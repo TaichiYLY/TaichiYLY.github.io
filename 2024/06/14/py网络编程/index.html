@@ -1,0 +1,200 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>py网络编程 - 泰极</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="大聪明是飞腾,就是我,hhh,"> 
+    <meta name="description" content="泰极的博客,网络编程
+
+用Python进行网络编程，就是在Python程序本身这个进程内，连接别的服务器进程的通信端口进行通信。Python 网络编程和其它语言类似，通常通过&amp;quot;Socket（套接字）&amp;,"> 
+    <meta name="author" content="Taichi"> 
+    <link rel="alternative" href="atom.xml" title="泰极" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    
+    
+    
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:title" content="py网络编程 - 泰极"/>
+    <meta name="twitter:description" content="泰极的博客,网络编程
+
+用Python进行网络编程，就是在Python程序本身这个进程内，连接别的服务器进程的通信端口进行通信。Python 网络编程和其它语言类似，通常通过&amp;quot;Socket（套接字）&amp;,"/>
+    
+    
+    
+    
+    <meta property="og:site_name" content="泰极"/>
+    <meta property="og:type" content="object"/>
+    <meta property="og:title" content="py网络编程 - 泰极"/>
+    <meta property="og:description" content="泰极的博客,网络编程
+
+用Python进行网络编程，就是在Python程序本身这个进程内，连接别的服务器进程的通信端口进行通信。Python 网络编程和其它语言类似，通常通过&amp;quot;Socket（套接字）&amp;,"/>
+    
+<link rel="stylesheet" href="/css/diaspora.css">
+
+    <script>window.searchDbPath = "/search.xml";</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">泰极</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="https://taichiyly.github.io"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">py网络编程</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">py网络编程</h1>
+        <div class="stuff">
+            <span>六月 14, 2024</span>
+            
+  <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E7%BD%91%E7%BB%9C/" rel="tag">网络</a></li></ul>
+
+
+        </div>
+        <div class="content markdown">
+            <h1>网络编程</h1>
+<blockquote>
+<p>用Python进行网络编程，就是在Python程序本身这个进程内，连接别的服务器进程的通信端口进行通信。Python 网络编程和其它语言类似，通常通过&quot;Socket（套接字）&quot;向网络发出请求或者应答网络请求，使主机间或者一台计算机上的进程间可以通讯。</p>
+</blockquote>
+<h3 id="TCPClient">TCPClient</h3>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> socket <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># print(gethostname())  # 使用 gethostname方法来获取</span></span><br><span class="line">host_name = <span class="string">&#x27;LAPTOP-E02HTJB6&#x27;</span>  <span class="comment"># ip 192.168.80.1</span></span><br><span class="line">port_num = <span class="number">1200</span>  <span class="comment"># 端口</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建socket</span></span><br><span class="line">clientSocket = socket(AF_INET, SOCK_STREAM)  <span class="comment"># AF_INET意思是ipv4，SOCK_STREAM意思是TCP的连接</span></span><br><span class="line"><span class="comment"># 建立连接</span></span><br><span class="line">clientSocket.connect((host_name,port_num))  <span class="comment"># ip地址 + 端口，放到一个元组里面</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 让用户输入内容</span></span><br><span class="line">message = <span class="built_in">input</span>(<span class="string">&quot;enter something: &quot;</span>)</span><br><span class="line">clientSocket.send(message.encode())  <span class="comment"># send发送,注意因为message是一个字符串，需要encode转换成Byte</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 接受信息</span></span><br><span class="line">upperMessage = clientSocket.recv(<span class="number">1024</span>).decode()  <span class="comment"># 把Byte转换成字符串</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;the message from the server: &#x27;</span> + upperMessage)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 释放资源</span></span><br><span class="line">clientSocket.close()</span><br></pre></td></tr></table></figure>
+<h3 id="TCPServer">TCPServer</h3>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> socket <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">serverSocket = socket(AF_INET, SOCK_STREAM)</span><br><span class="line"></span><br><span class="line">serverSocket.bind((gethostname(), <span class="number">1200</span>)) <span class="comment"># 元组，服务器的地址, 注意端口号需要保持一致</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 监听请求</span></span><br><span class="line">serverSocket.listen(<span class="number">2</span>)  <span class="comment"># 这个队列的数量，最大为2</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;the server is ready to accept information......&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 接受东西</span></span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:  <span class="comment"># 循环监听</span></span><br><span class="line">    <span class="comment"># serverSocket用来倾听连接的请求，connectionSockte用来传递数据</span></span><br><span class="line">    connectionSockte, address = serverSocket.accept()</span><br><span class="line"></span><br><span class="line">    message = connectionSockte.recv(<span class="number">1024</span>).decode()  <span class="comment"># 转成字符串</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;got the message from the client : &#x27;</span> + message)</span><br><span class="line"></span><br><span class="line">    modifedMessage = message.upper().encode()  <span class="comment"># 转换成大写，再转成Byte</span></span><br><span class="line">    connectionSockte.send(modifedMessage)  <span class="comment"># 发送</span></span><br><span class="line"></span><br><span class="line">    connectionSockte.close()  <span class="comment"># 释放资源</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        
+                            <li title="0" data-url="https://m704.music.126.net/20240817180004/1168f53be2b100c9e5ce9b53392f940e/jdyyaac/obj/w5rDlsOJwrLDjj7CmsOj/9916752193/7c23/cd08/2831/f8248c677bb4f9db9488822012e6826e.m4a?authSecret=000001915fb0c0981d0c0a3b19161e9e"></li>
+                        
+                    
+                        
+                            <li title="1" data-url="https://m804.music.126.net/20240817180100/a60e794006ab560e5d84c5e28987da71/jdyyaac/025f/065c/0608/55cb871d8416b7dc255f1bd4a49628da.m4a?authSecret=000001915fb19b2301f60a3b187e1df6"></li>
+                        
+                    
+                </ul>
+            
+        </div>
+        
+        
+    <div id="gitalk-container" class="comment link"
+		data-enable="false"
+        data-ae="false"
+        data-ci=""
+        data-cs=""
+        data-r=""
+        data-o=""
+        data-a=""
+        data-d="false"
+    >查看评论</div>
+
+
+    </div>
+    
+        <div class="side">
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">网络编程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#TCPClient"><span class="toc-number">1.0.1.</span> <span class="toc-text">TCPClient</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#TCPServer"><span class="toc-number">1.0.2.</span> <span class="toc-text">TCPServer</span></a></li></ol></li></ol></li></ol>
+        </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</html>

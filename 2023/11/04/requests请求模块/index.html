@@ -1,0 +1,347 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>requests请求模块 - 泰极</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="大聪明是飞腾,就是我,hhh,"> 
+    <meta name="description" content="泰极的博客,简介
+Requests是用python语言基于urllib编写的，采用的是Apache2 Licensed开源协议的HTTP库，Requests它会比urllib更加方便，可以节约我们大量的工作。
+,"> 
+    <meta name="author" content="Taichi"> 
+    <link rel="alternative" href="atom.xml" title="泰极" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    
+    
+    
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:title" content="requests请求模块 - 泰极"/>
+    <meta name="twitter:description" content="泰极的博客,简介
+Requests是用python语言基于urllib编写的，采用的是Apache2 Licensed开源协议的HTTP库，Requests它会比urllib更加方便，可以节约我们大量的工作。
+,"/>
+    
+    
+    
+    
+    <meta property="og:site_name" content="泰极"/>
+    <meta property="og:type" content="object"/>
+    <meta property="og:title" content="requests请求模块 - 泰极"/>
+    <meta property="og:description" content="泰极的博客,简介
+Requests是用python语言基于urllib编写的，采用的是Apache2 Licensed开源协议的HTTP库，Requests它会比urllib更加方便，可以节约我们大量的工作。
+,"/>
+    
+<link rel="stylesheet" href="/css/diaspora.css">
+
+    <script>window.searchDbPath = "/search.xml";</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">泰极</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="https://taichiyly.github.io"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">requests请求模块</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">requests请求模块</h1>
+        <div class="stuff">
+            <span>十一月 04, 2023</span>
+            
+
+        </div>
+        <div class="content markdown">
+            <h1>简介</h1>
+<p>Requests是用python语言基于urllib编写的，采用的是Apache2 Licensed开源协议的HTTP库，Requests它会比urllib更加方便，可以节约我们大量的工作。</p>
+<h1>安装</h1>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install requests</span><br></pre></td></tr></table></figure>
+<h2 id="使用">使用</h2>
+<h3 id="先上一串代码">先上一串代码</h3>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"> </span><br><span class="line">response  = requests.get(<span class="string">&quot;https://www.baidu.com&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(response))</span><br><span class="line"><span class="built_in">print</span>(response.status_code)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(response.text))</span><br><span class="line"><span class="comment">#获得响应头内容</span></span><br><span class="line"><span class="built_in">print</span>(response.headers)</span><br><span class="line"><span class="built_in">print</span>(response.headers[<span class="string">&#x27;content-type&#x27;</span>])</span><br><span class="line"><span class="comment">#还可以用这种方式获取请求头内容</span></span><br><span class="line"><span class="built_in">print</span>(response.request.headers)</span><br><span class="line"> <span class="comment"># 解决乱码问题</span></span><br><span class="line">response.enconding = <span class="string">&quot;utf-8&quot;</span></span><br><span class="line"><span class="built_in">print</span>(response.text)</span><br><span class="line"> </span><br><span class="line"><span class="built_in">print</span>(response.cookies)</span><br><span class="line"> </span><br><span class="line"><span class="built_in">print</span>(response.content)</span><br><span class="line"><span class="built_in">print</span>(response.content.decode(<span class="string">&quot;utf-8&quot;</span>))</span><br></pre></td></tr></table></figure>
+<ul>
+<li>response.text返回的是Unicode格式，通常需要转换为utf-8格式，否则就是乱码。</li>
+<li>response.content是二进制模式，可以下载视频之类的，如果想看的话需要decode成utf-8格式。</li>
+<li>不管是通过response.content.decode(&quot;utf-8)的方式还是通过response.encoding=&quot;utf-8&quot;的方式都可以避免乱码的问题发生</li>
+</ul>
+<h3 id="各种请求方式">各种请求方式</h3>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line">requests.post(<span class="string">&quot;http://httpbin.org/post&quot;</span>) <span class="comment">#发送post请求</span></span><br><span class="line">requests.put(<span class="string">&quot;http://httpbin.org/put&quot;</span>)  <span class="comment">#提交修改信息</span></span><br><span class="line">requests.patch(<span class="string">&quot;http://httpbin.org/put&quot;</span>)  <span class="comment">#提交局部修改的请求</span></span><br><span class="line">requests.delete(<span class="string">&quot;http://httpbin.org/delete&quot;</span>) <span class="comment"># 提交删除请求</span></span><br><span class="line">requests.head(<span class="string">&quot;http://httpbin.org/get&quot;</span>) <span class="comment">#获取HTML头部信息</span></span><br><span class="line">requests.options(<span class="string">&quot;http://httpbin.org/get&quot;</span>)  </span><br></pre></td></tr></table></figure>
+<h3 id="基本GET">基本GET</h3>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"> </span><br><span class="line">url = <span class="string">&#x27;https://www.baidu.com/&#x27;</span></span><br><span class="line">response = requests.get(url)</span><br><span class="line"><span class="built_in">print</span>(response.text)</span><br></pre></td></tr></table></figure>
+<h3 id="带参数的GET请求">带参数的GET请求</h3>
+<p><code>如果想查询http://httpbin.org/get页面的具体参数，需要在url里面加上，例如我想看有没有Host=httpbin.org这条数据，url形式应该是http://httpbin.org/get?Host=httpbin.org</code></p>
+<p>下面提交的数据是往这个地址传送data里面的数据。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 带参数的get请求</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line">url = <span class="string">&#x27;https://tieba.baidu.com/f?&#x27;</span></span><br><span class="line">params = &#123;<span class="string">&#x27;kw&#x27;</span>:<span class="string">&#x27;大学吧&#x27;</span>, <span class="string">&#x27;pn&#x27;</span>:<span class="string">&#x27;3&#x27;</span>&#125;</span><br><span class="line">headers = &#123;<span class="string">&#x27;User-Agent&#x27;</span> : <span class="string">&#x27;Mozilla/5.0 (Windows NT 6.1; WOW64)&#x27;</span>&#125;</span><br><span class="line"><span class="comment"># 开始请求</span></span><br><span class="line">html = requests.get(url=url, params=params, headers=headers).text</span><br><span class="line"><span class="built_in">print</span>(html)</span><br></pre></td></tr></table></figure>
+<h3 id="Json数据">Json数据</h3>
+<p>从下面的数据中我们可以得出，如果结果：</p>
+<p>1、requests中response.json()方法等同于json.loads（response.text）方法</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"> </span><br><span class="line">response = requests.get(<span class="string">&quot;http://httpbin.org/get&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(response.text))</span><br><span class="line"><span class="built_in">print</span>(response.json())</span><br><span class="line"><span class="built_in">print</span>(json.loads(response.text))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(response.json())</span><br><span class="line"><span class="built_in">print</span>(response.json()[<span class="string">&#x27;data&#x27;</span>])</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h5 id="获取二进制数据">获取二进制数据</h5>
+<p>在上面提到了response.content，这样获取的数据是二进制数据，同样的这个方法也可以用于下载图片以及视频资源</p>
+<h5 id="添加header">添加header</h5>
+<p><strong>首先说，为什么要加header（头部信息）呢？例如下面，我们试图访问知乎的登录页面（当然大家都你要是不登录知乎，就看不到里面的内容），我们试试不加header信息会报什么错。</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"> </span><br><span class="line">url = <span class="string">&#x27;https://www.zhihu.com/&#x27;</span></span><br><span class="line">headers = &#123;</span><br><span class="line">    <span class="string">&#x27;User-Agent&#x27;</span>:<span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line">response = requests.get(url,headers=headers)</span><br><span class="line"><span class="built_in">print</span>(response.text)</span><br></pre></td></tr></table></figure>
+<h3 id="基本post请求：">基本post请求：</h3>
+<p>通过post把数据提交到url地址，等同于一字典的形式提交form表单里面的数据</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"> </span><br><span class="line">url = <span class="string">&#x27;http://httpbin.org/post&#x27;</span></span><br><span class="line">data = &#123;</span><br><span class="line">    <span class="string">&#x27;name&#x27;</span>:<span class="string">&#x27;jack&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;age&#x27;</span>:<span class="string">&#x27;23&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">response = requests.post(url,data=data)</span><br><span class="line"><span class="built_in">print</span>(response.text)</span><br></pre></td></tr></table></figure>
+<p>结果:</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;args&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span><span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;data&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;files&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span><span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;form&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;age&quot;</span><span class="punctuation">:</span> <span class="string">&quot;23&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;jack&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;headers&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;Accept&quot;</span><span class="punctuation">:</span> <span class="string">&quot;*/*&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;Accept-Encoding&quot;</span><span class="punctuation">:</span> <span class="string">&quot;gzip, deflate&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;Connection&quot;</span><span class="punctuation">:</span> <span class="string">&quot;close&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;Content-Length&quot;</span><span class="punctuation">:</span> <span class="string">&quot;16&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;Content-Type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;application/x-www-form-urlencoded&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;Host&quot;</span><span class="punctuation">:</span> <span class="string">&quot;httpbin.org&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;User-Agent&quot;</span><span class="punctuation">:</span> <span class="string">&quot;python-requests/2.13.0&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;json&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">null</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;origin&quot;</span><span class="punctuation">:</span> <span class="string">&quot;118.144.137.95&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;http://httpbin.org/post&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>
+<p>语法结构</p>
+<p><code>requests.post(url,data=None,json=None)</code></p>
+</li>
+<li>
+<p>参数说明</p>
+<ul>
+<li>url: 需要爬取的网站的网址</li>
+<li>data: 请求数据</li>
+<li>json: json格式的数据</li>
+</ul>
+</li>
+<li>
+<p>案例:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line">url=<span class="string">&#x27;https://www.xslou.com/login.php&#x27;</span></span><br><span class="line">data=&#123;<span class="string">&#x27;username&#x27;</span>:<span class="string">&#x27;18600605736&#x27;</span>, <span class="string">&#x27;password&#x27;</span>:<span class="string">&#x27;57365736&#x27;</span>, <span class="string">&#x27;action&#x27;</span>:<span class="string">&#x27;login&#x27;</span>&#125;</span><br><span class="line">resp = requests.post(url,data)</span><br><span class="line">resp.encoding=<span class="string">&#x27;gb2312&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;响应状态码：&#x27;</span>, resp.status_code)   <span class="comment"># 200</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;响应内容&#x27;</span>, resp.text)        <span class="comment"># &lt;html&gt;......&lt;/html&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="响应">响应:</h3>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"> </span><br><span class="line"><span class="comment">#allow_redirects=False#设置这个属性为False则是不允许重定向，反之可以重定向 </span></span><br><span class="line">response = requests.get(<span class="string">&quot;http://www.baidu.com&quot;</span>,allow_redirects=<span class="literal">False</span>)</span><br><span class="line"><span class="comment">#打印请求页面的状态（状态码）</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(response.status_code),response.status_code)</span><br><span class="line"><span class="comment">#打印请求网址的headers所有信息</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(response.headers),response.headers)</span><br><span class="line"><span class="comment">#打印请求网址的cookies信息</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(response.cookies),response.cookies)</span><br><span class="line"><span class="comment">#打印请求网址的地址</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(response.url),response.url)</span><br><span class="line"><span class="comment">#打印请求的历史记录（以列表的形式显示）</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(response.history),response.history)</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>属性或方法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>response.status_code</td>
+<td>响应状态码</td>
+</tr>
+<tr>
+<td>response.content</td>
+<td>把response对象转换成二进制数据</td>
+</tr>
+<tr>
+<td>response.text</td>
+<td>把response对象转换成字符串数据</td>
+</tr>
+<tr>
+<td>response.encoding</td>
+<td>定义response对象的编码</td>
+</tr>
+<tr>
+<td>response.cookie</td>
+<td>获取请求后的cookie</td>
+</tr>
+<tr>
+<td>response.url</td>
+<td>获取请求网址</td>
+</tr>
+<tr>
+<td>response.json()</td>
+<td>内置的json解码器</td>
+</tr>
+<tr>
+<td>response.headers</td>
+<td>以字典对象存储服务器响应头,字典不区分大小写</td>
+</tr>
+</tbody>
+</table>
+<h3 id="内置的状态码">内置的状态码:</h3>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">100</span><span class="punctuation">:</span> (&#x27;continue&#x27;<span class="punctuation">,</span>)<span class="punctuation">,</span></span><br><span class="line"><span class="number">101</span><span class="punctuation">:</span> (&#x27;switching_protocols&#x27;<span class="punctuation">,</span>)<span class="punctuation">,</span></span><br><span class="line"><span class="number">102</span><span class="punctuation">:</span> (&#x27;processing&#x27;<span class="punctuation">,</span>)<span class="punctuation">,</span></span><br><span class="line"><span class="number">103</span><span class="punctuation">:</span> (&#x27;checkpoint&#x27;<span class="punctuation">,</span>)<span class="punctuation">,</span></span><br><span class="line"><span class="number">122</span><span class="punctuation">:</span> (&#x27;uri_too_long&#x27;<span class="punctuation">,</span> &#x27;request_uri_too_long&#x27;)<span class="punctuation">,</span></span><br><span class="line"><span class="number">200</span><span class="punctuation">:</span> (&#x27;ok&#x27;<span class="punctuation">,</span> &#x27;okay&#x27;<span class="punctuation">,</span> &#x27;all_ok&#x27;<span class="punctuation">,</span> &#x27;all_okay&#x27;<span class="punctuation">,</span> &#x27;all_good&#x27;<span class="punctuation">,</span> &#x27;\\o/&#x27;<span class="punctuation">,</span> &#x27;✓&#x27;)<span class="punctuation">,</span></span><br><span class="line"><span class="number">201</span><span class="punctuation">:</span> (&#x27;created&#x27;<span class="punctuation">,</span>)<span class="punctuation">,</span></span><br><span class="line"><span class="number">202</span><span class="punctuation">:</span> (&#x27;accepted&#x27;<span class="punctuation">,</span>)<span class="punctuation">,</span></span><br><span class="line"><span class="number">203</span><span class="punctuation">:</span> (&#x27;non_authoritative_info&#x27;<span class="punctuation">,</span> &#x27;non_authoritative_information&#x27;)<span class="punctuation">,</span></span><br><span class="line"><span class="number">204</span><span class="punctuation">:</span> (&#x27;no_content&#x27;<span class="punctuation">,</span>)<span class="punctuation">,</span></span><br><span class="line"><span class="number">205</span><span class="punctuation">:</span> (&#x27;reset_content&#x27;<span class="punctuation">,</span> &#x27;reset&#x27;)<span class="punctuation">,</span></span><br><span class="line"><span class="number">206</span><span class="punctuation">:</span> (&#x27;partial_content&#x27;<span class="punctuation">,</span> &#x27;partial&#x27;)<span class="punctuation">,</span></span><br><span class="line"><span class="number">207</span><span class="punctuation">:</span> (&#x27;multi_status&#x27;<span class="punctuation">,</span> &#x27;multiple_status&#x27;<span class="punctuation">,</span> &#x27;multi_stati&#x27;<span class="punctuation">,</span> &#x27;multiple_stati&#x27;)<span class="punctuation">,</span></span><br><span class="line"><span class="number">208</span><span class="punctuation">:</span> (&#x27;already_reported&#x27;<span class="punctuation">,</span>)<span class="punctuation">,</span></span><br><span class="line"><span class="number">226</span><span class="punctuation">:</span> (&#x27;im_used&#x27;<span class="punctuation">,</span>)<span class="punctuation">,</span></span><br><span class="line"></span><br><span class="line"># Redirection.</span><br><span class="line"><span class="number">300</span><span class="punctuation">:</span> (&#x27;multiple_choices&#x27;<span class="punctuation">,</span>)<span class="punctuation">,</span></span><br><span class="line"><span class="number">301</span><span class="punctuation">:</span> (&#x27;moved_permanently&#x27;<span class="punctuation">,</span> &#x27;moved&#x27;<span class="punctuation">,</span> &#x27;\\o-&#x27;)<span class="punctuation">,</span></span><br><span class="line"><span class="number">302</span><span class="punctuation">:</span> (&#x27;found&#x27;<span class="punctuation">,</span>)<span class="punctuation">,</span></span><br><span class="line"><span class="number">303</span><span class="punctuation">:</span> (&#x27;see_other&#x27;<span class="punctuation">,</span> &#x27;other&#x27;)<span class="punctuation">,</span></span><br><span class="line"><span class="number">304</span><span class="punctuation">:</span> (&#x27;not_modified&#x27;<span class="punctuation">,</span>)<span class="punctuation">,</span></span><br><span class="line"><span class="number">305</span><span class="punctuation">:</span> (&#x27;use_proxy&#x27;<span class="punctuation">,</span>)<span class="punctuation">,</span></span><br><span class="line"><span class="number">306</span><span class="punctuation">:</span> (&#x27;switch_proxy&#x27;<span class="punctuation">,</span>)<span class="punctuation">,</span></span><br><span class="line"><span class="number">307</span><span class="punctuation">:</span> (&#x27;temporary_redirect&#x27;<span class="punctuation">,</span> &#x27;temporary_moved&#x27;<span class="punctuation">,</span> &#x27;temporary&#x27;)<span class="punctuation">,</span></span><br><span class="line"><span class="number">308</span><span class="punctuation">:</span> (&#x27;permanent_redirect&#x27;<span class="punctuation">,</span></span><br><span class="line">      &#x27;resume_incomplete&#x27;<span class="punctuation">,</span> &#x27;resume&#x27;<span class="punctuation">,</span>)<span class="punctuation">,</span> # These <span class="number">2</span> to be removed in <span class="number">3.0</span></span><br><span class="line"></span><br><span class="line"># Client Error.</span><br><span class="line"><span class="number">400</span><span class="punctuation">:</span> (&#x27;bad_request&#x27;<span class="punctuation">,</span> &#x27;bad&#x27;)<span class="punctuation">,</span></span><br><span class="line"><span class="number">401</span><span class="punctuation">:</span> (&#x27;unauthorized&#x27;<span class="punctuation">,</span>)<span class="punctuation">,</span></span><br><span class="line"><span class="number">402</span><span class="punctuation">:</span> (&#x27;payment_required&#x27;<span class="punctuation">,</span> &#x27;payment&#x27;)<span class="punctuation">,</span></span><br><span class="line"><span class="number">403</span><span class="punctuation">:</span> (&#x27;forbidden&#x27;<span class="punctuation">,</span>)<span class="punctuation">,</span></span><br><span class="line"><span class="number">404</span><span class="punctuation">:</span> (&#x27;not_found&#x27;<span class="punctuation">,</span> &#x27;-o-&#x27;)<span class="punctuation">,</span></span><br><span class="line"><span class="number">405</span><span class="punctuation">:</span> (&#x27;method_not_allowed&#x27;<span class="punctuation">,</span> &#x27;not_allowed&#x27;)<span class="punctuation">,</span></span><br><span class="line"><span class="number">406</span><span class="punctuation">:</span> (&#x27;not_acceptable&#x27;<span class="punctuation">,</span>)<span class="punctuation">,</span></span><br><span class="line"><span class="number">407</span><span class="punctuation">:</span> (&#x27;proxy_authentication_required&#x27;<span class="punctuation">,</span> &#x27;proxy_auth&#x27;<span class="punctuation">,</span> &#x27;proxy_authentication&#x27;)<span class="punctuation">,</span></span><br><span class="line"><span class="number">408</span><span class="punctuation">:</span> (&#x27;request_timeout&#x27;<span class="punctuation">,</span> &#x27;timeout&#x27;)<span class="punctuation">,</span></span><br><span class="line"><span class="number">409</span><span class="punctuation">:</span> (&#x27;conflict&#x27;<span class="punctuation">,</span>)<span class="punctuation">,</span></span><br><span class="line"><span class="number">410</span><span class="punctuation">:</span> (&#x27;gone&#x27;<span class="punctuation">,</span>)<span class="punctuation">,</span></span><br><span class="line"><span class="number">411</span><span class="punctuation">:</span> (&#x27;length_required&#x27;<span class="punctuation">,</span>)<span class="punctuation">,</span></span><br><span class="line"><span class="number">412</span><span class="punctuation">:</span> (&#x27;precondition_failed&#x27;<span class="punctuation">,</span> &#x27;precondition&#x27;)<span class="punctuation">,</span></span><br><span class="line"><span class="number">413</span><span class="punctuation">:</span> (&#x27;request_entity_too_large&#x27;<span class="punctuation">,</span>)<span class="punctuation">,</span></span><br><span class="line"><span class="number">414</span><span class="punctuation">:</span> (&#x27;request_uri_too_large&#x27;<span class="punctuation">,</span>)<span class="punctuation">,</span></span><br><span class="line"><span class="number">415</span><span class="punctuation">:</span> (&#x27;unsupported_media_type&#x27;<span class="punctuation">,</span> &#x27;unsupported_media&#x27;<span class="punctuation">,</span> &#x27;media_type&#x27;)<span class="punctuation">,</span></span><br><span class="line"><span class="number">416</span><span class="punctuation">:</span> (&#x27;requested_range_not_satisfiable&#x27;<span class="punctuation">,</span> &#x27;requested_range&#x27;<span class="punctuation">,</span> &#x27;range_not_satisfiable&#x27;)<span class="punctuation">,</span></span><br><span class="line"><span class="number">417</span><span class="punctuation">:</span> (&#x27;expectation_failed&#x27;<span class="punctuation">,</span>)<span class="punctuation">,</span></span><br><span class="line"><span class="number">418</span><span class="punctuation">:</span> (&#x27;im_a_teapot&#x27;<span class="punctuation">,</span> &#x27;teapot&#x27;<span class="punctuation">,</span> &#x27;i_am_a_teapot&#x27;)<span class="punctuation">,</span></span><br><span class="line"><span class="number">421</span><span class="punctuation">:</span> (&#x27;misdirected_request&#x27;<span class="punctuation">,</span>)<span class="punctuation">,</span></span><br><span class="line"><span class="number">422</span><span class="punctuation">:</span> (&#x27;unprocessable_entity&#x27;<span class="punctuation">,</span> &#x27;unprocessable&#x27;)<span class="punctuation">,</span></span><br><span class="line"><span class="number">423</span><span class="punctuation">:</span> (&#x27;locked&#x27;<span class="punctuation">,</span>)<span class="punctuation">,</span></span><br><span class="line"><span class="number">424</span><span class="punctuation">:</span> (&#x27;failed_dependency&#x27;<span class="punctuation">,</span> &#x27;dependency&#x27;)<span class="punctuation">,</span></span><br><span class="line"><span class="number">425</span><span class="punctuation">:</span> (&#x27;unordered_collection&#x27;<span class="punctuation">,</span> &#x27;unordered&#x27;)<span class="punctuation">,</span></span><br><span class="line"><span class="number">426</span><span class="punctuation">:</span> (&#x27;upgrade_required&#x27;<span class="punctuation">,</span> &#x27;upgrade&#x27;)<span class="punctuation">,</span></span><br><span class="line"><span class="number">428</span><span class="punctuation">:</span> (&#x27;precondition_required&#x27;<span class="punctuation">,</span> &#x27;precondition&#x27;)<span class="punctuation">,</span></span><br><span class="line"><span class="number">429</span><span class="punctuation">:</span> (&#x27;too_many_requests&#x27;<span class="punctuation">,</span> &#x27;too_many&#x27;)<span class="punctuation">,</span></span><br><span class="line"><span class="number">431</span><span class="punctuation">:</span> (&#x27;header_fields_too_large&#x27;<span class="punctuation">,</span> &#x27;fields_too_large&#x27;)<span class="punctuation">,</span></span><br><span class="line"><span class="number">444</span><span class="punctuation">:</span> (&#x27;no_response&#x27;<span class="punctuation">,</span> &#x27;none&#x27;)<span class="punctuation">,</span></span><br><span class="line"><span class="number">449</span><span class="punctuation">:</span> (&#x27;retry_with&#x27;<span class="punctuation">,</span> &#x27;retry&#x27;)<span class="punctuation">,</span></span><br><span class="line"><span class="number">450</span><span class="punctuation">:</span> (&#x27;blocked_by_windows_parental_controls&#x27;<span class="punctuation">,</span> &#x27;parental_controls&#x27;)<span class="punctuation">,</span></span><br><span class="line"><span class="number">451</span><span class="punctuation">:</span> (&#x27;unavailable_for_legal_reasons&#x27;<span class="punctuation">,</span> &#x27;legal_reasons&#x27;)<span class="punctuation">,</span></span><br><span class="line"><span class="number">499</span><span class="punctuation">:</span> (&#x27;client_closed_request&#x27;<span class="punctuation">,</span>)<span class="punctuation">,</span></span><br><span class="line"></span><br><span class="line"># Server Error.</span><br><span class="line"><span class="number">500</span><span class="punctuation">:</span> (&#x27;internal_server_error&#x27;<span class="punctuation">,</span> &#x27;server_error&#x27;<span class="punctuation">,</span> &#x27;/o\\&#x27;<span class="punctuation">,</span> &#x27;✗&#x27;)<span class="punctuation">,</span></span><br><span class="line"><span class="number">501</span><span class="punctuation">:</span> (&#x27;not_implemented&#x27;<span class="punctuation">,</span>)<span class="punctuation">,</span></span><br><span class="line"><span class="number">502</span><span class="punctuation">:</span> (&#x27;bad_gateway&#x27;<span class="punctuation">,</span>)<span class="punctuation">,</span></span><br><span class="line"><span class="number">503</span><span class="punctuation">:</span> (&#x27;service_unavailable&#x27;<span class="punctuation">,</span> &#x27;unavailable&#x27;)<span class="punctuation">,</span></span><br><span class="line"><span class="number">504</span><span class="punctuation">:</span> (&#x27;gateway_timeout&#x27;<span class="punctuation">,</span>)<span class="punctuation">,</span></span><br><span class="line"><span class="number">505</span><span class="punctuation">:</span> (&#x27;http_version_not_supported&#x27;<span class="punctuation">,</span> &#x27;http_version&#x27;)<span class="punctuation">,</span></span><br><span class="line"><span class="number">506</span><span class="punctuation">:</span> (&#x27;variant_also_negotiates&#x27;<span class="punctuation">,</span>)<span class="punctuation">,</span></span><br><span class="line"><span class="number">507</span><span class="punctuation">:</span> (&#x27;insufficient_storage&#x27;<span class="punctuation">,</span>)<span class="punctuation">,</span></span><br><span class="line"><span class="number">509</span><span class="punctuation">:</span> (&#x27;bandwidth_limit_exceeded&#x27;<span class="punctuation">,</span> &#x27;bandwidth&#x27;)<span class="punctuation">,</span></span><br><span class="line"><span class="number">510</span><span class="punctuation">:</span> (&#x27;not_extended&#x27;<span class="punctuation">,</span>)<span class="punctuation">,</span></span><br><span class="line"><span class="number">511</span><span class="punctuation">:</span> (&#x27;network_authentication_required&#x27;<span class="punctuation">,</span> &#x27;network_auth&#x27;<span class="punctuation">,</span> &#x27;network_authentication&#x27;)<span class="punctuation">,</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line">response = requests.get(<span class="string">&#x27;http://www.jianshu.com/404.html&#x27;</span>)</span><br><span class="line"><span class="comment"># 使用request内置的字母判断状态码</span></span><br><span class="line"> </span><br><span class="line"><span class="comment">#如果response返回的状态码是非正常的就返回404错误</span></span><br><span class="line"><span class="keyword">if</span> response.status_code != requests.codes.ok:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;404&#x27;</span>)</span><br><span class="line"> </span><br><span class="line"><span class="comment">#如果页面返回的状态码是200，就打印下面的状态</span></span><br><span class="line">response = requests.get(<span class="string">&#x27;http://www.jianshu.com&#x27;</span>)</span><br><span class="line"><span class="keyword">if</span> response.status_code == <span class="number">200</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;200&#x27;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="request-高级操作">request 高级操作</h3>
+<h4 id="文件上传">文件上传</h4>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line">url = <span class="string">&quot;http://httpbin.org/post&quot;</span></span><br><span class="line">files= &#123;<span class="string">&quot;files&quot;</span>:<span class="built_in">open</span>(<span class="string">&quot;test.jpg&quot;</span>,<span class="string">&quot;rb&quot;</span>)&#125;</span><br><span class="line">response = requests.post(url,files=files)</span><br><span class="line"><span class="built_in">print</span>(response.text)</span><br></pre></td></tr></table></figure>
+<h3 id="获取cookie">获取cookie</h3>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line">response = requests.get(<span class="string">&#x27;https://www.baidu.com&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(response.cookies)</span><br><span class="line"><span class="keyword">for</span> key,value <span class="keyword">in</span> response.cookies.items():</span><br><span class="line">    <span class="built_in">print</span>(key,<span class="string">&#x27;==&#x27;</span>,value)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="会话保持">会话保持</h3>
+<p>cookie的一个作用就是可以用于模拟登录，做会话保持</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line">session = requests.session()</span><br><span class="line">session.get(<span class="string">&#x27;http://httpbin.org/cookies/set/number/12456&#x27;</span>)</span><br><span class="line">response = session.get(<span class="string">&#x27;http://httpbin.org/cookies&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(response.text)</span><br></pre></td></tr></table></figure>
+<h4 id="cookie-和-session-区别">cookie 和 session 区别</h4>
+<ul>
+<li>cookie数据存放在客户的浏览器上，session数据放在服务器上</li>
+<li>cookie不是很安全，别人可以分析存放在本地的cookie并进行cookie欺骗</li>
+<li>session会在一定时间内保存在服务器上。当访问增多，会比较占用你服务器的性能</li>
+<li>单个cookie保存的数据不能超过4K，很多浏览器都限制一个站点最多保存20个cookie</li>
+</ul>
+<h4 id="session发送请求后-实现登录后继续访问">session发送请求后,实现登录后继续访问</h4>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line">url=<span class="string">&#x27;https://www.xslou.com/login.php&#x27;</span></span><br><span class="line">data=&#123;<span class="string">&#x27;username&#x27;</span>:<span class="string">&#x27;18600605736&#x27;</span>, <span class="string">&#x27;password&#x27;</span>:<span class="string">&#x27;57365736&#x27;</span>, <span class="string">&#x27;action&#x27;</span>:<span class="string">&#x27;login&#x27;</span>&#125;</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 使用session发送请求</span></span><br><span class="line">session = requests.session()</span><br><span class="line">resp=session.post(url,data=data)    <span class="comment"># 使用session发送post请求</span></span><br><span class="line">resp.encoding=<span class="string">&#x27;gb2312&#x27;</span></span><br><span class="line"><span class="comment"># print( resp.text)        # &lt;html&gt;..&lt;title&gt;登录成功&lt;/title&gt;....&lt;/html&gt;</span></span><br><span class="line"> </span><br><span class="line"><span class="comment"># 推荐小说      # 推荐成功的链接</span></span><br><span class="line">hot_url=<span class="string">&#x27;https://www.xslou.com/modules/article/uservote.php?id=71960&#x27;</span></span><br><span class="line">resp2=session.get(hot_url)    <span class="comment"># 使用session发送get请求</span></span><br><span class="line">resp2.encoding=<span class="string">&#x27;gb2312&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(resp2.text)        <span class="comment"># &lt;html&gt;..&lt;title&gt;处理成功&lt;/title&gt;....&lt;/html&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="SSL证书认证参数-verify">SSL证书认证参数 verify</h4>
+<ul>
+<li>参数值：True（默认）| False</li>
+<li>适用网站：https类型网站但是没有经过 证书认证机构 认证的网站</li>
+<li>适用场景：当程序中抛出SSLError异常则考虑使用此参数</li>
+<li>使用示例：<code>requests.get(url=url,headers=headers,verify=False)</code></li>
+<li>当verify参数设置为False时，则不会再对网站进行SSL证书认证</li>
+</ul>
+<h4 id="设置超时时间-timeout">设置超时时间 timeout</h4>
+<p>我们可以通过timeout属性设置超时时间，一旦超过这个时间还没获得响应内容，就会提示错误。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line">requests.get(<span class="string">&#x27;http://github.com&#x27;</span>, timeout=<span class="number">0.001</span>)</span><br><span class="line"> </span><br><span class="line">---------------------以下为输出结果（报错）---------------------</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">&quot;&lt;stdin&gt;&quot;</span>, line <span class="number">1</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">requests.exceptions.Timeout: HTTPConnectionPool(host=<span class="string">&#x27;github.com&#x27;</span>, port=<span class="number">80</span>): Request timed out. (timeout=<span class="number">0.001</span>)</span><br></pre></td></tr></table></figure>
+<h4 id="代理IP参数-proxies">代理IP参数 proxies</h4>
+<ul>
+<li>
+<p>语法格式：<strong>proxies = { ‘协议’:‘协议://IP:端口号’}</strong></p>
+</li>
+<li>
+<p>示例：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">proxies = &#123;</span><br><span class="line">	<span class="string">&#x27;http&#x27;</span>:<span class="string">&#x27;http://IP:端口号&#x27;</span>,</span><br><span class="line">	<span class="string">&#x27;https&#x27;</span>:<span class="string">&#x27;http://IP:端口号&#x27;</span>,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>当我们抓取的地址为http时，则会选择proxies中http的代理，反之为https</p>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"> </span><br><span class="line">url = <span class="string">&#x27;http://httpbin.org/get&#x27;</span></span><br><span class="line">headers = &#123;<span class="string">&#x27;User-Agent&#x27;</span>:<span class="string">&#x27;Mozilla/5.0&#x27;</span>&#125;</span><br><span class="line"><span class="comment"># 定义代理，再代理IP网站中查找免费代理IP</span></span><br><span class="line">proxies = &#123;</span><br><span class="line">    <span class="string">&#x27;http&#x27;</span>:<span class="string">&#x27;http://112.85.164.220:9999&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;https&#x27;</span>:<span class="string">&#x27;https://112.85.164.220:9999&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line">html = requests.get(url=url,proxies=proxies,headers=headers,timeout=<span class="number">5</span>).text</span><br><span class="line"><span class="built_in">print</span>(html)</span><br></pre></td></tr></table></figure>
+<p><em><strong>*私密代理和独享代理*</strong></em></p>
+<ul>
+<li>
+<p>语法格式: <strong><u>proxies = {‘协议’:‘协议://用户名:密码@IP:端口号’}</u></strong></p>
+</li>
+<li>
+<p>示例：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">proxies = &#123;</span><br><span class="line">	<span class="string">&#x27;http&#x27;</span>:<span class="string">&#x27;http://用户名:密码@IP:端口号&#x27;</span>,</span><br><span class="line">	<span class="string">&#x27;https&#x27;</span>:<span class="string">&#x27;http://用户名:密码@IP:端口号&#x27;</span>,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>当我们抓取的地址为http时，则会选择proxies中http的代理，反之为https</p>
+</li>
+</ul>
+<h3 id="获取二进制数据-2">获取二进制数据</h3>
+<p>一般来说，对于非文本请求，可以以字节形式访问响应正文。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 获取二进制数据</span></span><br><span class="line"> </span><br><span class="line"><span class="comment"># 案例：保存百度图片</span></span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line">url=<span class="string">&#x27;https://www.baidu.com/img/bd_logo1.png&#x27;</span></span><br><span class="line">resp=requests.get(url)</span><br><span class="line"><span class="comment"># 存储</span></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;logo.png&#x27;</span>,<span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> file:</span><br><span class="line">    <span class="comment"># resp.content：把response对象转换为二进制数据</span></span><br><span class="line">    file.write(resp.content)</span><br></pre></td></tr></table></figure>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        
+                            <li title="0" data-url="https://m704.music.126.net/20240817180004/1168f53be2b100c9e5ce9b53392f940e/jdyyaac/obj/w5rDlsOJwrLDjj7CmsOj/9916752193/7c23/cd08/2831/f8248c677bb4f9db9488822012e6826e.m4a?authSecret=000001915fb0c0981d0c0a3b19161e9e"></li>
+                        
+                    
+                        
+                            <li title="1" data-url="https://m804.music.126.net/20240817180100/a60e794006ab560e5d84c5e28987da71/jdyyaac/025f/065c/0608/55cb871d8416b7dc255f1bd4a49628da.m4a?authSecret=000001915fb19b2301f60a3b187e1df6"></li>
+                        
+                    
+                </ul>
+            
+        </div>
+        
+        
+    <div id="gitalk-container" class="comment link"
+		data-enable="false"
+        data-ae="false"
+        data-ci=""
+        data-cs=""
+        data-r=""
+        data-o=""
+        data-a=""
+        data-d="false"
+    >查看评论</div>
+
+
+    </div>
+    
+        <div class="side">
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">2.</span> <span class="toc-text">安装</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8"><span class="toc-number">2.1.</span> <span class="toc-text">使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%88%E4%B8%8A%E4%B8%80%E4%B8%B2%E4%BB%A3%E7%A0%81"><span class="toc-number">2.1.1.</span> <span class="toc-text">先上一串代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%84%E7%A7%8D%E8%AF%B7%E6%B1%82%E6%96%B9%E5%BC%8F"><span class="toc-number">2.1.2.</span> <span class="toc-text">各种请求方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%ACGET"><span class="toc-number">2.1.3.</span> <span class="toc-text">基本GET</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%A6%E5%8F%82%E6%95%B0%E7%9A%84GET%E8%AF%B7%E6%B1%82"><span class="toc-number">2.1.4.</span> <span class="toc-text">带参数的GET请求</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Json%E6%95%B0%E6%8D%AE"><span class="toc-number">2.1.5.</span> <span class="toc-text">Json数据</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%95%B0%E6%8D%AE"><span class="toc-number">2.1.5.0.1.</span> <span class="toc-text">获取二进制数据</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0header"><span class="toc-number">2.1.5.0.2.</span> <span class="toc-text">添加header</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%ACpost%E8%AF%B7%E6%B1%82%EF%BC%9A"><span class="toc-number">2.1.6.</span> <span class="toc-text">基本post请求：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%93%8D%E5%BA%94"><span class="toc-number">2.1.7.</span> <span class="toc-text">响应:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%85%E7%BD%AE%E7%9A%84%E7%8A%B6%E6%80%81%E7%A0%81"><span class="toc-number">2.1.8.</span> <span class="toc-text">内置的状态码:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#request-%E9%AB%98%E7%BA%A7%E6%93%8D%E4%BD%9C"><span class="toc-number">2.1.9.</span> <span class="toc-text">request 高级操作</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0"><span class="toc-number">2.1.9.1.</span> <span class="toc-text">文件上传</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96cookie"><span class="toc-number">2.1.10.</span> <span class="toc-text">获取cookie</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BC%9A%E8%AF%9D%E4%BF%9D%E6%8C%81"><span class="toc-number">2.1.11.</span> <span class="toc-text">会话保持</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#cookie-%E5%92%8C-session-%E5%8C%BA%E5%88%AB"><span class="toc-number">2.1.11.1.</span> <span class="toc-text">cookie 和 session 区别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#session%E5%8F%91%E9%80%81%E8%AF%B7%E6%B1%82%E5%90%8E-%E5%AE%9E%E7%8E%B0%E7%99%BB%E5%BD%95%E5%90%8E%E7%BB%A7%E7%BB%AD%E8%AE%BF%E9%97%AE"><span class="toc-number">2.1.11.2.</span> <span class="toc-text">session发送请求后,实现登录后继续访问</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#SSL%E8%AF%81%E4%B9%A6%E8%AE%A4%E8%AF%81%E5%8F%82%E6%95%B0-verify"><span class="toc-number">2.1.11.3.</span> <span class="toc-text">SSL证书认证参数 verify</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E8%B6%85%E6%97%B6%E6%97%B6%E9%97%B4-timeout"><span class="toc-number">2.1.11.4.</span> <span class="toc-text">设置超时时间 timeout</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%A3%E7%90%86IP%E5%8F%82%E6%95%B0-proxies"><span class="toc-number">2.1.11.5.</span> <span class="toc-text">代理IP参数 proxies</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%95%B0%E6%8D%AE-2"><span class="toc-number">2.1.12.</span> <span class="toc-text">获取二进制数据</span></a></li></ol></li></ol></li></ol>
+        </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</html>

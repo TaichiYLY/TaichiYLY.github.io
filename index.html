@@ -1,191 +1,195 @@
-
-<!DOCTYPE html>
-<html lang="zh-CN" class="loading">
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>泰极 - 个人博客</title>
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="google" content="notranslate" />
-    <meta name="keywords" content="大聪明是飞腾,就是我,hhh,"> 
-    <meta name="description" content="泰极的博客,"> 
-    <meta name="author" content="Taichi"> 
-    <link rel="alternative" href="atom.xml" title="泰极" type="application/atom+xml"> 
-    <link rel="icon" href="/img/favicon.png"> 
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>泰极 - 个人博客</title><meta name="author" content="Taichi"><meta name="copyright" content="Taichi"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="泰极的博客">
+<meta property="og:type" content="website">
+<meta property="og:title" content="泰极">
+<meta property="og:url" content="https://taichiyly.github.io/index.html">
+<meta property="og:site_name" content="泰极">
+<meta property="og:description" content="泰极的博客">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
+<meta property="article:author" content="Taichi">
+<meta property="article:tag" content="博客">
+<meta property="article:tag" content="taichi">
+<meta property="article:tag" content="编程">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://taichiyly.github.io/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '泰极',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2024-08-20 19:04:31'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
     
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
     
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
     
-    <meta name="twitter:card" content="summary"/>
-    <meta name="twitter:title" content="泰极 - 个人博客"/>
-    <meta name="twitter:description" content="泰极的博客,"/>
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
     
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
     
-    
-    
-    <meta property="og:site_name" content="泰极"/>
-    <meta property="og:type" content="object"/>
-    <meta property="og:title" content="泰极 - 个人博客"/>
-    <meta property="og:description" content="泰极的博客,"/>
-    
-<link rel="stylesheet" href="/css/diaspora.css">
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">16</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">17</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="泰极"><span class="site-name">泰极</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">泰极</h1><div id="site_social_icons"><a class="social-icon" href="https://github.com/TaichiYLY" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:2049175570@qq.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left"><a href="/2024/08/20/demo/" title="demo"><img class="post-bg" src="https://pic.netbian.com/uploads/allimg/240221/085332-1708476812b03f.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="demo"></a></div><div class="recent-post-info"><a class="article-title" href="/2024/08/20/demo/" title="demo">demo</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-08-20T10:23:24.000Z" title="发表于 2024-08-20 18:23:24">2024-08-20</time></span></div><div class="content">Hexo-theme-diaspora
+在线预览 | PREVIEW 
+一款基于WP移植的Hexo主题，适合喜欢摄影，影评，乐评和玩弄文字的你，干净，清新； 响应式，Ajax，更多好玩的等你来发现。
 
-    <script>window.searchDbPath = "/search.xml";</script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
-<meta name="generator" content="Hexo 7.3.0"></head>
+再次感谢原作者创作出这么精美的主题 @Loeify 。如果你喜欢，请捐助原作者。
 
-<body class="loading">
-    <span id="config-title" style="display:none">泰极</span>
-    <div id="loader"></div>
-    <div class="nav">
-    <ul id="menu-menu" class="menu">
-        
-        <li class="pview menu-item menu-item-type-post_type menu-item-object-page">
-            <a href="//" title="首页" target="_blank" rel="noopener">首页</a>
-        </li>
-        
-        <li class="pview menu-item menu-item-type-post_type menu-item-object-page">
-            <a href="/categories/" title="分类" target="_blank" rel="noopener">分类</a>
-        </li>
-        
-        <li class="pview menu-item menu-item-type-post_type menu-item-object-page">
-            <a href="/tags/" title="标签" target="_blank" rel="noopener">标签</a>
-        </li>
-        
-        <li class="pview menu-item menu-item-type-post_type menu-item-object-page">
-            <a href="/archives/" title="归档" target="_blank" rel="noopener">归档</a>
-        </li>
-        
-        <li class="pview menu-item menu-item-type-post_type menu-item-object-page">
-            <a href="/about/" title="关于" target="_blank" rel="noopener">关于</a>
-        </li>
-        
-    </ul>
-	<span class="target"></span>
-	<center>
-	<div class="hitokoto">
-		<span class="typed" id="hitokoto" data-st="true"></span>
-	</div>
-	</center>
-	
-	<p class="footerlinks">
-		<a href="#" class="iconfont icon-null"></a>
-		
-            <a href="https://www.douyin.com/user/MS4wLjABAAAAwnZeazH1RTbG2btvlE5XAuwugaZnUAO4oBtaJj-4EAq5R6I044gOo9tW6eLumCYo?vid=7392532194448657704" title="facebook" class="iconfont icon-facebook" target="_blank" rel="noopener"> </a>
-        
-            <a href="https://www.douyin.com/user/MS4wLjABAAAAwnZeazH1RTbG2btvlE5XAuwugaZnUAO4oBtaJj-4EAq5R6I044gOo9tW6eLumCYo?vid=7392532194448657704" title="twitter" class="iconfont icon-twitter" target="_blank" rel="noopener"> </a>
-        
-            <a href="https://github.com/TaichiYLY" title="github" class="iconfont icon-github" target="_blank" rel="noopener"> </a>
-        
-            <a href="tel:+8617531331461" title="wechat" class="iconfont icon-wechat" target="_blank" rel="noopener"> </a>
-        
-            <a href="mailto:2049175570@qq.com" title="email" class="iconfont icon-email" target="_blank" rel="noopener"> </a>
-        
-		<a href="#" class="iconfont icon-null"></a>
-	</p>
-	
-    <p id="copyright">
-        &copy; 2024 Taichi.
-        <span> | </span>Powered by <a href="https://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a>
-        <span> | </span>Theme <a href="https://github.com/Fechin/hexo-theme-diaspora" title="Diaspora" target="_blank" rel="noopener">Diaspora</a> by Fechin
-		
-		<span> | </span><a rel="nofollow" href="https://blog.csdn.net/qq_56679246?type=blog" target="_blank">冀ICP备1008611号</a>
-		
-    </p>
-</div>
+安装主题
+1$ git clone git@gitee.com:Ljj1392036546_admin/hexo-theme-diaspora.git
+启用主题
+修改Hexo配置文件 _config.yml 主题项设置为diaspora
+1234...theme: diaspora...
+更新主题
+注意：请在更时主题时备份_config.yml配置文件
+12cd themes/diasporagit pull
+新建文章模板
+123456789---title: My awesome titledate: 2016-10-12 18:38:45tags: - 标签- 标签mp3: http://domain.com/awesome.mp3cover: http://domain.com/awesome.jp ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2024/08/18/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2%E4%B9%8B%E6%97%85/" title="启程：我的博客之旅"><img class="post-bg" src="https://pic.netbian.com/uploads/allimg/240221/085332-1708476812b03f.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="启程：我的博客之旅"></a></div><div class="recent-post-info"><a class="article-title" href="/2024/08/18/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2%E4%B9%8B%E6%97%85/" title="启程：我的博客之旅">启程：我的博客之旅</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-08-17T16:00:00.000Z" title="发表于 2024-08-18 00:00:00">2024-08-18</time></span></div><div class="content">
+在这个信息爆炸的时代，每个人都是自己故事的书写者，也是知识的传播者。今天，我终于鼓起勇气，踏出了这重要的一步——写下我的第一篇博客。这不仅仅是一个简单的文字堆砌，它是我心灵的一片小天地，是我学习、思考、成长的见证者。
+为何开始？
+在无数个日夜的探索与学习中，我遇到了无数的难题与挑战，也收获了无数的喜悦与启发。我渴望将这些宝贵的经历与感悟分享给同样在路上的你。或许我的文字还不够成熟，但每一句都是我用心敲打的印记，希望能成为你前行路上的一盏小灯，哪怕只能照亮一小段路程。
+内容预告
+在这篇博客中，我将从几个方面展开我的分享：
 
-<div id="container">
-    
-<div id="screen">
-    <div id="mark">
-        <div class="layer" data-depth="0.4">
-            <img src="/img/welcome-cover.jpg" id="cover" crossorigin="anonymous" width="1920" height="1080">
-        </div>
-    </div>
-    <div id="vibrant">
-        <svg viewbox="0 0 2880 1620" height="100%" preserveaspectratio="xMaxYMax slice">
-            <polygon opacity="0.7" points="2000,1620 0,1620 0,0 600,0 "/>
-        </svg>
-        <div></div>
-    </div>
-    <div id="header">
-        <div>
-            <a class="image-logo" href="/"></a>
-			
-			<div class="iconfont icon-search switchsearch" href="/search/" title="搜索"></div>
-			
-            <div class="iconfont icon-menu switchmenu"></div>
-        </div>
-    </div>
-    
-    <div id="post0">
-        <p>八月 18, 2024</p>
-        <h2><a href="/2024/08/18/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2%E4%B9%8B%E6%97%85/" title="启程：我的博客之旅" class="posttitle">启程：我的博客之旅</a></h2>
-        <p class="summary">
-在这个信息爆炸的时代，每个人都是自己故事的书写者，也是知识的传播者。今天，我终于鼓起勇气，踏出了这重要的一步——...</p>
-    </div>
-    
-</div>
+学习心得：回顾过去一段时间里，我在某个技术领域（比如编程、设计、市场营销等）的学习历程，包括遇到的困难、解决的方法以及获得的成长。
+项目实践：分享一个我最近完成的项目或实验，从策划到实施，再到成果展示的全过程。这里不仅有成功的经验，也会有失败的教训，希望能为你提供一些实践上的参考。
+思考感悟：记录一些生活中的小确幸或是对某个话题的深入思考，比如科技如何改变我们的生活、个人成长的重要性等。这些思考虽然琐碎，但却是我成长的足迹。
+未来展望：展望我的博客之路，以及我在技术 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2024/06/14/py%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/" title="py网络编程"><img class="post-bg" src="https://wallpaperbat.com/img/257015-python-programming-wallpaper.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="py网络编程"></a></div><div class="recent-post-info"><a class="article-title" href="/2024/06/14/py%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/" title="py网络编程">py网络编程</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-06-14T06:19:43.000Z" title="发表于 2024-06-14 14:19:43">2024-06-14</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a></span></div><div class="content">网络编程
 
-    <div id="primary">
-        
-<div class="post">
-    <a href="/2024/06/14/py%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/" title="py网络编程">
-        <img src="https://wallpaperbat.com/img/257015-python-programming-wallpaper.jpg" class="cover" width="680" height="440">
-    </a>
-    <div class="else">
-        <p>六月 14, 2024</p>
-        <h3><a href="/2024/06/14/py%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/" title="py网络编程" class="posttitle">py网络编程</a></h3>
-        <p>网络编程
+用Python进行网络编程，就是在Python程序本身这个进程内，连接别的服务器进程的通信端口进行通信。Python 网络编程和其它语言类似，通常通过&quot;Socket（套接字）&quot;向网络发出请求或者应答网络请求，使主机间或者一台计算机上的进程间可以通讯。
 
-用Python进行网络编程，就是在Python程序本身这个进程内，连接别的服务器进程的通信端口进行通信。Python 网络编程和其它语言类似，...</p>
-    </div>
-</div>
+TCPClient
+12345678910111213141516171819202122from socket import *# print(gethostname())  # 使用 gethostname方法来获取host_name = &#x27;LAPTOP-E02HTJB6&#x27;  # ip 192.168.80.1port_num = 1200  # 端口# 创建socketclientSocket = socket(AF_INET, SOCK_STREAM)  # AF_INET意思是ipv4，SOCK_STREAM意思是TCP的连接# 建立连接clientSocket.connect((host_name,port_num))  # ip地址 + 端口，放到一个元组里面# 让用户输 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2024/05/20/Python%E5%B8%B8%E7%94%A8%E6%A8%A1%E5%9D%97%E5%A4%A7%E5%85%A8/" title="Python常用模块大全"><img class="post-bg" src="https://wallpaperbat.com/img/283081-python-run-the-trap-8k-ultra-hd-wallpaper-background-image.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Python常用模块大全"></a></div><div class="recent-post-info"><a class="article-title" href="/2024/05/20/Python%E5%B8%B8%E7%94%A8%E6%A8%A1%E5%9D%97%E5%A4%A7%E5%85%A8/" title="Python常用模块大全">Python常用模块大全</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-05-20T06:16:31.000Z" title="发表于 2024-05-20 14:16:31">2024-05-20</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a></span></div><div class="content">Python常用模块大全（总结）
 
 
-<div class="post">
-    <a href="/2024/05/20/Python%E5%B8%B8%E7%94%A8%E6%A8%A1%E5%9D%97%E5%A4%A7%E5%85%A8/" title="Python常用模块大全">
-        <img src="https://wallpaperbat.com/img/283081-python-run-the-trap-8k-ultra-hd-wallpaper-background-image.png" class="cover" width="680" height="440">
-    </a>
-    <div class="else">
-        <p>五月 20, 2024</p>
-        <h3><a href="/2024/05/20/Python%E5%B8%B8%E7%94%A8%E6%A8%A1%E5%9D%97%E5%A4%A7%E5%85%A8/" title="Python常用模块大全" class="posttitle">Python常用模块大全</a></h3>
-        <p>Python常用模块大全（总结）
+Python拥有丰富的标准库和第三方库，这些模块极大地扩展了Python的功能，使其在各种应用场景中都能发挥重要作用。下面我将列出一些常用的Python模块及其简单代码案例，帮助你更好地理解和使用它们。
 
-
-Python拥有丰富的标准库和第三方库，这些模块极大地扩展了Python的功能，使其在各种应用场景中都能发挥重要作用...</p>
-    </div>
-</div>
-
-
-<div class="post">
-    <a href="/2024/05/13/%E6%95%B0%E5%AD%97%E6%8A%80%E6%9C%AF%E5%BA%94%E7%94%A8%E6%AF%94%E8%B5%9B/" title="数字技术应用比赛">
-        <img src="https://t.alcy.cc/fj/" class="cover" width="680" height="440">
-    </a>
-    <div class="else">
-        <p>五月 13, 2024</p>
-        <h3><a href="/2024/05/13/%E6%95%B0%E5%AD%97%E6%8A%80%E6%9C%AF%E5%BA%94%E7%94%A8%E6%AF%94%E8%B5%9B/" title="数字技术应用比赛" class="posttitle">数字技术应用比赛</a></h3>
-        <p>总时间7小时，上午到九点到下午四点
-
-
-Hadoop （预计：一小时）（配置文件==可以借鉴slave==中的配置）
-数据标注（预计：一小时）
-智能应用(...</p>
-    </div>
-</div>
-
-
-<div class="post">
-    <a href="/2024/05/10/CentOS7%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/" title="CentOS7常用指令">
-        <img src="https://t.alcy.cc/fj/" class="cover" width="680" height="440">
-    </a>
-    <div class="else">
-        <p>五月 10, 2024</p>
-        <h3><a href="/2024/05/10/CentOS7%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/" title="CentOS7常用指令" class="posttitle">CentOS7常用指令</a></h3>
-        <p>一、常用命令
+os模块：
+1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253os.remove() 删除文件 os.unlink() 删除文件 os.rename() 重命名文件 os.listdir() 列出指定目录下所有文件 os.chdir() 改变当前工作目录os.getcwd() 获取当前文件路径os.mkdir() 新建目录os.rmdir() 删除空目录(删除非空目录, 使用shutil.rmtree())os.makedirs() 创建多级目录os.removedirs() 删除多级目录os.stat(file) 获取文件属性os.chmod(file) 修改文件权限os.utime(file) 修改文 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2024/05/10/CentOS7%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/" title="CentOS7常用指令"><img class="post-bg" src="http://img.netbian.com/file/2024/0709/1921550UIjR.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="CentOS7常用指令"></a></div><div class="recent-post-info"><a class="article-title" href="/2024/05/10/CentOS7%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/" title="CentOS7常用指令">CentOS7常用指令</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-05-10T10:28:10.000Z" title="发表于 2024-05-10 18:28:10">2024-05-10</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%90%8E%E7%AB%AF/">后端</a></span></div><div class="content">一、常用命令
 1.文件与目录操作
 
 
@@ -205,51 +209,89 @@ cd …
 
 
 cd …/…
-...</p>
-    </div>
-</div>
+返回上两级目录
 
 
-<div class="post">
-    <a href="/2024/03/25/VSCode%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/" title="VSCode基本配置">
-        <img src="https://t.alcy.cc/fj/" class="cover" width="680" height="440">
-    </a>
-    <div class="else">
-        <p>三月 25, 2024</p>
-        <h3><a href="/2024/03/25/VSCode%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/" title="VSCode基本配置" class="posttitle">VSCode基本配置</a></h3>
-        <p>VSCode基本配置
+cd -
+返回上次所在目录
+
+
+cp file1 file2
+将file1==复制==为file2
+
+
+cp -a dir1 dir2
+复制一个目录
+
+
+cp -a /tmp/dir1 .
+复制一个目录到当前工作目录（.代表当前目录）
+
+
+ls
+查看目录中的文件
+
+
+ls -a
+显示隐藏文件
+
+
+ls -l
+显示详细信息（==ll==）
+
+
+ls -lrt
+按时间显示文件（l表示详细列表，r表示反向排序，t表示按时间排序）
+
+
+pwd
+显示工作路径
+
+
+mkdir dir1
+创建 ‘dir1’ 目录
+
+
+mkdir dir1 dir2
+同时创建两个目录
+
+
+mkdir -p /tmp/dir1/dir2
+==创建一个目录树==
+
+
+mv dir1 dir2
+移动/重命名一个目录
+
+
+rm -f file1
+删除 ‘file1’
+
+
+rm -rf dir1
+删除 ‘dir1’ 目录及其子目录内容
+
+
+
+2.查看文件内 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2024/03/25/VSCode%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/" title="VSCode基本配置"><img class="post-bg" src="http://img.netbian.com/file/2024/0715/003208zmSQA.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="VSCode基本配置"></a></div><div class="recent-post-info"><a class="article-title" href="/2024/03/25/VSCode%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/" title="VSCode基本配置">VSCode基本配置</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-03-25T10:36:36.000Z" title="发表于 2024-03-25 18:36:36">2024-03-25</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%BC%96%E8%BE%91%E5%99%A8/">编辑器</a></span></div><div class="content">VSCode基本配置
 设置快捷键：Ctrl + ,
-下载中文插件：Chinese，重启一下，如果没有，Ctrl + Shift + P，搜索：Displa...</p>
-    </div>
-</div>
-
-
-<div class="post">
-    <a href="/2024/03/20/Vue2-Book-B/" title="Vue2 Book B">
-        <img src="https://pic.netbian.com/uploads/allimg/240812/173159-1723455119ec9d.jpg" class="cover" width="680" height="440">
-    </a>
-    <div class="else">
-        <p>三月 20, 2024</p>
-        <h3><a href="/2024/03/20/Vue2-Book-B/" title="Vue2 Book B" class="posttitle">Vue2 Book B</a></h3>
-        <p>4.Vue中的Ajax
+下载中文插件：Chinese，重启一下，如果没有，Ctrl + Shift + P，搜索：Display Language
+主题推荐：Solarized Dark，快捷键：Ctrl + K Ctrl + T
+设置代码字体推荐：&quot;JetBrains Mono&quot; 或者 Consolas
+字体官网：JetBrains Mono官网  安装字体
+字体大小：设置中搜索 zoom这样就可以使用 Ctrl + 鼠标滚轮
+文件资源管理快捷键：Ctrl + B
+活动栏右击可以隐藏，如果再想打开看，可以在查看——外观——显示活动栏
+右边的小型预览也可以隐藏：在设置里面搜索mini勾选上minimap: Autohide
+重启后**默认是打开上次**编辑的文件，可以关闭到默认打开，设置中搜索restor,找到Restor Windows 把 all 改成 none，意思是打开软件的时候是一个空的文件
+配置默认打开的 设置里搜索startup 可以改成 welcomePage,也可以设置为 none 就是一个空的
+打开之前编辑过的文件 C ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2024/03/20/Vue2-Book-B/" title="Vue2 Book B"><img class="post-bg" src="https://pic.netbian.com/uploads/allimg/240812/173159-1723455119ec9d.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Vue2 Book B"></a></div><div class="recent-post-info"><a class="article-title" href="/2024/03/20/Vue2-Book-B/" title="Vue2 Book B">Vue2 Book B</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-03-20T10:38:45.000Z" title="发表于 2024-03-20 18:38:45">2024-03-20</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/web/">web</a></span></div><div class="content">4.Vue中的Ajax
 4.1. Vue脚手架配置代理
 
 本案例需要下载axios库：npm install axios
 
 vue.config.js:
-...</p>
-    </div>
-</div>
-
-
-<div class="post">
-    <a href="/2024/03/12/Vue2-Book-A/" title="Vue2 Book A">
-        <img src="https://pic.netbian.com/uploads/allimg/240816/190929-1723806569f94e.jpg" class="cover" width="680" height="440">
-    </a>
-    <div class="else">
-        <p>三月 12, 2024</p>
-        <h3><a href="/2024/03/12/Vue2-Book-A/" title="Vue2 Book A" class="posttitle">Vue2 Book A</a></h3>
-        <p>1.Vue核心
+123456789101112131415161718192021222324252627282930module.exports = &#123;    pages: &#123;        index: &#123;            entry: &#x27;src/main.js&#x27;,        &#125;,    &#125;,    lintOnSave:false,    // 开启代理服务器（方式一）    // devServer: &#123;    //     proxy:&#x27;http://localhost:5000&#x27;    // &#125;    //开启代理服务器（方式二）	devServer: &#123;        proxy: &#123;            &#x27;/jojo&#x27;: &#123;                targe ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2024/03/12/Vue2-Book-A/" title="Vue2 Book A"><img class="post-bg" src="https://pic.netbian.com/uploads/allimg/240816/190929-1723806569f94e.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Vue2 Book A"></a></div><div class="recent-post-info"><a class="article-title" href="/2024/03/12/Vue2-Book-A/" title="Vue2 Book A">Vue2 Book A</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-03-12T10:38:45.000Z" title="发表于 2024-03-12 18:38:45">2024-03-12</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/web/">web</a></span></div><div class="content">1.Vue核心
 1.1. Vue简介
 1.1.1. 官网
 
@@ -258,117 +300,120 @@ vue.config.js:
 
 1.1.2. 介绍与描述
 
-动态构建用户界面的==渐进式==JavaSc...</p>
-    </div>
-</div>
+动态构建用户界面的==渐进式==JavaScript框架
+作者：尤雨溪
+
+1.1.3. Vue的特点
+
+遵循==MVVM==模式
+编码简洁，体积小，运行效率高，适合移动/PC端开发
+它本身只关注UI，可以引入其它第三方库开发项目
+
+1.1.4.与其他JS框架的关联
+
+借鉴 Angular 的==模板==和==数据绑定==技术
+借鉴 React 的==组件化==和==虚拟DOM==技术
+
+1.1.5. Vue周边库
 
 
-<div class="post">
-    <a href="/2024/01/19/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/" title="计算机网络技术">
-        <img src="https://t.alcy.cc/fj/" class="cover" width="680" height="440">
-    </a>
-    <div class="else">
-        <p>一月 19, 2024</p>
-        <h3><a href="/2024/01/19/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/" title="计算机网络技术" class="posttitle">计算机网络技术</a></h3>
-        <p>计算机网络概括
+vue-cli：vue脚手架
+vue-resource
+axios
+vue-router：路由
+vuex：状态管理
+element-ui：基于vue的UI组件库（PC端）
+
+
+1.2. 初识Vue
+12345678910111213141516171819202122232425262728&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;    &lt;meta charset=&q ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2024/01/19/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/" title="计算机网络技术"><img class="post-bg" src="http://img.netbian.com/file/2024/0816/221229zX0E3.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="计算机网络技术"></a></div><div class="recent-post-info"><a class="article-title" href="/2024/01/19/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/" title="计算机网络技术">计算机网络技术</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-01-19T10:37:35.000Z" title="发表于 2024-01-19 18:37:35">2024-01-19</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/">计算机基础</a></span></div><div class="content">计算机网络概括
 计算机网络的概念
 计算机网络的定义
 
-计算机网络是指将地理位置不同的具有独立功能的多台计算机及其外部设备，通过通信线路连接起来，在网络操作...</p>
-    </div>
-</div>
+计算机网络是指将地理位置不同的具有独立功能的多台计算机及其外部设备，通过通信线路连接起来，在网络操作系统，网络管理软件及网络通信协议的管理和协调下，实现资源共享和信息传输的计算机
+简写：
+计算机网络是指将地理位置不同的且具有独立的多台计算机 通过通信线路连接，实现资源共享和信息传递。.
+
+计算机网络的组成
+通信子网和资源子网组成的
+
+==通信子网==：
+
+提供共享的软件资源和硬件资源
 
 
-<div class="post">
-    <a href="/2023/12/26/MySQL%E5%9F%BA%E7%A1%80/" title="MySQL基础">
-        <img src="https://t.alcy.cc/fj/" class="cover" width="680" height="440">
-    </a>
-    <div class="else">
-        <p>十二月 26, 2023</p>
-        <h3><a href="/2023/12/26/MySQL%E5%9F%BA%E7%A1%80/" title="MySQL基础" class="posttitle">MySQL基础</a></h3>
-        <p>2. SQL
-全称 Structured Query Language，结构化查询语言。操作关系型数据库的编程语言，定义了 一套操作关系型数据库统一==标...</p>
-    </div>
-</div>
+==资源子网==：
+
+提供信息交换的网络节点和通信线路
 
 
-    </div>
-    
-    <div id="pager"><a href="/page/2/" class="more">加载更多</a></div>
-    
-</div>
-<div id="preview"></div>
+比如说：两台电脑需要通信，中间的线路就叫做通信子网，通信子网并不是指那一条线，它是一个通俗的一个大的抽象概念，就是所有用来通信的，不管是光纤还是双绞线，它都被称为通信子网，所有服务于这个软件和硬件资源的，就是只要认为是资源的（比如说，一个文件1.mp3），然后要传输过去
+总结：
+
+通信子网是提供网络节点和线路
+资源子网是提供你需要的一些数据
 
 
 
-</body>
+计算机网络的类型
+（1）按照拓扑结构分类
+
+星型结构
+
+中间一个星，然后散开，（比如”米“字）
 
 
-<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
-<script src="/js/plugin.js"></script>
-<script src="/js/typed.js"></script>
-<script src="/js/diaspora.js"></script>
+树形结构
+
+树形是一个跟，相当与电脑的目录一 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2023/12/26/MySQL%E5%9F%BA%E7%A1%80/" title="MySQL基础"><img class="post-bg" src="/assets/image/mysql.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="MySQL基础"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/12/26/MySQL%E5%9F%BA%E7%A1%80/" title="MySQL基础">MySQL基础</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-12-26T10:34:32.000Z" title="发表于 2023-12-26 18:34:32">2023-12-26</time></span></div><div class="content">2. SQL
+全称 Structured Query Language，结构化查询语言。操作关系型数据库的编程语言，定义了 一套操作关系型数据库统一==标准== 。
+2.1 SQL 通用语法
+在学习具体的SQL语句之前，先来了解一下SQL语言的同于语法。
+
+1). SQL语句可以单行或多行书写，以分号结尾。
+2). SQL语句可以使用空格/缩进来增强语句的可读性。
+3). MySQL数据库的SQL语句不区分大小写，关键字建议使用大写。
+4). 注释：
+
+单行注释：-- 注释内容 或 # 注释内容
+多行注释：/* 注释内容 */
 
 
-<link rel="stylesheet" href="/photoswipe/photoswipe.css">
-<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+2.2 SQL分类
+SQL 语句，根据其功能，主要分为四类：DDL、DML、DQL、DCL。
 
 
-<script src="/photoswipe/photoswipe.min.js"></script>
-<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+分类
+全称
+说明
 
 
-<!-- Root element of PhotoSwipe. Must have class pswp. -->
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-    <!-- Background of PhotoSwipe. 
-         It's a separate element as animating opacity is faster than rgba(). -->
-    <div class="pswp__bg"></div>
-    <!-- Slides wrapper with overflow:hidden. -->
-    <div class="pswp__scroll-wrap">
-        <!-- Container that holds slides. 
-            PhotoSwipe keeps only 3 of them in the DOM to save memory.
-            Don't modify these 3 pswp__item elements, data is added later on. -->
-        <div class="pswp__container">
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-        </div>
-        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
-        <div class="pswp__ui pswp__ui--hidden">
-            <div class="pswp__top-bar">
-                <!--  Controls are self-explanatory. Order can be changed. -->
-                <div class="pswp__counter"></div>
-                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-                <button class="pswp__button pswp__button--share" title="Share"></button>
-                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
-                <!-- element will get class pswp__preloader--active when preloader is running -->
-                <div class="pswp__preloader">
-                    <div class="pswp__preloader__icn">
-                      <div class="pswp__preloader__cut">
-                        <div class="pswp__preloader__donut"></div>
-                      </div>
-                    </div>
-                </div>
+
+
+DDL
+Data Definition Language
+数据定义语言，用来定义数据库对象（数据库，表，字段）
+
+
+DML
+Data Manipulation Language
+数据操作语言，用来对数据库表中的数据进行增删改
+
+
+DQL
+Data Query Language
+数据查询语言，用来查询数据库中表的记录
+
+
+DCL
+Da ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/#content-inner">2</a><a class="extend next" rel="next" href="/page/2/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Taichi</div><div class="author-info__description">泰极的博客</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">16</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">17</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/TaichiYLY"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/TaichiYLY" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:2049175570@qq.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">这是我的博客</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/08/20/demo/" title="demo"><img src="https://pic.netbian.com/uploads/allimg/240221/085332-1708476812b03f.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="demo"/></a><div class="content"><a class="title" href="/2024/08/20/demo/" title="demo">demo</a><time datetime="2024-08-20T10:23:24.000Z" title="发表于 2024-08-20 18:23:24">2024-08-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/08/18/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2%E4%B9%8B%E6%97%85/" title="启程：我的博客之旅"><img src="https://pic.netbian.com/uploads/allimg/240221/085332-1708476812b03f.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="启程：我的博客之旅"/></a><div class="content"><a class="title" href="/2024/08/18/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2%E4%B9%8B%E6%97%85/" title="启程：我的博客之旅">启程：我的博客之旅</a><time datetime="2024-08-17T16:00:00.000Z" title="发表于 2024-08-18 00:00:00">2024-08-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/06/14/py%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/" title="py网络编程"><img src="https://wallpaperbat.com/img/257015-python-programming-wallpaper.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="py网络编程"/></a><div class="content"><a class="title" href="/2024/06/14/py%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/" title="py网络编程">py网络编程</a><time datetime="2024-06-14T06:19:43.000Z" title="发表于 2024-06-14 14:19:43">2024-06-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/05/20/Python%E5%B8%B8%E7%94%A8%E6%A8%A1%E5%9D%97%E5%A4%A7%E5%85%A8/" title="Python常用模块大全"><img src="https://wallpaperbat.com/img/283081-python-run-the-trap-8k-ultra-hd-wallpaper-background-image.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Python常用模块大全"/></a><div class="content"><a class="title" href="/2024/05/20/Python%E5%B8%B8%E7%94%A8%E6%A8%A1%E5%9D%97%E5%A4%A7%E5%85%A8/" title="Python常用模块大全">Python常用模块大全</a><time datetime="2024-05-20T06:16:31.000Z" title="发表于 2024-05-20 14:16:31">2024-05-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/05/10/CentOS7%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/" title="CentOS7常用指令"><img src="http://img.netbian.com/file/2024/0709/1921550UIjR.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="CentOS7常用指令"/></a><div class="content"><a class="title" href="/2024/05/10/CentOS7%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/" title="CentOS7常用指令">CentOS7常用指令</a><time datetime="2024-05-10T10:28:10.000Z" title="发表于 2024-05-10 18:28:10">2024-05-10</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
             </div>
-            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                <div class="pswp__share-tooltip"></div> 
-            </div>
-            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-            </button>
-            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-            </button>
-            <div class="pswp__caption">
-                <div class="pswp__caption__center"></div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-
-
-
-</html>
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Hello-World/"><span class="card-category-list-name">Hello World</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/web/"><span class="card-category-list-name">web</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/"><span class="card-category-list-name">web前端</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%90%8E%E7%AB%AF/"><span class="card-category-list-name">后端</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%BC%96%E7%A8%8B/"><span class="card-category-list-name">编程</span><span class="card-category-list-count">3</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%BC%96%E8%BE%91%E5%99%A8/"><span class="card-category-list-name">编辑器</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"><span class="card-category-list-name">计算机基础</span><span class="card-category-list-count">1</span></a></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/Js/" style="font-size: 1.1em; color: #999">Js</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" style="font-size: 1.1em; color: #999">计算机网络</a> <a href="/tags/NodeJs/" style="font-size: 1.1em; color: #999">NodeJs</a> <a href="/tags/PyCharm/" style="font-size: 1.1em; color: #999">PyCharm</a> <a href="/tags/es6/" style="font-size: 1.1em; color: #999">es6</a> <a href="/tags/Linux%E7%B3%BB%E7%BB%9F/" style="font-size: 1.1em; color: #999">Linux系统</a> <a href="/tags/%E7%BD%91%E7%BB%9C/" style="font-size: 1.1em; color: #999">网络</a> <a href="/tags/C%E8%AF%AD%E8%A8%80/" style="font-size: 1.1em; color: #999">C语言</a> <a href="/tags/%E6%8C%87%E9%92%88/" style="font-size: 1.1em; color: #999">指针</a> <a href="/tags/HTML/" style="font-size: 1.5em; color: #99a9bf">HTML</a> <a href="/tags/VSCode/" style="font-size: 1.1em; color: #999">VSCode</a> <a href="/tags/python/" style="font-size: 1.5em; color: #99a9bf">python</a> <a href="/tags/Python/" style="font-size: 1.5em; color: #99a9bf">Python</a> <a href="/tags/js/" style="font-size: 1.1em; color: #999">js</a> <a href="/tags/vue/" style="font-size: 1.5em; color: #99a9bf">vue</a> <a href="/tags/CSS/" style="font-size: 1.5em; color: #99a9bf">CSS</a> <a href="/tags/%E7%88%AC%E8%99%AB/" style="font-size: 1.1em; color: #999">爬虫</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span><a class="card-more-btn" href="/archives/" title="查看更多">
+    <i class="fas fa-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/08/"><span class="card-archive-list-date">八月 2024</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/06/"><span class="card-archive-list-date">六月 2024</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/05/"><span class="card-archive-list-date">五月 2024</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/03/"><span class="card-archive-list-date">三月 2024</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/01/"><span class="card-archive-list-date">一月 2024</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/12/"><span class="card-archive-list-date">十二月 2023</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/11/"><span class="card-archive-list-date">十一月 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/10/"><span class="card-archive-list-date">十月 2023</span><span class="card-archive-list-count">1</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">16</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2024-08-20T11:04:31.546Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By Taichi</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

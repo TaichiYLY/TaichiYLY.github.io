@@ -1,0 +1,752 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>CentOS7常用指令 | 泰 极</title><meta name="author" content="Taichi"><meta name="copyright" content="Taichi"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="一、常用命令1.文件与目录操作   命令 解析    cd &#x2F;home 进入 ‘&#x2F;home’ 目录   cd .. 返回上一级目录   cd ..&#x2F;.. 返回上两级目录   cd - 返回上次所在目录   cp file1 file2 将file1&#x3D;&#x3D;复制&#x3D;&#x3D;为file2   cp -a dir1 dir2 复制一个目录   c">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CentOS7常用指令">
+<meta property="og:url" content="https://taichiyly.github.io/2024/05/10/CentOS7%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/index.html">
+<meta property="og:site_name" content="泰 极">
+<meta property="og:description" content="一、常用命令1.文件与目录操作   命令 解析    cd &#x2F;home 进入 ‘&#x2F;home’ 目录   cd .. 返回上一级目录   cd ..&#x2F;.. 返回上两级目录   cd - 返回上次所在目录   cp file1 file2 将file1&#x3D;&#x3D;复制&#x3D;&#x3D;为file2   cp -a dir1 dir2 复制一个目录   c">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://img.netbian.com/file/2024/0709/1921550UIjR.jpg">
+<meta property="article:published_time" content="2024-05-10T10:28:10.000Z">
+<meta property="article:modified_time" content="2024-08-20T10:10:20.472Z">
+<meta property="article:author" content="Taichi">
+<meta property="article:tag" content="Linux系统">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://img.netbian.com/file/2024/0709/1921550UIjR.jpg"><link rel="shortcut icon" href="/assets/image/favicon.png"><link rel="canonical" href="https://taichiyly.github.io/2024/05/10/CentOS7%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":500,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'medium_zoom',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'CentOS7常用指令',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  isShuoshuo: false
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/assets/image/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">32</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">27</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa fa-heartbeat"></i><span> 列表</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/photo/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(http://img.netbian.com/file/2024/0709/1921550UIjR.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><img class="site-icon" src="/assets/image/logo.png" alt="Logo"><span class="site-name">泰 极</span></a><a class="nav-page-title" href="/"><span class="site-name">CentOS7常用指令</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa fa-heartbeat"></i><span> 列表</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/photo/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">CentOS7常用指令</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-05-10T10:28:10.000Z" title="发表于 2024-05-10 18:28:10">2024-05-10</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-08-20T10:10:20.472Z" title="更新于 2024-08-20 18:10:20">2024-08-20</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%90%8E%E7%AB%AF/">后端</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h1 id="一、常用命令"><a href="#一、常用命令" class="headerlink" title="一、常用命令"></a>一、常用命令</h1><h3 id="1-文件与目录操作"><a href="#1-文件与目录操作" class="headerlink" title="1.文件与目录操作"></a>1.文件与目录操作</h3><table>
+<thead>
+<tr>
+<th align="center">命令</th>
+<th align="left">解析</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">cd &#x2F;home</td>
+<td align="left">进入 ‘&#x2F;home’ 目录</td>
+</tr>
+<tr>
+<td align="center">cd ..</td>
+<td align="left">返回上一级目录</td>
+</tr>
+<tr>
+<td align="center">cd ..&#x2F;..</td>
+<td align="left">返回上两级目录</td>
+</tr>
+<tr>
+<td align="center">cd -</td>
+<td align="left">返回上次所在目录</td>
+</tr>
+<tr>
+<td align="center">cp file1 file2</td>
+<td align="left">将file1&#x3D;&#x3D;复制&#x3D;&#x3D;为file2</td>
+</tr>
+<tr>
+<td align="center">cp -a dir1 dir2</td>
+<td align="left">复制一个目录</td>
+</tr>
+<tr>
+<td align="center">cp -a &#x2F;tmp&#x2F;dir1 .</td>
+<td align="left">复制一个目录到当前工作目录（.代表当前目录）</td>
+</tr>
+<tr>
+<td align="center">ls</td>
+<td align="left">查看目录中的文件</td>
+</tr>
+<tr>
+<td align="center">ls -a</td>
+<td align="left">显示隐藏文件</td>
+</tr>
+<tr>
+<td align="center">ls -l</td>
+<td align="left">显示详细信息（&#x3D;&#x3D;ll&#x3D;&#x3D;）</td>
+</tr>
+<tr>
+<td align="center">ls -lrt</td>
+<td align="left">按时间显示文件（l表示详细列表，r表示反向排序，t表示按时间排序）</td>
+</tr>
+<tr>
+<td align="center">pwd</td>
+<td align="left">显示工作路径</td>
+</tr>
+<tr>
+<td align="center">mkdir dir1</td>
+<td align="left">创建 ‘dir1’ 目录</td>
+</tr>
+<tr>
+<td align="center">mkdir dir1 dir2</td>
+<td align="left">同时创建两个目录</td>
+</tr>
+<tr>
+<td align="center">mkdir -p &#x2F;tmp&#x2F;dir1&#x2F;dir2</td>
+<td align="left">&#x3D;&#x3D;创建一个目录树&#x3D;&#x3D;</td>
+</tr>
+<tr>
+<td align="center">mv dir1 dir2</td>
+<td align="left">移动&#x2F;重命名一个目录</td>
+</tr>
+<tr>
+<td align="center">rm -f file1</td>
+<td align="left">删除 ‘file1’</td>
+</tr>
+<tr>
+<td align="center">rm -rf dir1</td>
+<td align="left">删除 ‘dir1’ 目录及其子目录内容</td>
+</tr>
+</tbody></table>
+<h3 id="2-查看文件内容"><a href="#2-查看文件内容" class="headerlink" title="2.查看文件内容"></a>2.查看文件内容</h3><table>
+<thead>
+<tr>
+<th align="center">命令</th>
+<th>解析</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">cat file1</td>
+<td>从第一个字节开始正向查看文件的内容</td>
+</tr>
+<tr>
+<td align="center">head -2 file1</td>
+<td>查看一个文件的前两行</td>
+</tr>
+<tr>
+<td align="center">more file1</td>
+<td>查看一个长文件的内容</td>
+</tr>
+<tr>
+<td align="center">tac file1</td>
+<td>从最后一行开始反向查看一个文件的内容</td>
+</tr>
+<tr>
+<td align="center">tail -3 file1</td>
+<td>查看一个文件的最后三行</td>
+</tr>
+<tr>
+<td align="center">vi file</td>
+<td>打开并浏览文件</td>
+</tr>
+</tbody></table>
+<h3 id="3-文本内容处理"><a href="#3-文本内容处理" class="headerlink" title="3.文本内容处理"></a>3.文本内容处理</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>解析</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>grep str &#x2F;tmp&#x2F;test</td>
+<td>在文件 ‘&#x2F;tmp&#x2F;test’ 中查找 “str”</td>
+</tr>
+<tr>
+<td>grep ^str &#x2F;tmp&#x2F;test</td>
+<td>在文件 ‘&#x2F;tmp&#x2F;test’ 中查找以 “str” 开始的行</td>
+</tr>
+<tr>
+<td>grep [0-9] &#x2F;tmp&#x2F;test</td>
+<td>查找 ‘&#x2F;tmp&#x2F;test’ 文件中所有包含数字的行</td>
+</tr>
+<tr>
+<td>grep str -r &#x2F;tmp&#x2F;*</td>
+<td>在目录 ‘&#x2F;tmp’ 及其子目录中查找 “str”</td>
+</tr>
+<tr>
+<td>diff file1 file2</td>
+<td>找出两个文件的不同处</td>
+</tr>
+<tr>
+<td>sdiff file1 file2</td>
+<td>以对比的方式显示两个文件的不同</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>vi file</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>操作</th>
+<th>解析</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>i</td>
+<td>进入编辑文本模式</td>
+</tr>
+<tr>
+<td>Esc</td>
+<td>退出编辑文本模式</td>
+</tr>
+<tr>
+<td>:w</td>
+<td>保存当前修改</td>
+</tr>
+<tr>
+<td>:q</td>
+<td>不保存退出vi</td>
+</tr>
+<tr>
+<td>:wq</td>
+<td>保存当前修改并退出vi</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>vim file</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>操作</th>
+<th>解析</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>p</td>
+<td>粘贴</td>
+</tr>
+<tr>
+<td>y</td>
+<td>复制</td>
+</tr>
+<tr>
+<td>shift+g</td>
+<td>跳转到最后一行</td>
+</tr>
+<tr>
+<td>命令模式下 u</td>
+<td>撤回</td>
+</tr>
+<tr>
+<td>&#x2F;</td>
+<td>查找模式</td>
+</tr>
+<tr>
+<td>查找模式中</td>
+<td>n下一个,N上一个</td>
+</tr>
+</tbody></table>
+<h3 id="4-查询操作"><a href="#4-查询操作" class="headerlink" title="4.查询操作"></a>4.查询操作</h3><table>
+<thead>
+<tr>
+<th align="center">命令</th>
+<th>解析</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">find &#x2F; -name file1</td>
+<td>从 ‘&#x2F;’ 开始进入根文件系统查找文件和目录</td>
+</tr>
+<tr>
+<td align="center">find &#x2F; -user user1</td>
+<td>查找属于用户 ‘user1’ 的文件和目录</td>
+</tr>
+<tr>
+<td align="center">find &#x2F;home&#x2F;user1 -name *.bin</td>
+<td>在目录 ‘&#x2F; home&#x2F;user1’ 中查找以 ‘.bin’ 结尾的文件</td>
+</tr>
+<tr>
+<td align="center">find &#x2F;usr&#x2F;bin -type f -atime +100</td>
+<td>查找在过去100天内未被使用过的执行文件</td>
+</tr>
+<tr>
+<td align="center">find &#x2F;usr&#x2F;bin -type f -mtime -10</td>
+<td>查找在10天内被创建或者修改过的文件</td>
+</tr>
+<tr>
+<td align="center">locate *.ps</td>
+<td>寻找以 ‘.ps’ 结尾的文件，先运行 ‘updatedb’ 命令</td>
+</tr>
+<tr>
+<td align="center">find -name ‘*.[ch]’ | xargs grep -E ‘expr’</td>
+<td>在当前目录及其子目录所有.c和.h文件中查找 ‘expr’</td>
+</tr>
+<tr>
+<td align="center">find -type f -print0 | xargs -r0 grep -F ‘expr’</td>
+<td>在当前目录及其子目录的常规文件中查找 ‘expr’</td>
+</tr>
+<tr>
+<td align="center">find -maxdepth 1 -type f | xargs grep -F ‘expr’</td>
+<td>在当前目录中查找 ‘expr’</td>
+</tr>
+</tbody></table>
+<h3 id="5-压缩、解压"><a href="#5-压缩、解压" class="headerlink" title="5.压缩、解压"></a>5.压缩、解压</h3><table>
+<thead>
+<tr>
+<th align="center">命令</th>
+<th>解析</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">bzip2 file1</td>
+<td>压缩 file1</td>
+</tr>
+<tr>
+<td align="center">bunzip2 file1.bz2</td>
+<td>解压 file1.bz2</td>
+</tr>
+<tr>
+<td align="center">gzip file1</td>
+<td>压缩 file1</td>
+</tr>
+<tr>
+<td align="center">gzip -9 file1</td>
+<td>最大程度压缩 file1</td>
+</tr>
+<tr>
+<td align="center">gunzip file1.gz</td>
+<td>解压 file1.gz</td>
+</tr>
+<tr>
+<td align="center">tar -cvf archive.tar file1</td>
+<td>把file1打包成 archive.tar（-c: 建立压缩档案；-v: 显示所有过程；-f: 使用档案名字，是必须的，是最后一个参数）</td>
+</tr>
+<tr>
+<td align="center">tar -cvf archive.tar file1 dir1</td>
+<td>把 file1，dir1 打包成 archive.tar</td>
+</tr>
+<tr>
+<td align="center">tar -tf archive.tar</td>
+<td>显示一个包中的内容</td>
+</tr>
+<tr>
+<td align="center">tar -xvf archive.tar</td>
+<td>释放一个包</td>
+</tr>
+<tr>
+<td align="center">tar -xvf archive.tar -C &#x2F;tmp</td>
+<td>把压缩包释放到 &#x2F;tmp目录下</td>
+</tr>
+<tr>
+<td align="center">zip file1.zip file1</td>
+<td>创建一个zip格式的压缩包</td>
+</tr>
+<tr>
+<td align="center">zip -r file1.zip file1 dir1</td>
+<td>把文件和目录压缩成一个zip格式的压缩包</td>
+</tr>
+<tr>
+<td align="center">unzip file1.zip</td>
+<td>解压一个zip格式的压缩包到当前目录</td>
+</tr>
+<tr>
+<td align="center">unzip test.zip -d &#x2F;tmp&#x2F;</td>
+<td>解压一个zip格式的压缩包到 &#x2F;tmp 目录</td>
+</tr>
+</tbody></table>
+<h3 id="6-yum安装器"><a href="#6-yum安装器" class="headerlink" title="6.yum安装器"></a>6.yum安装器</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>解析</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>yum -y install [package]</td>
+<td>下载并安装一个rpm包</td>
+</tr>
+<tr>
+<td>yum localinstall [package.rpm]</td>
+<td>安装一个rpm包，使用你自己的软件仓库解决所有依赖关系</td>
+</tr>
+<tr>
+<td>yum -y update</td>
+<td>更新当前系统中安装的所有rpm包</td>
+</tr>
+<tr>
+<td>yum update [package]</td>
+<td>更新一个rpm包</td>
+</tr>
+<tr>
+<td>yum remove [package]</td>
+<td>删除一个rpm包</td>
+</tr>
+<tr>
+<td>yum list</td>
+<td>列出当前系统中安装的所有包</td>
+</tr>
+<tr>
+<td>yum search [package]</td>
+<td>在rpm仓库中搜寻软件包</td>
+</tr>
+<tr>
+<td>yum clean [package]</td>
+<td>清除缓存目录（&#x2F;var&#x2F;cache&#x2F;yum）下的软件包</td>
+</tr>
+<tr>
+<td>yum clean headers</td>
+<td>删除所有头文件</td>
+</tr>
+<tr>
+<td>yum clean all</td>
+<td>删除所有缓存的包和头文件</td>
+</tr>
+</tbody></table>
+<h3 id="7-网络相关"><a href="#7-网络相关" class="headerlink" title="7.网络相关"></a>7.网络相关</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>解析</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ifconfig eth0</td>
+<td>显示一个以太网卡的配置</td>
+</tr>
+<tr>
+<td>ifconfig eth0 192.168.1.1 netmask 255.255.255.0</td>
+<td>配置网卡的IP地址</td>
+</tr>
+<tr>
+<td>ifdown eth0</td>
+<td>禁用 ‘eth0’ 网络设备</td>
+</tr>
+<tr>
+<td>ifup eth0</td>
+<td>启用 ‘eth0’ 网络设备</td>
+</tr>
+<tr>
+<td>iwconfig eth1</td>
+<td>显示一个无线网卡的配置</td>
+</tr>
+<tr>
+<td>iwlist scan</td>
+<td>显示无线网络</td>
+</tr>
+<tr>
+<td>ip addr show</td>
+<td>显示网卡的IP地址</td>
+</tr>
+</tbody></table>
+<h3 id="8-系统相关"><a href="#8-系统相关" class="headerlink" title="8.系统相关"></a>8.系统相关</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>解析</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>su -</td>
+<td>切换到root权限（与su有区别）</td>
+</tr>
+<tr>
+<td>shutdown -h now</td>
+<td>关机</td>
+</tr>
+<tr>
+<td>shutdown -r now</td>
+<td>重启</td>
+</tr>
+<tr>
+<td>top</td>
+<td>罗列使用CPU资源最多的linux任务 （输入q退出）</td>
+</tr>
+<tr>
+<td>pstree</td>
+<td>以树状图显示程序</td>
+</tr>
+<tr>
+<td>man ping</td>
+<td>查看参考手册（例如ping 命令）</td>
+</tr>
+<tr>
+<td>passwd</td>
+<td>修改密码</td>
+</tr>
+<tr>
+<td>df -h</td>
+<td>显示磁盘的使用情况</td>
+</tr>
+<tr>
+<td>cal -3</td>
+<td>显示前一个月，当前月以及下一个月的月历</td>
+</tr>
+<tr>
+<td>cal 10 1988</td>
+<td>显示指定月，年的月历</td>
+</tr>
+<tr>
+<td>date –date ‘1970-01-01 UTC 1427888888 seconds’</td>
+<td>把一相对于1970-01-01 00:00的秒数转换成时间</td>
+</tr>
+</tbody></table>
+<h2 id="二、XSheel-5相关操作"><a href="#二、XSheel-5相关操作" class="headerlink" title="二、XSheel 5相关操作"></a>二、XSheel 5相关操作</h2><h3 id="1-窗体快捷键"><a href="#1-窗体快捷键" class="headerlink" title="1.窗体快捷键"></a>1.窗体快捷键</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>解析</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Ctrl + u</td>
+<td>删除光标之前到行首的字符</td>
+</tr>
+<tr>
+<td>Ctrl + k</td>
+<td>删除光标之前到行尾的字符</td>
+</tr>
+<tr>
+<td>Ctrl + c</td>
+<td>取消当前行输入的命令，相当于Ctrl + Break</td>
+</tr>
+<tr>
+<td>Ctrl + a</td>
+<td>光标移动到行首（ahead of line），相当于通常的Home键</td>
+</tr>
+<tr>
+<td>Ctrl + e</td>
+<td>光标移动到行尾（end of line）</td>
+</tr>
+<tr>
+<td>Ctrl + f</td>
+<td>光标向前（forward）移动一个字符位置</td>
+</tr>
+<tr>
+<td>Ctrl + b</td>
+<td>光标往回（backward）移动一个字符位置</td>
+</tr>
+<tr>
+<td>Ctrl + l</td>
+<td>清屏，相当于执行clear命令</td>
+</tr>
+<tr>
+<td>Ctrl + r</td>
+<td>显示:号提示，根据用户输入查找相关历史命令（reverse-i-search）</td>
+</tr>
+<tr>
+<td>Ctrl + w</td>
+<td>删除从光标位置前到当前所处单词（word）的开头</td>
+</tr>
+<tr>
+<td>Ctrl + t</td>
+<td>交换光标位置前的两个字符</td>
+</tr>
+<tr>
+<td>Ctrl + y</td>
+<td>粘贴最后一次被删除的单词</td>
+</tr>
+<tr>
+<td>Ctrl + Alt + d</td>
+<td>显示桌面</td>
+</tr>
+<tr>
+<td>Alt + b</td>
+<td>光标往回（backward）移动到前一个单词</td>
+</tr>
+<tr>
+<td>Alt + d</td>
+<td>删除从光标位置到当前所处单词的末尾</td>
+</tr>
+<tr>
+<td>Alt + F2</td>
+<td>运行</td>
+</tr>
+<tr>
+<td>Alt + F4</td>
+<td>关闭当前窗口</td>
+</tr>
+<tr>
+<td>Alt + F9</td>
+<td>最小化当前窗口</td>
+</tr>
+<tr>
+<td>Alt + F10</td>
+<td>最大化当前窗口</td>
+</tr>
+<tr>
+<td>Alt + Tab</td>
+<td>切换窗口</td>
+</tr>
+<tr>
+<td>Alt + 左键</td>
+<td>移动窗口（或在最下面的任务栏滚动鼠标滑轮）</td>
+</tr>
+</tbody></table>
+<p>命令行链接</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ssh root@192.168.80.134 -p 000000</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-操作小技巧"><a href="#2-操作小技巧" class="headerlink" title="2.操作小技巧"></a>2.操作小技巧</h3><blockquote>
+<ul>
+<li>鼠标中间键：粘贴突出显示的文本。(使用鼠标左键来选择文本。把光标指向想粘贴文本的地方。点击鼠标中间键来粘贴。)</li>
+<li>Tab：命令行自动补全。使用 shell 提示时可使用这一方式。键入命令或文件名的前几个字符，然后按 [Tab] 键，它会自动补全命令或显示匹配键入字符的所有命令。</li>
+<li>在滚动条的空白处点击鼠标中键：屏幕即滚动到那个地方。</li>
+<li>在桌面或文件管理器中直接按 &#x2F; 就可以输入位置，打开文件管理器。</li>
+<li>在 vi 或 Firefox 中直接按 &#x2F; 即可进入快速搜索状态。</li>
+<li>网站链接和图片可直接拖放到桌面或者目录，可以马上下载。</li>
+<li>直接将文件管理器中的文件拖到终端中就可以在终端中得到完整的路径名。</li>
+</ul>
+</blockquote>
+<h2 id="三、总结"><a href="#三、总结" class="headerlink" title="三、总结"></a>三、总结</h2><p> 其实要学好**<u>Linux</u>**的操作并不是很困难的事情，在平常的使用过程中，碰到问题，学会去网上寻找答案不失为一个非常好的手段！谢谢大家！</p>
+<h3 id="init一共分为7个级别，这7个级别的所代表的含义如下"><a href="#init一共分为7个级别，这7个级别的所代表的含义如下" class="headerlink" title="init一共分为7个级别，这7个级别的所代表的含义如下"></a>init一共分为7个级别，这7个级别的所代表的含义如下</h3><p>0：停机或者关机（千万不能将initdefault设置为0）</p>
+<p>1：单用户模式，只root用户进行维护</p>
+<p>2：多用户模式，不能使用NFS(Net File System)</p>
+<p>3：完全多用户模式（标准的运行级别）</p>
+<p>4：安全模式</p>
+<p>5：图形化（即图形界面）</p>
+<p>6：重启（千万不要把initdefault设置为6）</p>
+<h2 id="添加环境变量"><a href="#添加环境变量" class="headerlink" title="添加环境变量"></a>添加环境变量</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">vim /etc/profile</span><br><span class="line"> # 文件末尾增加</span><br><span class="line"><span class="keyword">export</span> <span class="variable constant_">JAVA_HOME</span>=<span class="regexp">/opt/</span>server/jdk1<span class="number">.8</span><span class="number">.0_131</span></span><br><span class="line"><span class="keyword">export</span> <span class="variable constant_">PATH</span>=$&#123;<span class="variable constant_">JAVA_HOME</span>&#125;/<span class="attr">bin</span>:$PATH</span><br></pre></td></tr></table></figure>
+
+<p>执行source命令，使配置立即生效 <code>source /etc/profile</code></p>
+<h3 id="防火墙"><a href="#防火墙" class="headerlink" title="防火墙"></a>防火墙</h3><figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 查看防火墙状态</span></span><br><span class="line"><span class="attribute">sudo</span> firewall-cmd --state</span><br><span class="line"><span class="comment"># 关闭防火墙:</span></span><br><span class="line">sudo systemctl stop firewalld</span><br><span class="line"><span class="comment"># 禁止开机启动</span></span><br><span class="line">sudo systemctl disable firewalld</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="配置静态"><a href="#配置静态" class="headerlink" title="配置静态"></a>配置静态</h3><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hostnamectl set-hostname node1.centos.com</span><br><span class="line"></span><br><span class="line">vi /etc/sysconfig/network-scripts/ifcfg-ens33</span><br><span class="line"></span><br><span class="line">BOOTPROTO=<span class="string">&quot;static&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 下面添加内容</span></span><br><span class="line">IPADDR=192.168.100.128</span><br><span class="line">NETMASK=255.255.255.0</span><br><span class="line">GATEWAY=192.168.100.2</span><br><span class="line">DNS1=192.168.100.2</span><br><span class="line"></span><br><span class="line">service network restart</span><br><span class="line"></span><br><span class="line"><span class="comment"># 检查 </span></span><br><span class="line">ip addr</span><br><span class="line">hostname</span><br></pre></td></tr></table></figure>
+
+<h2 id="远程发送"><a href="#远程发送" class="headerlink" title="远程发送"></a>远程发送</h2><figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 然后把文件拷贝到子节点中</span></span><br><span class="line">scp hadoop-env.sh node1:/opt/hadoop-<span class="number">3.1</span><span class="number">.0</span>/etc/hadoop/</span><br><span class="line">scp hadoop-env.sh node2:/opt/hadoop-<span class="number">3.1</span><span class="number">.0</span>/etc/hadoop/</span><br><span class="line">scp hadoop-env.sh node3:/opt/hadoop-<span class="number">3.1</span><span class="number">.0</span>/etc/hadoop/</span><br><span class="line"></span><br><span class="line"><span class="comment"># 复制文件夹 -r</span></span><br><span class="line">spc -r</span><br></pre></td></tr></table></figure>
+
+<h3 id="远程执行命令"><a href="#远程执行命令" class="headerlink" title="远程执行命令"></a>远程执行命令</h3><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 在master中控制node1执行命令</span></span><br><span class="line">ssh node1 <span class="string">&quot;mkdir -p /data/hadoop/tmp &amp; mkdir -p /data/hadoop/datanode&quot;</span></span><br><span class="line">ssh node2 <span class="string">&quot;mkdir -p /data/hadoop/tmp &amp; mkdir -p /data/hadoop/datanode&quot;</span></span><br><span class="line">ssh node3 <span class="string">&quot;mkdir -p /data/hadoop/tmp &amp; mkdir -p /data/hadoop/datanode&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="查看指定端口是否启动"><a href="#查看指定端口是否启动" class="headerlink" title="查看指定端口是否启动"></a>查看指定端口是否启动</h3><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 查看2181端口</span></span><br><span class="line">netstat -tnpl | grep 2181</span><br></pre></td></tr></table></figure>
+
+<h3 id="查看版本（验证是否安装成功）"><a href="#查看版本（验证是否安装成功）" class="headerlink" title="查看版本（验证是否安装成功）"></a>查看版本（验证是否安装成功）</h3><blockquote>
+<ul>
+<li><p>flume查看版本</p>
+<p><code>flume-ng version</code></p>
+</li>
+<li><p>java查看版本</p>
+<p><code>javac</code> 和 <code>java -version</code></p>
+</li>
+</ul>
+</blockquote>
+<h2 id="如何启动zookeeper集群"><a href="#如何启动zookeeper集群" class="headerlink" title="如何启动zookeeper集群"></a>如何启动zookeeper集群</h2><ol>
+<li><p>【 第一步 】三台服务器上都执行如下指令，启动ZooKeeper集群</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /usr/local/zookeeper/bin</span><br><span class="line">./zkServer.sh start</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>【 第二步 】三台服务器上都执行如下指令，查看ZooKeeper的2181端口是否启动：netstat -tnpl|grep 2181<br>出现如下图所示后，说明ZooKeeper端口号启动成功,如下图所示。 </p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 查看2181端口 2181是zookeeper的端口</span></span><br><span class="line">netstat -tnpl | grep 2181</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>【 第三步 】三台服务器上都执行如下指令，查看本机ZooKeeper的状态：会有两台服务器的ZooKeeper状态显示为follower（跟随者状态），<br>有一台服务器ZooKeeper状态显示为leader（领导者状态），如下面两图所示：</p>
+</li>
+</ol>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://taichiyly.github.io">Taichi</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://taichiyly.github.io/2024/05/10/CentOS7%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/">https://taichiyly.github.io/2024/05/10/CentOS7%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://taichiyly.github.io" target="_blank">泰 极</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Linux%E7%B3%BB%E7%BB%9F/">Linux系统</a></div><div class="post-share"><div class="social-share" data-image="http://img.netbian.com/file/2024/0709/1921550UIjR.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>赞助</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/assets/image/reward-wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/assets/image/reward-wechat.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/assets/image/reward-alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/assets/image/reward-alipay.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2024/05/20/Python%E5%B8%B8%E7%94%A8%E6%A8%A1%E5%9D%97%E5%A4%A7%E5%85%A8/" title="Python常用模块大全"><img class="cover" src="https://wallpaperbat.com/img/283081-python-run-the-trap-8k-ultra-hd-wallpaper-background-image.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">Python常用模块大全</div></div><div class="info-2"><div class="info-item-1">Python常用模块大全（总结）  Python拥有丰富的标准库和第三方库，这些模块极大地扩展了Python的功能，使其在各种应用场景中都能发挥重要作用。下面我将列出一些常用的Python模块及其简单代码案例，帮助你更好地理解和使用它们。  os模块：os.remove() 删除文件 os.unlink() 删除文件 os.rename() 重命名文件 os.listdir() 列出指定目录下所有文件 os.chdir() 改变当前工作目录os.getcwd() 获取当前文件路径os.mkdir() 新建目录os.rmdir() 删除空目录(删除非空目录, 使用shutil.rmtree())os.makedirs() 创建多级目录os.removedirs() 删除多级目录os.stat(file) 获取文件属性os.chmod(file) 修改文件权限os.utime(file) 修改文件时间戳os.name(file) 获取操作系统标识os.system() 执行操作系统命令os.execvp() 启动一个新进程os.fork()...</div></div></div></a><a class="pagination-related" href="/2024/03/25/VSCode%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/" title="VSCode基本配置"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">VSCode基本配置</div></div><div class="info-2"><div class="info-item-1">VSCode基本配置设置快捷键：Ctrl + ,  下载中文插件：Chinese，重启一下，如果没有，Ctrl + Shift + P，搜索：Display Language 主题推荐：Solarized Dark，快捷键：Ctrl + K Ctrl + T 设置代码字体推荐：&quot;JetBrains Mono&quot; 或者 Consolas 字体官网：JetBrains Mono官网  安装字体 字体大小：设置中搜索 zoom这样就可以使用 Ctrl + 鼠标滚轮 文件资源管理快捷键：Ctrl + B 活动栏右击可以隐藏，如果再想打开看，可以在查看——外观——显示活动栏 右边的小型预览也可以隐藏：在设置里面搜索mini勾选上minimap: Autohide 重启后**默认是打开上次**编辑的文件，可以关闭到默认打开，设置中搜索restor,找到Restor Windows 把 all 改成 none，意思是打开软件的时候是一个空的文件 配置默认打开的 设置里搜索startup 可以改成 welcomePage,也可以设置为 none...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/assets/image/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Taichi</div><div class="author-info-description">Taichi‘ Blog</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">32</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">27</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/taichiyly"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="toc-number">1.</span> <span class="toc-text">一、常用命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%96%87%E4%BB%B6%E4%B8%8E%E7%9B%AE%E5%BD%95%E6%93%8D%E4%BD%9C"><span class="toc-number">1.0.1.</span> <span class="toc-text">1.文件与目录操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%9F%A5%E7%9C%8B%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9"><span class="toc-number">1.0.2.</span> <span class="toc-text">2.查看文件内容</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E6%96%87%E6%9C%AC%E5%86%85%E5%AE%B9%E5%A4%84%E7%90%86"><span class="toc-number">1.0.3.</span> <span class="toc-text">3.文本内容处理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E6%9F%A5%E8%AF%A2%E6%93%8D%E4%BD%9C"><span class="toc-number">1.0.4.</span> <span class="toc-text">4.查询操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E5%8E%8B%E7%BC%A9%E3%80%81%E8%A7%A3%E5%8E%8B"><span class="toc-number">1.0.5.</span> <span class="toc-text">5.压缩、解压</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-yum%E5%AE%89%E8%A3%85%E5%99%A8"><span class="toc-number">1.0.6.</span> <span class="toc-text">6.yum安装器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3"><span class="toc-number">1.0.7.</span> <span class="toc-text">7.网络相关</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-%E7%B3%BB%E7%BB%9F%E7%9B%B8%E5%85%B3"><span class="toc-number">1.0.8.</span> <span class="toc-text">8.系统相关</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81XSheel-5%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C"><span class="toc-number">1.1.</span> <span class="toc-text">二、XSheel 5相关操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E7%AA%97%E4%BD%93%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.窗体快捷键</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%93%8D%E4%BD%9C%E5%B0%8F%E6%8A%80%E5%B7%A7"><span class="toc-number">1.1.2.</span> <span class="toc-text">2.操作小技巧</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E6%80%BB%E7%BB%93"><span class="toc-number">1.2.</span> <span class="toc-text">三、总结</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#init%E4%B8%80%E5%85%B1%E5%88%86%E4%B8%BA7%E4%B8%AA%E7%BA%A7%E5%88%AB%EF%BC%8C%E8%BF%997%E4%B8%AA%E7%BA%A7%E5%88%AB%E7%9A%84%E6%89%80%E4%BB%A3%E8%A1%A8%E7%9A%84%E5%90%AB%E4%B9%89%E5%A6%82%E4%B8%8B"><span class="toc-number">1.2.1.</span> <span class="toc-text">init一共分为7个级别，这7个级别的所代表的含义如下</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="toc-number">1.3.</span> <span class="toc-text">添加环境变量</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%98%B2%E7%81%AB%E5%A2%99"><span class="toc-number">1.3.1.</span> <span class="toc-text">防火墙</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E9%9D%99%E6%80%81"><span class="toc-number">1.3.2.</span> <span class="toc-text">配置静态</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%9C%E7%A8%8B%E5%8F%91%E9%80%81"><span class="toc-number">1.4.</span> <span class="toc-text">远程发送</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9C%E7%A8%8B%E6%89%A7%E8%A1%8C%E5%91%BD%E4%BB%A4"><span class="toc-number">1.4.1.</span> <span class="toc-text">远程执行命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E6%8C%87%E5%AE%9A%E7%AB%AF%E5%8F%A3%E6%98%AF%E5%90%A6%E5%90%AF%E5%8A%A8"><span class="toc-number">1.4.2.</span> <span class="toc-text">查看指定端口是否启动</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E7%89%88%E6%9C%AC%EF%BC%88%E9%AA%8C%E8%AF%81%E6%98%AF%E5%90%A6%E5%AE%89%E8%A3%85%E6%88%90%E5%8A%9F%EF%BC%89"><span class="toc-number">1.4.3.</span> <span class="toc-text">查看版本（验证是否安装成功）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E5%90%AF%E5%8A%A8zookeeper%E9%9B%86%E7%BE%A4"><span class="toc-number">1.5.</span> <span class="toc-text">如何启动zookeeper集群</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/02/23/%E9%94%99%E9%A2%98%E6%95%B4%E7%90%86/" title="网管错题整理">网管错题整理</a><time datetime="2025-02-23T03:20:47.235Z" title="发表于 2025-02-23 11:20:47">2025-02-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/02/23/%E6%AD%A3%E5%88%99/" title="正则表达式"><img src="https://t.alcy.cc/ycy" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="正则表达式"/></a><div class="content"><a class="title" href="/2025/02/23/%E6%AD%A3%E5%88%99/" title="正则表达式">正则表达式</a><time datetime="2025-02-23T01:38:58.000Z" title="发表于 2025-02-23 09:38:58">2025-02-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/02/23/Python50%E9%81%93%E7%BB%83%E4%B9%A0%E9%A2%98/" title="Python50道练习题"><img src="https://t.alcy.cc/fj" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Python50道练习题"/></a><div class="content"><a class="title" href="/2025/02/23/Python50%E9%81%93%E7%BB%83%E4%B9%A0%E9%A2%98/" title="Python50道练习题">Python50道练习题</a><time datetime="2025-02-23T01:38:58.000Z" title="发表于 2025-02-23 09:38:58">2025-02-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/02/23/requests%E8%AF%B7%E6%B1%82%E6%A8%A1%E5%9D%97/" title="requests请求模块"><img src="https://t.alcy.cc/xhl" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="requests请求模块"/></a><div class="content"><a class="title" href="/2025/02/23/requests%E8%AF%B7%E6%B1%82%E6%A8%A1%E5%9D%97/" title="requests请求模块">requests请求模块</a><time datetime="2025-02-23T01:38:58.000Z" title="发表于 2025-02-23 09:38:58">2025-02-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/12/29/Python%E7%BC%96%E7%A8%8B/" title="测试平台笔记"><img src="https://api.yimian.xyz/img" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="测试平台笔记"/></a><div class="content"><a class="title" href="/2024/12/29/Python%E7%BC%96%E7%A8%8B/" title="测试平台笔记">测试平台笔记</a><time datetime="2024-12-29T01:38:58.000Z" title="发表于 2024-12-29 09:38:58">2024-12-29</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2025 By Taichi</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>

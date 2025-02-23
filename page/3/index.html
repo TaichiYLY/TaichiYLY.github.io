@@ -1,0 +1,248 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>泰 极 - Taichi Blog</title><meta name="author" content="Taichi"><meta name="copyright" content="Taichi"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Taichi‘ Blog">
+<meta property="og:type" content="website">
+<meta property="og:title" content="泰 极">
+<meta property="og:url" content="https://taichiyly.github.io/page/3/index.html">
+<meta property="og:site_name" content="泰 极">
+<meta property="og:description" content="Taichi‘ Blog">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://taichiyly.github.io/assets/image/avatar.jpg">
+<meta property="article:author" content="Taichi">
+<meta property="article:tag" content="Taichi,Blog">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://taichiyly.github.io/assets/image/avatar.jpg"><link rel="shortcut icon" href="/assets/image/favicon.png"><link rel="canonical" href="https://taichiyly.github.io/page/3/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":500,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'medium_zoom',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '泰 极',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  isShuoshuo: false
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/assets/image/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">32</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">27</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa fa-heartbeat"></i><span> 列表</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/photo/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(/assets/image/index-background.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><img class="site-icon" src="/assets/image/logo.png" alt="Logo"><span class="site-name">泰 极</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa fa-heartbeat"></i><span> 列表</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/photo/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="site-info"><h1 id="site-title">泰 极</h1><div id="site-subtitle"><span id="subtitle"></span></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/06/14/py%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/" title="py网络编程">py网络编程</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-06-14T06:19:43.000Z" title="发表于 2024-06-14 14:19:43">2024-06-14</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a></span></div><div class="content">网络编程 用Python进行网络编程，就是在Python程序本身这个进程内，连接别的服务器进程的通信端口进行通信。Python 网络编程和其它语言类似，通常通过”Socket（套接字）”向网络发出请求或者应答网络请求，使主机间或者一台计算机上的进程间可以通讯。  TCPClientfrom socket import *# print(gethostname())  # 使用 gethostname方法来获取host_name = &#x27;LAPTOP-E02HTJB6&#x27;  # ip 192.168.80.1port_num = 1200  # 端口# 创建socketclientSocket = socket(AF_INET, SOCK_STREAM)  # AF_INET意思是ipv4，SOCK_STREAM意思是TCP的连接# 建立连接clientSocket.connect((host_name,port_num))  # ip地址 + 端口，放到一个元组里面# 让用户输入内容message = input(&quot;enter something:...</div></div></div><div class="recent-post-item"><div class="post_cover"><a href="/2024/05/20/Python%E5%B8%B8%E7%94%A8%E6%A8%A1%E5%9D%97%E5%A4%A7%E5%85%A8/" title="Python常用模块大全"><img class="post-bg" src="https://wallpaperbat.com/img/283081-python-run-the-trap-8k-ultra-hd-wallpaper-background-image.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Python常用模块大全"></a></div><div class="recent-post-info"><a class="article-title" href="/2024/05/20/Python%E5%B8%B8%E7%94%A8%E6%A8%A1%E5%9D%97%E5%A4%A7%E5%85%A8/" title="Python常用模块大全">Python常用模块大全</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-05-20T06:16:31.000Z" title="发表于 2024-05-20 14:16:31">2024-05-20</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a></span></div><div class="content">Python常用模块大全（总结）  Python拥有丰富的标准库和第三方库，这些模块极大地扩展了Python的功能，使其在各种应用场景中都能发挥重要作用。下面我将列出一些常用的Python模块及其简单代码案例，帮助你更好地理解和使用它们。  os模块：os.remove() 删除文件 os.unlink() 删除文件 os.rename() 重命名文件 os.listdir() 列出指定目录下所有文件 os.chdir() 改变当前工作目录os.getcwd() 获取当前文件路径os.mkdir() 新建目录os.rmdir() 删除空目录(删除非空目录, 使用shutil.rmtree())os.makedirs() 创建多级目录os.removedirs() 删除多级目录os.stat(file) 获取文件属性os.chmod(file) 修改文件权限os.utime(file) 修改文件时间戳os.name(file) 获取操作系统标识os.system() 执行操作系统命令os.execvp() 启动一个新进程os.fork()...</div></div></div><div class="recent-post-item"><div class="post_cover"><a href="/2024/05/10/CentOS7%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/" title="CentOS7常用指令"><img class="post-bg" src="http://img.netbian.com/file/2024/0709/1921550UIjR.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="CentOS7常用指令"></a></div><div class="recent-post-info"><a class="article-title" href="/2024/05/10/CentOS7%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/" title="CentOS7常用指令">CentOS7常用指令</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-05-10T10:28:10.000Z" title="发表于 2024-05-10 18:28:10">2024-05-10</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%90%8E%E7%AB%AF/">后端</a></span></div><div class="content">一、常用命令1.文件与目录操作   命令 解析    cd &#x2F;home 进入 ‘&#x2F;home’ 目录   cd .. 返回上一级目录   cd ..&#x2F;.. 返回上两级目录   cd - 返回上次所在目录   cp file1 file2 将file1&#x3D;&#x3D;复制&#x3D;&#x3D;为file2   cp -a dir1 dir2 复制一个目录   cp -a &#x2F;tmp&#x2F;dir1 . 复制一个目录到当前工作目录（.代表当前目录）   ls 查看目录中的文件   ls -a 显示隐藏文件   ls -l 显示详细信息（&#x3D;&#x3D;ll&#x3D;&#x3D;）   ls -lrt 按时间显示文件（l表示详细列表，r表示反向排序，t表示按时间排序）   pwd 显示工作路径   mkdir dir1 创建 ‘dir1’ 目录   mkdir dir1 dir2 同时创建两个目录   mkdir -p...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/03/25/VSCode%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/" title="VSCode基本配置">VSCode基本配置</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-03-25T10:36:36.000Z" title="发表于 2024-03-25 18:36:36">2024-03-25</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%BC%96%E8%BE%91%E5%99%A8/">编辑器</a></span></div><div class="content">VSCode基本配置设置快捷键：Ctrl + ,  下载中文插件：Chinese，重启一下，如果没有，Ctrl + Shift + P，搜索：Display Language 主题推荐：Solarized Dark，快捷键：Ctrl + K Ctrl + T 设置代码字体推荐：&quot;JetBrains Mono&quot; 或者 Consolas 字体官网：JetBrains Mono官网  安装字体 字体大小：设置中搜索 zoom这样就可以使用 Ctrl + 鼠标滚轮 文件资源管理快捷键：Ctrl + B 活动栏右击可以隐藏，如果再想打开看，可以在查看——外观——显示活动栏 右边的小型预览也可以隐藏：在设置里面搜索mini勾选上minimap: Autohide 重启后**默认是打开上次**编辑的文件，可以关闭到默认打开，设置中搜索restor,找到Restor Windows 把 all 改成 none，意思是打开软件的时候是一个空的文件 配置默认打开的 设置里搜索startup 可以改成 welcomePage,也可以设置为 none...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/03/20/Vue2-Book-B/" title="Vue2 Book B">Vue2 Book B</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-03-20T10:38:45.000Z" title="发表于 2024-03-20 18:38:45">2024-03-20</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/web/">web</a></span></div><div class="content">4.Vue中的Ajax4.1. Vue脚手架配置代理 本案例需要下载axios库：npm install axios  vue.config.js: module.exports = &#123;    pages: &#123;        index: &#123;            entry: &#x27;src/main.js&#x27;,        &#125;,    &#125;,    lintOnSave:false,    // 开启代理服务器（方式一）    // devServer: &#123;    //     proxy:&#x27;http://localhost:5000&#x27;    // &#125;    //开启代理服务器（方式二）	devServer: &#123;        proxy: &#123;            &#x27;/jojo&#x27;: &#123;                target: &#x27;http://localhost:5000&#x27;,            ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/03/12/Vue2-Book-A/" title="Vue2 Book A">Vue2 Book A</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-03-12T10:38:45.000Z" title="发表于 2024-03-12 18:38:45">2024-03-12</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/web/">web</a></span></div><div class="content">1.Vue核心1.1. Vue简介1.1.1. 官网 英文官网 中文官网  1.1.2. 介绍与描述 动态构建用户界面的&#x3D;&#x3D;渐进式&#x3D;&#x3D;JavaScript框架 作者：尤雨溪  1.1.3. Vue的特点 遵循&#x3D;&#x3D;MVVM&#x3D;&#x3D;模式 编码简洁，体积小，运行效率高，适合移动&#x2F;PC端开发 它本身只关注UI，可以引入其它第三方库开发项目  1.1.4.与其他JS框架的关联 借鉴 Angular 的&#x3D;&#x3D;模板&#x3D;&#x3D;和&#x3D;&#x3D;数据绑定&#x3D;&#x3D;技术 借鉴 React 的&#x3D;&#x3D;组件化&#x3D;&#x3D;和&#x3D;&#x3D;虚拟DOM&#x3D;&#x3D;技术  1.1.5. Vue周边库  vue-cli：vue脚手架 vue-resource axios vue-router：路由 vuex：状态管理 element-ui：基于vue的UI组件库（PC端）   1.2. 初识Vue&lt;!DOCTYPE...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/01/19/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/" title="计算机网络技术">计算机网络技术</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-01-19T10:37:35.000Z" title="发表于 2024-01-19 18:37:35">2024-01-19</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/">计算机基础</a></span></div><div class="content">计算机网络概括计算机网络的概念计算机网络的定义 计算机网络是指将地理位置不同的具有独立功能的多台计算机及其外部设备，通过通信线路连接起来，在网络操作系统，网络管理软件及网络通信协议的管理和协调下，实现资源共享和信息传输的计算机 简写： 计算机网络是指将地理位置不同的且具有独立的多台计算机...</div></div></div><div class="recent-post-item"><div class="post_cover"><a href="/2023/12/26/MySQL%E5%9F%BA%E7%A1%80/" title="MySQL基础"><img class="post-bg" src="/assets/image/mysql.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="MySQL基础"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/12/26/MySQL%E5%9F%BA%E7%A1%80/" title="MySQL基础">MySQL基础</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-12-26T10:34:32.000Z" title="发表于 2023-12-26 18:34:32">2023-12-26</time></span></div><div class="content">2. SQL全称 Structured Query Language，结构化查询语言。操作关系型数据库的编程语言，定义了 一套操作关系型数据库统一&#x3D;&#x3D;标准&#x3D;&#x3D; 。 2.1 SQL 通用语法在学习具体的SQL语句之前，先来了解一下SQL语言的同于语法。   1). SQL语句可以单行或多行书写，以分号结尾。 2). SQL语句可以使用空格&#x2F;缩进来增强语句的可读性。 3). MySQL数据库的SQL语句不区分大小写，关键字建议使用大写。  4). 注释：  单行注释：– 注释内容 或 # 注释内容  多行注释：&#x2F;* 注释内容 *&#x2F;    2.2 SQL分类SQL 语句，根据其功能，主要分为四类：DDL、DML、DQL、DCL。    分类 全称 说明    DDL Data Definition Language 数据定义语言，用来定义数据库对象（数据库，表，字段）   DML Data Manipulation Language 数据操作语言，用来对数据库表中的数据进行增删改   DQL Data Query...</div></div></div><div class="recent-post-item"><div class="post_cover"><a href="/2023/12/01/Node%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/" title="Node包管理工具"><img class="post-bg" src="https://img.nodejs.cn/logo.svg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Node包管理工具"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/12/01/Node%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/" title="Node包管理工具">Node包管理工具</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-12-01T06:05:34.000Z" title="发表于 2023-12-01 14:05:34">2023-12-01</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/web%E5%89%8D%E7%AB%AF/">web前端</a></span></div><div class="content">npmnpm 全称 Node package Manager ，翻译位中文意思是 【Node 的包管理工具】 npm 是 ndoe.js 官网内置的包管理工具，是 必须要掌握住的工具。 1.npm的安装node.js 在安装的时候会自动安装npm，所以如果你已经安装了node.js，就可以直接使用npm 可以通过 npm -v 查看版本号，如果显示版本说明安装成功了，反之安装失败 C:\Users\taichi&gt;npm -v9.5.1   查看版本可能显示的版本号不一样,不过不影响正常使用.  2.初始化创建一个空目录,然后为此目录作为工作目录 启动命令行工具, 执行 npm init npm init命令的作用是将文件夹初始化为一个【包】, 交互式创建 package.json package.json 内容示列： &#123;  &quot;name&quot;: &quot;test&quot;,  &quot;version&quot;: &quot;1.0.0&quot;,  &quot;description&quot;: &quot;study...</div></div></div><div class="recent-post-item"><div class="post_cover"><a href="/2023/10/31/C%E8%AF%AD%E8%A8%80%E6%8C%87%E9%92%88%E8%AF%A6%E8%A7%A3/" title="C语言指针详解"><img class="post-bg" src="/assets/image/C%E8%AF%AD%E8%A8%80.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="C语言指针详解"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/10/31/C%E8%AF%AD%E8%A8%80%E6%8C%87%E9%92%88%E8%AF%A6%E8%A7%A3/" title="C语言指针详解">C语言指针详解</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-10-31T10:38:45.000Z" title="发表于 2023-10-31 18:38:45">2023-10-31</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a></span></div><div class="content">C语言 指针关于内存那点事存储器：存储数据器件 外存 外存又叫外部存储器，长期存放数据，断电不丢失数据 常见的有外部存储器：硬盘、flash、rom、U盘、光盘、磁带   内存 内存又叫内部存储器，暂时存放数据，断电数据丢失 常见的内存设备：ram、DDR   虚拟内存：操作系统虚拟出来的内存 32bit   32根寻址总线  在写应用程序的时候，咱们看到的都是虚拟地址。 在运行程序的时候，操作系统会将 虚拟内存进行分区  堆  栈 主要存放局部变量（在函数内部，或复合语句内部定义的变量）  静态全局区  未初始化的静态全局区 静态变量（定义的时候，前面加static修饰）。或全局变量，没有初始化的，存放在此区  初始化的静态全局变量 全局变量、静态变量、赋过初值的、存放在此区    代码区 存放咱们的程序代码  文字常量区 存放常量的   内存以字节为单位来存储数据的，咱们可以将程序中的虚拟寻址空间，看成一个很大的维的字符数组 指针的相关概念 系统给虚拟内存的每个存储单元分配了一个编号，从 0x00 00 00 00 ~ 0xff ff ff...</div></div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/2/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/#content-inner">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/#content-inner">4</a><a class="extend next" rel="next" href="/page/4/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/assets/image/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Taichi</div><div class="author-info-description">Taichi‘ Blog</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">32</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">27</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/taichiyly"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/02/23/%E9%94%99%E9%A2%98%E6%95%B4%E7%90%86/" title="网管错题整理">网管错题整理</a><time datetime="2025-02-23T03:20:47.235Z" title="发表于 2025-02-23 11:20:47">2025-02-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/02/23/%E6%AD%A3%E5%88%99/" title="正则表达式"><img src="https://t.alcy.cc/ycy" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="正则表达式"/></a><div class="content"><a class="title" href="/2025/02/23/%E6%AD%A3%E5%88%99/" title="正则表达式">正则表达式</a><time datetime="2025-02-23T01:38:58.000Z" title="发表于 2025-02-23 09:38:58">2025-02-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/02/23/Python50%E9%81%93%E7%BB%83%E4%B9%A0%E9%A2%98/" title="Python50道练习题"><img src="https://t.alcy.cc/fj" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Python50道练习题"/></a><div class="content"><a class="title" href="/2025/02/23/Python50%E9%81%93%E7%BB%83%E4%B9%A0%E9%A2%98/" title="Python50道练习题">Python50道练习题</a><time datetime="2025-02-23T01:38:58.000Z" title="发表于 2025-02-23 09:38:58">2025-02-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/02/23/requests%E8%AF%B7%E6%B1%82%E6%A8%A1%E5%9D%97/" title="requests请求模块"><img src="https://t.alcy.cc/xhl" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="requests请求模块"/></a><div class="content"><a class="title" href="/2025/02/23/requests%E8%AF%B7%E6%B1%82%E6%A8%A1%E5%9D%97/" title="requests请求模块">requests请求模块</a><time datetime="2025-02-23T01:38:58.000Z" title="发表于 2025-02-23 09:38:58">2025-02-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/12/29/Python%E7%BC%96%E7%A8%8B/" title="测试平台笔记"><img src="https://api.yimian.xyz/img" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="测试平台笔记"/></a><div class="content"><a class="title" href="/2024/12/29/Python%E7%BC%96%E7%A8%8B/" title="测试平台笔记">测试平台笔记</a><time datetime="2024-12-29T01:38:58.000Z" title="发表于 2024-12-29 09:38:58">2024-12-29</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            <a class="card-more-btn" href="/categories/" title="查看更多">
+      <i class="fas fa-angle-right"></i></a>
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Python%E7%BC%96%E7%A8%8B%E8%B5%9B%E9%A1%B9/"><span class="card-category-list-name">Python编程赛项</span><span class="card-category-list-count">11</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/web/"><span class="card-category-list-name">web</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/"><span class="card-category-list-name">web前端</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%90%8E%E7%AB%AF/"><span class="card-category-list-name">后端</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%95%99%E7%A8%8B/"><span class="card-category-list-name">教程</span><span class="card-category-list-count">1</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%95%99%E7%A8%8B/Hexo/"><span class="card-category-list-name">Hexo</span><span class="card-category-list-count">1</span></a></li></ul></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%BC%96%E7%A8%8B/"><span class="card-category-list-name">编程</span><span class="card-category-list-count">3</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%BC%96%E8%BE%91%E5%99%A8/"><span class="card-category-list-name">编辑器</span><span class="card-category-list-count">2</span></a></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/js/" style="font-size: 1.1em; color: #999">js</a> <a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 1.1em; color: #999">教程</a> <a href="/tags/%E6%AF%94%E8%B5%9B/" style="font-size: 1.5em; color: #99a9bf">比赛</a> <a href="/tags/python/" style="font-size: 1.1em; color: #999">python</a> <a href="/tags/PyCharm/" style="font-size: 1.1em; color: #999">PyCharm</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" style="font-size: 1.1em; color: #999">计算机网络</a> <a href="/tags/OSI%E5%8F%82%E8%80%83%E6%A8%A1%E5%9E%8B/" style="font-size: 1.1em; color: #999">OSI参考模型</a> <a href="/tags/%E9%80%9A%E4%BF%A1%E6%96%B9%E5%BC%8F/" style="font-size: 1.1em; color: #999">通信方式</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%93%E6%9E%84/" style="font-size: 1.1em; color: #999">计算机结构</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9A%84%E6%A6%82%E5%BF%B5/" style="font-size: 1.1em; color: #999">计算机网络的概念</a> <a href="/tags/CSS/" style="font-size: 1.3em; color: #99a1ac">CSS</a> <a href="/tags/NodeJs/" style="font-size: 1.1em; color: #999">NodeJs</a> <a href="/tags/es6/" style="font-size: 1.1em; color: #999">es6</a> <a href="/tags/VSCode/" style="font-size: 1.1em; color: #999">VSCode</a> <a href="/tags/HTML/" style="font-size: 1.3em; color: #99a1ac">HTML</a> <a href="/tags/Linux%E7%B3%BB%E7%BB%9F/" style="font-size: 1.1em; color: #999">Linux系统</a> <a href="/tags/C%E8%AF%AD%E8%A8%80/" style="font-size: 1.1em; color: #999">C语言</a> <a href="/tags/vue/" style="font-size: 1.3em; color: #99a1ac">vue</a> <a href="/tags/Js/" style="font-size: 1.1em; color: #999">Js</a> <a href="/tags/Python/" style="font-size: 1.3em; color: #99a1ac">Python</a> <a href="/tags/%E7%BD%91%E7%BB%9C/" style="font-size: 1.1em; color: #999">网络</a> <a href="/tags/%E4%B8%BB%E9%A2%98/" style="font-size: 1.1em; color: #999">主题</a> <a href="/tags/Hexo/" style="font-size: 1.1em; color: #999">Hexo</a> <a href="/tags/%E9%94%99%E9%A2%98/" style="font-size: 1.1em; color: #999">错题</a> <a href="/tags/%E8%8B%B1%E8%AF%AD/" style="font-size: 1.1em; color: #999">英语</a> <a href="/tags/%E6%8C%87%E9%92%88/" style="font-size: 1.1em; color: #999">指针</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E6%A0%A1%E9%AA%8C/" style="font-size: 1.1em; color: #999">数据校验</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>归档</span>
+      <a class="card-more-btn" href="/archives/" title="查看更多"><i class="fas fa-angle-right"></i></a>
+    </div>
+    <ul class="card-archive-list">
+  
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2025/02/">
+          <span class="card-archive-list-date">二月 2025</span>
+          <span class="card-archive-list-count">4</span>
+        </a>
+      </li>
+    
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2024/12/">
+          <span class="card-archive-list-date">十二月 2024</span>
+          <span class="card-archive-list-count">7</span>
+        </a>
+      </li>
+    
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2024/11/">
+          <span class="card-archive-list-date">十一月 2024</span>
+          <span class="card-archive-list-count">3</span>
+        </a>
+      </li>
+    
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2024/10/">
+          <span class="card-archive-list-date">十月 2024</span>
+          <span class="card-archive-list-count">3</span>
+        </a>
+      </li>
+    
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2024/09/">
+          <span class="card-archive-list-date">九月 2024</span>
+          <span class="card-archive-list-count">1</span>
+        </a>
+      </li>
+    
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2024/08/">
+          <span class="card-archive-list-date">八月 2024</span>
+          <span class="card-archive-list-count">2</span>
+        </a>
+      </li>
+    
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2024/06/">
+          <span class="card-archive-list-date">六月 2024</span>
+          <span class="card-archive-list-count">1</span>
+        </a>
+      </li>
+    
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2024/05/">
+          <span class="card-archive-list-date">五月 2024</span>
+          <span class="card-archive-list-count">2</span>
+        </a>
+      </li>
+    </ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">32</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-02-23T03:26:59.630Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2025 By Taichi</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><div class="js-pjax"><script>window.typedJSFn = {
+  init: str => {
+    window.typed = new Typed('#subtitle', Object.assign({
+      strings: str,
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: true,
+      backSpeed: 50,
+    }, null))
+  },
+  run: subtitleType => {
+    if (true) {
+      if (typeof Typed === 'function') {
+        subtitleType()
+      } else {
+        btf.getScript('https://cdn.jsdelivr.net/npm/typed.js/dist/typed.umd.min.js').then(subtitleType)
+      }
+    } else {
+      subtitleType()
+    }
+  }
+}
+btf.addGlobalFn('pjaxSendOnce', () => { typed.destroy() }, 'typedDestroy')
+</script><script>function subtitleType () {
+  if (true) {
+    typedJSFn.init(["你在抱怨什么呢","为明天到来的事，说人生像是没有意义","没有选择会是唯一的路","这不是你自己的问题，人终归要好好去生活"])
+  } else {
+    document.getElementById("subtitle").textContent = "你在抱怨什么呢"
+  }
+}
+typedJSFn.run(subtitleType)</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>

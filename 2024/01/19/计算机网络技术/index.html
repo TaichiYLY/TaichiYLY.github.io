@@ -1,0 +1,758 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>计算机网络技术 | 泰 极</title><meta name="author" content="Taichi"><meta name="copyright" content="Taichi"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="计算机网络概括计算机网络的概念计算机网络的定义 计算机网络是指将地理位置不同的具有独立功能的多台计算机及其外部设备，通过通信线路连接起来，在网络操作系统，网络管理软件及网络通信协议的管理和协调下，实现资源共享和信息传输的计算机 简写： 计算机网络是指将地理位置不同的且具有独立的多台计算机 通过通信线路连接，实现资源共享和信息传递。.  计算机网络的组成通信子网和资源子网组成的  &#x3D;&amp;#x">
+<meta property="og:type" content="article">
+<meta property="og:title" content="计算机网络技术">
+<meta property="og:url" content="https://taichiyly.github.io/2024/01/19/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/index.html">
+<meta property="og:site_name" content="泰 极">
+<meta property="og:description" content="计算机网络概括计算机网络的概念计算机网络的定义 计算机网络是指将地理位置不同的具有独立功能的多台计算机及其外部设备，通过通信线路连接起来，在网络操作系统，网络管理软件及网络通信协议的管理和协调下，实现资源共享和信息传输的计算机 简写： 计算机网络是指将地理位置不同的且具有独立的多台计算机 通过通信线路连接，实现资源共享和信息传递。.  计算机网络的组成通信子网和资源子网组成的  &#x3D;&amp;#x">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://taichiyly.github.io/assets/image/avatar.jpg">
+<meta property="article:published_time" content="2024-01-19T10:37:35.000Z">
+<meta property="article:modified_time" content="2025-02-23T03:22:51.410Z">
+<meta property="article:author" content="Taichi">
+<meta property="article:tag" content="计算机网络">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://taichiyly.github.io/assets/image/avatar.jpg"><link rel="shortcut icon" href="/assets/image/favicon.png"><link rel="canonical" href="https://taichiyly.github.io/2024/01/19/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":500,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'medium_zoom',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '计算机网络技术',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  isShuoshuo: false
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/assets/image/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">32</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">27</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa fa-heartbeat"></i><span> 列表</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/photo/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><img class="site-icon" src="/assets/image/logo.png" alt="Logo"><span class="site-name">泰 极</span></a><a class="nav-page-title" href="/"><span class="site-name">计算机网络技术</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa fa-heartbeat"></i><span> 列表</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/photo/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">计算机网络技术</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-01-19T10:37:35.000Z" title="发表于 2024-01-19 18:37:35">2024-01-19</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-02-23T03:22:51.410Z" title="更新于 2025-02-23 11:22:51">2025-02-23</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/">计算机基础</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h1 id="计算机网络概括"><a href="#计算机网络概括" class="headerlink" title="计算机网络概括"></a>计算机网络概括</h1><h2 id="计算机网络的概念"><a href="#计算机网络的概念" class="headerlink" title="计算机网络的概念"></a>计算机网络的概念</h2><h3 id="计算机网络的定义"><a href="#计算机网络的定义" class="headerlink" title="计算机网络的定义"></a>计算机网络的定义</h3><ul>
+<li>计算机网络是指将地理位置不同的具有独立功能的多台计算机及其外部设备，通过通信线路连接起来，在网络操作系统，网络管理软件及网络通信协议的管理和协调下，实现资源共享和信息传输的计算机</li>
+<li>简写：</li>
+<li><u><strong>计算机网络是指将地理位置不同的且具有独立的多台计算机 通过通信线路连接，实现资源共享和信息传递。</strong></u>.</li>
+</ul>
+<h3 id="计算机网络的组成"><a href="#计算机网络的组成" class="headerlink" title="计算机网络的组成"></a>计算机网络的组成</h3><p>通信子网和资源子网组成的</p>
+<ul>
+<li>&#x3D;&#x3D;通信子网&#x3D;&#x3D;：<ul>
+<li>提供共享的软件资源和硬件资源</li>
+</ul>
+</li>
+<li>&#x3D;&#x3D;资源子网&#x3D;&#x3D;：<ul>
+<li>提供信息交换的网络节点和通信线路</li>
+</ul>
+</li>
+<li>比如说：两台电脑需要通信，中间的线路就叫做通信子网，通信子网并不是指那一条线，它是一个通俗的一个大的抽象概念，就是所有用来通信的，不管是光纤还是双绞线，它都被称为通信子网，所有服务于这个软件和硬件资源的，就是只要认为是资源的（比如说，一个文件1.mp3），然后要传输过去</li>
+<li>总结：<ul>
+<li>通信子网是提供网络节点和线路</li>
+<li>资源子网是提供你需要的一些数据</li>
+</ul>
+</li>
+</ul>
+<h3 id="计算机网络的类型"><a href="#计算机网络的类型" class="headerlink" title="计算机网络的类型"></a>计算机网络的类型</h3><h5 id="（1）按照拓扑结构分类"><a href="#（1）按照拓扑结构分类" class="headerlink" title="（1）按照拓扑结构分类"></a>（1）按照拓扑结构分类</h5><ol>
+<li>星型结构<ul>
+<li>中间一个星，然后散开，（比如”米“字）</li>
+</ul>
+</li>
+<li>树形结构<ul>
+<li>树形是一个跟，相当与电脑的目录一样，一个树往下生根。</li>
+</ul>
+</li>
+<li>总线型结构<ul>
+<li>总线型就是一个大的线，所有的电脑是这个总线的一层分支</li>
+</ul>
+</li>
+<li>环形结构<ul>
+<li>环形就是一个环，这个环形跟总线型是比较类似的，这个是闭环，总线是直线。</li>
+</ul>
+</li>
+<li>网状性结构<ul>
+<li>就比如五角星，每台电脑中间都有线连接。</li>
+</ul>
+</li>
+</ol>
+<h5 id="（2）按照范围分类"><a href="#（2）按照范围分类" class="headerlink" title="（2）按照范围分类"></a>（2）按照范围分类</h5><ol>
+<li>局域网 LAN <ul>
+<li>局域网是最小的你如一栋楼，一个小区</li>
+<li>范围是：几百米到十几公里</li>
+</ul>
+</li>
+<li>城域网 MAN<ul>
+<li>一个城市，比如果一个市区</li>
+</ul>
+</li>
+<li>广域网 WAN<ul>
+<li>比如说一个国家，或者是大省之间的一个通信</li>
+<li>（记法：蓝莓味 LMW局城广</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>补充： </li>
+<li>个人局域网 PAN</li>
+<li>互联网 Internet</li>
+</ul>
+<h5 id="（3）按照传输方式分类"><a href="#（3）按照传输方式分类" class="headerlink" title="（3）按照传输方式分类"></a>（3）按照传输方式分类</h5><ol>
+<li>有线网络<ul>
+<li>IEEE802.3</li>
+</ul>
+</li>
+<li>无线网络<ul>
+<li>IEEE802.11</li>
+<li>WLAN 无线局域网（wireless）</li>
+<li>WPAN 无线个人局域网</li>
+</ul>
+</li>
+</ol>
+<h2 id="计算机网络体系结构"><a href="#计算机网络体系结构" class="headerlink" title="计算机网络体系结构"></a>计算机网络体系结构</h2><h3 id="传输方式"><a href="#传输方式" class="headerlink" title="传输方式"></a>传输方式</h3><h5 id="按照传输方向分"><a href="#按照传输方向分" class="headerlink" title="按照传输方向分"></a>按照传输方向分</h5><ol>
+<li>&#x3D;&#x3D;单工&#x3D;&#x3D;<ul>
+<li>只能单方向传输的工作模式</li>
+<li>就比如考四级的耳机（你只能单方面的收到别人的信号，自己不能发出信号</li>
+</ul>
+</li>
+<li>&#x3D;&#x3D;双工&#x3D;&#x3D;<ul>
+<li>在同一时间，线路上只能允许一个方向的数据通过</li>
+<li>比如对讲机，甲在讲的时候，乙只能听，乙在讲的时候，甲只能听</li>
+</ul>
+</li>
+<li>&#x3D;&#x3D;全双工&#x3D;&#x3D;<ul>
+<li>双方可以同时进行数据通信</li>
+<li>比如打电话，在同一时间可以来可以回。</li>
+</ul>
+</li>
+</ol>
+<h5 id="按照传输对象（方式）分"><a href="#按照传输对象（方式）分" class="headerlink" title="按照传输对象（方式）分"></a>按照传输对象（方式）分</h5><ol>
+<li>单播（1对1）</li>
+<li>双播（1对多，可以指定群聊）</li>
+<li>广播（1对all，比如村里大喇叭）</li>
+</ol>
+<h3 id="数据交换"><a href="#数据交换" class="headerlink" title="数据交换"></a>数据交换</h3><ol>
+<li>&#x3D;&#x3D;电路交换&#x3D;&#x3D;<ul>
+<li>整个报文从源头到终点连续的传输</li>
+<li>缺点：占用信道，其他的线路都不能传输。</li>
+</ul>
+</li>
+<li>&#x3D;&#x3D;报文交换&#x3D;&#x3D;<ul>
+<li>整个报文先传送到相邻节点，全部存储下来查找转发表，再转发到下一个结束点</li>
+<li>有个中间商，不会霸占</li>
+</ul>
+</li>
+<li>&#x3D;&#x3D;分组交换&#x3D;&#x3D;<ul>
+<li>将一个报文分成多个分组，传送到相邻节点，在查找转发表，再传发到下一个节点 </li>
+<li>会分成好几个组，通过不同的</li>
+<li>&#x3D;&#x3D;最常用&#x3D;&#x3D;</li>
+</ul>
+</li>
+</ol>
+<h3 id="通信协议和体系结构"><a href="#通信协议和体系结构" class="headerlink" title="通信协议和体系结构"></a>通信协议和体系结构</h3><p>网络协议三要素</p>
+<p>&#x3D;&#x3D;语法、语义、时序&#x3D;&#x3D;</p>
+<p>OSI 参考模型</p>
+<p>OSI 参考模型叫做：开放式系统，互联参考模型</p>
+<p>从低到高排序，宗旨是下层为上层服务</p>
+<table>
+<thead>
+<tr>
+<th>OSI七层</th>
+<th align="left">介绍</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>应用层</td>
+<td align="left">使应用程序通过网络服务</td>
+</tr>
+<tr>
+<td>表示层</td>
+<td align="left">用于处理交互数据的表示方式，比如格式转换、数据的加密和解密、数据压缩和恢复等功能</td>
+</tr>
+<tr>
+<td>会话层</td>
+<td align="left">负责会务通信中&#x3D;&#x3D;两个节点之间&#x3D;&#x3D;的&#x3D;&#x3D;回话建立维护和断开&#x3D;&#x3D;，以及数据的交换</td>
+</tr>
+<tr>
+<td>传输层</td>
+<td align="left">提供&#x3D;&#x3D;端到端之间的数据传输服务&#x3D;&#x3D;，实现对数据进行控制和操作的功能。</td>
+</tr>
+<tr>
+<td>网络层</td>
+<td align="left">单位 &#x3D;&#x3D;分组&#x3D;&#x3D;，在数据链路层的基础之上，提供点到&#x3D;&#x3D;点之间的通信&#x3D;&#x3D;，提供路由功能，实现拥塞控制、网络互联等功能</td>
+</tr>
+<tr>
+<td>数据链路层</td>
+<td align="left">单位 &#x3D;&#x3D;帧&#x3D;&#x3D;，在物理层的基础上，提供&#x3D;&#x3D;节点到节点之间的服务&#x3D;&#x3D;，采用差错控制和流量控制的方法。实现网络互联</td>
+</tr>
+<tr>
+<td>物理层</td>
+<td align="left">单位 &#x3D;&#x3D;bit&#x3D;&#x3D;，利用传输介质为通信的网络节点之间的建立</td>
+</tr>
+</tbody></table>
+<p>节点是电脑和最近的路由器，两个电脑叫端到端</p>
+<p>下三层只能保证实现最基本的数据交换，当他们是怎样控制的一些规则是上三层（会表应）所决定的</p>
+<p>TCP&#x2F;IP 参考模型</p>
+<p>就是把OSI简化了</p>
+<table>
+<thead>
+<tr>
+<th>TCP&#x2F;IP</th>
+<th>OSI七层</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>应用层</td>
+<td>会话层、表示层、应用层</td>
+</tr>
+<tr>
+<td>传输层</td>
+<td>传输层</td>
+</tr>
+<tr>
+<td>网际层</td>
+<td>网络层</td>
+</tr>
+<tr>
+<td>网络接口层</td>
+<td>物理层和数据链路层</td>
+</tr>
+</tbody></table>
+<h3 id="题库："><a href="#题库：" class="headerlink" title="题库："></a>题库：</h3><p>1、什么是计算机网络？</p>
+<p>答：独立功能的计算机使用通信线路连接起来实现资源共享</p>
+<p>2、计算机网络的组成</p>
+<p>答：资源子网和通信子网。</p>
+<p>3、拓扑分类</p>
+<p>答：星型、树形、环形、总线型、网状型（常用）</p>
+<p>4、按照范围分类？</p>
+<p>答：LAN MAN WAN</p>
+<p>5、传输方式：有线和无线</p>
+<p>6、按照方向：单工、双工、全双工</p>
+<p>7、按照传输对象：单播、多播、广播。</p>
+<p>8、数据交换：电路交换、报文交换、分组交换。</p>
+<p>9、网络协议三要素：语法、语义、时序。</p>
+<p>10、OSI参考模型：应表会传网数物</p>
+<p>11、TCP&#x2F;IP参考模型：网络接口层、网际层、传输层、应用层.</p>
+<h3 id="计算机网络-第二章"><a href="#计算机网络-第二章" class="headerlink" title="计算机网络 第二章"></a>计算机网络 第二章</h3><h3 id="物理层"><a href="#物理层" class="headerlink" title="物理层"></a>物理层</h3><h3 id="物理层的基本概念"><a href="#物理层的基本概念" class="headerlink" title="物理层的基本概念"></a>物理层的基本概念</h3><h4 id="四大特性"><a href="#四大特性" class="headerlink" title="四大特性"></a>四大特性</h4><p>机械、电器、功能、过程</p>
+<blockquote>
+<ul>
+<li>机械特性：接口是怎样的</li>
+<li>电气特性：用多少伏的电</li>
+<li>功能特性：线路上平电压的特性 （什么介质怎么一个功能</li>
+<li>过程特性：实现不同功能所发射信号的顺序</li>
+</ul>
+</blockquote>
+<h4 id="两种信号"><a href="#两种信号" class="headerlink" title="两种信号"></a>两种信号</h4><p>数字、模拟</p>
+<blockquote>
+<ul>
+<li>模拟信号：特定频段的信号（有更加丰富的表现形式<ul>
+<li>连续的，有秩序的，被干扰后会失真</li>
+</ul>
+</li>
+<li>数字信号：二进制（不是1就是0）<ul>
+<li>离散的，有着更加强大的抗干扰能力</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h4 id="调制和编码"><a href="#调制和编码" class="headerlink" title="调制和编码"></a>调制和编码</h4><blockquote>
+<ul>
+<li>调制：模拟信号转换（return 模拟）</li>
+<li>编码：数字信号转换  （return 数字）<ul>
+<li>编码的步骤：采样、量化、编码。</li>
+</ul>
+</li>
+<li>区别：<ul>
+<li>数据可以通过编码手段转成数字信号，也可以通过调制手段将数据转为模拟信号</li>
+<li>数字数据可以通过数字发送器转换为数字信号（编号），也可以通过调制器转化为模拟信号（调制）</li>
+<li>模拟数据可以通过PCM编码器转化为数字信号（编码），也可以通过放大器调制器转化为模拟信号（调制）。</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h4 id="传输介质"><a href="#传输介质" class="headerlink" title="传输介质"></a>传输介质</h4><p>双绞线、光纤、同轴电缆、无线</p>
+<blockquote>
+<ul>
+<li>双绞线<ul>
+<li>屏蔽双绞线 &#x3D;&#x3D;STP&#x3D;&#x3D;：抗干扰强，贵一些（因为做了一些屏蔽外部干扰的处理）</li>
+<li>非屏蔽双绞线 &#x3D;&#x3D;UTP&#x3D;&#x3D;：便宜，抗干扰较差</li>
+<li>制作标准<ul>
+<li>&#x3D;&#x3D;T568B&#x3D;&#x3D;：白橙、橙、白绿、蓝、白蓝、绿、白宗、宗</li>
+<li>&#x3D;&#x3D;T568A&#x3D;&#x3D;：13、26替换：白绿、绿、白橙、蓝、白蓝、橙、白宗、宗</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>光纤：<ul>
+<li>单面光纤<ul>
+<li>只能传一种模式的光，中心纤芯很细，稳定性好，距离100KM</li>
+</ul>
+</li>
+<li>多模光纤<ul>
+<li>可传多种模式的光，中心纤芯较粗，距离2KM</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>同轴电缆：这个好，这个被淘汰了，不用学了</li>
+<li>无线：无线信号频率 IEEE802.11 (标准，有线是802.3)</li>
+</ul>
+</blockquote>
+<h4 id="三大部分"><a href="#三大部分" class="headerlink" title="三大部分"></a>三大部分</h4><p>源系统、传输系统、目标系统</p>
+<blockquote>
+<ul>
+<li>源系统：发送数据的一端</li>
+<li>传输系统：传输过程中的各种传输介质</li>
+<li>目标系统：接收数据的电脑</li>
+</ul>
+</blockquote>
+<h3 id="物理层的基本通信"><a href="#物理层的基本通信" class="headerlink" title="物理层的基本通信"></a>物理层的基本通信</h3><h4 id="四种信道复用技术"><a href="#四种信道复用技术" class="headerlink" title="四种信道复用技术"></a>四种信道复用技术</h4><p>&#x3D;&#x3D;复用技术&#x3D;&#x3D;是指一种在传输路径上综合多种信道，然后恢复原机制或解除终端各信道复用技术的过程。</p>
+<p>将多种不同的信号在同一信道上进行传输，复用技术主要是用于解决不同信号传输时应该如何区分。</p>
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/9716faf8ff09979922d25c0c2daf35da.png"></p>
+<blockquote>
+<ul>
+<li>频分复用 FDM<ul>
+<li>划分不同频率来并行传输信号</li>
+</ul>
+</li>
+<li>分时复用 TDM<ul>
+<li>划分不同的时间段来传输信号</li>
+</ul>
+</li>
+<li>波分复用 WDM<ul>
+<li>根据光波的长度进行传输</li>
+</ul>
+</li>
+<li>码分复用 CDM<ul>
+<li>在同一时间同一个频率根据传输的数据码进行区分</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h4 id="数据的传输方式"><a href="#数据的传输方式" class="headerlink" title="数据的传输方式"></a>数据的传输方式</h4><p>通过&#x3D;&#x3D;同时间传输数量&#x3D;&#x3D;分为：串行传输和并行传输</p>
+<blockquote>
+<ul>
+<li>&#x3D;&#x3D;串行传输&#x3D;&#x3D;：使用一条数据线，将数据一位一位地一次传输，每一位数据占一个固定的时间长度。只需要少数几条线就可以在系统间交换信息，特别适用于计算机与计算机、外设之间的远距离通信。</li>
+<li>&#x3D;&#x3D;并行传输&#x3D;&#x3D;：并行传输指的是数据以成组的方式，在多条并行信通上同时进行传输，是在传输中有多个数据位同时在设备之间进行传输。</li>
+</ul>
+</blockquote>
+<p>通过&#x3D;&#x3D;数据报文双方的行为方式&#x3D;&#x3D;分为：同步传输和异步传输。</p>
+<blockquote>
+<ul>
+<li>&#x3D;&#x3D;同步传输&#x3D;&#x3D;<ul>
+<li>双方都在线，约定好了，比如打电话</li>
+<li>同步传输的比特分组要大得多。它不是独立地发送每个字节，每个字节都有自己的开始位和停止位，而是把它们组合起来一起发送。我们将这些组合成为数据帧，或简称为帧。</li>
+</ul>
+</li>
+<li>&#x3D;&#x3D;异步传输&#x3D;&#x3D;<ul>
+<li>比如发消息</li>
+<li>异步传输将比特分成小组进行传送，小组可以是8位的1个字节或更长。发送放可以在任何时刻发送这些比特组</li>
+<li>而接收方从不知道它们会在什么时候到达。</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<p>通过&#x3D;&#x3D;传输的信号&#x3D;&#x3D;分为：基带传输和频带传输</p>
+<blockquote>
+<ul>
+<li>&#x3D;&#x3D;基带传输&#x3D;&#x3D;：传输数字信号叫做基带传输</li>
+<li>&#x3D;&#x3D;频带传输&#x3D;&#x3D;：传输模拟信号叫做频带传输（300-3400HZ）</li>
+</ul>
+</blockquote>
+<p>其他：</p>
+<ul>
+<li>传输方向：单工、半双工、全双工</li>
+<li>传输对象：单播、组播和广播。</li>
+</ul>
+<h3 id="必考内容"><a href="#必考内容" class="headerlink" title="必考内容"></a>必考内容</h3><p>1、四大特性：机械特性、电气特性、功能特性、过程特性</p>
+<p>2、两种信号：数字信号（常见 0 1）和模拟信号</p>
+<p>3、调制和编码：调制是将任意信号转换为模拟信号，编码是将任意信号转换为数字信号。编码的步骤（采样、量化、编码）</p>
+<p>4、传输介质：双绞线、光纤（单模和多膜）单 几千米  多 几十千米、</p>
+<p>5、源系统、传输系统、目的系统</p>
+<p>6、四种信道复用技术：频分、时分、波分、码分。 复用技术主要是用于解决不同信号传输时应该如何区分。</p>
+<p>7、数据的传输方式：</p>
+<ol>
+<li>串行传输和并行传输</li>
+<li>同步传输和异步传输</li>
+<li>基带传输和频带传输</li>
+</ol>
+<h3 id="计算机网络基础练习题"><a href="#计算机网络基础练习题" class="headerlink" title="计算机网络基础练习题"></a>计算机网络基础练习题</h3><h3 id="一、简答题"><a href="#一、简答题" class="headerlink" title="一、简答题"></a>一、简答题</h3><p>1、什么是计算机网络</p>
+<p>答:计算机网络是具有独立功能的计算机，通过通信线路连接起来实现资源共享。</p>
+<p>2、写出双绞线的两种线序：T568A和T568B。</p>
+<ul>
+<li>T568A：白绿、绿、白橙、蓝、白蓝、橙、白宗、宗</li>
+<li>T568B: 白橙、橙、白绿、蓝、白蓝、绿、白宗、宗</li>
+</ul>
+<p>3、写出OSI&#x2F;RM和TCP&#x2F;IP分层结构</p>
+<ul>
+<li>OSI：应表会传网数物</li>
+<li>TCP：网络接口层（物理和数据链路层）、网际层、传输层、应用层。</li>
+</ul>
+<p>4、写出IP地址空间中的特殊IP地址。</p>
+<p>保留IP地址：</p>
+<ul>
+<li>0.0.0.0：表示当前网络中的任何主机。</li>
+<li>127.0.0.1：表示本地回环地址，用于主机自身进行自我测试和通信。</li>
+</ul>
+<p>5、请画出下列比特流10100010的曼彻斯特编码和差分曼彻斯特编码。</p>
+<ul>
+<li>画~</li>
+</ul>
+<p>6、写出分层模型的优点。</p>
+<ul>
+<li>模块化设计</li>
+<li>易于理解</li>
+<li>互操作性</li>
+<li>容错性</li>
+<li>可扩展性(每个都是独立的)</li>
+</ul>
+<p>7、写出OSI模型的层次结构及各层的功能。</p>
+<ol>
+<li>物理层（Physical Layer）：<ul>
+<li>功能：负责在物理媒介上传输比特流，提供物理连接和电气特性以及数据传输的基本手段。</li>
+</ul>
+</li>
+<li>数据链路层（Data Link Layer）：<ul>
+<li>功能：负责将原始的比特流转换为逻辑上的数据帧，并提供错误检测和纠正、流控制、访问控制等功能。</li>
+</ul>
+</li>
+<li>网络层（Network Layer）：<ul>
+<li>功能：负责实现不同网络之间的数据包路由选择和转发，处理网络拓扑结构和寻址，确保数据可靠地从源节点到目标节点传输。</li>
+</ul>
+</li>
+<li>传输层（Transport Layer）：<ul>
+<li>功能：提供端到端的可靠数据传输服务，负责分段、流量控制、错误恢复等功能，并通过端口号标识应用程序之间的通信。</li>
+</ul>
+</li>
+<li>会话层（Session Layer）：<ul>
+<li>功能：负责建立、管理和终止会话（通信连接），实现不同主机之间的对话控制和同步。</li>
+</ul>
+</li>
+<li>表示层（Presentation Layer）：<ul>
+<li>功能：负责数据的格式转换、加密解密、压缩解压缩等操作，以确保不同系统上的应用程序能够相互理解和交换数据。</li>
+</ul>
+</li>
+<li>应用层（Application Layer）：<ul>
+<li>功能：为用户提供网络服务和应用程序接口，包括电子邮件、文件传输、远程登录、网页浏览等各种应用。</li>
+</ul>
+</li>
+</ol>
+<p>8、网卡、交换机和路由器的作用分别是什么？</p>
+<ul>
+<li>网卡是计算机与网络之间的接口设备，负责将数据转换为网络传输所需的格式。</li>
+<li>交换机用于局域网内部，根据目标MAC地址转发和过滤数据包，提供高速、可靠的局域网连接。</li>
+<li>路由器用于连接不同网络之间，根据IP地址确定数据包的最佳路径，并进行数据包转发和路由选择。</li>
+</ul>
+<p>9、TCP&#x2F;IP模型的网际层有哪些主要协议，各个协议的功能是什么？</p>
+<ol>
+<li>Internet Protocol（IP）：<ul>
+<li>功能：IP是TCP&#x2F;IP模型中最核心的协议之一，负责定义和管理网络地址，以便将数据从源主机传输到目标主机。它实现了数据包的分组、路由选择和寻址功能。</li>
+</ul>
+</li>
+<li>Internet Control Message Protocol（ICMP）：<ul>
+<li>功能：ICMP用于在IP网络中传递控制消息，如错误报告、网络探测和诊断信息等。它提供了网络中的通信状态和异常情况的反馈和报告。</li>
+</ul>
+</li>
+<li>Address Resolution Protocol（ARP）：<ul>
+<li>功能：ARP用于将IP地址转换为对应的物理MAC地址。当一个主机需要发送数据到另一个主机时，它需要知道目标主机的MAC地址，ARP协议负责将目标IP地址解析成对应的MAC地址。</li>
+</ul>
+</li>
+<li>Internet Group Management Protocol（IGMP）：<ul>
+<li>功能：IGMP用于在多播（Multicast）通信中，允许主机加入或离开一个多播组，并向路由器发送相应的组管理信息。</li>
+</ul>
+</li>
+<li>Internet Protocol Security（IPSec）：<ul>
+<li>功能：IPSec提供了通过对IP数据包进行加密和认证来保障网络通信的安全性。它可以用于建立虚拟专用网络（VPN）和提供数据包级的加密和认证机制。</li>
+</ul>
+</li>
+</ol>
+<p>10、写出TCP&#x2F;IP模型的层次结构及各层的功能。</p>
+<ol>
+<li>应用层（Application Layer）：<ul>
+<li>功能：提供应用程序与网络通信的接口，负责定义应用层协议，例如HTTP、SMTP、FTP等。应用层协议定义了数据的格式、传输方式和通信规则。</li>
+</ul>
+</li>
+<li>传输层（Transport Layer）：<ul>
+<li>功能：负责在网络节点之间建立、管理和终止数据传输通路。主要协议包括传输控制协议（TCP）和用户数据报协议（UDP）。传输层提供端到端的可靠数据传输、错误检测和恢复机制。</li>
+</ul>
+</li>
+<li>网际层（Internet Layer）：<ul>
+<li>功能：处理网络间的数据传输和路由选择。主要协议包括网际协议（IP）、地址解析协议（ARP）、互联网控制消息协议（ICMP）等。网际层负责将数据包从源主机传输到目标主机，并处理数据包的路由选择和跨网络传输。</li>
+</ul>
+</li>
+<li>网络接口层（Network Interface Layer）：<ul>
+<li>功能：在物理网络上发送和接收数据包。该层处理硬件接口和设备驱动程序，以及数据包的封装和解封装。它与特定的物理网络技术有关，如以太网、无线局域网等。</li>
+</ul>
+</li>
+</ol>
+<h3 id="二、案例分析题"><a href="#二、案例分析题" class="headerlink" title="二、案例分析题"></a>二、案例分析题</h3><ol>
+<li><blockquote>
+<p>亚星航公司申请了一个C类网络地址：192.168.10.0，子网掩码为255.255.255.0，由于工作需要，需对网络进行划分，要求如下：<br>将此网络划分成6个子网，请分别写出划分后子网掩码，每个子网的网络地址和广播地址，每个子网的主机数量及主机地址范围。</p>
+<ul>
+<li>2^n^ &gt; 6,n&#x3D;3,2^3^&#x3D;8&gt;6，子网掩码（255.255.255.224）舍去全0和全1剩下：</li>
+<li>192.168.10.32（001）<ul>
+<li>网络地址：192.168.10.32</li>
+<li>广播地址：192.168.10.63</li>
+<li>主机可用范围：192.168.10.33~192.168.10.62</li>
+</ul>
+</li>
+<li>192.168.10.64（010）<ul>
+<li>网络地址：192.168.10.64</li>
+<li>广播地址：192.168.10.95</li>
+<li>主机可用范围：192.168.10.65~192.168.10.94</li>
+</ul>
+</li>
+<li>192.168.10.96（011）<ul>
+<li>网络地址：192.168.10.96</li>
+<li>广播地址：192.168.10.127</li>
+<li>主机可用范围：192.168.10.97~192.168.10.126</li>
+</ul>
+</li>
+<li>192.168.10.128（100）<ul>
+<li>网络地址：192.168.10.128</li>
+<li>广播地址：192.168.10.159</li>
+<li>主机可用范围：192.168.10.129~192.168.10.158</li>
+</ul>
+</li>
+<li>192.168.10.160（101）<ul>
+<li>网络地址：192.168.10.160</li>
+<li>广播地址：192.168.10.191</li>
+<li>主机可用范围：192.168.10.161~192.168.10.190</li>
+</ul>
+</li>
+<li>192.168.10.192（110）<ul>
+<li>网络地址：192.168.10.192</li>
+<li>广播地址：192.168.10.223</li>
+<li>主机可用范围：192.168.10.193~192.168.10.222</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+</li>
+<li><p>下图对应的曼彻斯特编码值和差分曼彻斯特编码值分别是什么？</p>
+<p>这里没图片，就说一下看法：</p>
+<ul>
+<li>曼彻斯特编码：上0、下1</li>
+<li>差分曼彻斯特编码：0跳、1不跳（看虚线，虚线实了就是跳了，还是虚线就是没跳）</li>
+</ul>
+</li>
+<li><p>请画出下列比特流101100101的曼彻斯特编码和差分曼彻斯特编码。</p>
+<ul>
+<li>画画~</li>
+</ul>
+</li>
+<li><blockquote>
+<p>瑞航公司网络地址为172.16. 0.0，子网掩码为255.255.0.0，现因重新划分部门，需将该网络划分成6个子网，请分别写出划分后子网掩码，每个子网的网络地址和广播地址，每个子网的主机数量及主机地址范围。</p>
+<ul>
+<li>2^n^ &gt; 6,n&#x3D;3,2^3^&#x3D;8&gt;6，子网掩码（255.255.224.0）舍去全0和全1剩下：</li>
+<li>172.16.32.0（001）</li>
+<li>172.16.64.0（010）</li>
+<li>172.16.96.0（011）</li>
+<li>172.16.128.0（100）</li>
+<li>172.16.160.0（101）</li>
+<li>172.16.192.0（110）</li>
+<li>剩下的懒得写了，这里先写出了各个网段，可以参考上面的。</li>
+</ul>
+</blockquote>
+</li>
+<li><blockquote>
+<p>博知公司有8个子网，分别是： </p>
+<p>192.168.240.0&#x2F;24、192.168.241.0&#x2F;24、192.168.242.0&#x2F;24、192.168.243.0&#x2F;24 、192.168.244.0&#x2F;24 、192.168.245.0&#x2F;24 、192.168.246.0&#x2F;24 、192.168.247.0&#x2F;24</p>
+<p>现在将这8个类网络聚合为一个网络，请给出聚合后的网络地址和子网掩码。</p>
+<ul>
+<li>观察这八个子网的网络地址，可以发现它们的前三个字节都相同，只有最后一个字节不同。</li>
+<li>这八个子网的共同前缀是192.168.240.0&#x2F;21。在这个聚合后的网络中，前21位（192.168.240）表示网络地址，最后11位（.0）表示主机地址。</li>
+<li>因此，聚合后的网络地址是192.168.240.0，子网掩码是255.255.248.0（&#x2F;21）。</li>
+</ul>
+</blockquote>
+</li>
+<li><blockquote>
+<p>福润公司有4个子网，分别是：</p>
+<p>192.168.128.0&#x2F;24</p>
+<p>192.168.129.0&#x2F;24</p>
+<p>192.168.130.0&#x2F;24</p>
+<p>192.168.131.0&#x2F;24</p>
+<p>现在将这4个类网络聚合为一个网络，请给出聚合后的网络地址和子网掩码。</p>
+<ul>
+<li>要将这四个子网聚合为一个网络，需要找到它们的公共前缀。观察这四个子网的网络地址，可以发现它们的前三个字节都相同，只有最后一个字节不同。</li>
+<li>这四个子网的共同前缀是192.168.128.0&#x2F;22。在这个聚合后的网络中，前22位（192.168.128）表示网络地址，最后10位（.0）表示主机地址。</li>
+<li>因此，聚合后的网络地址是192.168.128.0，子网掩码是255.255.252.0（&#x2F;22）。</li>
+</ul>
+</blockquote>
+</li>
+<li><blockquote>
+<p>CRC属于检错码还是纠错码？如果某一数据通信系统采用CRC校验方式，生成多项式G(x)&#x3D;X4+X3+1，目的节点接收到二进制比特序列为110111101，判断传输过程中是否出现了错误？（要求包含过程）</p>
+<ul>
+<li><p>CRC（循环冗余校验）属于检错码，用于检测数据传输中的错误。</p>
+<p>对于给定的多项式G(x) &#x3D; X^4 + X^3 + 1，CRC校验的过程如下：</p>
+<ol>
+<li>首先，将发送方的数据序列和多项式进行按位异或运算。<ul>
+<li>数据序列：110111101</li>
+<li>多项式：10011</li>
+</ul>
+</li>
+<li>进行按位异或运算，将数据序列左移4位，然后进行异或操作：<ul>
+<li>异或结果：110111101000</li>
+</ul>
+</li>
+<li>检查异或结果是否为0。如果结果为0，则说明在传输过程中没有错误；如果结果不为0，则说明存在错误。</li>
+</ol>
+<p>在这个例子中，异或结果为110111101000，不等于0，因此可以判断在传输过程中出现了错误。</p>
+</li>
+</ul>
+</blockquote>
+</li>
+<li><p>需发送数据1101011011，采用CRC检验，生成多项式G(x)&#x3D;x4+x+1，求冗余位和最终发送的数据，并进行验证。（不会）</p>
+</li>
+<li><p>请给出CIDR地址块206.0.64.8&#x2F;18的全部细节，包含最小地址，最大地址，地址数量，聚合 C类网数量，地址掩码。（不会）</p>
+</li>
+<li><blockquote>
+<p>已知某个网络的地址为218.75.230.0，使用子网掩码为255.255.255.224对其进行子网划分，请给出划分后的子网数量，每个子网的网络地址和广播地址，每个子网的主机地址范围.</p>
+<ol>
+<li><p>首先将网络地址和子网掩码进行按位与运算，得到网络前缀： 218.75.230.0 (网络地址) 255.255.255.224 (子网掩码)</p>
+<p>218.75.230.0      (网络前缀)</p>
+</li>
+<li><p>每个子网的网络地址可以通过在网络前缀的基础上增加主机部分来得到。主机部分的范围是从1到子网容量减1（31）。</p>
+</li>
+</ol>
+<p>子网的网络地址、广播地址和主机地址范围如下：</p>
+<ol>
+<li>子网1：<ul>
+<li>网络地址：218.75.230.0</li>
+<li>广播地址：218.75.230.31</li>
+<li>主机地址范围：218.75.230.1 - 218.75.230.30</li>
+</ul>
+</li>
+<li>子网2：<ul>
+<li>网络地址：218.75.230.32</li>
+<li>广播地址：218.75.230.63</li>
+<li>主机地址范围：218.75.230.33 - 218.75.230.62</li>
+</ul>
+</li>
+<li>子网3：<ul>
+<li>网络地址：218.75.230.64</li>
+<li>广播地址：218.75.230.95</li>
+<li>主机地址范围：218.75.230.65 - 218.75.230.94</li>
+</ul>
+</li>
+</ol>
+<p>……依此类推，直到子网32。</p>
+<p>需要注意的是，每个子网的第一个地址是网络地址，最后一个地址是广播地址，中间的地址是可用的主机地址。</p>
+</blockquote>
+</li>
+</ol>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://taichiyly.github.io">Taichi</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://taichiyly.github.io/2024/01/19/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/">https://taichiyly.github.io/2024/01/19/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://taichiyly.github.io" target="_blank">泰 极</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a></div><div class="post-share"><div class="social-share" data-image="/assets/image/avatar.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>赞助</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/assets/image/reward-wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/assets/image/reward-wechat.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/assets/image/reward-alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/assets/image/reward-alipay.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2024/03/12/Vue2-Book-A/" title="Vue2 Book A"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">Vue2 Book A</div></div><div class="info-2"><div class="info-item-1">1.Vue核心1.1. Vue简介1.1.1. 官网 英文官网 中文官网  1.1.2. 介绍与描述 动态构建用户界面的&#x3D;&#x3D;渐进式&#x3D;&#x3D;JavaScript框架 作者：尤雨溪  1.1.3. Vue的特点 遵循&#x3D;&#x3D;MVVM&#x3D;&#x3D;模式 编码简洁，体积小，运行效率高，适合移动&#x2F;PC端开发 它本身只关注UI，可以引入其它第三方库开发项目  1.1.4.与其他JS框架的关联 借鉴 Angular 的&#x3D;&#x3D;模板&#x3D;&#x3D;和&#x3D;&#x3D;数据绑定&#x3D;&#x3D;技术 借鉴 React 的&#x3D;&#x3D;组件化&#x3D;&#x3D;和&#x3D;&#x3D;虚拟DOM&#x3D;&#x3D;技术  1.1.5. Vue周边库  vue-cli：vue脚手架 vue-resource axios vue-router：路由 vuex：状态管理 element-ui：基于vue的UI组件库（PC端）   1.2. 初识Vue&lt;!DOCTYPE...</div></div></div></a><a class="pagination-related" href="/2023/12/26/MySQL%E5%9F%BA%E7%A1%80/" title="MySQL基础"><img class="cover" src="/assets/image/mysql.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">MySQL基础</div></div><div class="info-2"><div class="info-item-1">2. SQL全称 Structured Query Language，结构化查询语言。操作关系型数据库的编程语言，定义了 一套操作关系型数据库统一&#x3D;&#x3D;标准&#x3D;&#x3D; 。 2.1 SQL 通用语法在学习具体的SQL语句之前，先来了解一下SQL语言的同于语法。   1). SQL语句可以单行或多行书写，以分号结尾。 2). SQL语句可以使用空格&#x2F;缩进来增强语句的可读性。 3). MySQL数据库的SQL语句不区分大小写，关键字建议使用大写。  4). 注释：  单行注释：– 注释内容 或 # 注释内容  多行注释：&#x2F;* 注释内容 *&#x2F;    2.2 SQL分类SQL 语句，根据其功能，主要分为四类：DDL、DML、DQL、DCL。    分类 全称 说明    DDL Data Definition Language 数据定义语言，用来定义数据库对象（数据库，表，字段）   DML Data Manipulation Language 数据操作语言，用来对数据库表中的数据进行增删改   DQL Data Query...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/assets/image/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Taichi</div><div class="author-info-description">Taichi‘ Blog</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">32</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">27</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/taichiyly"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%A6%82%E6%8B%AC"><span class="toc-number">1.</span> <span class="toc-text">计算机网络概括</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="toc-number">1.1.</span> <span class="toc-text">计算机网络的概念</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="toc-number">1.1.1.</span> <span class="toc-text">计算机网络的定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9A%84%E7%BB%84%E6%88%90"><span class="toc-number">1.1.2.</span> <span class="toc-text">计算机网络的组成</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9A%84%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.1.3.</span> <span class="toc-text">计算机网络的类型</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E6%8C%89%E7%85%A7%E6%8B%93%E6%89%91%E7%BB%93%E6%9E%84%E5%88%86%E7%B1%BB"><span class="toc-number">1.1.3.0.1.</span> <span class="toc-text">（1）按照拓扑结构分类</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%EF%BC%882%EF%BC%89%E6%8C%89%E7%85%A7%E8%8C%83%E5%9B%B4%E5%88%86%E7%B1%BB"><span class="toc-number">1.1.3.0.2.</span> <span class="toc-text">（2）按照范围分类</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%EF%BC%883%EF%BC%89%E6%8C%89%E7%85%A7%E4%BC%A0%E8%BE%93%E6%96%B9%E5%BC%8F%E5%88%86%E7%B1%BB"><span class="toc-number">1.1.3.0.3.</span> <span class="toc-text">（3）按照传输方式分类</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84"><span class="toc-number">1.2.</span> <span class="toc-text">计算机网络体系结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BC%A0%E8%BE%93%E6%96%B9%E5%BC%8F"><span class="toc-number">1.2.1.</span> <span class="toc-text">传输方式</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%8C%89%E7%85%A7%E4%BC%A0%E8%BE%93%E6%96%B9%E5%90%91%E5%88%86"><span class="toc-number">1.2.1.0.1.</span> <span class="toc-text">按照传输方向分</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%8C%89%E7%85%A7%E4%BC%A0%E8%BE%93%E5%AF%B9%E8%B1%A1%EF%BC%88%E6%96%B9%E5%BC%8F%EF%BC%89%E5%88%86"><span class="toc-number">1.2.1.0.2.</span> <span class="toc-text">按照传输对象（方式）分</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E4%BA%A4%E6%8D%A2"><span class="toc-number">1.2.2.</span> <span class="toc-text">数据交换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE%E5%92%8C%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84"><span class="toc-number">1.2.3.</span> <span class="toc-text">通信协议和体系结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E5%BA%93%EF%BC%9A"><span class="toc-number">1.2.4.</span> <span class="toc-text">题库：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E7%AC%AC%E4%BA%8C%E7%AB%A0"><span class="toc-number">1.2.5.</span> <span class="toc-text">计算机网络 第二章</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%89%A9%E7%90%86%E5%B1%82"><span class="toc-number">1.2.6.</span> <span class="toc-text">物理层</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%89%A9%E7%90%86%E5%B1%82%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-number">1.2.7.</span> <span class="toc-text">物理层的基本概念</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9B%9B%E5%A4%A7%E7%89%B9%E6%80%A7"><span class="toc-number">1.2.7.1.</span> <span class="toc-text">四大特性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%A4%E7%A7%8D%E4%BF%A1%E5%8F%B7"><span class="toc-number">1.2.7.2.</span> <span class="toc-text">两种信号</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%B0%83%E5%88%B6%E5%92%8C%E7%BC%96%E7%A0%81"><span class="toc-number">1.2.7.3.</span> <span class="toc-text">调制和编码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BC%A0%E8%BE%93%E4%BB%8B%E8%B4%A8"><span class="toc-number">1.2.7.4.</span> <span class="toc-text">传输介质</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%89%E5%A4%A7%E9%83%A8%E5%88%86"><span class="toc-number">1.2.7.5.</span> <span class="toc-text">三大部分</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%89%A9%E7%90%86%E5%B1%82%E7%9A%84%E5%9F%BA%E6%9C%AC%E9%80%9A%E4%BF%A1"><span class="toc-number">1.2.8.</span> <span class="toc-text">物理层的基本通信</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9B%9B%E7%A7%8D%E4%BF%A1%E9%81%93%E5%A4%8D%E7%94%A8%E6%8A%80%E6%9C%AF"><span class="toc-number">1.2.8.1.</span> <span class="toc-text">四种信道复用技术</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%9A%84%E4%BC%A0%E8%BE%93%E6%96%B9%E5%BC%8F"><span class="toc-number">1.2.8.2.</span> <span class="toc-text">数据的传输方式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BF%85%E8%80%83%E5%86%85%E5%AE%B9"><span class="toc-number">1.2.9.</span> <span class="toc-text">必考内容</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%E7%BB%83%E4%B9%A0%E9%A2%98"><span class="toc-number">1.2.10.</span> <span class="toc-text">计算机网络基础练习题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E7%AE%80%E7%AD%94%E9%A2%98"><span class="toc-number">1.2.11.</span> <span class="toc-text">一、简答题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90%E9%A2%98"><span class="toc-number">1.2.12.</span> <span class="toc-text">二、案例分析题</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/02/23/%E9%94%99%E9%A2%98%E6%95%B4%E7%90%86/" title="网管错题整理">网管错题整理</a><time datetime="2025-02-23T03:20:47.235Z" title="发表于 2025-02-23 11:20:47">2025-02-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/02/23/%E6%AD%A3%E5%88%99/" title="正则表达式"><img src="https://t.alcy.cc/ycy" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="正则表达式"/></a><div class="content"><a class="title" href="/2025/02/23/%E6%AD%A3%E5%88%99/" title="正则表达式">正则表达式</a><time datetime="2025-02-23T01:38:58.000Z" title="发表于 2025-02-23 09:38:58">2025-02-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/02/23/Python50%E9%81%93%E7%BB%83%E4%B9%A0%E9%A2%98/" title="Python50道练习题"><img src="https://t.alcy.cc/fj" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Python50道练习题"/></a><div class="content"><a class="title" href="/2025/02/23/Python50%E9%81%93%E7%BB%83%E4%B9%A0%E9%A2%98/" title="Python50道练习题">Python50道练习题</a><time datetime="2025-02-23T01:38:58.000Z" title="发表于 2025-02-23 09:38:58">2025-02-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/02/23/requests%E8%AF%B7%E6%B1%82%E6%A8%A1%E5%9D%97/" title="requests请求模块"><img src="https://t.alcy.cc/xhl" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="requests请求模块"/></a><div class="content"><a class="title" href="/2025/02/23/requests%E8%AF%B7%E6%B1%82%E6%A8%A1%E5%9D%97/" title="requests请求模块">requests请求模块</a><time datetime="2025-02-23T01:38:58.000Z" title="发表于 2025-02-23 09:38:58">2025-02-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/12/29/Python%E7%BC%96%E7%A8%8B/" title="测试平台笔记"><img src="https://api.yimian.xyz/img" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="测试平台笔记"/></a><div class="content"><a class="title" href="/2024/12/29/Python%E7%BC%96%E7%A8%8B/" title="测试平台笔记">测试平台笔记</a><time datetime="2024-12-29T01:38:58.000Z" title="发表于 2024-12-29 09:38:58">2024-12-29</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2025 By Taichi</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>

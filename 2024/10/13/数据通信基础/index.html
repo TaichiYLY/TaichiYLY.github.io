@@ -1,0 +1,379 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>数据通信基础 | 泰 极</title><meta name="author" content="Taichi"><meta name="copyright" content="Taichi"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="数据通信基础信道特性通信术语   消息：人类能感知的描述，如人能看到文字图形，听到声音等 信息：对事物状态或存在方式的不确定性表述，消息是信息的载体。通过听到消息来获取信息。 信号：在通信系统中，传统信息需要合适的载体在传输通道中传播，这样的载体称为信号，通常以电磁波的形式存在。 数据：通常是文字、数字、图像或符号。数据集合中包含信息和规律   -  数据通信系统的模型 码元：相同的时间间隔里面的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据通信基础">
+<meta property="og:url" content="https://taichiyly.github.io/2024/10/13/%E6%95%B0%E6%8D%AE%E9%80%9A%E4%BF%A1%E5%9F%BA%E7%A1%80/index.html">
+<meta property="og:site_name" content="泰 极">
+<meta property="og:description" content="数据通信基础信道特性通信术语   消息：人类能感知的描述，如人能看到文字图形，听到声音等 信息：对事物状态或存在方式的不确定性表述，消息是信息的载体。通过听到消息来获取信息。 信号：在通信系统中，传统信息需要合适的载体在传输通道中传播，这样的载体称为信号，通常以电磁波的形式存在。 数据：通常是文字、数字、图像或符号。数据集合中包含信息和规律   -  数据通信系统的模型 码元：相同的时间间隔里面的">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://taichiyly.github.io/assets/image/avatar.jpg">
+<meta property="article:published_time" content="2024-10-13T10:38:45.000Z">
+<meta property="article:modified_time" content="2025-02-23T03:22:56.363Z">
+<meta property="article:author" content="Taichi">
+<meta property="article:tag" content="通信方式">
+<meta property="article:tag" content="数据校验">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://taichiyly.github.io/assets/image/avatar.jpg"><link rel="shortcut icon" href="/assets/image/favicon.png"><link rel="canonical" href="https://taichiyly.github.io/2024/10/13/%E6%95%B0%E6%8D%AE%E9%80%9A%E4%BF%A1%E5%9F%BA%E7%A1%80/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":500,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'medium_zoom',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '数据通信基础',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  isShuoshuo: false
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/assets/image/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">32</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">27</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa fa-heartbeat"></i><span> 列表</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/photo/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><img class="site-icon" src="/assets/image/logo.png" alt="Logo"><span class="site-name">泰 极</span></a><a class="nav-page-title" href="/"><span class="site-name">数据通信基础</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa fa-heartbeat"></i><span> 列表</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/photo/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">数据通信基础</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-10-13T10:38:45.000Z" title="发表于 2024-10-13 18:38:45">2024-10-13</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-02-23T03:22:56.363Z" title="更新于 2025-02-23 11:22:56">2025-02-23</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86%E5%91%98/">网络管理员</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h1 id="数据通信基础"><a href="#数据通信基础" class="headerlink" title="数据通信基础"></a>数据通信基础</h1><h3 id="信道特性"><a href="#信道特性" class="headerlink" title="信道特性"></a>信道特性</h3><p>通信术语</p>
+<blockquote>
+<ul>
+<li><u><strong>消息</strong></u>：人类能感知的描述，如人能看到文字图形，听到声音等</li>
+<li><u><strong>信息</strong></u>：对事物状态或存在方式的不确定性表述，消息是信息的载体。通过听到消息来获取信息。</li>
+<li><u><strong>信号</strong></u>：在通信系统中，传统信息需要合适的载体在传输通道中传播，这样的载体称为信号，通常以电磁波的形式存在。</li>
+<li><u><strong>数据</strong></u>：通常是文字、数字、图像或符号。数据集合中包含信息和规律</li>
+</ul>
+</blockquote>
+<p>- </p>
+<h5 id="数据通信系统的模型"><a href="#数据通信系统的模型" class="headerlink" title="数据通信系统的模型"></a>数据通信系统的模型</h5><p><img src="/%E6%95%B0%E6%8D%AE%E9%80%9A%E4%BF%A1%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%A8%A1%E5%9E%8B.jpg" alt="数据通信系统的模型"></p>
+<p>码元：相同的时间间隔里面的符号来表示二进制</p>
+<ul>
+<li>源系统也可以作为目标系统，目标系统也可以作为源系统</li>
+<li>发送器：调制器</li>
+<li>接收器：解调器</li>
+<li>so 调制解调器 猫</li>
+</ul>
+<h5 id="信道的极限容量"><a href="#信道的极限容量" class="headerlink" title="信道的极限容量"></a>信道的极限容量</h5><p>2. </p>
+<p><img src="/%E4%BF%A1%E9%81%93%E7%9A%84%E6%9E%81%E9%99%90%E5%AE%B9%E9%87%8F.jpg" alt="信道的极限容量"></p>
+<p>关于失真 分为两种情况</p>
+<ol>
+<li>信号失真 可以识别</li>
+<li>信号失真太大 不可以识别</li>
+</ol>
+<h5 id="信道特征"><a href="#信道特征" class="headerlink" title="信道特征"></a>信道特征</h5><p><img src="/%E4%BF%A1%E9%81%93%E7%89%B9%E5%BE%81.jpg" alt="信道特征"></p>
+<blockquote>
+<p> 码元速度 也就是 波特率，单位时间内可以发送多少个码元（波特 Baud）</p>
+<p>数据速率是在单位时间内可以发送多少个bit比特（单位 bps 相等于 b&#x2F;s）</p>
+<p><u><strong>注意</strong></u>：只要题目给出了噪声 或 信噪比 使用香浓理论</p>
+<p>没有给噪音关键词，就是用下面的公式 </p>
+</blockquote>
+<h4 id="信道特征-奈奎斯特定理和香农理论"><a href="#信道特征-奈奎斯特定理和香农理论" class="headerlink" title="信道特征-奈奎斯特定理和香农理论"></a>信道特征-奈奎斯特定理和香农理论</h4><p><u><strong>奈式定理</strong></u>：</p>
+<ul>
+<li>在奈式定理中，N表示码元种类数，也可理解为不同离散值的个数。</li>
+<li>计算数据速率公式：<code>R=Blog,N</code>，即表示传输的一个码元对应传输了多少比特位。</li>
+<li>其中B表示码元速率又称为波特率，单位是baud，R是数据速率，单位是bps。</li>
+</ul>
+<p><u><strong>香农理论</strong></u>：</p>
+<ul>
+<li>使用香农理论时，由于S&#x2F;N（信噪比）的比值通常太大，因此通常使用分贝数(dB)来表示：<code>dB=10l0g10(S/N)</code></li>
+<li>例如，S&#x2F;N&#x3D;1000时，用分贝表示是30dB。如果带宽是3kHz，此时的极限数据速率就是：<code>C=Wlog2(1+S/N)=3000*9.97=30kbps</code></li>
+<li>当分贝数是30dB时，公式可以简化为C&#x3D;10W</li>
+</ul>
+<h5 id="调制技术-模拟信道传送数字数据"><a href="#调制技术-模拟信道传送数字数据" class="headerlink" title="调制技术-模拟信道传送数字数据"></a>调制技术-模拟信道传送数字数据</h5><blockquote>
+<p><u><strong>数据</strong></u>：数字数据和模拟数据 </p>
+<p><u><strong>信道</strong></u>：数字信道和模拟信道</p>
+<p>把数据转换成模拟：<u><strong>调制技术</strong></u></p>
+<p>把数据转换成数字：<u><strong>编码技术</strong></u></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>调制技术</th>
+<th>说明</th>
+<th>码元种类</th>
+<th>比特位</th>
+<th>特点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><u><strong>ASK</strong></u></td>
+<td>用恒定的载波振幅值表示一个数(通常是，无载波表示另1)个数。</td>
+<td>2</td>
+<td>1</td>
+<td>实现简单、但抗干扰性差、效率低(典型数据率仅为1200bps)</td>
+</tr>
+<tr>
+<td><u><strong>FSK</strong></u></td>
+<td>由载波频率(f<del>c</del>)附近的两个频率(f<del>1</del>、f<del>2</del>)表示两个不同值f<del>c</del>恰好为中值。</td>
+<td>2</td>
+<td>1</td>
+<td>抗干扰性较ASK更强，但占用带宽较大，典型速度也是1200bps</td>
+</tr>
+<tr>
+<td><u><strong>PSK</strong></u></td>
+<td>用载波的相位偏移来表示数据值。</td>
+<td>2</td>
+<td>1</td>
+<td>抗于扰性最好，而且相位的变化可以作为定时信息来同步时钟</td>
+</tr>
+<tr>
+<td>4DPSK</td>
+<td>四差分相移键控</td>
+<td>4</td>
+<td>2</td>
+<td>每90°表示一种状态</td>
+</tr>
+<tr>
+<td>QPSK</td>
+<td>正交相移键控</td>
+<td>4</td>
+<td>2</td>
+<td>每90°表示一种状态</td>
+</tr>
+</tbody></table>
+<p><img src="/%E8%B0%83%E5%88%B6%E6%8A%80%E6%9C%AF.jpg" alt="调制技术"></p>
+<h5 id="数字信道传送模拟数据"><a href="#数字信道传送模拟数据" class="headerlink" title="数字信道传送模拟数据"></a>数字信道传送模拟数据</h5><blockquote>
+<p><u><strong>PCM脉冲码调制技术</strong></u></p>
+<ul>
+<li>采样（奈奎斯特采样定律）</li>
+<li>量化</li>
+<li>编码：把量化后的值转成计算机可以识别的二进制</li>
+</ul>
+<p>把模拟数据通过编码转换成数字信号</p>
+</blockquote>
+<p>习题：</p>
+<p><img src="/%E4%BF%A1%E9%81%93%E4%B9%A0%E9%A2%98.jpg" alt="信道习题"></p>
+<p><img src="/%E4%BF%A1%E9%81%93%E4%B9%A0%E9%A2%981.jpg" alt="信道习题1"></p>
+<h3 id="数字编码与编码效率"><a href="#数字编码与编码效率" class="headerlink" title="数字编码与编码效率"></a>数字编码与编码效率</h3><p><img src="/%E6%9B%BC%E5%BD%BB%E6%96%AF%E7%89%B9.jpg" alt="曼彻斯特"></p>
+<p>编码效率</p>
+<table>
+<thead>
+<tr>
+<th>编码方案</th>
+<th>说明</th>
+<th>效率</th>
+<th>典型应用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>4B&#x2F;5B</td>
+<td>每次对4位数据进行编码，将其转换为5位符号</td>
+<td>1.25波特&#x2F;位即80%</td>
+<td>100Base-FX、100Base-TX、FDD</td>
+</tr>
+<tr>
+<td>8B&#x2F;10B</td>
+<td>每次对8位数据位进行编码，将其转为10位符号</td>
+<td>1.25波特&#x2F;位即80%</td>
+<td>千兆以太网</td>
+</tr>
+<tr>
+<td>8B&#x2F;6T</td>
+<td>8bit映射为6个三进制位</td>
+<td>0.75波特&#x2F;位</td>
+<td>100Base-T4</td>
+</tr>
+</tbody></table>
+<p><img src="/%E7%BC%96%E7%A0%81%E4%B9%A0%E9%A2%98.jpg" alt="编码习题"></p>
+<p><img src="/%E7%BC%96%E7%A0%81%E4%B9%A0%E9%A2%981.jpg" alt="编码习题1"></p>
+<h3 id="复用技术"><a href="#复用技术" class="headerlink" title="复用技术"></a>复用技术</h3><p><img src="/%E5%A4%8D%E7%94%A8%E6%8A%80%E6%9C%AF.jpg" alt="复用技术"></p>
+<blockquote>
+<ul>
+<li>频分复用（FDM）<ul>
+<li>在频域内将信道带宽划分为多个子信道，并利用载波调制技术，将原始信号调制到对应某个子信道的载波信号上，使得同时传输的多路信号在整个物理信道带宽运行的范围内频谱不重叠，从而共用一个信道。</li>
+</ul>
+</li>
+<li>时分复用（TDM）<ul>
+<li>将通信信道的传输信号在**<u>时域</u><strong>内划分为</strong><u>多个等长的时隙</u>**，每路信号占用不同的<br>时隙，在时域上互不重叠，使得多路信号合用单一的通信信道，实现信道共享</li>
+<li>按照时间去分，每个用户占用一段时间，在宏观上开 时间间隔非常短（同步时分复用）</li>
+</ul>
+</li>
+<li>空分复用（WDM）<ul>
+<li>让同一个频段在不同的空间内得到重复利用，称之为空分复用</li>
+<li>比如5类线就是4对双绞线共用1条缆</li>
+<li>将多根光纤组合成束实现空分复用，或者在同一根光纤中实现空分复用</li>
+</ul>
+</li>
+<li>波分复用（WDM）<ul>
+<li>光的频分复用，用光波来代替频率</li>
+<li>应用于光纤通道中</li>
+</ul>
+</li>
+<li>码分复用（CDM）<ul>
+<li>每个用户可在同一时间使用同样的频带进行通信，但使用的是基于码型的分割信道的方法，即每个用户分配一个地址码，各个码型互不重叠，通信各方之间不会相互干扰，且抗干扰能力强。</li>
+<li>主要用于**<u>无线通信系统</u><strong>，特别是</strong><u>移动通信系统</u>**。</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<p><img src="/%E5%A4%8D%E7%94%A8%E6%8A%80%E6%9C%AF%E4%B9%A0%E9%A2%98.jpg" alt="复用技术习题"></p>
+<p><img src="/%E5%A4%8D%E7%94%A8%E8%BD%BD%E6%B3%A2.jpg" alt="复用载波"></p>
+<h3 id="通信方式"><a href="#通信方式" class="headerlink" title="通信方式"></a>通信方式</h3><blockquote>
+<ul>
+<li>单工：单向</li>
+<li>半双工：每次只能一个方向（对讲机）</li>
+<li>全双工：双向（打电话）</li>
+</ul>
+</blockquote>
+<p>按收发双方对数据保持步调一致</p>
+<ul>
+<li>异步通信<ul>
+<li>以**<u>字符</u>**为单位独立进行传输，每次发送一个字符：“起始位”+“数据位”+“停止位”</li>
+</ul>
+</li>
+<li>同步通信<ul>
+<li>以**<u>数据块</u>**为单位进行传输，数据块包含多个字符：“起始标志”+“数据块位”+“停止标志”</li>
+</ul>
+</li>
+</ul>
+<p><img src="/%E9%80%9A%E4%BF%A1%E6%96%B9%E5%BC%8F%E4%B9%A0%E9%A2%98.jpg" alt="通信方式习题"></p>
+<h3 id="差错控制"><a href="#差错控制" class="headerlink" title="差错控制"></a>差错控制</h3><ul>
+<li><p><u><strong>什么是检错和纠错</strong></u>?</p>
+</li>
+<li><p><u><strong>什么是码距</strong></u>?</p>
+<p>任何编码都由一组码字组成，两个码字间变化的二进制位数称为<u><strong>码距</strong></u>。</p>
+<p>而在一种编码中任意两个码字之间最少变化的二进制位数称为该数据编码的最小码距。</p>
+</li>
+<li><p><u><strong>码距与检错、纠错有何关系</strong></u>?</p>
+<ol>
+<li>在一个码组内为了检测e个误码，要求最小码距d应该满足：<code>d&gt;=e+1</code></li>
+<li>在一个码组内为了纠正t个误码，要求最小码距d应该满足：<code>d&gt;=2t+1</code></li>
+</ol>
+</li>
+</ul>
+<p>码距与检错、纠错的关系：</p>
+<ul>
+<li>若用1位长度的二进制编码。若A&#x3D;1，B&#x3D;0。这样A，B之间的最小码距为1。</li>
+<li>若用2位长度的二进制编码，若以A&#x3D;11，B&#x3D;00为例，A、B之间的最小码距为2。</li>
+<li>若用3位长度的二进制编码，可选用111，000作为合法编码。A，B之间的最小码距为3。</li>
+</ul>
+<p>校验技术：</p>
+<blockquote>
+<ul>
+<li>奇偶校验（检错码）<ul>
+<li>检错码的构造：检错码 &#x3D; 信息字段 + 校验字段</li>
+</ul>
+</li>
+<li>海明校验（**<u>即检错又纠错</u>**）</li>
+<li>CRC循环冗余校验（检错码）</li>
+</ul>
+</blockquote>
+<p>奇偶校验</p>
+<p><img src="/%E5%A5%87%E5%81%B6%E6%A0%A1%E9%AA%8C.jpg" alt="奇偶校验"></p>
+<p>海明校验</p>
+<p>m表示数据位的位数，k校验位的位数</p>
+<p><img src="/%E6%B5%B7%E6%98%8E%E6%A0%A1%E9%AA%8C.jpg" alt="海明校验"></p>
+<p>海明校验的存放位置跟2^x^有关系，图中1、2、4、8 都是空的</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://taichiyly.github.io">Taichi</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://taichiyly.github.io/2024/10/13/%E6%95%B0%E6%8D%AE%E9%80%9A%E4%BF%A1%E5%9F%BA%E7%A1%80/">https://taichiyly.github.io/2024/10/13/%E6%95%B0%E6%8D%AE%E9%80%9A%E4%BF%A1%E5%9F%BA%E7%A1%80/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://taichiyly.github.io" target="_blank">泰 极</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E9%80%9A%E4%BF%A1%E6%96%B9%E5%BC%8F/">通信方式</a><a class="post-meta__tags" href="/tags/%E6%95%B0%E6%8D%AE%E6%A0%A1%E9%AA%8C/">数据校验</a></div><div class="post-share"><div class="social-share" data-image="/assets/image/avatar.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>赞助</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/assets/image/reward-wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/assets/image/reward-wechat.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/assets/image/reward-alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/assets/image/reward-alipay.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2024/11/26/hello-world/" title="Hello World"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">Hello World</div></div><div class="info-2"><div class="info-item-1">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new &quot;My New Post&quot;  More info: Writing Run server1$ hexo server  More info: Server Generate static files1$ hexo generate  More info: Generating Deploy to remote sites1$ hexo deploy  More info: Deployment </div></div></div></a><a class="pagination-related" href="/2024/10/13/%E7%BD%91%E7%BB%9C%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/" title="网络体系结构"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">网络体系结构</div></div><div class="info-2"><div class="info-item-1">网络体系结构 计算机网络的概念 OSI参考模型 TCP&#x2F;IP体系  计算机网络 计算机网络的概念  20世纪50年代以前：计算机技术与通信技术结合 20世纪50年代至70年代中期：APPANET 20世纪70年代开始：0SI七层模型和TCP&#x2F;IP体系 20世纪90年代开始：因特网 &#x3D; Internet &#x3D; 互联网  计算机网络的定义  计算机网络定义为“以能够相互共享资源的方式互连起来的自治计算机系统的集合”，主要表现在如下几点：★目的是实现计算机资源的共享★分布在不同地理位置的多台独立的“自治计算机”★...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/assets/image/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Taichi</div><div class="author-info-description">Taichi‘ Blog</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">32</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">27</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/taichiyly"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E9%80%9A%E4%BF%A1%E5%9F%BA%E7%A1%80"><span class="toc-number">1.</span> <span class="toc-text">数据通信基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%A1%E9%81%93%E7%89%B9%E6%80%A7"><span class="toc-number">1.0.1.</span> <span class="toc-text">信道特性</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E9%80%9A%E4%BF%A1%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%A8%A1%E5%9E%8B"><span class="toc-number">1.0.1.0.1.</span> <span class="toc-text">数据通信系统的模型</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BF%A1%E9%81%93%E7%9A%84%E6%9E%81%E9%99%90%E5%AE%B9%E9%87%8F"><span class="toc-number">1.0.1.0.2.</span> <span class="toc-text">信道的极限容量</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BF%A1%E9%81%93%E7%89%B9%E5%BE%81"><span class="toc-number">1.0.1.0.3.</span> <span class="toc-text">信道特征</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BF%A1%E9%81%93%E7%89%B9%E5%BE%81-%E5%A5%88%E5%A5%8E%E6%96%AF%E7%89%B9%E5%AE%9A%E7%90%86%E5%92%8C%E9%A6%99%E5%86%9C%E7%90%86%E8%AE%BA"><span class="toc-number">1.0.1.1.</span> <span class="toc-text">信道特征-奈奎斯特定理和香农理论</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%B0%83%E5%88%B6%E6%8A%80%E6%9C%AF-%E6%A8%A1%E6%8B%9F%E4%BF%A1%E9%81%93%E4%BC%A0%E9%80%81%E6%95%B0%E5%AD%97%E6%95%B0%E6%8D%AE"><span class="toc-number">1.0.1.1.1.</span> <span class="toc-text">调制技术-模拟信道传送数字数据</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%95%B0%E5%AD%97%E4%BF%A1%E9%81%93%E4%BC%A0%E9%80%81%E6%A8%A1%E6%8B%9F%E6%95%B0%E6%8D%AE"><span class="toc-number">1.0.1.1.2.</span> <span class="toc-text">数字信道传送模拟数据</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E5%AD%97%E7%BC%96%E7%A0%81%E4%B8%8E%E7%BC%96%E7%A0%81%E6%95%88%E7%8E%87"><span class="toc-number">1.0.2.</span> <span class="toc-text">数字编码与编码效率</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%8D%E7%94%A8%E6%8A%80%E6%9C%AF"><span class="toc-number">1.0.3.</span> <span class="toc-text">复用技术</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%9A%E4%BF%A1%E6%96%B9%E5%BC%8F"><span class="toc-number">1.0.4.</span> <span class="toc-text">通信方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B7%AE%E9%94%99%E6%8E%A7%E5%88%B6"><span class="toc-number">1.0.5.</span> <span class="toc-text">差错控制</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/02/23/%E9%94%99%E9%A2%98%E6%95%B4%E7%90%86/" title="网管错题整理">网管错题整理</a><time datetime="2025-02-23T03:20:47.235Z" title="发表于 2025-02-23 11:20:47">2025-02-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/02/23/%E6%AD%A3%E5%88%99/" title="正则表达式"><img src="https://t.alcy.cc/ycy" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="正则表达式"/></a><div class="content"><a class="title" href="/2025/02/23/%E6%AD%A3%E5%88%99/" title="正则表达式">正则表达式</a><time datetime="2025-02-23T01:38:58.000Z" title="发表于 2025-02-23 09:38:58">2025-02-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/02/23/Python50%E9%81%93%E7%BB%83%E4%B9%A0%E9%A2%98/" title="Python50道练习题"><img src="https://t.alcy.cc/fj" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Python50道练习题"/></a><div class="content"><a class="title" href="/2025/02/23/Python50%E9%81%93%E7%BB%83%E4%B9%A0%E9%A2%98/" title="Python50道练习题">Python50道练习题</a><time datetime="2025-02-23T01:38:58.000Z" title="发表于 2025-02-23 09:38:58">2025-02-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/02/23/requests%E8%AF%B7%E6%B1%82%E6%A8%A1%E5%9D%97/" title="requests请求模块"><img src="https://t.alcy.cc/xhl" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="requests请求模块"/></a><div class="content"><a class="title" href="/2025/02/23/requests%E8%AF%B7%E6%B1%82%E6%A8%A1%E5%9D%97/" title="requests请求模块">requests请求模块</a><time datetime="2025-02-23T01:38:58.000Z" title="发表于 2025-02-23 09:38:58">2025-02-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/12/29/Python%E7%BC%96%E7%A8%8B/" title="测试平台笔记"><img src="https://api.yimian.xyz/img" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="测试平台笔记"/></a><div class="content"><a class="title" href="/2024/12/29/Python%E7%BC%96%E7%A8%8B/" title="测试平台笔记">测试平台笔记</a><time datetime="2024-12-29T01:38:58.000Z" title="发表于 2024-12-29 09:38:58">2024-12-29</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2025 By Taichi</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>

@@ -1,0 +1,420 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>计算机硬件基础 | 泰 极</title><meta name="author" content="Taichi"><meta name="copyright" content="Taichi"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="计算机硬件基础上午考试  数据的表示 （重要） 计算机系统的组成与体系结构（了解） 指令流水技术（计算少，观念多） 存储系统（）  一、数据的表示进制  R进制的表示（R进制分为二、八、十、十六） 原则：逢R进一 十六进制：1015 是 af   R进制转十进制（按权展开） 二进制的1101转十进制   十进制转R进制（短除法） 十进制236转二进制：11101100 计算方法 236 除以 2">
+<meta property="og:type" content="article">
+<meta property="og:title" content="计算机硬件基础">
+<meta property="og:url" content="https://taichiyly.github.io/2024/10/11/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A1%AC%E4%BB%B6%E5%9F%BA%E7%A1%80/index.html">
+<meta property="og:site_name" content="泰 极">
+<meta property="og:description" content="计算机硬件基础上午考试  数据的表示 （重要） 计算机系统的组成与体系结构（了解） 指令流水技术（计算少，观念多） 存储系统（）  一、数据的表示进制  R进制的表示（R进制分为二、八、十、十六） 原则：逢R进一 十六进制：1015 是 af   R进制转十进制（按权展开） 二进制的1101转十进制   十进制转R进制（短除法） 十进制236转二进制：11101100 计算方法 236 除以 2">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://taichiyly.github.io/assets/image/avatar.jpg">
+<meta property="article:published_time" content="2024-10-11T04:31:45.000Z">
+<meta property="article:modified_time" content="2025-02-23T03:22:54.335Z">
+<meta property="article:author" content="Taichi">
+<meta property="article:tag" content="计算机结构">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://taichiyly.github.io/assets/image/avatar.jpg"><link rel="shortcut icon" href="/assets/image/favicon.png"><link rel="canonical" href="https://taichiyly.github.io/2024/10/11/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A1%AC%E4%BB%B6%E5%9F%BA%E7%A1%80/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":500,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'medium_zoom',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '计算机硬件基础',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  isShuoshuo: false
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/assets/image/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">32</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">27</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa fa-heartbeat"></i><span> 列表</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/photo/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><img class="site-icon" src="/assets/image/logo.png" alt="Logo"><span class="site-name">泰 极</span></a><a class="nav-page-title" href="/"><span class="site-name">计算机硬件基础</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa fa-heartbeat"></i><span> 列表</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/photo/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">计算机硬件基础</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-10-11T04:31:45.000Z" title="发表于 2024-10-11 12:31:45">2024-10-11</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-02-23T03:22:54.335Z" title="更新于 2025-02-23 11:22:54">2025-02-23</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86%E5%91%98/">网络管理员</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h1 id="计算机硬件基础"><a href="#计算机硬件基础" class="headerlink" title="计算机硬件基础"></a>计算机硬件基础</h1><p>上午考试</p>
+<blockquote>
+<p>数据的表示 （<u><strong>重要</strong></u>）</p>
+<p>计算机系统的组成与体系结构（了解）</p>
+<p>指令流水技术（计算少，观念多）</p>
+<p>存储系统（）</p>
+</blockquote>
+<h3 id="一、数据的表示"><a href="#一、数据的表示" class="headerlink" title="一、数据的表示"></a>一、数据的表示</h3><h4 id="进制"><a href="#进制" class="headerlink" title="进制"></a>进制</h4><blockquote>
+<ul>
+<li><u><strong>R进制的表示</strong></u>（R进制分为二、八、十、十六）<ul>
+<li>原则：逢R进一</li>
+<li>十六进制：10<del>15 是 a</del>f</li>
+</ul>
+</li>
+<li><u><strong>R进制转十进制</strong></u>（按权展开）<ul>
+<li>二进制的1101转十进制</li>
+</ul>
+</li>
+<li><u><strong>十进制转R进制</strong></u>（短除法）<ul>
+<li>十进制236转二进制：11101100</li>
+<li>计算方法 236 除以 2 余数 0 or 1</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<p>进制转换</p>
+<blockquote>
+<ul>
+<li><u><strong>二进制、八进制、十六进制互转</strong></u></li>
+<li><u><strong>整数二进制转八进制（421）</strong></u>，从右到左起每三位二进制转1位八进制，不足三位的在左边添0补齐。</li>
+<li><u><strong>整数二进制转十六进制（8421）</strong></u>，从右到左起每四位二进制转1位八进制，不足四位的在左边添0补齐。</li>
+<li>反之十六进制转二进制，则每一位十六进制转换为四位二进制表示</li>
+</ul>
+</blockquote>
+<p>计算机中的原反补码</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>数值1</th>
+<th>数值-1</th>
+<th>1+(-1)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>原码</td>
+<td>0 0000001</td>
+<td>1 0000001</td>
+<td>1 0000010</td>
+</tr>
+<tr>
+<td>反码</td>
+<td>0 0000001</td>
+<td>1 1111110</td>
+<td>1 1111111</td>
+</tr>
+<tr>
+<td>补码</td>
+<td>0 0000001</td>
+<td>1 1111111</td>
+<td>0 0000000</td>
+</tr>
+</tbody></table>
+<p>考点：</p>
+<blockquote>
+<ol>
+<li>给原码 求 补码，或者给 补码 求 原码 （负数）</li>
+<li>在计算机里面用补码来表示一个数字和存储一个数字</li>
+<li>用8个bit位的二进制数能够表示 -128的是哪一个？</li>
+</ol>
+</blockquote>
+<p>取值范围：</p>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">定点整数</th>
+<th align="center">定点小数</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">原码</td>
+<td align="center">-(2^n-1^-1)~2^n-1^-1</td>
+<td align="center">-1＜X＜1</td>
+</tr>
+<tr>
+<td align="center">反码</td>
+<td align="center">-(2^n-1^-1)~2^n-1^-1</td>
+<td align="center">-1＜X＜1</td>
+</tr>
+<tr>
+<td align="center">补码</td>
+<td align="center">-2^n-1^~2^n-1^-1</td>
+<td align="center">-1≤X＜1</td>
+</tr>
+</tbody></table>
+<p>考点：</p>
+<blockquote>
+<p>n表示：我有几个bit的二进制数，就是多少位二进制数 一直讲的都是用8个二进制来表示一位，那么这里的n就等于8，如果把n&#x3D;8代入补码中，取值范围是 <code>-128~127</code>，如果是原码或反码：<code>-127~127</code></p>
+</blockquote>
+<p><img src="/%E8%BF%9B%E5%88%B6%E4%B9%A0%E9%A2%98.jpg"></p>
+<p>答案是B和D</p>
+<h3 id="二、逻辑运算"><a href="#二、逻辑运算" class="headerlink" title="二、逻辑运算"></a>二、逻辑运算</h3><blockquote>
+<p>逻辑“或”运算</p>
+<ul>
+<li><code>0+0=0,0v0=0</code></li>
+<li><code>0+1=1,0v1=1</code></li>
+<li><code>1+0=1,1v0=1</code></li>
+<li><code>1+1=1,1v1=1</code></li>
+</ul>
+<p>逻辑“与”运算</p>
+<ul>
+<li><code>0x0=0,0∧0=0,0.0=0</code></li>
+<li><code>0x1=0,0∧1=0,0.1=0</code></li>
+<li><code>1x0=0,1∧0=0,1.0=0</code></li>
+<li><code>1x1=1,1∧1=1,1.1=1</code></li>
+</ul>
+<p>逻辑“非”运算(<u><strong>取反&#x3D;&#x3D;,上面一条&#x3D;&#x3D;斜线</strong></u>)</p>
+<p>逻辑“异或”运算(相同为0,不同为1)</p>
+<ul>
+<li><code>0⊕0=0</code></li>
+<li><code>0⊕1=1</code></li>
+<li><code>1⊕0=1</code></li>
+<li><code>1⊕1=0</code></li>
+</ul>
+</blockquote>
+<p><img src="/%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E4%B9%A0%E9%A2%98.jpg" alt="逻辑运算习题"></p>
+<blockquote>
+<p>结题思路：第一题，直接代入，第二题看到 -128的编码 直接选补码（在这里ASCII码没有任何关系，是干扰）</p>
+</blockquote>
+<h3 id="三、计算机结构"><a href="#三、计算机结构" class="headerlink" title="三、计算机结构"></a>三、计算机结构</h3><p>我们通过输入设备，把数据输入到主机。主机处理完后再讲结构传输到输出设备。</p>
+<p>主机有**<u>CPU和内存</u><strong>。CPU的工作在于<u><strong>管理与运算</strong></u>。管理与运算的数据从哪里来呢？从内存里来的。而</strong><u>内存里面的数据则是从输入设备传来的</u>**。</p>
+<p><u><strong>冯诺依曼体系结构</strong></u>：</p>
+<p><img src="/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%93%E6%9E%84%E5%9B%BE.jpg" alt="计算机结构图"></p>
+<blockquote>
+<p><u><strong>CPU</strong></u>内又有2个主要单元：运算器和控制器。（中央处理器）</p>
+<p><u><strong>运算器</strong></u>**<u>负责程序运算与逻辑判断等操作</u>**。</p>
+<p><u><strong>控制器</strong></u>**<u>负责协调各周边组件与各单元间的工作</u>**。</p>
+</blockquote>
+<p><img src="/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%BB%E6%9C%BA%E7%BB%93%E6%9E%84%E5%9B%BE.jpg" alt="计算机主机结构图"></p>
+<blockquote>
+<p>控制器</p>
+<ul>
+<li><u><strong>程序计数器PC</strong></u>（也称为指令计数器，里面存放的是**<u>指令的地址</u>**，每取出一个地址 计算器就+1）</li>
+<li><u><strong>指令寄存器IR</strong></u></li>
+<li><u><strong>指令译码器</strong></u></li>
+<li>时序部分</li>
+</ul>
+<p>运算器</p>
+<ul>
+<li><u><strong>算术逻辑单元ALU</strong></u>（重要，通过算术单元来进行算术运算和逻辑运算）</li>
+<li><u><strong>累加寄存器</strong></u>（重要，也称为累加器，**<u>暂时存放中间的结构</u>**）</li>
+<li>数据缓冲寄存器（CPU与主存交互时暂时存放的地方）</li>
+<li>状态条件寄存器（存储状态信息，比方说溢出）</li>
+</ul>
+</blockquote>
+<p>考试：</p>
+<ul>
+<li>控制器或运算器里包含了那些部件，这些部件所表示的含义（比如：以下哪一个不是运算器中的组件？）</li>
+<li>运算器与控制器是什么   </li>
+<li></li>
+</ul>
+<h3 id="四、寻址方式"><a href="#四、寻址方式" class="headerlink" title="四、寻址方式"></a>四、寻址方式</h3><p><img src="/%E5%AF%BB%E5%9D%80%E6%96%B9%E5%BC%8F.jpg" alt="寻址方式"></p>
+<ul>
+<li><u><strong>操作码</strong></u>是 要进行什么操作</li>
+<li><u><strong>地址码</strong></u>是 存储的操作对象</li>
+</ul>
+<blockquote>
+<ul>
+<li>立即寻址：**<u>操作数直接在指令中，速度快，灵活性差</u>**</li>
+<li>直接寻址：**<u>指令中存放的是操作数的地址</u>**</li>
+<li>间接寻址：**<u>指令中存放了一个地址，这个地址对应的内容是操作数的地址</u>**。</li>
+<li>寄存器寻址方式：**<u>寄存器存放操作数</u>**。</li>
+<li>寄存器间接寻址方式：**<u>寄存器内 存放的是操作数的地址</u>**。操作地址在寄存器（内存），操作数存放在主存里面</li>
+</ul>
+</blockquote>
+<p><img src="/%E5%AF%BB%E5%9D%80%E6%96%B9%E5%BC%8F%E4%B9%A0%E9%A2%98.jpg" alt="寻址方式习题"></p>
+<h3 id="五、Flynn弗林分类"><a href="#五、Flynn弗林分类" class="headerlink" title="五、Flynn弗林分类"></a>五、Flynn弗林分类</h3><blockquote>
+<p>在计算机体系结构中分类方式有很多种，最著名的一种就是弗林分类，在Flynn中分成了四中体系结构</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="center">体系结构类型</th>
+<th align="center">结构</th>
+<th>关键特性</th>
+<th>代表</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">单指令流单数据流<br />SISD</td>
+<td align="center">控制部分：一个<br />处理器：一个<br />主存模板：一个</td>
+<td></td>
+<td>单处理器系统</td>
+</tr>
+<tr>
+<td align="center">单指令流多数据流<br />MISD</td>
+<td align="center">控制部分：一个<br />处理器：多个<br />主存模板：多个</td>
+<td>各处理器以异步的形式执行同一条指令</td>
+<td>并行处理机<br />阵列处理机<br />超级向量处理机</td>
+</tr>
+<tr>
+<td align="center"><u>**多指令流单数据流&#x3D;&#x3D;<br />MISD</td>
+<td align="center">控制部分：多个<br />处理器：一个<br />主存模板：多个</td>
+<td>&#x3D;&#x3D;被证明不可能，至少是不实际**</u></td>
+<td>目前没有，有文献称流水线计算机为此类</td>
+</tr>
+<tr>
+<td align="center">多指令流多数据流<br />MIMD</td>
+<td align="center">控制部分：多个<br />处理器：多个<br />主存模板：多个</td>
+<td>能够实现作业、任务、指令等各级全面并行</td>
+<td>多处理机系统<br />多计算机，目前主流</td>
+</tr>
+</tbody></table>
+<p>考法：以下分类中，被证明是不可能的，不实践的是哪一个？（写的不是汉语，是英语MISD）</p>
+<h3 id="六、流水线"><a href="#六、流水线" class="headerlink" title="六、流水线"></a>六、流水线</h3><p><img src="/%E6%B5%81%E6%B0%B4%E7%BA%BF1.jpg" alt="流水线1"></p>
+<p><img src="/%E6%B5%81%E6%B0%B4%E7%BA%BF2.jpg" alt="流水线2"></p>
+<blockquote>
+<p>流水线执行时间是全部的时间，t1是取值时间，t2是分析时间，t3是执行时间，<u><strong>流水线周期</strong></u>是**<u>执行最长的单个时间</u>**（t）</p>
+</blockquote>
+<p><img src="/%E6%B5%81%E6%B0%B4%E7%BA%BF%E4%BE%8B%E9%A2%98.jpg" alt="流水线例题"></p>
+<h3 id="七、多级存储器结构"><a href="#七、多级存储器结构" class="headerlink" title="七、多级存储器结构"></a>七、多级存储器结构</h3><blockquote>
+<p>三个性能指标参数：</p>
+<ol>
+<li>容量：能不能支持应用的一些操作</li>
+<li>速度：速度能不能匹配的上CPU，以及输入输出</li>
+<li>价格：比较合理</li>
+</ol>
+</blockquote>
+<p><img src="/%E5%A4%9A%E7%BA%A7%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84.jpg" alt="多级存储结构"></p>
+<blockquote>
+<p>高速缓冲Cache中存放的是CPU要经常读取的主存中的数据</p>
+<p>RAM</p>
+<ul>
+<li>动态随机存储器 DRAM，动态需要时刻的刷新电路才能保持数据，PC机待机中，大部分电都是在这个上面损耗掉了，在<u><strong>主存</strong></u>里面</li>
+<li>静态随机存储器 SRAM，静态不需要刷新电路就能保存数据，在<u><strong>高速缓存</strong></u>里面</li>
+</ul>
+</blockquote>
+<p><img src="/%E5%A4%9A%E7%BA%A7%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%841.jpg" alt="多级存储结构1.jpg"></p>
+<blockquote>
+<ul>
+<li>顺序存储是以时间顺序来进行存储，按照时间来进行读取</li>
+<li>直接存储：外存，</li>
+<li>随机存储：内存，当前正在工作的一些数据，断电后地址会刷新</li>
+</ul>
+</blockquote>
+<p>例题：以下那种设备使用到了 相联存储，相联存储器 or Cache</p>
+<p><img src="/%E5%A4%9A%E7%BA%A7%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84%E4%B9%A0%E9%A2%98.jpg" alt="多级存储结构习题"></p>
+<p><img src="/%E5%A4%9A%E7%BA%A7%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84%E4%B9%A0%E9%A2%981.jpg" alt="多级存储结构习题"></p>
+<h3 id="八、主存"><a href="#八、主存" class="headerlink" title="八、主存"></a>八、主存</h3><p>一个字等于一个以上的字节，一个字可以表示一个或多个字节</p>
+<blockquote>
+<p>汉字两个字节表示</p>
+<p>英文的ABCD用一个字节表示</p>
+<p>内存地址一般使用16进制来表示，H结尾是十六进制</p>
+<p>多少个地址块：&#x3D;通过大数-小数 + 1</p>
+</blockquote>
+<p><img src="/%E4%B8%BB%E5%AD%98.jpg" alt="主存"></p>
+<p>习题每做</p>
+<h3 id="九、磁盘存储（了解）"><a href="#九、磁盘存储（了解）" class="headerlink" title="九、磁盘存储（了解）"></a>九、磁盘存储（了解）</h3><p>硬盘</p>
+<p><img src="D:\笔记\网络管理员\通信技术\磁盘存储.jpg" alt="磁盘存储"></p>
+<p>性能指标</p>
+<ul>
+<li><p>时间</p>
+</li>
+<li><p>容量</p>
+</li>
+<li><p>速率</p>
+<p><img src="D:\笔记\网络管理员\通信技术\磁盘存储习题.jpg" alt="磁盘存储习题"></p>
+</li>
+</ul>
+<p>C、D</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://taichiyly.github.io">Taichi</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://taichiyly.github.io/2024/10/11/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A1%AC%E4%BB%B6%E5%9F%BA%E7%A1%80/">https://taichiyly.github.io/2024/10/11/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A1%AC%E4%BB%B6%E5%9F%BA%E7%A1%80/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://taichiyly.github.io" target="_blank">泰 极</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%93%E6%9E%84/">计算机结构</a></div><div class="post-share"><div class="social-share" data-image="/assets/image/avatar.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>赞助</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/assets/image/reward-wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/assets/image/reward-wechat.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/assets/image/reward-alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/assets/image/reward-alipay.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2024/10/13/%E7%BD%91%E7%BB%9C%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/" title="网络体系结构"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">网络体系结构</div></div><div class="info-2"><div class="info-item-1">网络体系结构 计算机网络的概念 OSI参考模型 TCP&#x2F;IP体系  计算机网络 计算机网络的概念  20世纪50年代以前：计算机技术与通信技术结合 20世纪50年代至70年代中期：APPANET 20世纪70年代开始：0SI七层模型和TCP&#x2F;IP体系 20世纪90年代开始：因特网 &#x3D; Internet &#x3D; 互联网  计算机网络的定义  计算机网络定义为“以能够相互共享资源的方式互连起来的自治计算机系统的集合”，主要表现在如下几点：★目的是实现计算机资源的共享★分布在不同地理位置的多台独立的“自治计算机”★...</div></div></div></a><a class="pagination-related" href="/2024/09/17/%E8%8B%B1%E8%AF%AD%E8%AF%8D%E6%80%A7/" title="英语词性"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">英语词性</div></div><div class="info-2"><div class="info-item-1">英语词性10种英语词性说明   名词(.n) 代词(pron.) 冠词(art.) 数词(num.) 形容词(adj.) 副词(adv.) 动词(v.) 连词(conj.) 介词(prep.) 感叹词(int.)   特殊词性   及物动词(vt.) 不及物动词(vi.)   10种英语词性说明 英语词性有10种,另外2种是特殊词性 分别是及物、不及物   名词(.n)：Nouns 表示人或事物的名称 box，pen，tree，apple 代词(pron.)：Pronoun 代替名词、数词、形容词We，this，them，myself 形容词(adj.)：Adjective 用来修饰名词，表示人或事物的特征 Good，sad，high，short 数词(num.)：Numeral 表示数目或顺序 one，two，first 动词(v.)：Verb 表示动作或状态Jump，sing，visit 副词(adv.)：Adverb 修饰动、形、副等词，表示动作特征 there，widely，subbenly 冠词(art.)：Article 用在名词前面，帮助说明名词所指的范围...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/assets/image/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Taichi</div><div class="author-info-description">Taichi‘ Blog</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">32</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">27</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/taichiyly"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A1%AC%E4%BB%B6%E5%9F%BA%E7%A1%80"><span class="toc-number">1.</span> <span class="toc-text">计算机硬件基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA"><span class="toc-number">1.0.1.</span> <span class="toc-text">一、数据的表示</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%9B%E5%88%B6"><span class="toc-number">1.0.1.1.</span> <span class="toc-text">进制</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97"><span class="toc-number">1.0.2.</span> <span class="toc-text">二、逻辑运算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%93%E6%9E%84"><span class="toc-number">1.0.3.</span> <span class="toc-text">三、计算机结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%AF%BB%E5%9D%80%E6%96%B9%E5%BC%8F"><span class="toc-number">1.0.4.</span> <span class="toc-text">四、寻址方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%94%E3%80%81Flynn%E5%BC%97%E6%9E%97%E5%88%86%E7%B1%BB"><span class="toc-number">1.0.5.</span> <span class="toc-text">五、Flynn弗林分类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E6%B5%81%E6%B0%B4%E7%BA%BF"><span class="toc-number">1.0.6.</span> <span class="toc-text">六、流水线</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%83%E3%80%81%E5%A4%9A%E7%BA%A7%E5%AD%98%E5%82%A8%E5%99%A8%E7%BB%93%E6%9E%84"><span class="toc-number">1.0.7.</span> <span class="toc-text">七、多级存储器结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%AB%E3%80%81%E4%B8%BB%E5%AD%98"><span class="toc-number">1.0.8.</span> <span class="toc-text">八、主存</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B9%9D%E3%80%81%E7%A3%81%E7%9B%98%E5%AD%98%E5%82%A8%EF%BC%88%E4%BA%86%E8%A7%A3%EF%BC%89"><span class="toc-number">1.0.9.</span> <span class="toc-text">九、磁盘存储（了解）</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/02/23/%E9%94%99%E9%A2%98%E6%95%B4%E7%90%86/" title="网管错题整理">网管错题整理</a><time datetime="2025-02-23T03:20:47.235Z" title="发表于 2025-02-23 11:20:47">2025-02-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/02/23/%E6%AD%A3%E5%88%99/" title="正则表达式"><img src="https://t.alcy.cc/ycy" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="正则表达式"/></a><div class="content"><a class="title" href="/2025/02/23/%E6%AD%A3%E5%88%99/" title="正则表达式">正则表达式</a><time datetime="2025-02-23T01:38:58.000Z" title="发表于 2025-02-23 09:38:58">2025-02-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/02/23/Python50%E9%81%93%E7%BB%83%E4%B9%A0%E9%A2%98/" title="Python50道练习题"><img src="https://t.alcy.cc/fj" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Python50道练习题"/></a><div class="content"><a class="title" href="/2025/02/23/Python50%E9%81%93%E7%BB%83%E4%B9%A0%E9%A2%98/" title="Python50道练习题">Python50道练习题</a><time datetime="2025-02-23T01:38:58.000Z" title="发表于 2025-02-23 09:38:58">2025-02-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/02/23/requests%E8%AF%B7%E6%B1%82%E6%A8%A1%E5%9D%97/" title="requests请求模块"><img src="https://t.alcy.cc/xhl" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="requests请求模块"/></a><div class="content"><a class="title" href="/2025/02/23/requests%E8%AF%B7%E6%B1%82%E6%A8%A1%E5%9D%97/" title="requests请求模块">requests请求模块</a><time datetime="2025-02-23T01:38:58.000Z" title="发表于 2025-02-23 09:38:58">2025-02-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/12/29/Python%E7%BC%96%E7%A8%8B/" title="测试平台笔记"><img src="https://api.yimian.xyz/img" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="测试平台笔记"/></a><div class="content"><a class="title" href="/2024/12/29/Python%E7%BC%96%E7%A8%8B/" title="测试平台笔记">测试平台笔记</a><time datetime="2024-12-29T01:38:58.000Z" title="发表于 2024-12-29 09:38:58">2024-12-29</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2025 By Taichi</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>

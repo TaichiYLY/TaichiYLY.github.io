@@ -1,0 +1,2160 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>影视剪辑全能课 · 整理版学习笔记 | 泰 极</title><meta name="author" content="Taichi"><meta name="copyright" content="Taichi"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="影视剪辑全能课 · 整理版学习笔记 这份笔记怎么用 第一遍学：按单元顺序读，每节开头的「一句话记住」就是这一节的骨架。 复盘：只看每节的「一句话记住」+ 加粗关键句，能回忆出细节才算过；回忆不出的回头读小节。 动手前：翻到文末「附录 A 功能位置速查」和「附录 B 参数与预设速查」，找按钮在哪、参数填多少。 交片前：过一遍「附录 D 交付前检查清单」。  课程地图   单元 课程 主题 关键词">
+<meta property="og:type" content="article">
+<meta property="og:title" content="影视剪辑全能课 · 整理版学习笔记">
+<meta property="og:url" content="https://taichiyly.github.io/2026/11/22/%E5%BD%B1%E8%A7%86%E5%89%AA%E8%BE%91%E5%85%A8%E8%83%BD%E8%AF%BE/index.html">
+<meta property="og:site_name" content="泰 极">
+<meta property="og:description" content="影视剪辑全能课 · 整理版学习笔记 这份笔记怎么用 第一遍学：按单元顺序读，每节开头的「一句话记住」就是这一节的骨架。 复盘：只看每节的「一句话记住」+ 加粗关键句，能回忆出细节才算过；回忆不出的回头读小节。 动手前：翻到文末「附录 A 功能位置速查」和「附录 B 参数与预设速查」，找按钮在哪、参数填多少。 交片前：过一遍「附录 D 交付前检查清单」。  课程地图   单元 课程 主题 关键词">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://t.alcy.cc/ycy">
+<meta property="article:published_time" content="2026-11-22T01:38:58.000Z">
+<meta property="article:modified_time" content="2026-11-26T15:46:53.658Z">
+<meta property="article:author" content="Taichi">
+<meta property="article:tag" content="影视飓风">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://t.alcy.cc/ycy"><link rel="shortcut icon" href="/assets/image/favicon.png"><link rel="canonical" href="https://taichiyly.github.io/2026/11/22/%E5%BD%B1%E8%A7%86%E5%89%AA%E8%BE%91%E5%85%A8%E8%83%BD%E8%AF%BE/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":500,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'medium_zoom',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '影视剪辑全能课 · 整理版学习笔记',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  isShuoshuo: false
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/assets/image/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">34</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">28</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">12</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa fa-heartbeat"></i><span> 列表</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/photo/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://t.alcy.cc/ycy);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><img class="site-icon" src="/assets/image/logo.png" alt="Logo"><span class="site-name">泰 极</span></a><a class="nav-page-title" href="/"><span class="site-name">影视剪辑全能课 · 整理版学习笔记</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa fa-heartbeat"></i><span> 列表</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/photo/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">影视剪辑全能课 · 整理版学习笔记</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-11-22T01:38:58.000Z" title="发表于 2026-11-22 09:38:58">2026-11-22</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-11-26T15:46:53.658Z" title="更新于 2026-11-26 23:46:53">2026-11-26</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%89%AA%E6%98%A0%E8%AF%BE%E7%A8%8B/">剪映课程</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h1 id="影视剪辑全能课-·-整理版学习笔记"><a href="#影视剪辑全能课-·-整理版学习笔记" class="headerlink" title="影视剪辑全能课 · 整理版学习笔记"></a>影视剪辑全能课 · 整理版学习笔记</h1><hr>
+<h2 id="这份笔记怎么用"><a href="#这份笔记怎么用" class="headerlink" title="这份笔记怎么用"></a>这份笔记怎么用</h2><ul>
+<li><strong>第一遍学</strong>：按单元顺序读，每节开头的「一句话记住」就是这一节的骨架。</li>
+<li><strong>复盘</strong>：只看每节的「一句话记住」+ 加粗关键句，能回忆出细节才算过；回忆不出的回头读小节。</li>
+<li><strong>动手前</strong>：翻到文末「附录 A 功能位置速查」和「附录 B 参数与预设速查」，找按钮在哪、参数填多少。</li>
+<li><strong>交片前</strong>：过一遍「附录 D 交付前检查清单」。</li>
+</ul>
+<h2 id="课程地图"><a href="#课程地图" class="headerlink" title="课程地图"></a>课程地图</h2><table>
+<thead>
+<tr>
+<th align="left">单元</th>
+<th align="left">课程</th>
+<th align="left">主题</th>
+<th align="left">关键词</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">第一单元<br>基础篇</td>
+<td align="left">0–5</td>
+<td align="left">剪映上手 + 一条片子的完整流程</td>
+<td align="left">界面、口播精剪、A&#x2F;B-Roll、混剪节奏、音效、导出</td>
+</tr>
+<tr>
+<td align="left">第二单元<br>进阶篇</td>
+<td align="left">6–9</td>
+<td align="left">专业工具的底层原理</td>
+<td align="left">关键帧、曲线变速、抠像体系、一级调色</td>
+</tr>
+<tr>
+<td align="left">第三单元<br>实战篇</td>
+<td align="left">10–14</td>
+<td align="left">从「会用工具」到「会做结构」</td>
+<td align="left">综艺包装、平面跟踪、多机位、时钟理论、Vlog</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>全课主线：<strong>工具（0–9）→ 流程（0–5）→ 结构（10–14）</strong>。越往后越不是在教按钮，而是在教判断。</p>
+</blockquote>
+<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><p><strong>第一单元 · 基础篇（0–5）</strong></p>
+<ul>
+<li>0 导学：课程结构与界面</li>
+<li>1 十分钟走通专业剪辑全流程</li>
+<li>2 口播精剪与 A-Roll &#x2F; B-Roll 协同</li>
+<li>3 混剪节奏与蒙太奇逻辑</li>
+<li>4 听觉塑造：音乐处理与音效设计</li>
+<li>5 最终交付与导出管理</li>
+</ul>
+<p><strong>第二单元 · 进阶篇（6–9）</strong></p>
+<ul>
+<li>6 运动控制：关键帧与曲线运动</li>
+<li>7 动态节奏：曲线变速与素材帧率</li>
+<li>8 空间重组：全套抠像工具</li>
+<li>9 色彩科学：一级调色工具</li>
+</ul>
+<p><strong>第三单元 · 实战篇（10–14）</strong></p>
+<ul>
+<li>10 实操：快速复刻综艺包装</li>
+<li>11 实操：平面跟踪让文字长在物体上</li>
+<li>12 实操：多机位采访剪辑</li>
+<li>13 实操：时钟理论与长视频结构</li>
+<li>14 实操：Vlog 的剪辑结构与色彩</li>
+</ul>
+<p><strong>附录</strong></p>
+<ul>
+<li>A 功能位置速查</li>
+<li>B 参数与预设速查</li>
+<li>C 素材与资源清单</li>
+<li>D 交付前检查清单</li>
+<li>E 笔误修订表</li>
+</ul>
+<hr>
+<h1 id="第一单元-·-基础篇（0–5）"><a href="#第一单元-·-基础篇（0–5）" class="headerlink" title="第一单元 · 基础篇（0–5）"></a>第一单元 · 基础篇（0–5）</h1><h2 id="0-导学：课程结构与界面"><a href="#0-导学：课程结构与界面" class="headerlink" title="0 导学：课程结构与界面"></a>0 导学：课程结构与界面</h2><blockquote>
+<p><strong>一句话记住</strong>：这门课分<strong>基础篇 &#x2F; 进阶篇 &#x2F; 实战篇</strong>三块，学之前先把四个面板认全，把「媒体丢失、格式不支持、卡顿」三个常见坑填掉。</p>
+</blockquote>
+<h3 id="课程结构"><a href="#课程结构" class="headerlink" title="课程结构"></a>课程结构</h3><p>剪映，课程分三个部分：</p>
+<ul>
+<li><strong>基础篇</strong>：界面、流程、口播、混剪、音效、导出</li>
+<li><strong>进阶篇</strong>：关键帧、变速、抠像、调色</li>
+<li><strong>实战篇</strong>：包装复刻、跟踪、多机位、结构理论</li>
+</ul>
+<h3 id="界面：从左到右四个面板"><a href="#界面：从左到右四个面板" class="headerlink" title="界面：从左到右四个面板"></a>界面：从左到右四个面板</h3><p>默认布局从左到右排列，也可以在<strong>右上角切换布局</strong>：</p>
+<table>
+<thead>
+<tr>
+<th align="left">面板</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">素材面板</td>
+<td align="left">添加素材和各种效果工具</td>
+</tr>
+<tr>
+<td align="left">播放器面板</td>
+<td align="left">预览画面</td>
+</tr>
+<tr>
+<td align="left">参数属性调整面板</td>
+<td align="left">选中对象后调整各项参数</td>
+</tr>
+<tr>
+<td align="left">时间线面板</td>
+<td align="left">排列、剪辑所有轨道</td>
+</tr>
+</tbody></table>
+<p><img src="/image-20261028095334906.png" alt="四面板布局"></p>
+<h3 id="常见问题排查"><a href="#常见问题排查" class="headerlink" title="常见问题排查"></a>常见问题排查</h3><table>
+<thead>
+<tr>
+<th align="left">现象</th>
+<th align="left">原因 &#x2F; 处理</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">媒体丢失 <code>Media Not Found</code></td>
+<td align="left">移动了素材文件位置 → 重新连接素材</td>
+</tr>
+<tr>
+<td align="left">素材导不进去</td>
+<td align="left">一般 MOV、MP4 兼容性最好；其他格式剪映暂不支持 → 用转码工具转成支持的格式</td>
+</tr>
+<tr>
+<td align="left">卡顿、闪退、预览不流畅</td>
+<td align="left"><strong>主页右上角 → 全局设置 → 清除缓存</strong>；可开启「自动清除缓存」；剪辑时关掉不必要的后台应用</td>
+</tr>
+<tr>
+<td align="left">其他 BUG</td>
+<td align="left">主页右上角「帮助中心」</td>
+</tr>
+<tr>
+<td align="left">需要云备份</td>
+<td align="left">开通会员后可用「剪映云」云盘</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="1-十分钟走通专业剪辑全流程"><a href="#1-十分钟走通专业剪辑全流程" class="headerlink" title="1 十分钟走通专业剪辑全流程"></a>1 十分钟走通专业剪辑全流程</h2><blockquote>
+<p><strong>一句话记住</strong>：这条片子的全流程就是 <strong>导入 → 拖上时间线 → 排&#x2F;切&#x2F;删 → 踩节拍对齐 → 导出</strong>；先有「轨道」概念，再谈技巧。</p>
+</blockquote>
+<h3 id="步骤一：新建工程、导入素材"><a href="#步骤一：新建工程、导入素材" class="headerlink" title="步骤一：新建工程、导入素材"></a>步骤一：新建工程、导入素材</h3><ul>
+<li>新建工程界面先导入素材。</li>
+<li>还有<strong>官方素材库</strong>，可以随意挑选、收藏。</li>
+</ul>
+<h3 id="步骤二：把素材放上时间线"><a href="#步骤二：把素材放上时间线" class="headerlink" title="步骤二：把素材放上时间线"></a>步骤二：把素材放上时间线</h3><ul>
+<li>点素材的<strong>加号</strong>或直接<strong>拖拽</strong>，都能加到时间线。</li>
+<li><strong>播放头以帧为单位</strong>——剪辑的最小单位就是帧。</li>
+</ul>
+<h3 id="关键概念：主轨与辅轨"><a href="#关键概念：主轨与辅轨" class="headerlink" title="关键概念：主轨与辅轨"></a>关键概念：主轨与辅轨</h3><ul>
+<li>在添加第二个素材之前，先在<strong>参数面板右下角打开「自由层级」</strong>。</li>
+<li><strong>上下维度 &#x3D; 画中画格式</strong>。</li>
+<li>最下面一层叫<strong>主轨</strong>，往上的其他轨道叫<strong>辅轨</strong>。</li>
+<li><strong>主轨有磁吸功能</strong>。</li>
+</ul>
+<blockquote>
+<p>基础操作只有四件事：<strong>导入、分割、删除、排列</strong>。所谓剪辑，本质就是一个「素材排列拼接」的过程。</p>
+</blockquote>
+<h3 id="BGM-与踩节拍"><a href="#BGM-与踩节拍" class="headerlink" title="BGM 与踩节拍"></a>BGM 与踩节拍</h3><ul>
+<li>BGM 背景音乐非常重要。</li>
+<li>音频一般在主轨<strong>下方</strong>，最左边有音乐符号作区分。</li>
+</ul>
+<p>操作：</p>
+<ol>
+<li>选中音频轨道；</li>
+<li>在<strong>时间线左上方</strong>找到标记按钮，点「<strong>踩节拍</strong>」；</li>
+<li>踩好后，把每一段视频的开头或结尾<strong>拖动到最近的标记点上对齐</strong>。</li>
+</ol>
+<h3 id="预览卡顿的两个应急手段"><a href="#预览卡顿的两个应急手段" class="headerlink" title="预览卡顿的两个应急手段"></a>预览卡顿的两个应急手段</h3><ul>
+<li>点视频播放器下面的<strong>清晰度按钮</strong>降低预览画质；</li>
+<li>点轨道空白处 → <strong>草稿参数面板的「修改」→ 性能 → 代理调低</strong>。</li>
+</ul>
+<h3 id="首次导出参数（参考）"><a href="#首次导出参数（参考）" class="headerlink" title="首次导出参数（参考）"></a>首次导出参数（参考）</h3><table>
+<thead>
+<tr>
+<th align="left">项目</th>
+<th align="left">取值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">分辨率</td>
+<td align="left">1080p – 4K</td>
+</tr>
+<tr>
+<td align="left">格式</td>
+<td align="left">MP4</td>
+</tr>
+<tr>
+<td align="left">帧率</td>
+<td align="left">60</td>
+</tr>
+<tr>
+<td align="left">视频码率</td>
+<td align="left">推荐 &#x2F; 更高</td>
+</tr>
+<tr>
+<td align="left">视频编码</td>
+<td align="left">HEVC</td>
+</tr>
+<tr>
+<td align="left">音频质量</td>
+<td align="left">PCM 无损</td>
+</tr>
+<tr>
+<td align="left">音频采样率</td>
+<td align="left">48000 Hz</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>这套是「第一节课的通用参考值」。<strong>正式交付时以第 5 课的导出逻辑和平台推荐表为准</strong>，别两处混用。</p>
+</blockquote>
+<hr>
+<h2 id="2-口播精剪与-A-Roll-B-Roll-协同"><a href="#2-口播精剪与-A-Roll-B-Roll-协同" class="headerlink" title="2 口播精剪与 A-Roll &#x2F; B-Roll 协同"></a>2 口播精剪与 A-Roll &#x2F; B-Roll 协同</h2><blockquote>
+<p><strong>一句话记住</strong>：口播片 &#x3D; <strong>先把话修干净（智能剪口播）→ 再用 B-Roll 盖画面 → 最后补字幕和 BGM</strong>。声音是主线，画面是补丁。</p>
+</blockquote>
+<h3 id="开工前的环境设置"><a href="#开工前的环境设置" class="headerlink" title="开工前的环境设置"></a>开工前的环境设置</h3><p>点右上角「全局设置」：</p>
+<ul>
+<li><strong>草稿</strong>：修改「草稿位置」、「素材下载位置」；</li>
+<li><strong>性能</strong>：代理模式设为「新建草稿时默认开启」。</li>
+</ul>
+<h3 id="第一步：看清口播的问题"><a href="#第一步：看清口播的问题" class="headerlink" title="第一步：看清口播的问题"></a>第一步：看清口播的问题</h3><p>未剪辑的口播一定有大量<strong>气口、啰嗦、重复</strong>，以及个人<strong>口癖</strong>。</p>
+<ul>
+<li>点时间线右上角的<strong>三个点</strong> → 打开「轨道调节」→ 把<strong>轨道音频占比调到 60% 左右</strong>，看波形判断气口。</li>
+<li><strong>音频全平的部分</strong>，大概率就是卡顿或没正常发声的部分。</li>
+</ul>
+<h3 id="第二步：智能剪口播（语义化剪辑）"><a href="#第二步：智能剪口播（语义化剪辑）" class="headerlink" title="第二步：智能剪口播（语义化剪辑）"></a>第二步：智能剪口播（语义化剪辑）</h3><ol>
+<li>导入口播视频；</li>
+<li><strong>右键</strong>素材 → 菜单里点「<strong>智能剪口播工具</strong>」；</li>
+<li>左侧生成对应<strong>文字稿</strong>，直接在稿子里删掉不要的词、不要的停顿；</li>
+<li>视频轨道会<strong>同步剪辑、同步删除</strong>。</li>
+</ol>
+<blockquote>
+<p><strong>遇到「两个气口挨太近」听起来很怪</strong>：把两段分隔开，然后为前后两个音频段落各拉一下音频轨道的<strong>小把手</strong>，取房间安静状态的底噪，垫到下面填空。</p>
+</blockquote>
+<p><img src="/image-20261028134526810.png" alt="气口与底噪填补"></p>
+<h3 id="第三步：A-Roll-与-B-Roll"><a href="#第三步：A-Roll-与-B-Roll" class="headerlink" title="第三步：A-Roll 与 B-Roll"></a>第三步：A-Roll 与 B-Roll</h3><ul>
+<li><strong>A-Roll</strong>：一般是主轨道的信息（讲话、叙事主线）。</li>
+<li><strong>B-Roll</strong>：辅轨道素材（点时间线左上角可新建时间线，用双时间线）。</li>
+</ul>
+<p>操作逻辑：播放 A-Roll，听到 A-Roll 里提到的内容，就去上面的时间线里<strong>捞对应画面</strong>，裁掉前后没用的段落，取中间可用的拉到 A-Roll 的辅轨。</p>
+<blockquote>
+<p>例：口播里说「这个全新的柑橘色，有点偏绿」→ 在 B-Roll 里找到展示该颜色的素材，取中间可用段落，铺到辅轨。</p>
+</blockquote>
+<h3 id="B-Roll-与声音的实操经验（逐条对照）"><a href="#B-Roll-与声音的实操经验（逐条对照）" class="headerlink" title="B-Roll 与声音的实操经验（逐条对照）"></a>B-Roll 与声音的实操经验（逐条对照）</h3><ol>
+<li><strong>对齐口播节奏</strong>：B-Roll 的切换点尽可能对齐说话的重音&#x2F;节奏。</li>
+<li><strong>宁长勿短</strong>：B-Roll 太短、话没说完就切走，会「漏字」，让观众跳出你想表达的感觉——<strong>最好的解法是换一个更长的 B-Roll</strong>。</li>
+<li><strong>成组使用</strong>：B-Roll 通常按「镜头组」添加——同一内容、不同景别、不同角度的几个镜头组合在一起。</li>
+<li><strong>用放大规避断点</strong>：中间有 A-Roll 分隔时，可以用「放大」把卡顿的镜头藏掉。</li>
+<li><strong>不重复</strong>：一条片子里不要有重复的 B-Roll，尽量用不同的素材。</li>
+<li><strong>B-Roll 一般无声</strong>：同一轨道里把音频轨道关掉。</li>
+<li><strong>声音优先在前期解决</strong>：最理想是前期把该录的话全录完。剪完气口后如果缺一句话，时间线右上角有<strong>录音功能</strong>可用——但那些功能没必要开，<strong>用自然的原声最好</strong>。</li>
+<li><strong>响度统一</strong>：音量不统一时，选中所有音频片段 → 右上角参数面板「<strong>响度统一</strong>」。</li>
+<li><strong>前期一个小问题，胜过后期十个补救</strong>。</li>
+<li><strong>麦克风套只袜子</strong>可以防喷麦。</li>
+<li><strong>一定戴耳机</strong>：很多问题其实是<strong>声道问题</strong>，在音频参数面板的「声道配置」里检查。</li>
+<li><strong>字幕先于 BGM</strong>（见下）。</li>
+</ol>
+<h3 id="第四步：先识别字幕，再加-BGM"><a href="#第四步：先识别字幕，再加-BGM" class="headerlink" title="第四步：先识别字幕，再加 BGM"></a>第四步：先识别字幕，再加 BGM</h3><ol>
+<li>左上角素材面板 → <strong>字幕</strong> → <strong>自动识别</strong>；</li>
+<li><strong>不动任何设置</strong>，直接点开始识别，生成一排字幕轨道；</li>
+<li>字幕默认<strong>互相关联</strong>——调好一段的参数，其他字幕会同步调整；</li>
+<li>位置：<strong>视频中心下方</strong>；字体：简约<strong>黑体</strong>；同时打开<strong>阴影</strong>效果。</li>
+</ol>
+<p><strong>阴影参数（原课推荐值）</strong>：</p>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">数值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">不透明度</td>
+<td align="left">60%</td>
+</tr>
+<tr>
+<td align="left">模糊度</td>
+<td align="left">7%</td>
+</tr>
+<tr>
+<td align="left">距离</td>
+<td align="left">5</td>
+</tr>
+<tr>
+<td align="left">角度</td>
+<td align="left">-45°</td>
+</tr>
+</tbody></table>
+<ul>
+<li>可以用图片素材里的「<strong>横屏安全区</strong>」当参考图，判断字幕位置是否安全。</li>
+<li>调好大小位置后，<strong>从头播放检查一遍错别字</strong>，并把所有字幕<strong>拉长</strong>，保证收尾衔接不闪断。</li>
+</ul>
+<h3 id="第五步：最后注入灵魂——BGM"><a href="#第五步：最后注入灵魂——BGM" class="headerlink" title="第五步：最后注入灵魂——BGM"></a>第五步：最后注入灵魂——BGM</h3><blockquote>
+<p>至此，一条标准口播片的完整链路：<strong>素材管理 → 口播粗剪 → B-Roll 叠加 → 多轨道编排 → 字幕识别 → 导出</strong>。</p>
+</blockquote>
+<hr>
+<h2 id="3-混剪节奏与蒙太奇逻辑"><a href="#3-混剪节奏与蒙太奇逻辑" class="headerlink" title="3 混剪节奏与蒙太奇逻辑"></a>3 混剪节奏与蒙太奇逻辑</h2><blockquote>
+<p><strong>一句话记住</strong>：没有 A-Roll 的混剪，靠<strong>景别搭骨架、音乐定节奏</strong>；节奏不能让人猜到下一拍，所以要会「<strong>切分节拍</strong>」，再往上叠蒙太奇。</p>
+</blockquote>
+<h3 id="混剪的起点：先分类，再搭框架"><a href="#混剪的起点：先分类，再搭框架" class="headerlink" title="混剪的起点：先分类，再搭框架"></a>混剪的起点：先分类，再搭框架</h3><p>全是 B-Roll、没有 A-Roll 时，没有台词当主线，就必须<strong>有意识地挖掘素材特征</strong>，主动搭建剪辑框架。</p>
+<p>没有头绪时，<strong>按景别分类</strong>：</p>
+<ul>
+<li><strong>远景</strong>：展示宏大场景</li>
+<li><strong>中景</strong>：突出人物动作</li>
+<li><strong>特写</strong>：捕捉细微表情</li>
+</ul>
+<p>剪辑中通过<strong>景别的跳跃和切换</strong>，构建基础的视觉层次。</p>
+<blockquote>
+<p>剪辑的结构模式和音乐类似：镜头拼接从<strong>平缓</strong>过渡到<strong>高潮</strong>，再逐渐<strong>减弱</strong>直到柔和，最后汇合成一个重大的结束与终结。</p>
+</blockquote>
+<h3 id="顺序问题：音乐先行，还是景别先行？"><a href="#顺序问题：音乐先行，还是景别先行？" class="headerlink" title="顺序问题：音乐先行，还是景别先行？"></a>顺序问题：音乐先行，还是景别先行？</h3><ul>
+<li><strong>景别决定观众看什么</strong>；</li>
+<li><strong>BGM 决定用什么节奏去看</strong>。</li>
+</ul>
+<p>所以：<strong>在搭景别框架之前，先找一段合适的音乐，确定节奏主线。</strong></p>
+<p>操作：导入音频 → 用<strong>踩节拍</strong>工具踩点。针对音乐平稳的开头，<strong>先用「节拍 1」</strong>匹配舒缓基调。</p>
+<blockquote>
+<p>音乐开头常有一段<strong>情绪铺垫</strong>（只有弦乐、还没有鼓点），这时镜头要选<strong>镜头语言平缓、没有剧烈位移的空镜</strong>（纯粹描绘氛围的空镜），来缓解画面张力。</p>
+</blockquote>
+<h3 id="双时间线剪辑法"><a href="#双时间线剪辑法" class="headerlink" title="双时间线剪辑法"></a>双时间线剪辑法</h3><p>建议沿用第 2 课的双时间线思路：</p>
+<ul>
+<li><strong>时间线 2</strong>：素材（B-Roll）</li>
+<li><strong>时间线 1</strong>：BGM</li>
+</ul>
+<p>这是为了观众的节奏感、也为后续的节奏爆发蓄力，最稳妥的编排逻辑。</p>
+<h3 id="景别递进：从广阔到具体"><a href="#景别递进：从广阔到具体" class="headerlink" title="景别递进：从广阔到具体"></a>景别递进：从广阔到具体</h3><p>遵循<strong>景别递进</strong>做空间叙事：</p>
+<ol>
+<li><strong>远景</strong>：交代氛围的大远景</li>
+<li><strong>中景</strong>：交代环境关系</li>
+<li><strong>近景 &#x2F; 特写</strong>：突出人物情绪、核心主体的细节</li>
+</ol>
+<p>单一套路用多了会单调，所以引入更进一步的<strong>镜头拼接思维</strong>。</p>
+<h3 id="匹配剪辑与蒙太奇"><a href="#匹配剪辑与蒙太奇" class="headerlink" title="匹配剪辑与蒙太奇"></a>匹配剪辑与蒙太奇</h3><ul>
+<li><strong>匹配剪辑</strong>：镜头之间的衔接通常是导演和剪辑师设计出来的。比如从骨头切到宇宙飞船，靠的是<strong>相似的几何形状或运动轨迹</strong>做匹配。</li>
+<li>但它<strong>不只是把两个相似镜头接在一起这么简单</strong>。</li>
+<li>两个本无关系的镜头接到一起后，观众会<strong>自动脑补关联</strong>，创造 <strong>1+1 &gt; 2</strong> 的效果——这就是<strong>蒙太奇</strong>（装配与组装）。</li>
+<li><strong>蒙太奇是剪辑师控制情绪、引导观众思考的核心工具</strong>。掌握它，你就不只是拼接镜头，而是<strong>用镜头写文章</strong>。</li>
+</ul>
+<h3 id="打破预期：切分节拍"><a href="#打破预期：切分节拍" class="headerlink" title="打破预期：切分节拍"></a>打破预期：切分节拍</h3><p>一直严格按节拍剪，节奏始终在观众预期内，观众就会<strong>预判到下一拍的时机</strong>。</p>
+<p><strong>切分节拍</strong>：在两个节拍之间插入一个新的节拍（高潮）。</p>
+<ul>
+<li>可以在不该出现剪辑点的地方<strong>突然切一刀</strong>；</li>
+<li>也可以在重音到来之前<strong>提前抢一拍</strong>。</li>
+</ul>
+<h3 id="转场预设"><a href="#转场预设" class="headerlink" title="转场预设"></a>转场预设</h3><ul>
+<li>位置：左上角素材面板 → <strong>光效 → 炫光转场</strong>，拖到两个素材的剪辑点处。</li>
+<li>添加后点击转场本身，右上角参数面板可<strong>调整时长</strong>，也可点下面的「<strong>应用全部</strong>」。</li>
+<li><strong>原则</strong>：在保持画面转换流畅的前提下，<strong>尽量选风格简约的效果</strong>。</li>
+</ul>
+<h3 id="特效：调味料，不是主菜"><a href="#特效：调味料，不是主菜" class="headerlink" title="特效：调味料，不是主菜"></a>特效：调味料，不是主菜</h3><p>想在剪辑点<strong>之外</strong>提示画面质感时，用<strong>特效</strong>。</p>
+<p>特效可以理解为：<strong>已经被预设好、可以直接叠加在画面里、样式丰富的动态滤镜</strong>。</p>
+<ul>
+<li>画面特效</li>
+<li>人物特效</li>
+</ul>
+<blockquote>
+<p>特效只是调味料，从来不是视频的主菜。需要在强调情绪、增强氛围的关键点上<strong>稍微点缀</strong>，不要每个镜头都往上堆。真正让画面出彩的是<strong>素材本身 + 组接素材的逻辑 + 本身的节奏</strong>。</p>
+</blockquote>
+<hr>
+<h2 id="4-听觉塑造：音乐处理与音效设计"><a href="#4-听觉塑造：音乐处理与音效设计" class="headerlink" title="4 听觉塑造：音乐处理与音效设计"></a>4 听觉塑造：音乐处理与音效设计</h2><blockquote>
+<p><strong>一句话记住</strong>：声音能<strong>提前建场</strong>（J-Cut）、也能<strong>留场</strong>（L-Cut）；音效要参与叙事，而不是随手铺满。</p>
+</blockquote>
+<h3 id="处理过长的-BGM"><a href="#处理过长的-BGM" class="headerlink" title="处理过长的 BGM"></a>处理过长的 BGM</h3><ol>
+<li>找到<strong>副歌结束时的那个重拍</strong>（鼓点最响的一下），切开；</li>
+<li>把后面那一段音频<strong>拉到最低</strong>；</li>
+<li>选中这两段音频，按 <code>Alt + G</code> <strong>封装成音频复合片段</strong>。</li>
+</ol>
+<p><img src="/image-20261029145746113.png" alt="BGM 重拍切分与音频复合片段"></p>
+<blockquote>
+<p>目的是保持听感的纯净，让音乐自然收在重拍上。</p>
+</blockquote>
+<h3 id="环境音效：从画面联想"><a href="#环境音效：从画面联想" class="headerlink" title="环境音效：从画面联想"></a>环境音效：从画面联想</h3><ul>
+<li>观察画面，同步联想「这一段地方可能有什么声音」——比如海浪、风声、火焰。</li>
+<li>常见音效剪映素材库都有：左上角素材面板 → <strong>音频工具 → 音效库</strong> → 搜索框直接搜。</li>
+</ul>
+<h3 id="J-Cut-与-L-Cut"><a href="#J-Cut-与-L-Cut" class="headerlink" title="J-Cut 与 L-Cut"></a>J-Cut 与 L-Cut</h3><ul>
+<li><strong>J-Cut：声音先行，画面后出。</strong> 让声音提前 2–3 秒、并给一个<strong>渐入</strong>效果——画面还没出来，海浪已经响起，观众脑海里已自动构建海边场景的预期，等画面出来一切都很自然。</li>
+<li><strong>L-Cut：画面消失，音乐正常播放。</strong>（声音留住、画面先走）</li>
+</ul>
+<p><img src="/image-20261029150956205.png" alt="音效库"></p>
+<h3 id="特殊设计音效"><a href="#特殊设计音效" class="headerlink" title="特殊设计音效"></a>特殊设计音效</h3><p>光有环境音，画面冲击力还不够；想进一步强化视觉张力，就用<strong>设计过的特殊音效</strong>。</p>
+<ul>
+<li>不只用在开场和转场，还能<strong>强化动作节奏</strong>，甚至<strong>构建超现实氛围</strong>；</li>
+<li>例：画面是缓慢推进的空镜时，加<strong>低音轰鸣</strong>。</li>
+</ul>
+<blockquote>
+<p>音效不只在配音，它同时<strong>参与叙事</strong>。你添加的每一个音效都应该认真斟酌，否则很可能适得其反、影响观感。音效的添加与设计需要长期练习。</p>
+</blockquote>
+<h3 id="音效素材的来源"><a href="#音效素材的来源" class="headerlink" title="音效素材的来源"></a>音效素材的来源</h3><ol>
+<li><strong>新手首选</strong>：剪映自带音效库，充分利用。</li>
+<li>实在找不到，可以试<strong>剪映自带的 AI 音效</strong>。</li>
+<li>也可以<strong>自己录声音</strong>，导入剪映后改一下<strong>倍速和音调</strong>。</li>
+</ol>
+<p><strong>国外商用免版权音乐站（专业音效&#x2F;配乐资源）</strong>：</p>
+<table>
+<thead>
+<tr>
+<th align="left">网站</th>
+<th align="left">特点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.musicbed.com/">Musicbed</a></td>
+<td align="left">高品质影视向配乐，偏大气、抒情，适合短片、宣传片</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="https://artlist.io/">Artlist</a></td>
+<td align="left">热门订阅制 BGM 平台，歌曲量大，视频创作者常用</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.storyblocks.com/">Storyblocks</a></td>
+<td align="left">除音乐外还包含视频素材、音效，打包订阅</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="https://elements.envato.com/audio">Envato Elements Audio</a></td>
+<td align="left">Envato 旗下，音乐 + 音效 + 模板一站式素材库</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="5-最终交付与导出管理"><a href="#5-最终交付与导出管理" class="headerlink" title="5 最终交付与导出管理"></a>5 最终交付与导出管理</h2><blockquote>
+<p><strong>一句话记住</strong>：糊不糊、大不大，只看<strong>分辨率 &#x2F; 帧率 &#x2F; 码率</strong>三个参数；而<strong>封面、命名、工程文件夹</strong>决定了你半年后还能不能找回这条片子。</p>
+</blockquote>
+<h3 id="问题引入"><a href="#问题引入" class="headerlink" title="问题引入"></a>问题引入</h3><p>花好几天剪出来的片子，<strong>糊得连字幕都看不清</strong>，或者<strong>文件大得发不出去</strong>，只能再压一遍——发朋友圈、抖音、小红书都难受。</p>
+<h3 id="封面"><a href="#封面" class="headerlink" title="封面"></a>封面</h3><ul>
+<li>默认情况下剪映会<strong>自动提取视频第一帧</strong>作封面，但第一帧往往是<strong>黑场</strong>。</li>
+<li>点视频封面下方的「<strong>前往选择</strong>」，手动挑一个静帧：<ul>
+<li>人物表情最自然的瞬间，或景色最美的一刻；</li>
+<li>一定要有<strong>张力</strong>、要<strong>简洁</strong>。</li>
+</ul>
+</li>
+<li>选好之后还可以<strong>加标题、加包装</strong>（编辑封面）。</li>
+<li>也可以自己做封面再导入（例如用豆包模仿 B 站封面风格）。</li>
+</ul>
+<h3 id="命名规范"><a href="#命名规范" class="headerlink" title="命名规范"></a>命名规范</h3><p>示例：<code>2026-01-10_混剪教学_4K_成片1_抖音</code></p>
+<p><strong>格式：<code>日期 + 片名 + 分辨率 + 视频版本 + 平台</code></strong></p>
+<p>为什么要这样命名：</p>
+<ul>
+<li>一条片子一定会反复修改、导出好几个版本（抖音版、朋友圈版、给客户看的小样）；</li>
+<li><strong>从导出第一个文件开始就养成习惯</strong>，哪怕只给自己看；</li>
+<li>一眼就能看出：哪天做的、什么分辨率、成片还是过程稿、第几个版本、发哪个平台。</li>
+</ul>
+<h3 id="工程文件与素材管理"><a href="#工程文件与素材管理" class="headerlink" title="工程文件与素材管理"></a>工程文件与素材管理</h3><p>从一开始就养成分类和文件管理的习惯：每次新建项目前，先建一个<strong>总文件夹</strong>，里面按类别分子文件夹。</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">2026-01-10_混剪教学_4K_成片1_抖音</span><br><span class="line">├── 导出</span><br><span class="line">│   ├── 成片</span><br><span class="line">│   └── 小样</span><br><span class="line">├── 视频</span><br><span class="line">│   ├── Aroll      # 故事的顺序</span><br><span class="line">│   ├── Broll      # 没有 A-Roll 时就是混剪素材</span><br><span class="line">│   └── 其它素材</span><br><span class="line">├── 图片</span><br><span class="line">│   ├── 图片素材</span><br><span class="line">│   └── 包装设计素材</span><br><span class="line">└── 音频</span><br><span class="line">    ├── BGM</span><br><span class="line">    └── 音效</span><br></pre></td></tr></table></figure>
+
+<h3 id="决定清晰度与体积的三个参数"><a href="#决定清晰度与体积的三个参数" class="headerlink" title="决定清晰度与体积的三个参数"></a>决定清晰度与体积的三个参数</h3><blockquote>
+<p>一个视频导出后是否清晰、文件大小是否合理，本质上<strong>只受三个关键参数影响</strong>。</p>
+</blockquote>
+<h4 id="1-分辨率"><a href="#1-分辨率" class="headerlink" title="1. 分辨率"></a>1. 分辨率</h4><ul>
+<li>指视频的清晰度，即里面的<strong>像素数量</strong>。</li>
+<li><strong>上限由原始素材决定</strong>，一般<strong>保持原分辨率</strong>。</li>
+<li>⚠️ 素材本身就是 1080P，强行拉到 4K <strong>不会变清晰</strong>，盲目导出高分辨率除了体积臃肿还会有其他问题。</li>
+<li>原文另列出两个「智能」选项：<strong>智能分辨率、智能补帧</strong>。</li>
+</ul>
+<h4 id="2-帧率"><a href="#2-帧率" class="headerlink" title="2. 帧率"></a>2. 帧率</h4><ul>
+<li>决定画面的<strong>流畅度</strong>和综合播放的清晰度；剪辑中可剪的最小单位就是一帧（一张图片）。</li>
+<li>指视频中<strong>每秒有多少帧画面</strong>。</li>
+<li>常见取值：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">帧率</th>
+<th align="left">适用场景</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">24 帧</td>
+<td align="left">电影感</td>
+</tr>
+<tr>
+<td align="left">25 帧</td>
+<td align="left">中国广播电视标准</td>
+</tr>
+<tr>
+<td align="left">30 帧</td>
+<td align="left">普通标准视频</td>
+</tr>
+<tr>
+<td align="left">60 帧</td>
+<td align="left">运动画面</td>
+</tr>
+</tbody></table>
+<ul>
+<li><strong>一般跟原视频保持一致</strong>。</li>
+<li>⚠️ <strong>不建议使用 AI 自动补帧</strong>：AI 技术只作为<strong>单段素材的补救手段</strong>——某个素材本身清晰度不足、帧率和其他素材没法匹配时再用。不要指望它取代前期拍摄。</li>
+</ul>
+<h4 id="3-编码码率"><a href="#3-编码码率" class="headerlink" title="3. 编码码率"></a>3. 编码码率</h4><ul>
+<li>指视频中保存的<strong>信息密度</strong>，即每一秒视频软件分配了多少算力和数据量去压缩画面。</li>
+<li><strong>码率越高</strong> → 数据量越大、需要压掉的东西越少 → 细节保留更多（树叶边缘更清晰、远处纹理更清楚），<strong>代价是文件变大</strong>。</li>
+<li><strong>码率越低</strong> → 数据量越小、文件越小 → 画面开始丢东西：<strong>模糊、马赛克、色块缺失</strong>。</li>
+<li><strong>码率并不是越高越好</strong>；一般选「<strong>推荐</strong>」，让剪映自己选合适码率。</li>
+</ul>
+<h3 id="发布平台推荐导出参数"><a href="#发布平台推荐导出参数" class="headerlink" title="发布平台推荐导出参数"></a>发布平台推荐导出参数</h3><table>
+<thead>
+<tr>
+<th align="left">发布平台</th>
+<th align="left">推荐导出分辨率</th>
+<th align="left">推荐导出帧率</th>
+<th align="left">视频码率档位</th>
+<th align="left">自定义设置码率</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">抖音</td>
+<td align="left">1080p – 4K</td>
+<td align="left">30 帧</td>
+<td align="left">推荐</td>
+<td align="left">20000 – 35000 KB&#x2F;s</td>
+</tr>
+<tr>
+<td align="left">小红书</td>
+<td align="left">1080p – 4K</td>
+<td align="left">30 帧</td>
+<td align="left">推荐</td>
+<td align="left">10000 – 25000 KB&#x2F;s</td>
+</tr>
+<tr>
+<td align="left">BiliBili</td>
+<td align="left">2K – 4K</td>
+<td align="left">60 帧</td>
+<td align="left">更高</td>
+<td align="left">40000 – 45000 KB&#x2F;s</td>
+</tr>
+<tr>
+<td align="left">YouTube</td>
+<td align="left">2K – 4K</td>
+<td align="left">60 帧</td>
+<td align="left">更高</td>
+<td align="left">40000 – 45000 KB&#x2F;s</td>
+</tr>
+</tbody></table>
+<h3 id="封装与音频参数"><a href="#封装与音频参数" class="headerlink" title="封装与音频参数"></a>封装与音频参数</h3><p>设置好之后，剪辑界面<strong>左下角会估算视频体积</strong>，合适就进入封装格式：</p>
+<ul>
+<li><strong>格式</strong>：<code>MP4</code>、<code>MOV</code></li>
+<li><strong>视频编码</strong>：<code>H.264</code>（默认）</li>
+</ul>
+<p>导出后如果出现<strong>声音变小、杂音、消失</strong>，这不是软件 BUG，而是<strong>音频参数没设对</strong>：</p>
+<table>
+<thead>
+<tr>
+<th align="left">音频参数</th>
+<th align="left">推荐值</th>
+<th align="left">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">音频质量</td>
+<td align="left"><code>AAC 256 kbps</code> 或 <code>AAC 320 kbps</code></td>
+<td align="left">声音细节的保留程度</td>
+</tr>
+<tr>
+<td align="left">音频采样率</td>
+<td align="left"><code>48000 Hz</code></td>
+<td align="left">采样精度</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>剪辑最有意思的地方：它不是一个单一机械的操作，而是<strong>音乐节奏、平面排版，甚至色彩科学的跨界融合</strong>。</p>
+</blockquote>
+<hr>
+<h1 id="第二单元-·-进阶篇（6–9）"><a href="#第二单元-·-进阶篇（6–9）" class="headerlink" title="第二单元 · 进阶篇（6–9）"></a>第二单元 · 进阶篇（6–9）</h1><blockquote>
+<p>这一部分讲剪映里的专业工具。想要完全掌握，<strong>课下必须自己花时间反复练习、尝试不同效果</strong>。</p>
+</blockquote>
+<h2 id="6-运动控制：关键帧与曲线运动"><a href="#6-运动控制：关键帧与曲线运动" class="headerlink" title="6 运动控制：关键帧与曲线运动"></a>6 运动控制：关键帧与曲线运动</h2><blockquote>
+<p><strong>一句话记住</strong>：关键帧 &#x3D; <strong>给某个参数设起点和终点，中间交给软件补间</strong>；补出来的是<strong>匀速直线</strong>，想自然就得改<strong>曲线</strong>，而且<strong>相关参数的曲线必须一起改</strong>。</p>
+</blockquote>
+<h3 id="前置：素材的基础参数"><a href="#前置：素材的基础参数" class="headerlink" title="前置：素材的基础参数"></a>前置：素材的基础参数</h3><p>先把素材拖进时间线，<strong>右键 → 基础调整</strong>：定格、倒放、旋转、镜像、裁剪等。这些是比较好上手的基础属性。</p>
+<p>更复杂的参数在<strong>右上角参数面板</strong>里（选中素材后出现）：</p>
+<ul>
+<li><strong>缩放</strong>：也可以直接拖拽素材边框来缩放</li>
+<li><strong>位置</strong>：按住画面本身拖动来改变位置</li>
+</ul>
+<blockquote>
+<p>通常<strong>片段与片段之间的参数没有关联</strong>。想同时改变多个片段的参数，需要<strong>全选</strong>后再去右上角参数面板调整。</p>
+<p>调整这些参数后，片段就会应用并<strong>固定</strong>下来。但进阶剪辑中我们要让画面<strong>动起来</strong>（画面缓缓推进、文字从屏幕外飞进来），这就需要关键帧。</p>
+</blockquote>
+<h3 id="关键帧的本质"><a href="#关键帧的本质" class="headerlink" title="关键帧的本质"></a>关键帧的本质</h3><blockquote>
+<p><strong>给素材的某个参数，设置一个起点和一个终点，让软件按时间顺序帮我们计算中间的变化过程。</strong></p>
+</blockquote>
+<ul>
+<li>当同一个参数上有<strong>两个及以上不同数值</strong>的关键帧时，软件会读取这两个关键帧，随时间变化把中间每一帧都算出来；</li>
+<li>起点到终点的变化，就以视觉方式呈现在播放器里；</li>
+<li>所有中间位置都是软件帮忙补全的，这个过程叫 **<code>补间动画</code>**；</li>
+<li>选中素材后，右上角<strong>每个可调参数后面都有一个菱形按钮</strong>——这意味着任何参数都能随时间变化，进一步组合就能做出复杂动画。</li>
+</ul>
+<h3 id="案例：手机推近效果"><a href="#案例：手机推近效果" class="headerlink" title="案例：手机推近效果"></a>案例：手机推近效果</h3><p>把素材拖到时间线，添加关键帧前<strong>先想清楚这个放大动画</strong>：</p>
+<table>
+<thead>
+<tr>
+<th align="left">要素</th>
+<th align="left">内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">起点关键帧</td>
+<td align="left">从哪里开始（举起手机的那一刻：缩放 + 位置）</td>
+</tr>
+<tr>
+<td align="left">终点关键帧</td>
+<td align="left">在哪里结束，终点这一帧把画面放到合适构图（手机充满画面这一帧）</td>
+</tr>
+<tr>
+<td align="left">涉及参数</td>
+<td align="left">位置、缩放、旋转——<strong>注意每一个都要打上关键帧</strong></td>
+</tr>
+</tbody></table>
+<p><strong>判断有没有打上</strong>：看右边参数面板，<strong>实心 &#x3D; 有关键帧，空心 &#x3D; 没有关键帧</strong>。</p>
+<p><strong>常见错误</strong>：播放时出现「先移动后放大」或「先放大后移动」，说明<strong>关键帧错位了</strong>。按住 <code>Ctrl + 滚轮</code> 放大时间线，仔细检查关键帧位置。</p>
+<h3 id="关键帧曲线（让运动有力量感）"><a href="#关键帧曲线（让运动有力量感）" class="headerlink" title="关键帧曲线（让运动有力量感）"></a>关键帧曲线（让运动有力量感）</h3><blockquote>
+<p>关键帧只负责记录参数信息，软件生成的动画只是两个关键帧之间的<strong>线性运动</strong>；这个线性的速度，<strong>没办法通过调整关键帧数值本身来改变</strong>。</p>
+</blockquote>
+<p>操作：</p>
+<ol>
+<li><strong>右键素材片段 → 关键帧变速曲线</strong>（快捷键 <code>Alt + K</code>）；</li>
+<li>关键帧轨道展开，出现<strong>三条曲线</strong>（横轴是时间）：<ol>
+<li>缩放</li>
+<li>X 轴</li>
+<li>Y 轴</li>
+</ol>
+</li>
+<li>默认是线性的，大脑看来不自然。为了更自然：<ul>
+<li>走 <strong>加速 → 减速</strong>，就是 <strong>S 形曲线</strong>，这是曲线动画的原理；</li>
+<li>点这根缩放参数的线 → 右上角按钮 → 选剪映准备好的预设 → 点「<strong>二次方缓动 S 形</strong>」。</li>
+</ul>
+</li>
+<li>⚠️ <strong>三根线只动了一根，动画就会出现明显错位</strong>——三个参数节奏不统一就导致动作脱节。</li>
+<li>想让画面协调，<strong>必须让所有相关参数的曲线保持一致</strong>：分别点 X 轴、Y 轴，也用上同样的「二次方缓动」。</li>
+</ol>
+<blockquote>
+<p><strong>关键帧的本质</strong>：给静态的参数<strong>注入一个时间上的维度</strong>。有了它，才能精确控制任何一个效果的开始、结束，以及中间的变化节奏。</p>
+<p>关键帧这个东西必须多练、多试、多调。而且这门技术不太可能随时间消亡——哪怕真有 AI 生成的内容，关键帧这个工具大概还是会用到。</p>
+</blockquote>
+<hr>
+<h2 id="7-动态节奏：曲线变速与素材帧率"><a href="#7-动态节奏：曲线变速与素材帧率" class="headerlink" title="7 动态节奏：曲线变速与素材帧率"></a>7 动态节奏：曲线变速与素材帧率</h2><blockquote>
+<p><strong>一句话记住</strong>：变速不是被动调速度，而是<strong>主动操控观众注意力</strong>；慢放卡顿靠补帧只能补救，<strong>真正丝滑的前提是前期拍高帧率</strong>。</p>
+</blockquote>
+<h3 id="为什么调速度"><a href="#为什么调速度" class="headerlink" title="为什么调速度"></a>为什么调速度</h3><p>画面节奏忽快忽慢，紧张时突然加速、震撼时瞬间慢放——片子的情绪是被<strong>速度</strong>牵着走的（运动里的爆发瞬间、旅拍的转场衔接、卡点混剪）。</p>
+<blockquote>
+<p>作为剪辑师，要做的不是被动调整播放速度，而是<strong>主动利用速度去控制观众的注意力</strong>：该快时让节奏飞起来，该慢时突然慢下来让画面有冲击力。快慢之间的切换，就是剪辑师掌控时间的方式——<strong>操控时间的能力</strong>。</p>
+</blockquote>
+<h3 id="基础变速"><a href="#基础变速" class="headerlink" title="基础变速"></a>基础变速</h3><ol>
+<li>时间线上点中片段；</li>
+<li>右上角参数面板找到<strong>第三个选项「变速」</strong>；</li>
+<li>素材片段左右两侧出现一对<strong>白色手柄</strong>，拖拽即可：<ul>
+<li><strong>拖短</strong> &#x3D; 提高倍速 &#x3D; <strong>快放</strong></li>
+<li><strong>拖长</strong> &#x3D; 降低倍速 &#x3D; <strong>慢放</strong></li>
+</ul>
+</li>
+<li>拉动时，右上角参数面板里的变速数值会同步变化。</li>
+</ol>
+<h3 id="慢放为什么卡？怎么补？"><a href="#慢放为什么卡？怎么补？" class="headerlink" title="慢放为什么卡？怎么补？"></a>慢放为什么卡？怎么补？</h3><ul>
+<li>慢放到 <strong>0.1 倍速</strong>时，画面明显卡顿、丢帧；慢放倍率越大，卡顿越明显。</li>
+<li><strong>原因</strong>：变速时素材内部发生了<strong>重复帧</strong>，或<strong>丢弃部分帧</strong>来填补空白。</li>
+</ul>
+<p>剪映的解决方案：<strong>智能补帧</strong>（用 AI 生成新帧填补帧间空白），点开有两个选项：</p>
+<table>
+<thead>
+<tr>
+<th align="left">方式</th>
+<th align="left">原理</th>
+<th align="left">优缺点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">帧融合</td>
+<td align="left">把前后两帧画面叠加、模糊混合，补上一个过渡</td>
+<td align="left">处理速度快；缺陷明显——<strong>重影、破碎感</strong></td>
+</tr>
+<tr>
+<td align="left">光流法</td>
+<td align="left">分析画面里物体运动轨迹，算出一张「理论上应该存在」的中间帧插进去</td>
+<td align="left">速度慢，但<strong>效果更好、运动更流畅</strong></td>
+</tr>
+</tbody></table>
+<p>⚠️ 但必须清楚：</p>
+<ul>
+<li>两种补帧都是<strong>后期算法造出来的画面</strong>，再怎么补也达不到<strong>原生高帧率拍摄的自然感</strong>，只是补救策略，<strong>不建议过度依赖它做强行的慢动作</strong>。</li>
+<li>想在后期做丝滑升格，<strong>最好的方法是前期就拍高帧率</strong>（60 帧、120 帧甚至更高），这样后期有足够多的原始画面，放慢好几倍依然流畅。</li>
+<li>变速效果的好坏<strong>高度依赖素材本身质量</strong>：高帧率素材慢放丝滑，普通素材慢放容易卡顿。</li>
+<li><strong>最佳做法：前期拍 60 帧或 120 帧 + 后期配合光流法。</strong></li>
+</ul>
+<h3 id="什么时候该用变速"><a href="#什么时候该用变速" class="headerlink" title="什么时候该用变速"></a>什么时候该用变速</h3><p><strong>1. 艺术化处理</strong></p>
+<ul>
+<li>前期高帧率拍摄，后期人为慢放 → 丝滑的<strong>升格</strong>效果（空翻、滑雪）；</li>
+<li>把普通素材<strong>加速</strong>模拟<strong>延时摄影</strong>的时间流逝（日出、日落）；</li>
+<li>目的是让画面本身更有表现力。</li>
+</ul>
+<p><strong>2. 空隙填补</strong></p>
+<ul>
+<li>剪辑编排得差不多了，但这段素材离下个转场<strong>就差 1–2 秒，或多 1–2 秒</strong>；</li>
+<li>直接点变速拖拽两侧小手柄，<strong>拉满空隙长度</strong>即可（匀速变化）。</li>
+</ul>
+<blockquote>
+<p>整段素材从头到尾只有一个速度，看起来就不怎么专业 → 所以要用<strong>曲线变速</strong>。</p>
+</blockquote>
+<h3 id="曲线变速"><a href="#曲线变速" class="headerlink" title="曲线变速"></a>曲线变速</h3><p>应用场景：在场景转换的位置把素材速度变快，加速瞬间观众注意力被速度变化吸引，视觉上有种「嗖」一下被拽过去的感觉；等速度恢复正常时，画面<strong>已经切到下一个场景</strong>了。</p>
+<blockquote>
+<p>简单说：<strong>让视频想什么时候快就快，想什么时候慢就慢。</strong></p>
+<p>对比理解：<strong>关键帧曲线控制的是位置、缩放这些空间参数；曲线变速控制的是时间本身的速度。</strong></p>
+</blockquote>
+<p>操作：时间线点中素材 → 右上角参数面板 → 变速 → <strong>曲线变速</strong> → <strong>自定义曲线</strong>，出现<strong>变速预览窗口</strong>：</p>
+<table>
+<thead>
+<tr>
+<th align="left">元素</th>
+<th align="left">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">横轴</td>
+<td align="left">视频的播放时间</td>
+</tr>
+<tr>
+<td align="left">白色竖线</td>
+<td align="left">对应时间线上的播放头</td>
+</tr>
+<tr>
+<td align="left">中间带三组把手的线</td>
+<td align="left">就是变速曲线</td>
+</tr>
+<tr>
+<td align="left">线上的小把手</td>
+<td align="left">素材片段两侧的变速把手，可在片段之间自由调整，把片段切分并变速（<strong>向上拖加速，向下拖减速</strong>）</td>
+</tr>
+</tbody></table>
+<p><img src="/image-20261031194802369.png" alt="基础变速转场：加速 → 匀速 → 减速"></p>
+<p>上图即「<strong>加速 → 匀速 → 减速</strong>」的变速转场效果。</p>
+<h3 id="动作变速：重构画面重心"><a href="#动作变速：重构画面重心" class="headerlink" title="动作变速：重构画面重心"></a>动作变速：重构画面重心</h3><p>例：滑雪素材。目标是通过改变时间流速，<strong>强化雪墙喷发的视觉冲击力</strong>。</p>
+<ol>
+<li>先<strong>定位素材中动作的顶点</strong>——滑雪者切入雪地、雪墙喷发到最后最高点的那一帧，把它作为<strong>速度变化的转折中心</strong>；</li>
+<li>手动添加关键帧：在动作顶点<strong>之前</strong>把曲线向上拉高，实现快速推进；</li>
+<li>在雪墙完全炸裂的<strong>瞬间</strong>，把曲线向下拉到 <strong>0.3 倍速，甚至 0.1 倍超慢动作</strong>；</li>
+<li>这种<strong>极快 → 极慢</strong>的剧烈反差，就是想要的效果。</li>
+</ol>
+<p><img src="/image-20261031195436229.png" alt="动作变速曲线：顶点前拉高、炸裂瞬间压到极慢"></p>
+<blockquote>
+<p>逻辑：<strong>快节奏负责制造动能</strong>；随后<strong>慢节奏迫使观众的视觉焦点停留在雪花破碎的细节上</strong>，从而成倍放大画面的震撼感。</p>
+<p>剪映变速关键帧的调整逻辑，多试一试手感就有了。</p>
+</blockquote>
+<h3 id="变速卡点"><a href="#变速卡点" class="headerlink" title="变速卡点"></a>变速卡点</h3><p>画面跟着音乐鼓点忽快忽慢，每一拍都卡得刚刚好——手动做非常麻烦。</p>
+<p>操作：导入素材 → 添加一段 BGM → 点击素材片段 → 变速 → 最后一个「<strong>变速卡点</strong>」→ 选一个喜欢的预设效果。</p>
+<blockquote>
+<p>变速是剪辑中非常常用、也特别出效果的工具，但<strong>用得太多会审美疲劳</strong>。最重要的一点：在<strong>满足故事性</strong>的前提下合理运用，该快的时候快、该慢的时候慢，让速度真正为内容服务。</p>
+</blockquote>
+<hr>
+<h2 id="8-空间重组：全套抠像工具"><a href="#8-空间重组：全套抠像工具" class="headerlink" title="8 空间重组：全套抠像工具"></a>8 空间重组：全套抠像工具</h2><blockquote>
+<p><strong>一句话记住</strong>：抠像是<strong>一整套工具协作</strong>——智能抠像（AI 轮廓）&#x2F; 自定义抠像（手涂）&#x2F; 色度抠图（抠颜色）&#x2F; 蒙版（抠范围）&#x2F; 混合模式（抠亮暗），不同素材用不同工具，不同效果用不同组合。</p>
+</blockquote>
+<p>剪映的两大优势：<strong>字幕识别</strong>、<strong>抠像</strong>。</p>
+<p>一键抠人的<strong>智能抠像</strong>、处理发丝边缘的<strong>自定义抠像</strong>、绿幕素材的<strong>色度抠图</strong>，最后还有<strong>蒙版、混合模式</strong>。</p>
+<h3 id="开工前：默认开启自由层级"><a href="#开工前：默认开启自由层级" class="headerlink" title="开工前：默认开启自由层级"></a>开工前：默认开启自由层级</h3><p>剪映主页 → <strong>全局设置</strong> → 「剪辑参数」里找到并勾选「<strong>新建草稿时默认打开自由层级</strong>」。这样以后新建草稿，自由层级默认都是开的。</p>
+<blockquote>
+<p>抠像需要一个主体素材。点素材片段 → 右上角参数面板里找到「<strong>抠像</strong>」。</p>
+</blockquote>
+<p><img src="/image-20261101090933800.png" alt="抠像面板"></p>
+<h3 id="8-1-智能抠像"><a href="#8-1-智能抠像" class="headerlink" title="8.1 智能抠像"></a>8.1 智能抠像</h3><ul>
+<li>剪映自动识别画面中的<strong>人物主体</strong>，抠出后背景变透明。</li>
+<li><strong>抠完先别急着操作，先检查精准度</strong>：<ul>
+<li>点时间线上的<strong>预览图标</strong>，或按快捷键 <code>S</code>，激活<strong>预览轴</strong>功能；</li>
+<li>鼠标会变成一个可自由拖动的播放头，能直观看到<strong>有没有残留背景</strong>、<strong>有没有把不该抠的抠掉</strong>。</li>
+</ul>
+</li>
+<li>如果出现识别不精准（人物边缘有残留、有些地方没抠干净），就要用<strong>自定义抠像</strong>。</li>
+</ul>
+<p><img src="/image-20261101091217620.png" alt="预览轴检查抠像细节"></p>
+<h3 id="8-2-自定义抠像"><a href="#8-2-自定义抠像" class="headerlink" title="8.2 自定义抠像"></a>8.2 自定义抠像</h3><ul>
+<li>光标自动变成<strong>一支画笔</strong>，像画画一样在要抠出的物体上<strong>大致涂抹</strong>；</li>
+<li>笔画会<strong>自动识别物体边缘</strong>，帮你快速框定更大范围；</li>
+<li>大致范围选好后，可以进一步调整<strong>笔刷粗细</strong>，或换成普通画笔形态；</li>
+<li>涂多了就换<strong>智能橡皮擦</strong>；</li>
+<li><strong>蓝色部分就是最后被抠出来的部分</strong>；</li>
+<li>调整满意后点击右下角「<strong>应用效果</strong>」，剪映会自动计算并<strong>跟踪物体在整个视频时间轴上的运动</strong>，最终抠干净并生成一个<strong>背景透明的独立图层</strong>。</li>
+</ul>
+<p>最后<strong>再播放检查一遍</strong>，确定没有残留背景、也没有缺失的部分。</p>
+<blockquote>
+<p>剪映的抠像虽然上手简单，但想做出有创意的效果，<strong>需要把不同工具组合起来用</strong>。</p>
+</blockquote>
+<p><strong>组合效果示例：</strong></p>
+<p><img src="/image-20261101092842354.png" alt="抠像组合案例 1"></p>
+<p><img src="/image-20261101092905625.png" alt="抠像组合案例 2"></p>
+<p><img src="/image-20261101092935488.png" alt="抠像组合案例 3"></p>
+<p><img src="/image-20261101092945643.png" alt="抠像组合案例 4"></p>
+<h3 id="8-3-「三明治」：人物-文字-背景三层"><a href="#8-3-「三明治」：人物-文字-背景三层" class="headerlink" title="8.3 「三明治」：人物 + 文字 + 背景三层"></a>8.3 「三明治」：人物 + 文字 + 背景三层</h3><p>口播评测时，每当提到<strong>关键信息</strong>，就把这一段素材单独切分出来：</p>
+<ol>
+<li><strong>复制一份相同素材</strong>，拖到辅轨，和下面的片段<strong>对齐同步播放</strong>；</li>
+<li>点击<strong>辅轨</strong>上的素材进行<strong>抠像</strong>；</li>
+<li>此时乍看没有区别——因为底层素材背景和上面的叠在一起了；</li>
+<li>点击<strong>主轨</strong>上的素材片段，按快捷键 <code>V</code> 或<strong>右键禁用</strong>，把背景素材暂时关掉；</li>
+<li>用预览轴 <code>S</code> 检查一遍抠图细节，确保没有问题；</li>
+<li>添加一段<strong>文字轨道</strong>，把它的层级放到<strong>抠像层和背景层之间</strong>（中间层）；</li>
+<li>调整文字大小和位置，加上剪映的<strong>入场、出场动画</strong>，选一个<strong>易读的字体</strong>。</li>
+</ol>
+<p>成果：<strong>抠出的人物在最前面，文字在中间，背景在最后</strong>——像夹三明治一样，层次感一下就出来了。</p>
+<p><img src="/image-20261101113149586.png" alt="三明治抠像效果"></p>
+<blockquote>
+<p>动画参考：入场「随机上升」，出场「向下滑动」。</p>
+</blockquote>
+<h3 id="8-4-色度抠图（绿幕-蓝幕）"><a href="#8-4-色度抠图（绿幕-蓝幕）" class="headerlink" title="8.4 色度抠图（绿幕 &#x2F; 蓝幕）"></a>8.4 色度抠图（绿幕 &#x2F; 蓝幕）</h3><p>智能抠像和自定义抠图都是靠 <strong>AI 算法识别物体轮廓</strong>，大部分素材都能搞定；但遇到<strong>发丝飘逸、细节特别丰富</strong>的素材就不够用了。</p>
+<p><strong>色度抠图原理不同</strong>：它靠<strong>精准剔除某一种特定颜色</strong>，这种方式更稳定，适合影视制作中常见的<strong>蓝幕、绿幕</strong>。</p>
+<p>操作：选中绿幕素材 → 拖到时间线 → 右上角「<strong>色度抠图</strong>」→ 会看到一个<strong>取色器</strong>（长得像小吸管）→ 把鼠标放到播放器上，光标变成吸管 → 在要抠掉的颜色上<strong>点一下</strong>，颜色瞬间扣除（点绿色背景，绿色消失、人物留下）。</p>
+<p><strong>抠不干净的原因</strong>：拍摄时绿幕难免有<strong>褶皱、明暗不匀、光线不均匀</strong>，导致背景出现深浅不一的绿色或噪点。默认阈值比较窄，只能扣掉与吸管颜色<strong>完全一致</strong>的部分，偏深偏浅的区域就残留了。→ 需要手动<strong>拉宽色度抠图的阈值</strong>。</p>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>强度</strong></td>
+<td align="left">拉大则扣除的颜色范围变大，深一点的绿色也会被清掉</td>
+</tr>
+<tr>
+<td align="left"><strong>阴影</strong></td>
+<td align="left">控制阴影区域的保留程度；拉大阴影，绿幕上的阴影区会被加重或保留（用来<strong>修复因打光不匀造成的残留痕迹</strong>）</td>
+</tr>
+</tbody></table>
+<p>⚠️ 阈值拉太满，画面就会<strong>漏</strong>。抠图时要<strong>一边观察画面变化，一边找刚刚好的平衡点</strong>。</p>
+<p><strong>边缘残留处理</strong>：</p>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>边缘羽化</strong></td>
+<td align="left">拉大让抠出的物体边缘更柔和，与背景过渡更自然</td>
+</tr>
+<tr>
+<td align="left"><strong>边缘清除</strong></td>
+<td align="left">专门对付顽固绿边，拉高会智能识别并去掉边缘残留的绿色</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>还是那句话：<strong>一边拉，一边观察，直到绿幕完全消失为止。</strong></p>
+</blockquote>
+<h3 id="8-5-蒙版：只保留画面中的一块"><a href="#8-5-蒙版：只保留画面中的一块" class="headerlink" title="8.5 蒙版：只保留画面中的一块"></a>8.5 蒙版：只保留画面中的一块</h3><p>问题：绿幕只有一小块，人物稍微一动、边缘就露馅了——能不能像<strong>剪纸</strong>一样只保留中间这一块？</p>
+<p><img src="/image-20261101115438034.png" alt="绿幕范围不足的问题"></p>
+<p><strong>蒙版</strong>：在一个画面中，只想显示其中的一个范围。</p>
+<p><img src="/image-20261101144738203.png" alt="蒙版示意"></p>
+<p>理解方式：中间剪了一个圆洞的卡纸挡在素材前面——透过圆洞的部分保留，被卡纸遮住的部分隐藏。<strong>这块卡纸就是核心逻辑</strong>，只不过剪辑里的卡纸更灵活多样。</p>
+<p>操作：选中素材 → 右上角参数面板 → <strong>蒙版工具</strong> → 选一种形状（<strong>圆形、矩形</strong>等）来框选想保留或隐藏的画面范围。</p>
+<h3 id="8-6-混合模式：黑白素材的空间重组"><a href="#8-6-混合模式：黑白素材的空间重组" class="headerlink" title="8.6 混合模式：黑白素材的空间重组"></a>8.6 混合模式：黑白素材的空间重组</h3><p>想玩更酷炫的效果（合成烟雾、粒子消散），就要用<strong>混合模式</strong>。</p>
+<p>操作：导入黑白素材 → 右上角参数面板 → <strong>画面 → 基础 → 混合</strong> → 逐一尝试不同混合模式预设，观察效果。</p>
+<p>按预设分为三类：</p>
+<table>
+<thead>
+<tr>
+<th align="left">分组</th>
+<th align="left">预设</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>变亮组</strong></td>
+<td align="left">颜色减淡、强光、变亮、滤色</td>
+<td align="left">剔除<strong>黑色</strong>部分，保留白色部分</td>
+</tr>
+<tr>
+<td align="left"><strong>变暗组</strong></td>
+<td align="left">线性加深、正片叠底、颜色加深、变暗</td>
+<td align="left">剔除<strong>白色</strong>部分，保留黑色部分</td>
+</tr>
+<tr>
+<td align="left"><strong>叠加组</strong></td>
+<td align="left">叠加、柔光</td>
+<td align="left">既不剔除亮部也不剔除暗部，让亮部更亮、暗部更暗地叠加，实现<strong>半透明</strong>效果</td>
+</tr>
+</tbody></table>
+<p>例：白底黑色颗粒的图，要去掉白底、保留黑色颗粒 → 用<strong>变暗组</strong>（线性加深、正片叠底、颜色加深、变暗）。</p>
+<blockquote>
+<p><strong>口诀：留白用变亮，留黑用变暗，融合用叠加。</strong></p>
+</blockquote>
+<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><p>从最基础的<strong>智能抠像</strong>，到手动调整的<strong>自定义抠图</strong>，再到处理绿幕的<strong>色度抠图</strong>，最后还有<strong>蒙版和混合模式</strong>——抠像其实是一套<strong>完整的工具协作</strong>：不同的素材用不同的工具，不同的效果用不同的组合。</p>
+<p>日常拍摄的素材，用智能抠像可能就完全够用；但想更进一步处理更专业、更多样的素材（<strong>绿幕、特效合成、创意转场</strong>），理解这些抠像工具的原理和操作就变得非常重要。</p>
+<hr>
+<h2 id="9-色彩科学：一级调色工具"><a href="#9-色彩科学：一级调色工具" class="headerlink" title="9 色彩科学：一级调色工具"></a>9 色彩科学：一级调色工具</h2><blockquote>
+<p><strong>一句话记住</strong>：好看不靠特效，靠<strong>色彩准确 + 明暗自然</strong>；调色本质只动三个值（<strong>亮度 &#x2F; 饱和度 &#x2F; 色相</strong>），而<strong>色轮</strong>是把这三个值最直观整合起来的工具，<strong>示波器</strong>则是你唯一可信的眼睛。</p>
+</blockquote>
+<h3 id="调色的两个基础"><a href="#调色的两个基础" class="headerlink" title="调色的两个基础"></a>调色的两个基础</h3><p>前八节课都在用工具打造画面的动态效果（关键帧让画面动起来、卡点打造节奏），但还有一个特别重要的维度：<strong>素材本身的样子</strong>。</p>
+<p>什么样的画面第一眼看上去就是好看的？不取决于加了多少特效，而是两个基础：</p>
+<ul>
+<li><strong>色彩是否准确</strong></li>
+<li><strong>明暗是否自然</strong></li>
+</ul>
+<p>想获得直觉上就很舒服的画面，需要用<strong>调节工具</strong>。调色是日积月累、逐步长进的功夫——不仅要会工具怎么用，还要对色彩本身有更进一步的感知。</p>
+<h3 id="起点：Log-灰片与-LUT"><a href="#起点：Log-灰片与-LUT" class="headerlink" title="起点：Log 灰片与 LUT"></a>起点：Log 灰片与 LUT</h3><p>导入素材后发现画面<strong>灰灰的</strong>，那其实是 <code>Log 灰片</code>原始素材。</p>
+<ul>
+<li>这种灰灰的画面，比直出模式拍下来的彩色素材<strong>保留更多画面细节</strong>；大部分专业调色流程都基于灰片进行；</li>
+<li>但灰片确实会影响判断，所以需要<strong>色彩还原 <code>LUT</code><strong>：通过查找画面里每一个像素的颜色、替换成预设好的另一个颜色——这也是它名字的由来：</strong>Look Up Table，颜色查找表</strong>。</li>
+<li>⚠️ 不同厂家用不同的 LUT 曲线，甚至<strong>同一厂家不同机型也不一样</strong>。使用 LUT 前要<strong>仔细辨别你的素材是用哪条 Log 曲线拍的</strong>。</li>
+</ul>
+<p>两种使用方式：</p>
+<ol>
+<li>选中素材 → 右上角参数面板 <code>调整 → 基础 → LUT</code>，直接作用在灰片上；</li>
+<li>左上角「调节」里找一个 LUT <strong>拖下来变成一条轨道</strong>，覆盖作用在素材片段之上。</li>
+</ol>
+<p>用完 LUT、把灰片色彩还原后，就可以进入更多的<strong>自定义调节环节</strong>（也就是调色）。</p>
+<h3 id="调色的本质：三个数值"><a href="#调色的本质：三个数值" class="headerlink" title="调色的本质：三个数值"></a>调色的本质：三个数值</h3><p>调整画面里每一颗像素的三个关键数值：</p>
+<table>
+<thead>
+<tr>
+<th align="left">数值</th>
+<th align="left">决定</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>亮度</strong></td>
+<td align="left">明暗</td>
+</tr>
+<tr>
+<td align="left"><strong>饱和度</strong></td>
+<td align="left">浓淡</td>
+</tr>
+<tr>
+<td align="left"><strong>色相</strong></td>
+<td align="left">到底是红、蓝还是绿</td>
+</tr>
+</tbody></table>
+<p>这三个是<strong>颜色的三个基本属性</strong>，剪映中所有调节工具本质上就是分别调整这三个维度。</p>
+<p>位置：点击素材 → 右上角参数面板 → <code>调整</code>。</p>
+<h3 id="基础调节：别只会拉「亮度」"><a href="#基础调节：别只会拉「亮度」" class="headerlink" title="基础调节：别只会拉「亮度」"></a>基础调节：别只会拉「亮度」</h3><ul>
+<li><strong>亮度</strong>滑块：往右画面变亮、往左变暗。但它控制的是<strong>画面整体</strong>，单纯拉动会把画面一起提亮&#x2F;压暗——<strong>很容易让亮的地方过曝，或暗的地方死黑</strong>。</li>
+<li>所以一般用更细分的工具，<strong>分别调整亮部或暗部</strong>：<ul>
+<li><strong>高光</strong>：控制画面中高亮区域的明暗</li>
+<li><strong>阴影</strong>：控制暗部的明暗</li>
+</ul>
+</li>
+<li><strong>饱和度</strong>：控制颜色的鲜艳程度。往右变浓，往左变淡，拉到最左就是黑白。<ul>
+<li>⚠️ 新手最容易犯的错是把饱和度<strong>拉太满</strong>，觉得这样才好看。但高饱和度看久了非常容易<strong>腻</strong>，而且<strong>丢失层次感</strong>——<strong>适度的饱和度才是最舒服的</strong>。</li>
+</ul>
+</li>
+<li><strong>色相</strong>：决定颜色的种类（偏红还是偏蓝）。在 <code>HSL</code> 调节里可以<strong>单独选中某一种颜色</strong>再改它的色相。<ul>
+<li>例：觉得画面里的绿色太扎眼，就单独调绿色的色相滑块往青的方向调。</li>
+</ul>
+</li>
+<li>这三个参数结合在一起，就构成了调色的全部可能：<strong>色相、饱和度、亮度</strong>。</li>
+</ul>
+<blockquote>
+<p>在专业调色中，会使用<strong>曲线、色轮</strong>这类能在一个面板里精准调节亮度、色相、饱和度的工具。这里<strong>推荐使用色轮</strong>。</p>
+</blockquote>
+<h3 id="色轮：把三个参数揉成一个直觉"><a href="#色轮：把三个参数揉成一个直觉" class="headerlink" title="色轮：把三个参数揉成一个直觉"></a>色轮：把三个参数揉成一个直觉</h3><p><strong>动手前的关键前提</strong>：不要直接点击素材进行改变——那样<strong>不可逆</strong>，没法对比调色前后的效果。</p>
+<p>推荐做法：点击素材面板上方的 <code>调节 → 新建调节 → 自定义调节</code>，<strong>拉到轨道上方叠加在素材上面</strong>（不去覆盖它），然后让这条叠加的调节轨道去作用不同的参数（比如色轮）。</p>
+<blockquote>
+<p>单独新建一条调节轨道后，选中调节，再通过色轮修改。</p>
+</blockquote>
+<p>点开色轮，有<strong>四个长得差不多的圆盘</strong>，分别对应画面中的四个区域：</p>
+<ol>
+<li><strong>阴影</strong></li>
+<li><strong>中间调</strong></li>
+<li><strong>高光</strong></li>
+<li><strong>偏移</strong></li>
+</ol>
+<p>每个色轮上还有：<strong>饱和度滑轨、锚点（色相）、亮度滑块</strong>。</p>
+<p>理解方式：每个色轮 &#x3D; 一个把<strong>亮度、饱和度、色相</strong>三个参数整合到一起的调色控制中心，用非常直接的方式让你操控这三个维度。</p>
+<table>
+<thead>
+<tr>
+<th align="left">操作</th>
+<th align="left">效果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">拖动圆盘<strong>中心的锚点</strong></td>
+<td align="left">该区域画面染上那个方向的颜色 → 控制<strong>色相</strong>（并带一定饱和度）</td>
+</tr>
+<tr>
+<td align="left">调<strong>左侧滑轨</strong></td>
+<td align="left">与锚点配合，同时增强色相与饱和度；<strong>滑轨越高颜色越浓、饱和越强</strong></td>
+</tr>
+<tr>
+<td align="left">拖<strong>右侧竖滑块</strong></td>
+<td align="left">控制<strong>亮度</strong>；上拖变亮，下拖变暗</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>例：想让画面<strong>高光部分偏暖一点、亮一点</strong>，其他区域不变 → 在<strong>高光色轮</strong>里把锚点往橙红方向拖，再把右侧亮度滑块往上推一点，一步到位。</p>
+</blockquote>
+<p><strong>色轮的使用套路（原文给的起点）</strong>：</p>
+<ul>
+<li>阴影：往右下角一点</li>
+<li>中间调：往左侧一点</li>
+<li>高光：往橙色一点</li>
+</ul>
+<blockquote>
+<p><strong>色轮的魅力</strong>：它把三个独立参数用最直观的方式整合在一起。你不需要去想「我要加多少饱和度、多少色相」，只需凭直觉把锚点往想要的方向拖，画面变化一目了然。</p>
+<p>而且四个色轮分别控制不同区域，可以非常精细地调整画面各部分：<strong>让阴影变冷、中间调保持自然、高光偏暖</strong>，组合起来能创造出非常丰富的画面层次。</p>
+</blockquote>
+<h3 id="示波器：不要靠眼睛猜"><a href="#示波器：不要靠眼睛猜" class="headerlink" title="示波器：不要靠眼睛猜"></a>示波器：不要靠眼睛猜</h3><p>问题：调色时周边有灯、屏幕亮度、房间墙纸的色温，甚至今天戴的眼镜，都会干扰对颜色的感知。想要调色更专业精准，就需要一个能把<strong>饱和度、亮度、色相量化呈现</strong>的参考。</p>
+<p><strong>调色示波器</strong>：播放器面板<strong>右上角</strong>打开。</p>
+<p><img src="/image-20261103125928264.png" alt="调色示波器"></p>
+<p>点开后播放器上出现三个不同样式的示波器，分别实时反映素材画面里的<strong>色相、饱和度、亮度</strong>。画面里每一个像素的亮度都会在波形图里显示成一个点。</p>
+<ul>
+<li>例：移动的灯光，波形图上代表灯光的亮点也会跟着移动；<strong>左对应画面左，右对应画面右</strong>，这些点堆叠起来就是波形。</li>
+</ul>
+<p><strong>三个图的读法</strong>：</p>
+<table>
+<thead>
+<tr>
+<th align="left">图</th>
+<th align="left">看什么</th>
+<th align="left">怎么用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>波形图</strong></td>
+<td align="left">亮度分布</td>
+<td align="left">一眼看出哪里<strong>过曝</strong>、哪里<strong>欠曝</strong>。例：日出素材里太阳顶到了波形图顶部，说明该区域过曝、细节可能已丢失 → 精准压暗这部分，而不是凭感觉瞎猜</td>
+</tr>
+<tr>
+<td align="left"><strong>分量图</strong></td>
+<td align="left">红、绿、蓝三通道亮度（逻辑同波形图）</td>
+<td align="left">画面里有灰色&#x2F;白色物体时，<strong>三条线基本重合 &#x3D; 白平衡准</strong>；某一条明显偏离 &#x3D; 出现<strong>色偏</strong></td>
+</tr>
+<tr>
+<td align="left"><strong>矢量图</strong></td>
+<td align="left">饱和度 + 色相方向</td>
+<td align="left"><strong>圆代表饱和度本身</strong>，从圆心到边缘的距离 &#x3D; 饱和度高低；<strong>星点飞出的方向 &#x3D; 偏色方向</strong>（圆环一周不同角度对应不同色相）</td>
+</tr>
+</tbody></table>
+<p><strong>色偏判断实例</strong>：</p>
+<ul>
+<li><p>画面<strong>偏蓝</strong> → 分量图里蓝色通道的波形明显高于红、绿。</p>
+<p><img src="/image-20261103132226278.png" alt="偏蓝：蓝色通道明显高于红绿"></p>
+</li>
+<li><p>画面<strong>偏黄</strong> → 红色和绿色通道的波形一起压过蓝色。</p>
+<p><img src="/image-20261103132315421.png" alt="偏黄：红绿通道一起压过蓝"></p>
+</li>
+</ul>
+<blockquote>
+<p>不需要靠眼睛猜「这个画面是不是有点蓝」，直接看分量图，三条线一对比，偏色一目了然，再用<strong>色轮</strong>来调整。</p>
+</blockquote>
+<p><strong>修正色偏的操作</strong>：</p>
+<ul>
+<li>色偏比较简单时：只观察红绿蓝<strong>分量图</strong>就能调整——<strong>拨动偏移色轮中间的锚点，反向地远离那个颜色</strong>。</li>
+<li>但如果后期调节步骤出了错，画面偏向了一个<strong>不属于三原色</strong>的情况，只看分量图是判断不出来的。这时要同时观察<strong>示波器</strong>和最右边的<strong>矢量图</strong>。</li>
+<li>拉高画面整体饱和度，矢量图上代表像素的亮点会像星星一样<strong>从圆心向外扩散</strong>。</li>
+</ul>
+<p><img src="/image-20261103132958656.png" alt="矢量图：星点扩散方向即偏色方向"></p>
+<blockquote>
+<p><strong>实用技巧</strong>：在色轮调节里找到<strong>偏移</strong>，把锚点<strong>按照星星扩散的相反方向</strong>调整，就能快速恢复对应色偏（例：往左下角拖）。</p>
+</blockquote>
+<p>需要很多实践才能真正理解矢量图、分量图到底在做什么。调色不是一次就能精通的，需要很多次动手调。</p>
+<blockquote>
+<p><strong>建议</strong>：找一张特别喜欢的电影作品或静帧画面，导入剪映放在旁边当参考，<strong>对着它调整你的素材</strong>——尝试还原它的影调关系、色彩氛围、质感细节。这个过程会极大地训练你的观察力和色彩审美；通过自己的调整一步步接近心中理想的画面时，那种成就感是无与伦比的。</p>
+</blockquote>
+<h3 id="扩展：完整调色流程（实操记录）"><a href="#扩展：完整调色流程（实操记录）" class="headerlink" title="扩展：完整调色流程（实操记录）"></a>扩展：完整调色流程（实操记录）</h3><p><strong>观察分量图和波形图</strong>：</p>
+<ul>
+<li><code>1023</code> &#x3D; 上限（最亮），<code>0</code> &#x3D; 下限（最暗）——<strong>两边都不能碰</strong>；</li>
+<li>把红绿蓝颜色铺满，但不能触及最暗、最亮。</li>
+</ul>
+<p><strong>一级调色</strong>：</p>
+<ol>
+<li>加亮度、对比度；</li>
+<li>增加阴影、增加高光，调整色温；</li>
+<li>再调高光；</li>
+<li>调整两个饱和度向上，暗部向上，再加一点黑；</li>
+<li>一级调色完成 → <strong>粘贴属性</strong>到下一个素材，再降一些阴影，继续调整。</li>
+</ol>
+<p><strong>HSL 分区控制</strong>：吸管吸取天空 → 增加饱和度、降一点亮度、降低色相。<strong>人脸皮肤、沙滩、土地</strong>都可以用 <code>HSL</code> 单独控制。</p>
+<p><strong>色轮</strong>：</p>
+<ul>
+<li>一级色轮：强度 50°，暗部往青色偏一点；</li>
+<li>log 色轮：暗部往蓝色偏一点；「一起四轮」取消；</li>
+<li>中间调不动；高光往暖侧（唇侧）偏一点；中间往左侧调一点点；偏移不动；</li>
+<li>阴影亮度再沉一点；阴影饱和度稍微提高；高光饱和度稍微降下来；高光亮度增加一些。</li>
+</ul>
+<p><strong>滤镜</strong>：<code>蓝橙 II</code>，强度 30，染色——滤镜可以让整体更柔和一些。</p>
+<p><strong>分区调色</strong>：</p>
+<ol>
+<li>加一个调整图层；</li>
+<li>打开<strong>曲线</strong>，把亮度往下拉一点、降一点高光；</li>
+<li>用<strong>蒙版钢笔</strong>大致把人框出来——现在是中间暗、两边亮；</li>
+<li>蒙版点「<strong>反转</strong>」→ 人物亮、四周暗；</li>
+<li><strong>羽化拉到最大</strong>，扩展不用；</li>
+<li><strong>分割</strong>这个调整图层，按每个素材分别框选人物。</li>
+</ol>
+<p><strong>收尾</strong>：再重新加一个调节，增加<strong>锐化、清晰</strong>以及<strong>暗角</strong>；画面特效里加「<strong>电影感画幅</strong>」。</p>
+<hr>
+<h1 id="第三单元-·-实战篇（10–14）"><a href="#第三单元-·-实战篇（10–14）" class="headerlink" title="第三单元 · 实战篇（10–14）"></a>第三单元 · 实战篇（10–14）</h1><h2 id="10-实操：快速复刻综艺包装"><a href="#10-实操：快速复刻综艺包装" class="headerlink" title="10 实操：快速复刻综艺包装"></a>10 实操：快速复刻综艺包装</h2><blockquote>
+<p><strong>一句话记住</strong>：<strong>镜头时长由信息密度决定</strong>；想让观众一直看下去就搭「<strong>踩梯子</strong>」——每层都让观众对下一层有预期，但下一层又超出预期。</p>
+</blockquote>
+<h3 id="拉片：先用工具把成片拆开"><a href="#拉片：先用工具把成片拆开" class="headerlink" title="拉片：先用工具把成片拆开"></a>拉片：先用工具把成片拆开</h3><p>可以把成片拖进时间线，用<strong>拉片工具「智能镜头分割」</strong>——这样能根据成片逐镜头对照，更好地复刻和对比画面。</p>
+<blockquote>
+<p>智能镜头分割能节省大量拉片时间，每一个剪辑点都看得见，也不会出现手动剪辑时段落分不清的情况。</p>
+</blockquote>
+<h3 id="核心判断：镜头时长由信息密度决定"><a href="#核心判断：镜头时长由信息密度决定" class="headerlink" title="核心判断：镜头时长由信息密度决定"></a>核心判断：镜头时长由信息密度决定</h3><p>短视频的核心：<strong>信息少的可以快点切走，信息多的就得放长一些。</strong></p>
+<blockquote>
+<p>你必须让视频的节奏<strong>服务于你想传递的信息</strong>——观众到底要花多久，才能把屏幕上所有信息吸收完。</p>
+</blockquote>
+<p>所以重点：<strong>化繁为简</strong>。这个视频的重点是「设备的预算」，大多数观众也只能看懂预算，别的东西只是辅助信息（用来体现设备很复杂）——那就<strong>只突出价格</strong>。</p>
+<h3 id="为什么这条片子不用转场"><a href="#为什么这条片子不用转场" class="headerlink" title="为什么这条片子不用转场"></a>为什么这条片子不用转场</h3><p>仔细看，这个视频<strong>没有使用转场</strong>：</p>
+<ul>
+<li>它本身的<strong>文字信息已经足够丰富</strong>，并且希望呈现的是<strong>递进式关系</strong>；</li>
+<li><strong>递进关系</strong> &#x3D; 观众带着上一段画面的记忆，延续到下一段来增强理解；</li>
+<li>把设备一点一点背到身上、价格一层层递进，观众会更有预期看下去；</li>
+<li>如果加转场，<strong>一定程度上会打断观众「吸取信息的踩梯子关系」</strong>。</li>
+</ul>
+<h3 id="踩梯子"><a href="#踩梯子" class="headerlink" title="踩梯子"></a>踩梯子</h3><blockquote>
+<p><strong>踩梯子</strong>：必须每一次都让观众对下一次抱有预期，但下一次又会超出观众的预期。这是特别核心的一点。</p>
+</blockquote>
+<p>要让踩梯子有效，就要<strong>化繁为简</strong>：减少转场、舍弃音乐、弱化一切可能干扰踩梯子的东西，让观众的注意力<strong>全部集中在核心信息上</strong>——奔跑的人，和跳动的价格。</p>
+<p>本片观众在意的只有两件事：<strong>Tim 在跑</strong> 和 <strong>价格</strong>。这种反差感、以及「这么多设备背在身上什么时候会砸在地上」的隐形心理预期，就是全部的钩子。</p>
+<blockquote>
+<p>整体下来，这个视频的难度很低，更多的是<strong>心理上的游戏</strong>。</p>
+</blockquote>
+<p><strong>第一个镜头（1.2 秒）</strong>：只有一段简单信息——拿着手机跑，上面放一条粉丝的信息，只保留 1 秒左右。</p>
+<ul>
+<li>这样能保障视频<strong>开头的留存率</strong>被抓住；</li>
+<li>还交代了「视频中的人是谁、观众认不认识」。</li>
+</ul>
+<h3 id="跟踪文字：操作与避坑"><a href="#跟踪文字：操作与避坑" class="headerlink" title="跟踪文字：操作与避坑"></a>跟踪文字：操作与避坑</h3><p><strong>跟踪原理</strong>：靠<strong>对比度和反差</strong>进行跟踪。</p>
+<ul>
+<li><strong>框目标时不需完美无瑕地框住整个物体</strong>，只需要把跟踪框<strong>中心的十字标点</strong>锁在一个明显的、不易消失的物体上；</li>
+<li><strong>关闭「透视」和「距离」</strong>，避免镜头前后移动时改变大小和透视效果。</li>
+</ul>
+<p><strong>流程</strong>：<code>框目标 → 定特征点 → 开始跟踪</code></p>
+<p>⚠️ <strong>注意</strong>：</p>
+<ul>
+<li><strong>素材越长，跟踪时间越久</strong> → 必须先完成<strong>粗剪</strong>，再去添加文字和跟踪效果。</li>
+<li><strong>文字排版</strong>：画面中可能出现多个追踪标签，要留意位置运动时<strong>不要撞在一起</strong>、不要和画面其他元素打架；该错开就错开、该留白就留白，始终保持<strong>清晰可读</strong>。</li>
+<li><strong>字体选择</strong>：太有设计感的字体（明显的装饰线、非常规字体）会让本来就元素多的画面更杂乱。<strong>元素过多时选边缘平滑的非衬线、加粗字体</strong>。</li>
+<li><strong>跟踪文字做好后先导出，不要继续往下做</strong>，原因有四：<ol>
+<li>相当于做了一次<strong>备份</strong>；</li>
+<li>可以避免后期添加其他复杂效果时<strong>不小心误触或移动</strong>；</li>
+<li>导出后跟踪效果已经<strong>渲染进视频</strong>，再怎么折腾都不会被影响；</li>
+<li>不用复合片段的原因是——<strong>跟踪非常耗性能</strong>。</li>
+</ol>
+</li>
+</ul>
+<h3 id="分镜拆解与节奏"><a href="#分镜拆解与节奏" class="headerlink" title="分镜拆解与节奏"></a>分镜拆解与节奏</h3><table>
+<thead>
+<tr>
+<th align="left">镜头</th>
+<th align="left">时长</th>
+<th align="left">价格钩子</th>
+<th align="left">画面 &#x2F; 设备</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">1</td>
+<td align="left">1.2 s</td>
+<td align="left">—</td>
+<td align="left"><strong>iPhone</strong>：手持跑步 + 粉丝信息条</td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left">1.4 s</td>
+<td align="left">￥50,000</td>
+<td align="left"><strong>DJI Osmo Pocket 3 ×16</strong>；慢慢把更多信息抛给观众</td>
+</tr>
+<tr>
+<td align="left">3</td>
+<td align="left">2.2 s</td>
+<td align="left">￥200,000</td>
+<td align="left">Canon C400 + RF 50mm F1.4 L VCM<br>Canon C400 + RF 24mm F1.4 L VCM<br>Canon RF 24-105mm F2.8 L IS USM ×2<br>Canon RF 70-200mm F2.8 L IS USM</td>
+</tr>
+<tr>
+<td align="left">4</td>
+<td align="left">2.2 s</td>
+<td align="left">￥500,000</td>
+<td align="left">Canon C80 + RF 50mm F1.4 L VCM<br>RED Komodo X + FUJINON MK 50-135mm T2.9<br>Hasselblad X2D 100C + XCD 4&#x2F;28P<br>Sony FX3 + FE 24-70mm F2.8 GM ×5<br>FUJIFILM GFX100 II + DZOFILM Vespid Retro 35mm T2.1</td>
+</tr>
+<tr>
+<td align="left">5</td>
+<td align="left">3.3 s</td>
+<td align="left">￥1,000,000</td>
+<td align="left">Sony FX3 + FE 24-70mm F2.8 GM ×5<br>Inspire 3<br>Canon C80 + RF 24mm F1.4 L VCM<br>ARRI Alexa Mini + Sigma HS 40mm<br>V-Raptor 8K VV + Sigma HS 50mm<br>V-Raptor 8K VV + Viltrox Anamorphic<br>RED Monstro 8K VV + Viltrox Anamorphic</td>
+</tr>
+<tr>
+<td align="left">收尾</td>
+<td align="left">4.2 s</td>
+<td align="left">￥1,000,000 → ￥?,000,000</td>
+<td align="left">文字包装（见下）</td>
+</tr>
+</tbody></table>
+<p><strong>镜头 5 附带——手臂上挂的机器</strong>：Mavic 3 Cine ×2、Mavic 3 Classic、Air 3、Air 3S、Mavic 2 Pro。</p>
+<p><strong>最后镜头（4.2 秒）：两个文字的包装</strong></p>
+<ul>
+<li><code>￥1,000,000</code>：<strong>出场</strong>效果向上</li>
+<li><code>￥?,000,000</code>：<strong>入场</strong>效果向上</li>
+<li>调整好两者距离 → <strong>打组</strong> → 加一个<strong>镜像蒙版</strong> → 加点<strong>羽化</strong></li>
+</ul>
+<hr>
+<h2 id="11-实操：平面跟踪让文字长在物体上"><a href="#11-实操：平面跟踪让文字长在物体上" class="headerlink" title="11 实操：平面跟踪让文字长在物体上"></a>11 实操：平面跟踪让文字长在物体上</h2><blockquote>
+<p><strong>一句话记住</strong>：屏幕跟踪<strong>只作用于素材</strong>，所以要把文字轨<strong>先转成复合片段</strong>再跟踪；选范围要选<strong>画面中最大那一帧</strong>，跟踪完<strong>立刻重命名平面</strong>。</p>
+</blockquote>
+<blockquote>
+<p>本节案例原型是「<strong>影视飓风运镜</strong>」——当你看了太多影视飓风、开始练手持手机运镜之后，正好用这段一镜到底的素材来练平面跟踪。</p>
+</blockquote>
+<p><strong>平面跟踪</strong>：在三维空间里，让文字去贴合物体的<strong>透视关系</strong>——要让文字<strong>真的长在物体上</strong>。</p>
+<h3 id="前置分析"><a href="#前置分析" class="headerlink" title="前置分析"></a>前置分析</h3><p>导入素材后，先把成片导进来分析：这段一镜到底的视频，镜头在空间里穿梭，每经过一个关键物品，文字都会带着透视感贴上去——这就是<strong>平面跟踪</strong>。</p>
+<blockquote>
+<p>开始实操前，<strong>建议先完整预览一遍</strong>，在脑子里标记出要处理的几个点位，再进入跟踪环节。</p>
+</blockquote>
+<h3 id="关键前提：文字轨道要先变成「素材」"><a href="#关键前提：文字轨道要先变成「素材」" class="headerlink" title="关键前提：文字轨道要先变成「素材」"></a>关键前提：文字轨道要先变成「素材」</h3><p><strong>剪映的屏幕跟踪只能作用于素材</strong>（图片或视频）。</p>
+<p>→ 把<strong>文本轨道转化为复合片段</strong>，它就变成视频了，才能被跟踪。</p>
+<ol>
+<li>先改一下文字参数（阴影等），让它更好看，<strong>保存预设</strong>；</li>
+<li><strong>退出复合片段前，把文本拉长一些</strong>；</li>
+<li>点击复合片段 → 右上角参数面板 → <strong>跟踪 → 平面跟踪</strong>；</li>
+<li>先<strong>选中跟踪范围</strong>，再作用追踪。</li>
+</ol>
+<h3 id="注意事项（每条都是坑）"><a href="#注意事项（每条都是坑）" class="headerlink" title="注意事项（每条都是坑）"></a>注意事项（每条都是坑）</h3><ul>
+<li>选择跟踪范围时，要选<strong>画面中最大的那一帧</strong>；</li>
+<li>在复合片段中，尽量把<strong>文字轨道拉长</strong>；</li>
+<li>可以给文字添加<strong>入场效果</strong>；特效可用「<strong>色差故障</strong>」；</li>
+<li>给复合片段添加<strong>出场淡出</strong>效果；</li>
+<li><strong>关闭等比</strong>后手动调节；</li>
+<li>追踪完成后，在当前追踪平面的选项里进行<strong>重命名</strong>；</li>
+<li>⚠️ <strong>现版本限制</strong>：当你追踪的平面<strong>消失在画面中</strong>时，素材就会<strong>丢失跟踪目标</strong>，即便后面画面再出现，它也不会重新跟踪 → 所以最好<strong>在每段素材之后删除掉后面的复合片段</strong>；</li>
+<li><strong>文字微调</strong>：不要尝试直接在复合片段上调整文字的高度&#x2F;宽度 → <strong>进入复合片段</strong>，选中文字，在右上角文字基础参数中找到「位置大小」，<strong>关闭等比缩放按钮</strong>，返回后分别调整缩放的高度和宽度，对比前后区别来恢复素材；</li>
+<li>如果出现<strong>文字跳出</strong>的情况，就<strong>重新调整一个跟踪</strong>。</li>
+</ul>
+<h3 id="预设：把常用包装存下来"><a href="#预设：把常用包装存下来" class="headerlink" title="预设：把常用包装存下来"></a>预设：把常用包装存下来</h3><p>在剪映中，除了文本参数外，像<strong>调节、已保存了多轨道的复合片段</strong>等工具，都可以<strong>一键快速设置为预设</strong>，下次直接调用。这非常方便，很适合保存一些固定的剪辑和包装。</p>
+<hr>
+<h2 id="12-实操：多机位采访剪辑"><a href="#12-实操：多机位采访剪辑" class="headerlink" title="12 实操：多机位采访剪辑"></a>12 实操：多机位采访剪辑</h2><blockquote>
+<p><strong>一句话记住</strong>：多机位只有三步——<strong>合板对齐 → 先剪内容 → 多机位切换</strong>；切换的唯一原则是<strong>镜头永远对准正在说话的人</strong>。</p>
+</blockquote>
+<h3 id="为什么用多机位"><a href="#为什么用多机位" class="headerlink" title="为什么用多机位"></a>为什么用多机位</h3><p>人物一来一回的对话，通常在<strong>同一场景的不同机位</strong>拍摄。为了提高效率、避免演员费两次事、避免拍摄多次出现穿帮，就用多机位的不同角度，对<strong>相同的空间做多角度同时拍摄</strong>。</p>
+<h3 id="第一步：多机位合板"><a href="#第一步：多机位合板" class="headerlink" title="第一步：多机位合板"></a>第一步：多机位合板</h3><p>本例准备了三段素材，分别是：<strong>Tim、Tim、Links</strong>（对应三个机位）。</p>
+<p>拿到素材后，<strong>第一件事不是剪辑</strong>，而是<strong>多机位合板</strong>：把不同机位拍的素材<strong>按时间线完全对齐</strong>，让它们处在同一个时间轴上。</p>
+<p>虽然拍摄时多机位同时开机，但每台机器的<strong>录制开始时间不可能完全一致</strong>。对齐方法：</p>
+<ol>
+<li><strong>音频波形对齐</strong>：根据同时发出的声音对齐（常用）；</li>
+<li><strong>时码器</strong>：在拍摄现场使用（很贵，不常用）。</li>
+</ol>
+<p><strong>手动操作</strong>：</p>
+<ol>
+<li>选中所有不同机位的素材；</li>
+<li>右键 →「<strong>新建多机位片段</strong>」，对齐方式选<strong>自动</strong>；</li>
+<li><strong>打开代理模式</strong>，保证剪辑流畅度。</li>
+</ol>
+<p>此时播放器会变成<strong>两个窗口</strong>：</p>
+<ul>
+<li><strong>左边窗口</strong>：可以同时预览所有机位素材；</li>
+<li><strong>右边窗口</strong>：正常时间线的剪辑预览。</li>
+</ul>
+<blockquote>
+<p>可以<strong>双击</strong>进入多机位片段，在里面快速对不同机位片段进行<strong>微调</strong>和<strong>初步调色</strong>。</p>
+</blockquote>
+<h3 id="第二步：多机位切换"><a href="#第二步：多机位切换" class="headerlink" title="第二步：多机位切换"></a>第二步：多机位切换</h3><p>剪映可以让它按<strong>线性播放</strong>的顺序，对三个机位进行实时切换。</p>
+<blockquote>
+<p><strong>采访视频最重要的原则：将镜头对准正在说话的人。</strong></p>
+</blockquote>
+<ul>
+<li>把鼠标移到左边的多机位窗口，鼠标会变成<strong>剃刀图标</strong>；</li>
+<li><strong>点一下想要的画面</strong>，时间线上就会自动切一刀，同时机位切过去；</li>
+<li><strong>切错了怎么办</strong>：选中需要更改机位的片段，点预览窗口左边的<strong>小窗口</strong>，就能改为正确的目标机位。</li>
+</ul>
+<h3 id="第三步：包装"><a href="#第三步：包装" class="headerlink" title="第三步：包装"></a>第三步：包装</h3><p>粗剪完成后要包装，让它看起来更完整、更专业：</p>
+<ol>
+<li><strong>角标 &#x2F; 人名条</strong>（多人对话场景作用特别大）：<ul>
+<li>左上角文本工具 → <code>文字模板</code> → 搜索「<strong>人名条</strong>」或「<strong>角标</strong>」；</li>
+<li>挑一个模板拖到轨道上，改文字内容，调整位置和大小；</li>
+<li>这些模板<strong>自带排版动画</strong>，只需确定位置即可。</li>
+<li>例：画面左下角标「Tim 采访者 &#x2F; Links 采访者 &#x2F; Tim Cook 被访者」，观众一眼分清谁是谁。</li>
+</ul>
+</li>
+<li><strong>金句切片</strong>：采访中的精彩金句或独立信息，可以单独提取出来加文字包装，做成小的<strong>金句片段</strong>——既能突出重点，又很方便传播，<strong>这类切片通常点赞很高</strong>。</li>
+</ol>
+<h3 id="核心三步总结"><a href="#核心三步总结" class="headerlink" title="核心三步总结"></a>核心三步总结</h3><blockquote>
+<p>多机位剪辑听起来复杂，但<strong>核心就三步</strong>：</p>
+<ol>
+<li><strong>合板对齐</strong></li>
+<li><strong>先剪视频（内容）</strong></li>
+<li><strong>多机位切换</strong></li>
+</ol>
+<p>合板保障了时间线统一；先剪单一机位，确保内容一致性；多机位切换让你像<strong>导播</strong>一样，让画面更丰富、更有质感；最后锦上添花，再做一点包装和调色，你的视频就和别人的不一样了。</p>
+<p>这条流程：不管是<strong>采访、综艺还是多机位拍摄的活动</strong>，其实都够用了。</p>
+</blockquote>
+<hr>
+<h2 id="13-实操：时钟理论与长视频结构"><a href="#13-实操：时钟理论与长视频结构" class="headerlink" title="13 实操：时钟理论与长视频结构"></a>13 实操：时钟理论与长视频结构</h2><blockquote>
+<p><strong>一句话记住</strong>：长视频靠<strong>分段式剪辑</strong>（每段独立打磨成一个小故事）+ <strong>时钟理论</strong>（把时长画成圆，在 3&#x2F;6&#x2F;9 点位置放爆点）+ <strong>波峰制</strong>（平淡→拉升→落下，20 分钟约 10 个波峰）。</p>
+</blockquote>
+<h3 id="从「会用工具」到「会讲故事」"><a href="#从「会用工具」到「会讲故事」" class="headerlink" title="从「会用工具」到「会讲故事」"></a>从「会用工具」到「会讲故事」</h3><p>前面已经把常用工具都过完了（基础操作 → 关键帧动画 → 调色 → 抠图 → 跟踪）。工具都会了、素材也拍好了，画面是对的、节奏是顺的——<strong>但就是不够出彩</strong>。</p>
+<blockquote>
+<p>这就像：你学会了用笔，但不代表能写出好文章；学会了按快门，也不代表一定能拍出好照片。</p>
+<p><strong>掌握剪辑工具只是学好剪辑的第一步。</strong></p>
+</blockquote>
+<p><strong>剪辑思维</strong>：如何把一个复杂的、混乱的现实世界，讲成一个好的故事。</p>
+<blockquote>
+<p>老规矩：先把成片放进去，一起拉一拉片。</p>
+</blockquote>
+<h3 id="第一步：先给视频长度一个预设"><a href="#第一步：先给视频长度一个预设" class="headerlink" title="第一步：先给视频长度一个预设"></a>第一步：先给视频长度一个预设</h3><p>这期节目《<strong>熬夜 48 小时，我的身体发生了什么变化</strong>》非常复杂——涉及 48 个小时不间断的素材，还有后面大量的采访、调研。最难的一点是<strong>怎么分配我们的时间</strong>。如果要做这样的视频，先对<strong>视频长度</strong>有个大概预设：</p>
+<ol>
+<li><strong>13 – 23 分钟</strong>（高节奏长视频）</li>
+<li>**50 分钟 +**（超长内容）</li>
+</ol>
+<blockquote>
+<p>⚠️ <strong>不建议选中间长度</strong>（35 分钟、40 分钟左右）：这个时候正好是一个人处在<strong>兴趣衰减期</strong>，而视频又没办法在中间拉住所有人——结果就是别人既没完全看进去，又产生了跳出行为，<strong>完播率会非常糟糕</strong>。</p>
+</blockquote>
+<p>本期选择 <strong>19 分 41 秒</strong>（高节奏长视频）。所以它对<strong>节奏控制非常严谨</strong>：不会花大量时间讲一个单一事件，而是<strong>更多采用场景化方式</strong>，在很小的时间内展示一种情绪和状态，再用<strong>旁白把更多信息压缩进更短的时间</strong>里——而不是靠更多现场、更冗杂的描述去讲「这里到底是什么现象、发生了什么」。</p>
+<p><img src="/image-20261107135058285.png" alt="场景化表达"></p>
+<p><img src="/image-20261107135246533.png" alt="用旁白压缩信息"></p>
+<p><img src="/image-20261107135259246.png" alt="避免冗杂的现场描述"></p>
+<h3 id="开头：三个问题就是钩子"><a href="#开头：三个问题就是钩子" class="headerlink" title="开头：三个问题就是钩子"></a>开头：三个问题就是钩子</h3><p>开头直接提出三个问题：</p>
+<ol>
+<li>你熬夜吗？</li>
+<li>最长一次熬夜熬过多久？</li>
+<li>熬夜对身体有多大的伤害？</li>
+</ol>
+<p>这三问抛出了节目中非常重要的、让观众继续看下去的<strong>钩子</strong>。</p>
+<blockquote>
+<p>千万不要小看开头短短十几秒，它承担的作用远远比后面的视频都重要。想一想这三个问题的作用是什么——<strong>它其实在替观众提问</strong>：这些问题可能本身就是观众关心、或被问住的问题，而且确保提出的问题是绝大多数中国人（乃至全世界的人）都会感兴趣的。</p>
+<p>所以当问题抛出来，观众会下意识在心里回答「我熬过，我熬过两天」——<strong>钩子就已经下完了</strong>，观众至少会为这句话留下几秒钟，好奇接下来会发生什么。</p>
+</blockquote>
+<p>紧接着是「<strong>我要亲身体验</strong>」（这一点很重要）。体验之后进入一段<strong>非常快速的混剪</strong>：把正片中有张力、后面很痛苦的状态揉在一起；随着不断上升的音乐，配合画面中逐渐扭曲的五官，这段混剪其实在传递一个信息——<strong>这个挑战比你想象的要精彩得多</strong>。这又构成了一个很明显的钩子：观众本身已经有了问题、看到了后续、也一定程度上预期到痛苦，<strong>但不知道会有多痛苦，他一定会想看下去</strong>。</p>
+<p><strong>所以开头做了三件事</strong>：</p>
+<ol>
+<li><strong>抛出问题</strong>：让观众产生共鸣和好奇</li>
+<li><strong>揭示主题</strong>：告诉观众我们要做什么</li>
+<li><strong>混剪预告</strong>：用高密度画面告诉观众，接下来一定有高看的内容</li>
+</ol>
+<p><img src="/image-20261107141744342.png" alt="开头三段式"></p>
+<h3 id="中段：线性叙事-大胆砍素材"><a href="#中段：线性叙事-大胆砍素材" class="headerlink" title="中段：线性叙事 + 大胆砍素材"></a>中段：线性叙事 + 大胆砍素材</h3><p>从这一刻起进入<strong>线性叙事</strong>：按时间顺序讲述整个故事。</p>
+<ul>
+<li>紧接着进入下一个重要议题：<strong>留住观众</strong>——Tim 的身体细胞活性会不会被保持下来、48 小时后会不会有区别。</li>
+<li>讲完后进入一小段现场内容，再进入旁白阶段。</li>
+<li>因为前 9 个小时 Tim 本来就是醒着的，<strong>观众也不想看他一开始醒着做什么</strong>，所以<strong>大刀阔斧砍掉巨量内容</strong>：10 个小时的视频变成不到 20 秒，直接跳过。</li>
+</ul>
+<h3 id="锚点：观众想看的是「变成什么样」"><a href="#锚点：观众想看的是「变成什么样」" class="headerlink" title="锚点：观众想看的是「变成什么样」"></a>锚点：观众想看的是「变成什么样」</h3><p>第一次把节奏<strong>放缓</strong>、加入更多 Tim 现场内容的地方，是在他熬夜到十几个小时、<strong>进入第一次疲劳状态</strong>的时候。必须清楚——<strong>这才是观众想看的东西</strong>。</p>
+<blockquote>
+<p><strong>他们想看的是你熬夜之后变成了什么样，不是看你熬夜的过程</strong>——这是这个节目的<strong>锚点</strong>。</p>
+</blockquote>
+<p>所以只保留 Tim 的<strong>反应</strong>，以及测验体现出<strong>智力下降</strong>。这和前面学的<strong>踩梯子</strong>逻辑非常近似：一阶一阶搭观众的预期——观众大概知道 Tim 会变笨，但<strong>不会知道会变多笨</strong>；带着这个预期，观众会不断想往下看。</p>
+<p>因此不断<strong>放大</strong> Tim 在疲劳状态下的反应；后面再增添一点现场的慢表述，来稍微舒缓节奏。</p>
+<h3 id="波峰制：不能一直紧绷"><a href="#波峰制：不能一直紧绷" class="headerlink" title="波峰制：不能一直紧绷"></a>波峰制：不能一直紧绷</h3><blockquote>
+<p>剪辑有个很重要的点：<strong>不能让观众始终保持紧绷的高潮状态</strong>——那样视频就等于没有任何高潮。</p>
+</blockquote>
+<p>所以逻辑是不断采用<strong>波峰制</strong>：<strong>平淡一下 → 迅速拉升 → 再降下来</strong>，反复循环。一般一个 20 分钟的视频，可能会安排 <strong>10 个这样的波峰</strong>，来保证观众的兴趣被锁定。</p>
+<p>本片的波峰素材来源：</p>
+<ul>
+<li>检测活性</li>
+<li>智力检测</li>
+<li>痛苦反应（多个）</li>
+<li>专家采访</li>
+</ul>
+<p>（这一段约 7 分钟。）</p>
+<h3 id="后端要更快"><a href="#后端要更快" class="headerlink" title="后端要更快"></a>后端要更快</h3><blockquote>
+<p>一般视频<strong>后端都不能有慢的剪辑节奏</strong>，要比之前更快一些。</p>
+</blockquote>
+<p>所以会看到<strong>切镜频率明显拉升</strong>；真正开始放缓的地方是从<strong>采访</strong>开始的（借助动态效果、图片、小的包装）；而<strong>最终的结束要快速结束</strong>（为了完播率）。</p>
+<h3 id="分段式剪辑"><a href="#分段式剪辑" class="headerlink" title="分段式剪辑"></a>分段式剪辑</h3><p>剪辑一个长视频时，剪辑师<strong>不是一口气从头剪到尾</strong>的（否则前后节奏、信息密度容易不均）。</p>
+<p>所以长视频需要<strong>把时间拆开，分成不同段落，分开剪辑，最后再总装</strong>——类似于拼装。</p>
+<blockquote>
+<p><strong>分段式剪辑</strong>：每一段都是<strong>完全独立剪辑、独立打磨</strong>的。</p>
+<p>分三段：<strong>前期、中期、后期</strong>。</p>
+</blockquote>
+<p><strong>结构上，尽量让每一段都有相似的叙事逻辑</strong>：</p>
+<ul>
+<li>我在干什么？</li>
+<li>我的状态怎么样？</li>
+<li>中间发生了什么突发状况？</li>
+<li>测试数据有什么变化？</li>
+<li>并且有哪些东西是<strong>无聊的、能不能变成旁白</strong>？</li>
+</ul>
+<p>这样<strong>每一段都是一个完整的小故事</strong>，观众看完一段还想看下一段。</p>
+<p><strong>好处 1：素材利用率</strong></p>
+<p>把素材按阶段归类、筛选时，可以更好地找到最有趣、最有信息量的片段。本质上是——<strong>把长视频拆成一个个短视频在看</strong>：如果这个短视频有趣，那连在一起就是好几个有趣的短视频。把最有信息量的视频融在每一个阶段里，而<strong>不是在几百个视频中大海捞针</strong>。（其它视频背后也都是这个逻辑。）</p>
+<p><strong>好处 2：解决「下一段放哪、结构怎么排、节奏从哪来」</strong></p>
+<p>用<strong>音乐来引导</strong>：每个段落的音乐完全不一样，一篇会有十几个音乐放在里面。</p>
+<table>
+<thead>
+<tr>
+<th align="left">阶段</th>
+<th align="left">音乐情绪</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">前期</td>
+<td align="left">轻松 + 一点好奇</td>
+</tr>
+<tr>
+<td align="left">中期</td>
+<td align="left">紧张感拉满</td>
+</tr>
+<tr>
+<td align="left">后期</td>
+<td align="left">疲惫 + 一点挣扎</td>
+</tr>
+</tbody></table>
+<p>音乐一变，观众的情绪就会跟着变。所以在<strong>粗剪阶段</strong>，会先把音乐拖到时间线下面的音频轨道上，一段一段排好，再根据音乐的情绪去大概匹配画面，<strong>先找一找感觉</strong>。</p>
+<blockquote>
+<p>⚠️ 注意：这里只是<strong>找感觉</strong>，<strong>不是最终版音乐</strong>（本质区别）。</p>
+</blockquote>
+<h3 id="时钟理论"><a href="#时钟理论" class="headerlink" title="时钟理论"></a>时钟理论</h3><p>如果节奏感通过音乐找到了大概方向，想变得更科学，就用<strong>时钟理论</strong>：</p>
+<blockquote>
+<p>把<strong>视频的时长作为周长画成一个圆</strong>，随后标出 <strong>0 点、3 点、6 点、9 点</strong>的位置。这些位置是观众最容易感到疲惫、想要退出视频的位置——<strong>如果这里没有爆点，视频的完播率是没办法保证的</strong>。</p>
+</blockquote>
+<p>举例：<strong>10 分钟的视频</strong>——</p>
+<ul>
+<li><strong>3 点</strong> ≈ 第 <strong>2–3 分钟</strong>：应该是第一个刺激点</li>
+<li><strong>6 点</strong> ≈ 第 <strong>5 分钟</strong>位置</li>
+<li><strong>9 点</strong> ≈ 第 <strong>7–8 分钟</strong></li>
+</ul>
+<p>这些就是刺激点、爆点。</p>
+<blockquote>
+<p>先画一个钟，通过这个钟来避免两种情况：<strong>一开始燃了一下，后面整整 10 分钟都是平淡叙事</strong>；或者<strong>把内容都挤在六点钟</strong>。</p>
+</blockquote>
+<p><strong>钟不合适时怎么办</strong>：</p>
+<ul>
+<li>要么<strong>缩减时长</strong>，变成更小的钟；</li>
+<li>要么<strong>把节奏放缓、把高潮点重新分配</strong>，确保视频内容<strong>充斥整个时钟</strong>；</li>
+<li>让观众<strong>每隔一段时间都能迎来一个新的情绪点</strong>。</li>
+</ul>
+<p><strong>时钟理论的最大意义</strong>：每一阶段都有信息密度的支撑，它能<strong>直观地告诉你——在哪个时间点，你缺少了让观众留下的内容</strong>。</p>
+<p><strong>落地</strong>：画好钟、标好节点后，回到时间线，把<strong>有张力的镜头、值得讨论的话题、前后可以呼应的画面</strong>，<strong>均匀地分布在时钟之上</strong>，时间线就构建起来了。</p>
+<p><strong>反向用法（拆解任何视频）</strong>：打开计时器，<strong>每 3 分钟记一下</strong>——此刻情绪是什么样的、在看什么：0 分钟在想什么、3 分钟在想什么、6 分钟、9 分钟。</p>
+<blockquote>
+<p>如何讲好一个故事：本质上就在时钟的旋转之中——通过分段剪辑不断给观众刺激。<strong>不需要每一步都用复杂特效，需要的是在时钟的每一个关键点，给到一个让观众继续看下去的理由。</strong></p>
+</blockquote>
+<h3 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h3><blockquote>
+<p><strong>从操作工具到构思结构的转变，是从剪辑爱好者迈向专业后期最难的一步。</strong></p>
+<p>要思考底层逻辑。</p>
+</blockquote>
+<hr>
+<h2 id="14-实操：Vlog-的剪辑结构与色彩"><a href="#14-实操：Vlog-的剪辑结构与色彩" class="headerlink" title="14 实操：Vlog 的剪辑结构与色彩"></a>14 实操：Vlog 的剪辑结构与色彩</h2><blockquote>
+<p><strong>一句话记住</strong>：Vlog &#x3D; <strong>把素材理清楚 → 把结构搭起来 → 把画面调好看</strong>；结构靠「思维导图 + 日记」，串联靠「旁白 + 节奏点」。</p>
+</blockquote>
+<p>加州的样片日记，本质是一篇 <strong>VLOG</strong>——很多平台上特别火的类型。我们去到各种地方，把看到的、听到的、拍到的分享出来，剪辑在一起，就像名字一样，<strong>一篇视频化的日记</strong>就写完了。</p>
+<h3 id="第一步：整理素材"><a href="#第一步：整理素材" class="headerlink" title="第一步：整理素材"></a>第一步：整理素材</h3><p>既然是<strong>日记</strong>，流程就是先把这次旅行中见到的、拍到的素材做对应整理：</p>
+<ul>
+<li>分类：<strong>视频、图片、音频</strong>（最常见的三种）</li>
+<li>命名逻辑：自己拍片、自己做 VLOG，一定要做好素材命名 —— <code>日期 + 地名日记</code></li>
+<li>目录建议：<code>01_素材</code>、<code>02_音乐</code>、<code>03_成片</code></li>
+<li>不同设备拍的画面，可以用<strong>时间 + 地点 + 事件</strong>来区分，这样后期一眼就能看出这段素材是什么内容</li>
+<li>⚠️ <strong>视频文件名不建议更改</strong>，保持原始的就可以了</li>
+</ul>
+<h3 id="VLOG-的特征与难点"><a href="#VLOG-的特征与难点" class="headerlink" title="VLOG 的特征与难点"></a>VLOG 的特征与难点</h3><p><strong>特征</strong>：以<strong>第一人称视角</strong>带着观众一起经历；好处是可以<strong>提前定一个大纲</strong>，围绕主题去剪辑。</p>
+<p><strong>难点</strong>：拍摄时有很多不确定，<strong>素材之间的内容跳跃性太大</strong>——前一秒还在聊巨大的杉树，后一秒就切到路边遇到的人。如果按时间线铺，<strong>观众很容易看懵</strong>。</p>
+<h3 id="技巧：用一个明确的「主线」把素材串起来"><a href="#技巧：用一个明确的「主线」把素材串起来" class="headerlink" title="技巧：用一个明确的「主线」把素材串起来"></a>技巧：用一个明确的「主线」把素材串起来</h3><ul>
+<li><strong>初期</strong>：列一个<strong>无序的思维导图</strong>，把素材中的主题内容、以及自己想表达的<strong>全部扔上去</strong>，然后再排序、构建对应的时间线。</li>
+<li><strong>操作</strong>：在时间线里整理素材时，<strong>想到什么就往上扔</strong>——不管是精彩内容还是突然冒出的新主意。这时候<strong>完全不用在乎素材怎么排序</strong>，只要把素材记录上去就行。</li>
+<li><strong>例子</strong>：在海边遇到玩滑板很厉害的人，前期随机采访了他们，把素材放进来；然后<strong>任何与这个内容有呼应的素材</strong>，只要涉及滑板或运动（滑板历史），都放到一起；<strong>前后有呼应的部分用箭头简单标注</strong>一下——这样就有了完整的素材内容结构。</li>
+<li>所有素材都可以被<strong>规律化、串联</strong>：哪些内容可以放在一起，哪些情绪内容可以形成对比。</li>
+</ul>
+<h3 id="思维导图示例（加州样片日记）"><a href="#思维导图示例（加州样片日记）" class="headerlink" title="思维导图示例（加州样片日记）"></a>思维导图示例（加州样片日记）</h3><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">加州样片日记</span><br><span class="line">├── 巨杉</span><br><span class="line">│   ├── 巨杉样片</span><br><span class="line">│   └── 历史引用</span><br><span class="line">│       ├── 淘金热影响</span><br><span class="line">│       └── 象海豹</span><br><span class="line">│           ├── 海豹样片</span><br><span class="line">│           ├── 节奏点</span><br><span class="line">│           └── 海豹介绍</span><br><span class="line">├── 圣巴巴拉</span><br><span class="line">│   ├── 图片样片</span><br><span class="line">│   └── 蓝调时刻</span><br><span class="line">├── 电影之城</span><br><span class="line">│   ├── 大白鲨博物馆</span><br><span class="line">│   └── 奥斯卡博物馆</span><br><span class="line">│       └── 体验红毯</span><br><span class="line">└── 威尼斯海滩</span><br><span class="line">    ├── 人物采访</span><br><span class="line">    ├── 运动样片</span><br><span class="line">    └── 圣托莫妮卡结尾</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>通过梳理思维导图，可以把<strong>主题清晰标注出来</strong>；哪些东西是这个主题的<strong>附属品</strong>，一定要分类过去。</p>
+</blockquote>
+<h3 id="辅助工具：让大模型帮你写出「日记」"><a href="#辅助工具：让大模型帮你写出「日记」" class="headerlink" title="辅助工具：让大模型帮你写出「日记」"></a>辅助工具：让大模型帮你写出「日记」</h3><p>如果你特别健谈、说了很多话，可以用剪映<strong>先把视频提取成文字</strong>，再把文字全部复制下来，丢给任意一个大模型，让它帮忙<strong>总结、重新编排</strong>，或者把你的话提取成有意义的内容。</p>
+<p>这样就会得到<strong>一篇文章</strong>——相当于把现场讲的东西做成了一个日记（用来参考），帮助你快速提炼到底发生了什么。<strong>因为人是非常健忘的。</strong></p>
+<blockquote>
+<p><strong>思维导图 + 日记</strong>：来真正把视频变成可看的状态。</p>
+</blockquote>
+<h3 id="时钟理论（同样适用）"><a href="#时钟理论（同样适用）" class="headerlink" title="时钟理论（同样适用）"></a>时钟理论（同样适用）</h3><p><img src="/image-20261111091911854.png" alt="超长视频的时钟结构"></p>
+<h3 id="组装：分段式剪辑"><a href="#组装：分段式剪辑" class="headerlink" title="组装：分段式剪辑"></a>组装：分段式剪辑</h3><p>剪辑时只需要找到对应素材，继续采用<strong>分段式剪辑</strong>：<strong>只把这一段剪得有趣，再去和前后拼接</strong>，这样样片日记就组装出来了。</p>
+<blockquote>
+<p>这样就把生活中线性发生的事件，<strong>拆开重组</strong>，编织成一个有节奏、有结构的故事。把素材结构梳理完之后，就可以围绕视频主题和分段进行进一步的<strong>粗剪和串联</strong>。</p>
+</blockquote>
+<p><strong>粗剪</strong>：在构建好<strong>主题</strong>和 <strong>A-Roll 时间线</strong>后，匹配上对应的 <strong>B-Roll</strong> 画面。</p>
+<h3 id="片段与片段之间的串联（两种过渡）"><a href="#片段与片段之间的串联（两种过渡）" class="headerlink" title="片段与片段之间的串联（两种过渡）"></a>片段与片段之间的串联（两种过渡）</h3><p><strong>1. 旁白</strong></p>
+<ul>
+<li>两个段落中间，穿插后期录制的、能够<strong>承上启下</strong>的画外音。</li>
+<li>例：从 4:25 开始，从巨杉过渡到第二段场景，就录了一段讲述历史背景的旁白——既丰富了上一段内容，又有了平缓的过渡，观众不会觉得跳脱。</li>
+</ul>
+<p><strong>2. 节奏点（高节点）</strong></p>
+<ul>
+<li><p>B-Roll 的作用本是解释说明 A-Roll 里提到的内容；但当<strong>画面与画面、主题与主题之间需要过渡</strong>时，B-Roll 也能发挥重要作用——结合音乐在 Vlog 里做一段<strong>小的混剪</strong>，进一步提升画面节奏感。</p>
+</li>
+<li><p>进一步把<strong>旁白和节奏点结合起来</strong>：可以做「<strong>旁白 + 小混剪 + 音乐</strong>」。</p>
+<p><img src="/image-20261111093442919.png" alt="旁白收尾 + 节奏点开场"></p>
+<blockquote>
+<p>先用一段旁白把情绪铺垫好，<strong>旁白一停，音乐立刻起来，画面跟着节奏点一起拉升</strong>，观众情绪很快被调动起来。这种「<strong>旁白收尾 + 节奏点开场</strong>」的组合，既能完成过渡，又能给视频情绪起伏（很多纪录片都会用到）。</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="调色"><a href="#调色" class="headerlink" title="调色"></a>调色</h3><p>粗剪完成后就要调色。</p>
+<ul>
+<li><strong>灰片</strong>：保留大量信息，电影感；</li>
+<li><strong>曲线</strong>：调成 <strong>S 形</strong>，增加对比——<strong>亮的更亮、暗的更暗</strong>；</li>
+<li>曲线上<strong>往上拖变亮、往下拖变暗，点哪里控制哪里</strong>。</li>
+</ul>
+<p><strong>批量统一色彩的两个工具</strong>：</p>
+<table>
+<thead>
+<tr>
+<th align="left">工具</th>
+<th align="left">适用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>色彩克隆</strong></td>
+<td align="left">很多场景、不同角度的素材需要统一色彩，手动会很繁琐 → 点开后<strong>选择已经调好颜色的那一帧</strong></td>
+</tr>
+<tr>
+<td align="left"><strong>智能调色工具</strong></td>
+<td align="left">适合<strong>调色初期</strong>和<strong>快速出片</strong>的情况，能给出一个参考效果，帮助建立起调色的方向感</td>
+</tr>
+</tbody></table>
+<h3 id="导出与归档"><a href="#导出与归档" class="headerlink" title="导出与归档"></a>导出与归档</h3><p>剪辑完成后，先看一眼粗剪效果，就可以进入导出步骤：</p>
+<ol>
+<li>设置好<strong>分辨率和码率</strong>；</li>
+<li>文件名命名为 <strong>demo &#x2F; 小样</strong>，导出到一开始创建的<strong>小样文件夹</strong>中，方便随时回看和检查问题；</li>
+<li>等所有修改都改好、要给甲方和客户看时，再导出到<strong>成品文件夹</strong>。</li>
+</ol>
+<blockquote>
+<p>素材、小样、成片在同一个文件夹内，管理起来比较清晰，后期想找也比较方便。</p>
+</blockquote>
+<h3 id="Vlog-的核心"><a href="#Vlog-的核心" class="headerlink" title="Vlog 的核心"></a>Vlog 的核心</h3><ol>
+<li><strong>把素材理清楚</strong></li>
+<li><strong>把结构搭起来</strong></li>
+<li><strong>把画面调好看</strong></li>
+</ol>
+<blockquote>
+<p>剩下的就是多练。每一次拍摄、每一次剪辑，都是经验的积累，慢慢就会找到属于自己的节奏和风格。</p>
+</blockquote>
+<hr>
+<h1 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h1><h2 id="附录-A-功能位置速查"><a href="#附录-A-功能位置速查" class="headerlink" title="附录 A 功能位置速查"></a>附录 A 功能位置速查</h2><table>
+<thead>
+<tr>
+<th align="left">功能</th>
+<th align="left">在哪里</th>
+<th align="left">用来干什么</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">全局设置</td>
+<td align="left">主页右上角</td>
+<td align="left">改草稿&#x2F;素材位置、代理模式、清缓存、默认自由层级</td>
+</tr>
+<tr>
+<td align="left">布局切换</td>
+<td align="left">界面右上角</td>
+<td align="left">更换面板布局</td>
+</tr>
+<tr>
+<td align="left">自由层级</td>
+<td align="left">参数面板右下角 &#x2F; 全局设置</td>
+<td align="left">让画中画层级可自由调整</td>
+</tr>
+<tr>
+<td align="left">草稿参数修改</td>
+<td align="left">点轨道空白处 → 修改</td>
+<td align="left">性能里调低代理，缓解预览卡顿</td>
+</tr>
+<tr>
+<td align="left">预览轴</td>
+<td align="left">时间线上预览图标 &#x2F; 快捷键 <code>S</code></td>
+<td align="left">鼠标变播放头，逐点检查画面</td>
+</tr>
+<tr>
+<td align="left">踩节拍</td>
+<td align="left">选中音频 → 时间线左上「标记」</td>
+<td align="left">给音乐打节拍点，方便卡点对齐</td>
+</tr>
+<tr>
+<td align="left">轨道调节</td>
+<td align="left">时间线右上角「三个点」</td>
+<td align="left">调轨道音频占比（看气口用 60%）</td>
+</tr>
+<tr>
+<td align="left">智能剪口播</td>
+<td align="left">右键素材</td>
+<td align="left">生成文字稿，删词同步剪视频</td>
+</tr>
+<tr>
+<td align="left">录音</td>
+<td align="left">时间线右上角</td>
+<td align="left">补录缺失的一句话</td>
+</tr>
+<tr>
+<td align="left">响度统一</td>
+<td align="left">选中多个音频 → 右上角参数面板</td>
+<td align="left">统一不同片段的音量</td>
+</tr>
+<tr>
+<td align="left">智能补帧</td>
+<td align="left">变速面板内</td>
+<td align="left">补慢放产生的重复帧&#x2F;丢帧（光溜法）</td>
+</tr>
+<tr>
+<td align="left">关键帧变速曲线</td>
+<td align="left">右键素材 &#x2F; <code>Alt + K</code></td>
+<td align="left">调缩放、X 轴、Y 轴的缓动曲线</td>
+</tr>
+<tr>
+<td align="left">曲线变速</td>
+<td align="left">参数面板 → 变速</td>
+<td align="left">让速度随时间变化</td>
+</tr>
+<tr>
+<td align="left">变速卡点</td>
+<td align="left">参数面板 → 变速 → 最后一个</td>
+<td align="left">用预设把画面卡在鼓点上</td>
+</tr>
+<tr>
+<td align="left">音频复合片段</td>
+<td align="left">选中两段音频后 <code>Alt + G</code></td>
+<td align="left">把切开的音乐封装成一体</td>
+</tr>
+<tr>
+<td align="left">抠像</td>
+<td align="left">选中素材 → 参数面板 → 抠像</td>
+<td align="left">智能&#x2F;自定义&#x2F;色度抠图入口</td>
+</tr>
+<tr>
+<td align="left">蒙版</td>
+<td align="left">选中素材 → 参数面板 → 蒙版</td>
+<td align="left">只保留画面中的某个范围</td>
+</tr>
+<tr>
+<td align="left">混合模式</td>
+<td align="left">参数面板 → 画面 → 基础 → 混合</td>
+<td align="left">用亮暗关系去背景（留白&#x2F;留黑&#x2F;融合）</td>
+</tr>
+<tr>
+<td align="left">新建调节</td>
+<td align="left">素材面板 → 调节 → 新建调节</td>
+<td align="left">叠加一条可逆的调色轨道</td>
+</tr>
+<tr>
+<td align="left">色轮</td>
+<td align="left">参数面板 → 调整 → 色轮</td>
+<td align="left">按阴影&#x2F;中间调&#x2F;高光&#x2F;偏移分区调色</td>
+</tr>
+<tr>
+<td align="left">调色示波器</td>
+<td align="left">播放器面板右上角</td>
+<td align="left">看波形图、分量图、矢量图判断亮度和色偏</td>
+</tr>
+<tr>
+<td align="left">色彩克隆</td>
+<td align="left">调节面板</td>
+<td align="left">用已调好的一帧统一其他素材色彩</td>
+</tr>
+<tr>
+<td align="left">智能调色</td>
+<td align="left">调节面板</td>
+<td align="left">调色初期快速出效果</td>
+</tr>
+<tr>
+<td align="left">字幕自动识别</td>
+<td align="left">素材面板 → 字幕 → 自动识别</td>
+<td align="left">生成字幕轨道</td>
+</tr>
+<tr>
+<td align="left">文字模板 &#x2F; 角标</td>
+<td align="left">素材面板 → 文字模板 → 搜「人名条&#x2F;角标」</td>
+<td align="left">加人名条、身份标</td>
+</tr>
+<tr>
+<td align="left">智能镜头分割</td>
+<td align="left">右键 &#x2F; 拉片工具</td>
+<td align="left">把成片按镜头自动拆开</td>
+</tr>
+<tr>
+<td align="left">多机位片段</td>
+<td align="left">全选素材 → 右键 → 新建多机位片段</td>
+<td align="left">合板 + 实时切机位</td>
+</tr>
+<tr>
+<td align="left">平面跟踪</td>
+<td align="left">复合片段 → 参数面板 → 跟踪 → 平面跟踪</td>
+<td align="left">让文字贴合物体透视</td>
+</tr>
+<tr>
+<td align="left">禁用片段</td>
+<td align="left">右键 &#x2F; 原文记录快捷键 <code>V</code></td>
+<td align="left">临时关掉某层画面（做三明治用）</td>
+</tr>
+</tbody></table>
+<h2 id="附录-B-参数与预设速查"><a href="#附录-B-参数与预设速查" class="headerlink" title="附录 B 参数与预设速查"></a>附录 B 参数与预设速查</h2><table>
+<thead>
+<tr>
+<th align="left">项目</th>
+<th align="left">推荐值</th>
+<th align="left">出处</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">轨道音频占比（看气口）</td>
+<td align="left">约 60%</td>
+<td align="left">第 2 课</td>
+</tr>
+<tr>
+<td align="left">字幕阴影</td>
+<td align="left">不透明度 60%、模糊度 7%、距离 5、角度 -45°</td>
+<td align="left">第 2 课</td>
+</tr>
+<tr>
+<td align="left">BGM 封装</td>
+<td align="left">切在副歌重拍后，<code>Alt + G</code></td>
+<td align="left">第 4 课</td>
+</tr>
+<tr>
+<td align="left">J-Cut 提前量</td>
+<td align="left">声音提前 2–3 秒 + 渐入</td>
+<td align="left">第 4 课</td>
+</tr>
+<tr>
+<td align="left">慢放卡顿临界</td>
+<td align="left">0.1 倍速开始明显卡顿</td>
+<td align="left">第 7 课</td>
+</tr>
+<tr>
+<td align="left">动作变速</td>
+<td align="left">顶点前拉高，炸裂瞬间压到 0.3 → 0.1 倍</td>
+<td align="left">第 7 课</td>
+</tr>
+<tr>
+<td align="left">关键帧缓动</td>
+<td align="left">二次方缓动 S 形，缩放 &#x2F; X &#x2F; Y 三轴保持一致</td>
+<td align="left">第 6 课</td>
+</tr>
+<tr>
+<td align="left">示波器上下限</td>
+<td align="left">0（最暗）&#x2F; 1023（最亮），两边都不能碰</td>
+<td align="left">第 9 课</td>
+</tr>
+<tr>
+<td align="left">色轮起点</td>
+<td align="left">阴影偏右下、中间调偏左、高光偏橙</td>
+<td align="left">第 9 课</td>
+</tr>
+<tr>
+<td align="left">滤镜</td>
+<td align="left">蓝橙 II，强度 30</td>
+<td align="left">第 9 课扩展</td>
+</tr>
+<tr>
+<td align="left">视频封装</td>
+<td align="left">MP4 &#x2F; MOV，视频编码 H.264</td>
+<td align="left">第 5 课</td>
+</tr>
+<tr>
+<td align="left">音频</td>
+<td align="left">AAC 320 kbps，采样率 48000 Hz</td>
+<td align="left">第 5 课</td>
+</tr>
+<tr>
+<td align="left">帧率选择</td>
+<td align="left">24 电影感 &#x2F; 25 广播电视 &#x2F; 30 普通 &#x2F; 60 运动</td>
+<td align="left">第 5 课</td>
+</tr>
+<tr>
+<td align="left">码率档位</td>
+<td align="left">默认选「推荐」，别盲目拉满</td>
+<td align="left">第 5 课</td>
+</tr>
+</tbody></table>
+<p><strong>口诀与记忆点</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">类型</th>
+<th align="left">内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">抠像分层</td>
+<td align="left">人物在最前、文字在中、背景在最后 &#x3D; <strong>三明治</strong></td>
+</tr>
+<tr>
+<td align="left">混合模式</td>
+<td align="left"><strong>留白用变亮，留黑用变暗，融合用叠加</strong></td>
+</tr>
+<tr>
+<td align="left">声音剪辑</td>
+<td align="left"><strong>J-Cut 声音先行，L-Cut 画面先走</strong></td>
+</tr>
+<tr>
+<td align="left">节奏设计</td>
+<td align="left"><strong>踩梯子</strong>：每次让观众有预期，但下一次超出预期</td>
+</tr>
+<tr>
+<td align="left">长视频结构</td>
+<td align="left"><strong>波峰制</strong>：平淡 → 迅速拉升 → 降下来</td>
+</tr>
+<tr>
+<td align="left">短片节奏</td>
+<td align="left"><strong>信息少的快点切，信息多的放长些</strong></td>
+</tr>
+<tr>
+<td align="left">混剪框架</td>
+<td align="left"><strong>景别决定看什么，BGM 决定什么节奏</strong></td>
+</tr>
+<tr>
+<td align="left">Vlog 三件事</td>
+<td align="left"><strong>素材理清楚、结构搭起来、画面调好看</strong></td>
+</tr>
+</tbody></table>
+<h2 id="附录-C-素材与资源清单"><a href="#附录-C-素材与资源清单" class="headerlink" title="附录 C 素材与资源清单"></a>附录 C 素材与资源清单</h2><p><strong>免版权音乐 &#x2F; 音效站</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">网站</th>
+<th align="left">特点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.musicbed.com/">Musicbed</a></td>
+<td align="left">高品质影视向配乐，偏大气、抒情，适合短片、宣传片</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="https://artlist.io/">Artlist</a></td>
+<td align="left">热门订阅制 BGM 平台，歌曲量大，视频创作者常用</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.storyblocks.com/">Storyblocks</a></td>
+<td align="left">音乐 + 视频素材 + 音效，打包订阅</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="https://elements.envato.com/audio">Envato Elements Audio</a></td>
+<td align="left">Envato 旗下，音乐 + 音效 + 模板一站式</td>
+</tr>
+</tbody></table>
+<p><strong>剪映内置资源</strong></p>
+<ul>
+<li>官方素材库（可挑选、收藏）</li>
+<li>音效库（素材面板 → 音频 → 音效库）</li>
+<li>AI 音效（实在找不到时用）</li>
+<li>图片素材里的「横屏安全区」参考图（判断字幕位置）</li>
+<li>文字模板里的「人名条 &#x2F; 角标」（多机位包装）</li>
+<li>转场预设：光效 → 炫光转场</li>
+<li>画面特效：电影感画幅等</li>
+</ul>
+<p><strong>素材命名规则一览</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">对象</th>
+<th align="left">规则</th>
+<th align="left">示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">项目 &#x2F; 导出文件</td>
+<td align="left">日期 + 片名 + 分辨率 + 版本 + 平台</td>
+<td align="left"><code>2026-01-10_混剪教学_4K_成片1_抖音</code></td>
+</tr>
+<tr>
+<td align="left">Vlog 素材</td>
+<td align="left">日期 + 地名日记 &#x2F; 时间 + 地点 + 事件</td>
+<td align="left"><code>01_素材</code>、<code>02_音乐</code>、<code>03_成片</code></td>
+</tr>
+<tr>
+<td align="left">原始视频文件</td>
+<td align="left">保持原名，不要改</td>
+<td align="left">—</td>
+</tr>
+<tr>
+<td align="left">粗剪输出</td>
+<td align="left">demo &#x2F; 小样，进「小样」文件夹</td>
+<td align="left">—</td>
+</tr>
+</tbody></table>
+<h2 id="附录-D-交付前检查清单"><a href="#附录-D-交付前检查清单" class="headerlink" title="附录 D 交付前检查清单"></a>附录 D 交付前检查清单</h2><p><strong>剪辑完成</strong></p>
+<ul>
+<li><input disabled="" type="checkbox"> 气口、口癖、重复已清干净，两段气口之间有底噪垫着</li>
+<li><input disabled="" type="checkbox"> B-Roll 是否对齐口播节奏；有没有「话没说完就切走」的漏字</li>
+<li><input disabled="" type="checkbox"> 同一条片子里没有重复使用同一个 B-Roll</li>
+<li><input disabled="" type="checkbox"> B-Roll 轨道音频已关闭</li>
+<li><input disabled="" type="checkbox"> 所有音频响度统一，戴耳机听过一遍没有声道问题</li>
+<li><input disabled="" type="checkbox"> 字幕：位置在中心下方、字体简约黑体、阴影按 60%&#x2F;7%&#x2F;5&#x2F;-45° 设置</li>
+<li><input disabled="" type="checkbox"> 从头播放检查过错别字，字幕已拉长保证收尾衔接</li>
+<li><input disabled="" type="checkbox"> BGM 已在字幕之后添加，且收在重拍上</li>
+<li><input disabled="" type="checkbox"> 关键帧相关参数的曲线保持一致（缩放 &#x2F; X &#x2F; Y）</li>
+<li><input disabled="" type="checkbox"> 慢放段落的补帧方式已选好（优先光流法，前提是素材帧率够）</li>
+<li><input disabled="" type="checkbox"> 抠像层已用预览轴（<code>S</code>）逐点检查过边缘</li>
+<li><input disabled="" type="checkbox"> 调色看过示波器：无过曝、无欠曝、灰&#x2F;白物体三通道基本重合</li>
+</ul>
+<p><strong>导出与交付</strong></p>
+<ul>
+<li><input disabled="" type="checkbox"> 分辨率没有超过素材原生分辨率（1080P 不要硬拉 4K）</li>
+<li><input disabled="" type="checkbox"> 帧率与原素材一致</li>
+<li><input disabled="" type="checkbox"> 码率档位按平台选（抖音&#x2F;小红书选「推荐」，B 站&#x2F;YouTube 选「更高」）</li>
+<li><input disabled="" type="checkbox"> 封装 MP4&#x2F;MOV，编码 H.264</li>
+<li><input disabled="" type="checkbox"> 音频 AAC 320 kbps &#x2F; 48000 Hz，导出后试听没有变小、杂音、消失</li>
+<li><input disabled="" type="checkbox"> 封面已手动选帧（不是黑场第一帧），有张力、简洁</li>
+<li><input disabled="" type="checkbox"> 文件按「日期 + 片名 + 分辨率 + 版本 + 平台」命名</li>
+<li><input disabled="" type="checkbox"> 小样进「小样」文件夹，成片进「成片」文件夹</li>
+</ul>
+<p><strong>结构复盘（长视频 &#x2F; Vlog）</strong></p>
+<ul>
+<li><input disabled="" type="checkbox"> 时钟上 3 &#x2F; 6 &#x2F; 9 点各有一个爆点</li>
+<li><input disabled="" type="checkbox"> 每段是否都有相似的叙事小结构（我在干什么 &#x2F; 状态 &#x2F; 突发 &#x2F; 数据变化）</li>
+<li><input disabled="" type="checkbox"> 无聊的内容是否转成了旁白</li>
+<li><input disabled="" type="checkbox"> 每 3 分钟的情绪起伏记录过一遍</li>
+<li><input disabled="" type="checkbox"> 结尾是快速收掉，而不是拖慢</li>
+</ul>
+<h2 id="附录-E-笔误修订表"><a href="#附录-E-笔误修订表" class="headerlink" title="附录 E 笔误修订表"></a>附录 E 笔误修订表</h2><p>整理时对原文明显的错别字&#x2F;串行做了修正，逐条列出便于对照原稿复核（<strong>技术结论没有任何改动</strong>）：</p>
+<table>
+<thead>
+<tr>
+<th align="left">原文</th>
+<th align="left">整理版</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">大纲「第二单元：10~14」</td>
+<td align="left">第三单元（10–14）</td>
+<td align="left">原文两个「第二单元」，第三个应为第三单元</td>
+</tr>
+<tr>
+<td align="left"><code>字母识别</code></td>
+<td align="left">字幕识别</td>
+<td align="left">同音错字</td>
+</tr>
+<tr>
+<td align="left"><code>HasselbladX20 100C</code></td>
+<td align="left">Hasselblad X2D 100C</td>
+<td align="left">相机型号</td>
+</tr>
+<tr>
+<td align="left"><code>48000H</code></td>
+<td align="left">48000 Hz</td>
+<td align="left">单位笔误</td>
+</tr>
+<tr>
+<td align="left">混合模式「变量」</td>
+<td align="left">变亮</td>
+<td align="left">剪映预设名为「变亮」</td>
+</tr>
+<tr>
+<td align="left"><code>学墙</code>（多次）</td>
+<td align="left">雪墙</td>
+<td align="left">滑雪案例中的雪墙</td>
+</tr>
+<tr>
+<td align="left"><code>王左下角去拖动</code></td>
+<td align="left">往左下角拖</td>
+<td align="left">错字</td>
+</tr>
+<tr>
+<td align="left"><code>看一篇粗剪的效果</code></td>
+<td align="left">看一眼粗剪效果</td>
+<td align="left">错字</td>
+</tr>
+<tr>
+<td align="left"><code>所有在镜头选择的时候</code></td>
+<td align="left">这时镜头要选</td>
+<td align="left">错字</td>
+</tr>
+<tr>
+<td align="left"><code>海量就已经响起了</code></td>
+<td align="left">海浪已经响起</td>
+<td align="left">错字</td>
+</tr>
+<tr>
+<td align="left"><code>背导员和剪辑师</code></td>
+<td align="left">导演和剪辑师</td>
+<td align="left">错字</td>
+</tr>
+<tr>
+<td align="left"><code>引入阶级的镜头拼接思维</code></td>
+<td align="left">引入更进一步的镜头拼接思维</td>
+<td align="left">错字</td>
+</tr>
+<tr>
+<td align="left"><code>阴阳</code></td>
+<td align="left">明暗不匀</td>
+<td align="left">上下文为绿幕光照问题</td>
+</tr>
+<tr>
+<td align="left"><code>有些槽点</code></td>
+<td align="left">绿色或噪点</td>
+<td align="left">上下文为绿幕画面瑕疵</td>
+</tr>
+<tr>
+<td align="left"><code>视屏</code></td>
+<td align="left">视频</td>
+<td align="left">错字</td>
+</tr>
+<tr>
+<td align="left"><code>你想导播一样</code></td>
+<td align="left">像导播一样</td>
+<td align="left">错字</td>
+</tr>
+<tr>
+<td align="left"><code>智能补帧之后又两个选项</code></td>
+<td align="left">有两个选项</td>
+<td align="left">错字</td>
+</tr>
+<tr>
+<td align="left"><code>从最基础的智能抠像，从最基础的智能抠像</code></td>
+<td align="left">去重</td>
+<td align="left">原文重复</td>
+</tr>
+<tr>
+<td align="left"><code>巨衫</code> &#x2F; <code>巨衫样片</code></td>
+<td align="left">巨杉 &#x2F; 巨杉样片</td>
+<td align="left">同音错字</td>
+</tr>
+<tr>
+<td align="left"><code>明亮是否自然</code></td>
+<td align="left">明暗是否自然</td>
+<td align="left">与「色彩是否准确」并列的是明暗，不是明亮</td>
+</tr>
+<tr>
+<td align="left"><code>景别的跳远和切换</code></td>
+<td align="left">景别的跳跃和切换</td>
+<td align="left">错字</td>
+</tr>
+<tr>
+<td align="left">第 12 课末尾单独一行的「多机位剪辑听起来复杂」</td>
+<td align="left">并入「核心三步」总结</td>
+<td align="left">原文重复残留</td>
+</tr>
+<tr>
+<td align="left">「画好始终，标好节点后」</td>
+<td align="left">「画好钟」</td>
+<td align="left">同音错字</td>
+</tr>
+</tbody></table>
+<hr>
+<blockquote>
+<p><strong>最后一句（第 14 课原话）</strong>：剩下的就是多练。每一次拍摄、每一次剪辑，都是经验的积累，慢慢的就会找到属于自己的节奏还有风格。</p>
+</blockquote>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://taichiyly.github.io">Taichi</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://taichiyly.github.io/2026/11/22/%E5%BD%B1%E8%A7%86%E5%89%AA%E8%BE%91%E5%85%A8%E8%83%BD%E8%AF%BE/">https://taichiyly.github.io/2026/11/22/%E5%BD%B1%E8%A7%86%E5%89%AA%E8%BE%91%E5%85%A8%E8%83%BD%E8%AF%BE/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://taichiyly.github.io" target="_blank">泰 极</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%BD%B1%E8%A7%86%E9%A3%93%E9%A3%8E/">影视飓风</a></div><div class="post-share"><div class="social-share" data-image="https://t.alcy.cc/ycy" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>赞助</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/assets/image/reward-wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/assets/image/reward-wechat.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/assets/image/reward-alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/assets/image/reward-alipay.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/11/26/%E5%89%AA%E6%98%A0%E5%BF%AB%E6%8D%B7%E9%94%AE/" title="剪映快捷键"><img class="cover" src="https://t.alcy.cc/ycy" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">剪映快捷键</div></div><div class="info-2"><div class="info-item-1">一、剪映中基础快捷键   名称 快捷按键    复制 Ctrl + C   剪切 Ctrl + X   粘贴 Ctrl + V   删除 退格键（Backspace）   撤销* Ctrl + Z   恢复 Ctrl + Shift + Z   导入媒体 Ctrl + I   导出 Ctrl + E   新建草稿 Ctrl + N   切换素材面板 Tab   返回草稿页 Ctrl + Alt + Q   退出 Ctrl + Q   二、剪映中播放器相关的快捷键   名称 快捷按键    播放&#x2F;暂停 空格键   全屏&#x2F;退出全屏 Ctrl + Shift + F   取消播放器对齐 长按Ctrl   三、剪映中时间线的快捷键   名称 快捷按键    分割 Ctrl + B   批量分割 Ctrl + Shift + B   鼠标选择模式 A   鼠标分割模式 B   向左全选 [   向右全选 ]   主轨磁吸 P   吸附开关 N   联动开关 ~   预览轴开关 S   轨道放大 Ctrl +   轨道缩小 Ctrl -   时间线缩放 Ctrl...</div></div></div></a><a class="pagination-related" href="/2025/02/23/%E9%94%99%E9%A2%98%E6%95%B4%E7%90%86/" title="网管错题整理"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">网管错题整理</div></div><div class="info-2"><div class="info-item-1">网管错题整理第三章 Windows系统管理与命令 在Windows Server 2008 R2中创建ftp服务组件（）。  A、ftpd &#x3D;&#x3D;IIS&#x3D;&#x3D; MMC ActiveDiretory  解析：ISS组件包含了web和ftp两个服务。  在某台Windows操作系统的PC上的命令行窗口中输入 tracert www.21cto.com 命令，得到如下如所示的窗口，则改**PC的IP地址**可能为（192.168.43.2），图中出现请求超时说明（中间路由设备禁用了ICMP）  -   在Windows Server 2008 R2 中创建和管理虚拟机的组件是（）。  A、&#x3D;&#x3D;Hyper-V&#x3D;&#x3D; B、MMC C、IIS D、Active Directory   &#x3D;&#x3D;Hyper-V&#x3D;&#x3D;：微软开发的一款虚拟化产品，直接在Windows server 2008...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2026/11/26/%E5%89%AA%E6%98%A0%E5%BF%AB%E6%8D%B7%E9%94%AE/" title="剪映快捷键"><img class="cover" src="https://t.alcy.cc/ycy" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-26</div><div class="info-item-2">剪映快捷键</div></div><div class="info-2"><div class="info-item-1">一、剪映中基础快捷键   名称 快捷按键    复制 Ctrl + C   剪切 Ctrl + X   粘贴 Ctrl + V   删除 退格键（Backspace）   撤销* Ctrl + Z   恢复 Ctrl + Shift + Z   导入媒体 Ctrl + I   导出 Ctrl + E   新建草稿 Ctrl + N   切换素材面板 Tab   返回草稿页 Ctrl + Alt + Q   退出 Ctrl + Q   二、剪映中播放器相关的快捷键   名称 快捷按键    播放&#x2F;暂停 空格键   全屏&#x2F;退出全屏 Ctrl + Shift + F   取消播放器对齐 长按Ctrl   三、剪映中时间线的快捷键   名称 快捷按键    分割 Ctrl + B   批量分割 Ctrl + Shift + B   鼠标选择模式 A   鼠标分割模式 B   向左全选 [   向右全选 ]   主轨磁吸 P   吸附开关 N   联动开关 ~   预览轴开关 S   轨道放大 Ctrl +   轨道缩小 Ctrl -   时间线缩放 Ctrl...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/assets/image/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Taichi</div><div class="author-info-description">Taichi‘ Blog</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">34</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">28</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">12</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/taichiyly"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BD%B1%E8%A7%86%E5%89%AA%E8%BE%91%E5%85%A8%E8%83%BD%E8%AF%BE-%C2%B7-%E6%95%B4%E7%90%86%E7%89%88%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0"><span class="toc-number">1.</span> <span class="toc-text">影视剪辑全能课 · 整理版学习笔记</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%99%E4%BB%BD%E7%AC%94%E8%AE%B0%E6%80%8E%E4%B9%88%E7%94%A8"><span class="toc-number">1.1.</span> <span class="toc-text">这份笔记怎么用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%BE%E7%A8%8B%E5%9C%B0%E5%9B%BE"><span class="toc-number">1.2.</span> <span class="toc-text">课程地图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%AE%E5%BD%95"><span class="toc-number">1.3.</span> <span class="toc-text">目录</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E5%8D%95%E5%85%83-%C2%B7-%E5%9F%BA%E7%A1%80%E7%AF%87%EF%BC%880%E2%80%935%EF%BC%89"><span class="toc-number">2.</span> <span class="toc-text">第一单元 · 基础篇（0–5）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#0-%E5%AF%BC%E5%AD%A6%EF%BC%9A%E8%AF%BE%E7%A8%8B%E7%BB%93%E6%9E%84%E4%B8%8E%E7%95%8C%E9%9D%A2"><span class="toc-number">2.1.</span> <span class="toc-text">0 导学：课程结构与界面</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%BE%E7%A8%8B%E7%BB%93%E6%9E%84"><span class="toc-number">2.1.1.</span> <span class="toc-text">课程结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%95%8C%E9%9D%A2%EF%BC%9A%E4%BB%8E%E5%B7%A6%E5%88%B0%E5%8F%B3%E5%9B%9B%E4%B8%AA%E9%9D%A2%E6%9D%BF"><span class="toc-number">2.1.2.</span> <span class="toc-text">界面：从左到右四个面板</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%8E%92%E6%9F%A5"><span class="toc-number">2.1.3.</span> <span class="toc-text">常见问题排查</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%8D%81%E5%88%86%E9%92%9F%E8%B5%B0%E9%80%9A%E4%B8%93%E4%B8%9A%E5%89%AA%E8%BE%91%E5%85%A8%E6%B5%81%E7%A8%8B"><span class="toc-number">2.2.</span> <span class="toc-text">1 十分钟走通专业剪辑全流程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A5%E9%AA%A4%E4%B8%80%EF%BC%9A%E6%96%B0%E5%BB%BA%E5%B7%A5%E7%A8%8B%E3%80%81%E5%AF%BC%E5%85%A5%E7%B4%A0%E6%9D%90"><span class="toc-number">2.2.1.</span> <span class="toc-text">步骤一：新建工程、导入素材</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A5%E9%AA%A4%E4%BA%8C%EF%BC%9A%E6%8A%8A%E7%B4%A0%E6%9D%90%E6%94%BE%E4%B8%8A%E6%97%B6%E9%97%B4%E7%BA%BF"><span class="toc-number">2.2.2.</span> <span class="toc-text">步骤二：把素材放上时间线</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E9%94%AE%E6%A6%82%E5%BF%B5%EF%BC%9A%E4%B8%BB%E8%BD%A8%E4%B8%8E%E8%BE%85%E8%BD%A8"><span class="toc-number">2.2.3.</span> <span class="toc-text">关键概念：主轨与辅轨</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#BGM-%E4%B8%8E%E8%B8%A9%E8%8A%82%E6%8B%8D"><span class="toc-number">2.2.4.</span> <span class="toc-text">BGM 与踩节拍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%84%E8%A7%88%E5%8D%A1%E9%A1%BF%E7%9A%84%E4%B8%A4%E4%B8%AA%E5%BA%94%E6%80%A5%E6%89%8B%E6%AE%B5"><span class="toc-number">2.2.5.</span> <span class="toc-text">预览卡顿的两个应急手段</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A6%96%E6%AC%A1%E5%AF%BC%E5%87%BA%E5%8F%82%E6%95%B0%EF%BC%88%E5%8F%82%E8%80%83%EF%BC%89"><span class="toc-number">2.2.6.</span> <span class="toc-text">首次导出参数（参考）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%8F%A3%E6%92%AD%E7%B2%BE%E5%89%AA%E4%B8%8E-A-Roll-B-Roll-%E5%8D%8F%E5%90%8C"><span class="toc-number">2.3.</span> <span class="toc-text">2 口播精剪与 A-Roll &#x2F; B-Roll 协同</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%80%E5%B7%A5%E5%89%8D%E7%9A%84%E7%8E%AF%E5%A2%83%E8%AE%BE%E7%BD%AE"><span class="toc-number">2.3.1.</span> <span class="toc-text">开工前的环境设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E6%AD%A5%EF%BC%9A%E7%9C%8B%E6%B8%85%E5%8F%A3%E6%92%AD%E7%9A%84%E9%97%AE%E9%A2%98"><span class="toc-number">2.3.2.</span> <span class="toc-text">第一步：看清口播的问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E6%AD%A5%EF%BC%9A%E6%99%BA%E8%83%BD%E5%89%AA%E5%8F%A3%E6%92%AD%EF%BC%88%E8%AF%AD%E4%B9%89%E5%8C%96%E5%89%AA%E8%BE%91%EF%BC%89"><span class="toc-number">2.3.3.</span> <span class="toc-text">第二步：智能剪口播（语义化剪辑）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E6%AD%A5%EF%BC%9AA-Roll-%E4%B8%8E-B-Roll"><span class="toc-number">2.3.4.</span> <span class="toc-text">第三步：A-Roll 与 B-Roll</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#B-Roll-%E4%B8%8E%E5%A3%B0%E9%9F%B3%E7%9A%84%E5%AE%9E%E6%93%8D%E7%BB%8F%E9%AA%8C%EF%BC%88%E9%80%90%E6%9D%A1%E5%AF%B9%E7%85%A7%EF%BC%89"><span class="toc-number">2.3.5.</span> <span class="toc-text">B-Roll 与声音的实操经验（逐条对照）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E6%AD%A5%EF%BC%9A%E5%85%88%E8%AF%86%E5%88%AB%E5%AD%97%E5%B9%95%EF%BC%8C%E5%86%8D%E5%8A%A0-BGM"><span class="toc-number">2.3.6.</span> <span class="toc-text">第四步：先识别字幕，再加 BGM</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E6%AD%A5%EF%BC%9A%E6%9C%80%E5%90%8E%E6%B3%A8%E5%85%A5%E7%81%B5%E9%AD%82%E2%80%94%E2%80%94BGM"><span class="toc-number">2.3.7.</span> <span class="toc-text">第五步：最后注入灵魂——BGM</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E6%B7%B7%E5%89%AA%E8%8A%82%E5%A5%8F%E4%B8%8E%E8%92%99%E5%A4%AA%E5%A5%87%E9%80%BB%E8%BE%91"><span class="toc-number">2.4.</span> <span class="toc-text">3 混剪节奏与蒙太奇逻辑</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B7%B7%E5%89%AA%E7%9A%84%E8%B5%B7%E7%82%B9%EF%BC%9A%E5%85%88%E5%88%86%E7%B1%BB%EF%BC%8C%E5%86%8D%E6%90%AD%E6%A1%86%E6%9E%B6"><span class="toc-number">2.4.1.</span> <span class="toc-text">混剪的起点：先分类，再搭框架</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A1%BA%E5%BA%8F%E9%97%AE%E9%A2%98%EF%BC%9A%E9%9F%B3%E4%B9%90%E5%85%88%E8%A1%8C%EF%BC%8C%E8%BF%98%E6%98%AF%E6%99%AF%E5%88%AB%E5%85%88%E8%A1%8C%EF%BC%9F"><span class="toc-number">2.4.2.</span> <span class="toc-text">顺序问题：音乐先行，还是景别先行？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%8C%E6%97%B6%E9%97%B4%E7%BA%BF%E5%89%AA%E8%BE%91%E6%B3%95"><span class="toc-number">2.4.3.</span> <span class="toc-text">双时间线剪辑法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%99%AF%E5%88%AB%E9%80%92%E8%BF%9B%EF%BC%9A%E4%BB%8E%E5%B9%BF%E9%98%94%E5%88%B0%E5%85%B7%E4%BD%93"><span class="toc-number">2.4.4.</span> <span class="toc-text">景别递进：从广阔到具体</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8C%B9%E9%85%8D%E5%89%AA%E8%BE%91%E4%B8%8E%E8%92%99%E5%A4%AA%E5%A5%87"><span class="toc-number">2.4.5.</span> <span class="toc-text">匹配剪辑与蒙太奇</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%93%E7%A0%B4%E9%A2%84%E6%9C%9F%EF%BC%9A%E5%88%87%E5%88%86%E8%8A%82%E6%8B%8D"><span class="toc-number">2.4.6.</span> <span class="toc-text">打破预期：切分节拍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BD%AC%E5%9C%BA%E9%A2%84%E8%AE%BE"><span class="toc-number">2.4.7.</span> <span class="toc-text">转场预设</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%89%B9%E6%95%88%EF%BC%9A%E8%B0%83%E5%91%B3%E6%96%99%EF%BC%8C%E4%B8%8D%E6%98%AF%E4%B8%BB%E8%8F%9C"><span class="toc-number">2.4.8.</span> <span class="toc-text">特效：调味料，不是主菜</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E5%90%AC%E8%A7%89%E5%A1%91%E9%80%A0%EF%BC%9A%E9%9F%B3%E4%B9%90%E5%A4%84%E7%90%86%E4%B8%8E%E9%9F%B3%E6%95%88%E8%AE%BE%E8%AE%A1"><span class="toc-number">2.5.</span> <span class="toc-text">4 听觉塑造：音乐处理与音效设计</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%84%E7%90%86%E8%BF%87%E9%95%BF%E7%9A%84-BGM"><span class="toc-number">2.5.1.</span> <span class="toc-text">处理过长的 BGM</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%8E%AF%E5%A2%83%E9%9F%B3%E6%95%88%EF%BC%9A%E4%BB%8E%E7%94%BB%E9%9D%A2%E8%81%94%E6%83%B3"><span class="toc-number">2.5.2.</span> <span class="toc-text">环境音效：从画面联想</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#J-Cut-%E4%B8%8E-L-Cut"><span class="toc-number">2.5.3.</span> <span class="toc-text">J-Cut 与 L-Cut</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%89%B9%E6%AE%8A%E8%AE%BE%E8%AE%A1%E9%9F%B3%E6%95%88"><span class="toc-number">2.5.4.</span> <span class="toc-text">特殊设计音效</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9F%B3%E6%95%88%E7%B4%A0%E6%9D%90%E7%9A%84%E6%9D%A5%E6%BA%90"><span class="toc-number">2.5.5.</span> <span class="toc-text">音效素材的来源</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E6%9C%80%E7%BB%88%E4%BA%A4%E4%BB%98%E4%B8%8E%E5%AF%BC%E5%87%BA%E7%AE%A1%E7%90%86"><span class="toc-number">2.6.</span> <span class="toc-text">5 最终交付与导出管理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E5%BC%95%E5%85%A5"><span class="toc-number">2.6.1.</span> <span class="toc-text">问题引入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%81%E9%9D%A2"><span class="toc-number">2.6.2.</span> <span class="toc-text">封面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83"><span class="toc-number">2.6.3.</span> <span class="toc-text">命名规范</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B7%A5%E7%A8%8B%E6%96%87%E4%BB%B6%E4%B8%8E%E7%B4%A0%E6%9D%90%E7%AE%A1%E7%90%86"><span class="toc-number">2.6.4.</span> <span class="toc-text">工程文件与素材管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%B3%E5%AE%9A%E6%B8%85%E6%99%B0%E5%BA%A6%E4%B8%8E%E4%BD%93%E7%A7%AF%E7%9A%84%E4%B8%89%E4%B8%AA%E5%8F%82%E6%95%B0"><span class="toc-number">2.6.5.</span> <span class="toc-text">决定清晰度与体积的三个参数</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E5%88%86%E8%BE%A8%E7%8E%87"><span class="toc-number">2.6.5.1.</span> <span class="toc-text">1. 分辨率</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E5%B8%A7%E7%8E%87"><span class="toc-number">2.6.5.2.</span> <span class="toc-text">2. 帧率</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E7%BC%96%E7%A0%81%E7%A0%81%E7%8E%87"><span class="toc-number">2.6.5.3.</span> <span class="toc-text">3. 编码码率</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%91%E5%B8%83%E5%B9%B3%E5%8F%B0%E6%8E%A8%E8%8D%90%E5%AF%BC%E5%87%BA%E5%8F%82%E6%95%B0"><span class="toc-number">2.6.6.</span> <span class="toc-text">发布平台推荐导出参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%81%E8%A3%85%E4%B8%8E%E9%9F%B3%E9%A2%91%E5%8F%82%E6%95%B0"><span class="toc-number">2.6.7.</span> <span class="toc-text">封装与音频参数</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%8D%95%E5%85%83-%C2%B7-%E8%BF%9B%E9%98%B6%E7%AF%87%EF%BC%886%E2%80%939%EF%BC%89"><span class="toc-number">3.</span> <span class="toc-text">第二单元 · 进阶篇（6–9）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E8%BF%90%E5%8A%A8%E6%8E%A7%E5%88%B6%EF%BC%9A%E5%85%B3%E9%94%AE%E5%B8%A7%E4%B8%8E%E6%9B%B2%E7%BA%BF%E8%BF%90%E5%8A%A8"><span class="toc-number">3.1.</span> <span class="toc-text">6 运动控制：关键帧与曲线运动</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%89%8D%E7%BD%AE%EF%BC%9A%E7%B4%A0%E6%9D%90%E7%9A%84%E5%9F%BA%E7%A1%80%E5%8F%82%E6%95%B0"><span class="toc-number">3.1.1.</span> <span class="toc-text">前置：素材的基础参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E9%94%AE%E5%B8%A7%E7%9A%84%E6%9C%AC%E8%B4%A8"><span class="toc-number">3.1.2.</span> <span class="toc-text">关键帧的本质</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A1%88%E4%BE%8B%EF%BC%9A%E6%89%8B%E6%9C%BA%E6%8E%A8%E8%BF%91%E6%95%88%E6%9E%9C"><span class="toc-number">3.1.3.</span> <span class="toc-text">案例：手机推近效果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E9%94%AE%E5%B8%A7%E6%9B%B2%E7%BA%BF%EF%BC%88%E8%AE%A9%E8%BF%90%E5%8A%A8%E6%9C%89%E5%8A%9B%E9%87%8F%E6%84%9F%EF%BC%89"><span class="toc-number">3.1.4.</span> <span class="toc-text">关键帧曲线（让运动有力量感）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-%E5%8A%A8%E6%80%81%E8%8A%82%E5%A5%8F%EF%BC%9A%E6%9B%B2%E7%BA%BF%E5%8F%98%E9%80%9F%E4%B8%8E%E7%B4%A0%E6%9D%90%E5%B8%A7%E7%8E%87"><span class="toc-number">3.2.</span> <span class="toc-text">7 动态节奏：曲线变速与素材帧率</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%B0%83%E9%80%9F%E5%BA%A6"><span class="toc-number">3.2.1.</span> <span class="toc-text">为什么调速度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E5%8F%98%E9%80%9F"><span class="toc-number">3.2.2.</span> <span class="toc-text">基础变速</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%85%A2%E6%94%BE%E4%B8%BA%E4%BB%80%E4%B9%88%E5%8D%A1%EF%BC%9F%E6%80%8E%E4%B9%88%E8%A1%A5%EF%BC%9F"><span class="toc-number">3.2.3.</span> <span class="toc-text">慢放为什么卡？怎么补？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E8%AF%A5%E7%94%A8%E5%8F%98%E9%80%9F"><span class="toc-number">3.2.4.</span> <span class="toc-text">什么时候该用变速</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9B%B2%E7%BA%BF%E5%8F%98%E9%80%9F"><span class="toc-number">3.2.5.</span> <span class="toc-text">曲线变速</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8A%A8%E4%BD%9C%E5%8F%98%E9%80%9F%EF%BC%9A%E9%87%8D%E6%9E%84%E7%94%BB%E9%9D%A2%E9%87%8D%E5%BF%83"><span class="toc-number">3.2.6.</span> <span class="toc-text">动作变速：重构画面重心</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E9%80%9F%E5%8D%A1%E7%82%B9"><span class="toc-number">3.2.7.</span> <span class="toc-text">变速卡点</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-%E7%A9%BA%E9%97%B4%E9%87%8D%E7%BB%84%EF%BC%9A%E5%85%A8%E5%A5%97%E6%8A%A0%E5%83%8F%E5%B7%A5%E5%85%B7"><span class="toc-number">3.3.</span> <span class="toc-text">8 空间重组：全套抠像工具</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%80%E5%B7%A5%E5%89%8D%EF%BC%9A%E9%BB%98%E8%AE%A4%E5%BC%80%E5%90%AF%E8%87%AA%E7%94%B1%E5%B1%82%E7%BA%A7"><span class="toc-number">3.3.1.</span> <span class="toc-text">开工前：默认开启自由层级</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-1-%E6%99%BA%E8%83%BD%E6%8A%A0%E5%83%8F"><span class="toc-number">3.3.2.</span> <span class="toc-text">8.1 智能抠像</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-2-%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8A%A0%E5%83%8F"><span class="toc-number">3.3.3.</span> <span class="toc-text">8.2 自定义抠像</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-3-%E3%80%8C%E4%B8%89%E6%98%8E%E6%B2%BB%E3%80%8D%EF%BC%9A%E4%BA%BA%E7%89%A9-%E6%96%87%E5%AD%97-%E8%83%8C%E6%99%AF%E4%B8%89%E5%B1%82"><span class="toc-number">3.3.4.</span> <span class="toc-text">8.3 「三明治」：人物 + 文字 + 背景三层</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-4-%E8%89%B2%E5%BA%A6%E6%8A%A0%E5%9B%BE%EF%BC%88%E7%BB%BF%E5%B9%95-%E8%93%9D%E5%B9%95%EF%BC%89"><span class="toc-number">3.3.5.</span> <span class="toc-text">8.4 色度抠图（绿幕 &#x2F; 蓝幕）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-5-%E8%92%99%E7%89%88%EF%BC%9A%E5%8F%AA%E4%BF%9D%E7%95%99%E7%94%BB%E9%9D%A2%E4%B8%AD%E7%9A%84%E4%B8%80%E5%9D%97"><span class="toc-number">3.3.6.</span> <span class="toc-text">8.5 蒙版：只保留画面中的一块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-6-%E6%B7%B7%E5%90%88%E6%A8%A1%E5%BC%8F%EF%BC%9A%E9%BB%91%E7%99%BD%E7%B4%A0%E6%9D%90%E7%9A%84%E7%A9%BA%E9%97%B4%E9%87%8D%E7%BB%84"><span class="toc-number">3.3.7.</span> <span class="toc-text">8.6 混合模式：黑白素材的空间重组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%8F%E7%BB%93"><span class="toc-number">3.3.8.</span> <span class="toc-text">小结</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-%E8%89%B2%E5%BD%A9%E7%A7%91%E5%AD%A6%EF%BC%9A%E4%B8%80%E7%BA%A7%E8%B0%83%E8%89%B2%E5%B7%A5%E5%85%B7"><span class="toc-number">3.4.</span> <span class="toc-text">9 色彩科学：一级调色工具</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B0%83%E8%89%B2%E7%9A%84%E4%B8%A4%E4%B8%AA%E5%9F%BA%E7%A1%80"><span class="toc-number">3.4.1.</span> <span class="toc-text">调色的两个基础</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B5%B7%E7%82%B9%EF%BC%9ALog-%E7%81%B0%E7%89%87%E4%B8%8E-LUT"><span class="toc-number">3.4.2.</span> <span class="toc-text">起点：Log 灰片与 LUT</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B0%83%E8%89%B2%E7%9A%84%E6%9C%AC%E8%B4%A8%EF%BC%9A%E4%B8%89%E4%B8%AA%E6%95%B0%E5%80%BC"><span class="toc-number">3.4.3.</span> <span class="toc-text">调色的本质：三个数值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E8%B0%83%E8%8A%82%EF%BC%9A%E5%88%AB%E5%8F%AA%E4%BC%9A%E6%8B%89%E3%80%8C%E4%BA%AE%E5%BA%A6%E3%80%8D"><span class="toc-number">3.4.4.</span> <span class="toc-text">基础调节：别只会拉「亮度」</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%89%B2%E8%BD%AE%EF%BC%9A%E6%8A%8A%E4%B8%89%E4%B8%AA%E5%8F%82%E6%95%B0%E6%8F%89%E6%88%90%E4%B8%80%E4%B8%AA%E7%9B%B4%E8%A7%89"><span class="toc-number">3.4.5.</span> <span class="toc-text">色轮：把三个参数揉成一个直觉</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A4%BA%E6%B3%A2%E5%99%A8%EF%BC%9A%E4%B8%8D%E8%A6%81%E9%9D%A0%E7%9C%BC%E7%9D%9B%E7%8C%9C"><span class="toc-number">3.4.6.</span> <span class="toc-text">示波器：不要靠眼睛猜</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%A9%E5%B1%95%EF%BC%9A%E5%AE%8C%E6%95%B4%E8%B0%83%E8%89%B2%E6%B5%81%E7%A8%8B%EF%BC%88%E5%AE%9E%E6%93%8D%E8%AE%B0%E5%BD%95%EF%BC%89"><span class="toc-number">3.4.7.</span> <span class="toc-text">扩展：完整调色流程（实操记录）</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E5%8D%95%E5%85%83-%C2%B7-%E5%AE%9E%E6%88%98%E7%AF%87%EF%BC%8810%E2%80%9314%EF%BC%89"><span class="toc-number">4.</span> <span class="toc-text">第三单元 · 实战篇（10–14）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#10-%E5%AE%9E%E6%93%8D%EF%BC%9A%E5%BF%AB%E9%80%9F%E5%A4%8D%E5%88%BB%E7%BB%BC%E8%89%BA%E5%8C%85%E8%A3%85"><span class="toc-number">4.1.</span> <span class="toc-text">10 实操：快速复刻综艺包装</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8B%89%E7%89%87%EF%BC%9A%E5%85%88%E7%94%A8%E5%B7%A5%E5%85%B7%E6%8A%8A%E6%88%90%E7%89%87%E6%8B%86%E5%BC%80"><span class="toc-number">4.1.1.</span> <span class="toc-text">拉片：先用工具把成片拆开</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%B8%E5%BF%83%E5%88%A4%E6%96%AD%EF%BC%9A%E9%95%9C%E5%A4%B4%E6%97%B6%E9%95%BF%E7%94%B1%E4%BF%A1%E6%81%AF%E5%AF%86%E5%BA%A6%E5%86%B3%E5%AE%9A"><span class="toc-number">4.1.2.</span> <span class="toc-text">核心判断：镜头时长由信息密度决定</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%BF%99%E6%9D%A1%E7%89%87%E5%AD%90%E4%B8%8D%E7%94%A8%E8%BD%AC%E5%9C%BA"><span class="toc-number">4.1.3.</span> <span class="toc-text">为什么这条片子不用转场</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B8%A9%E6%A2%AF%E5%AD%90"><span class="toc-number">4.1.4.</span> <span class="toc-text">踩梯子</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B7%9F%E8%B8%AA%E6%96%87%E5%AD%97%EF%BC%9A%E6%93%8D%E4%BD%9C%E4%B8%8E%E9%81%BF%E5%9D%91"><span class="toc-number">4.1.5.</span> <span class="toc-text">跟踪文字：操作与避坑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E9%95%9C%E6%8B%86%E8%A7%A3%E4%B8%8E%E8%8A%82%E5%A5%8F"><span class="toc-number">4.1.6.</span> <span class="toc-text">分镜拆解与节奏</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-%E5%AE%9E%E6%93%8D%EF%BC%9A%E5%B9%B3%E9%9D%A2%E8%B7%9F%E8%B8%AA%E8%AE%A9%E6%96%87%E5%AD%97%E9%95%BF%E5%9C%A8%E7%89%A9%E4%BD%93%E4%B8%8A"><span class="toc-number">4.2.</span> <span class="toc-text">11 实操：平面跟踪让文字长在物体上</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%89%8D%E7%BD%AE%E5%88%86%E6%9E%90"><span class="toc-number">4.2.1.</span> <span class="toc-text">前置分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E9%94%AE%E5%89%8D%E6%8F%90%EF%BC%9A%E6%96%87%E5%AD%97%E8%BD%A8%E9%81%93%E8%A6%81%E5%85%88%E5%8F%98%E6%88%90%E3%80%8C%E7%B4%A0%E6%9D%90%E3%80%8D"><span class="toc-number">4.2.2.</span> <span class="toc-text">关键前提：文字轨道要先变成「素材」</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9%EF%BC%88%E6%AF%8F%E6%9D%A1%E9%83%BD%E6%98%AF%E5%9D%91%EF%BC%89"><span class="toc-number">4.2.3.</span> <span class="toc-text">注意事项（每条都是坑）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%84%E8%AE%BE%EF%BC%9A%E6%8A%8A%E5%B8%B8%E7%94%A8%E5%8C%85%E8%A3%85%E5%AD%98%E4%B8%8B%E6%9D%A5"><span class="toc-number">4.2.4.</span> <span class="toc-text">预设：把常用包装存下来</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-%E5%AE%9E%E6%93%8D%EF%BC%9A%E5%A4%9A%E6%9C%BA%E4%BD%8D%E9%87%87%E8%AE%BF%E5%89%AA%E8%BE%91"><span class="toc-number">4.3.</span> <span class="toc-text">12 实操：多机位采访剪辑</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E7%94%A8%E5%A4%9A%E6%9C%BA%E4%BD%8D"><span class="toc-number">4.3.1.</span> <span class="toc-text">为什么用多机位</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E6%AD%A5%EF%BC%9A%E5%A4%9A%E6%9C%BA%E4%BD%8D%E5%90%88%E6%9D%BF"><span class="toc-number">4.3.2.</span> <span class="toc-text">第一步：多机位合板</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E6%AD%A5%EF%BC%9A%E5%A4%9A%E6%9C%BA%E4%BD%8D%E5%88%87%E6%8D%A2"><span class="toc-number">4.3.3.</span> <span class="toc-text">第二步：多机位切换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E6%AD%A5%EF%BC%9A%E5%8C%85%E8%A3%85"><span class="toc-number">4.3.4.</span> <span class="toc-text">第三步：包装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%B8%E5%BF%83%E4%B8%89%E6%AD%A5%E6%80%BB%E7%BB%93"><span class="toc-number">4.3.5.</span> <span class="toc-text">核心三步总结</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13-%E5%AE%9E%E6%93%8D%EF%BC%9A%E6%97%B6%E9%92%9F%E7%90%86%E8%AE%BA%E4%B8%8E%E9%95%BF%E8%A7%86%E9%A2%91%E7%BB%93%E6%9E%84"><span class="toc-number">4.4.</span> <span class="toc-text">13 实操：时钟理论与长视频结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%8E%E3%80%8C%E4%BC%9A%E7%94%A8%E5%B7%A5%E5%85%B7%E3%80%8D%E5%88%B0%E3%80%8C%E4%BC%9A%E8%AE%B2%E6%95%85%E4%BA%8B%E3%80%8D"><span class="toc-number">4.4.1.</span> <span class="toc-text">从「会用工具」到「会讲故事」</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E6%AD%A5%EF%BC%9A%E5%85%88%E7%BB%99%E8%A7%86%E9%A2%91%E9%95%BF%E5%BA%A6%E4%B8%80%E4%B8%AA%E9%A2%84%E8%AE%BE"><span class="toc-number">4.4.2.</span> <span class="toc-text">第一步：先给视频长度一个预设</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%80%E5%A4%B4%EF%BC%9A%E4%B8%89%E4%B8%AA%E9%97%AE%E9%A2%98%E5%B0%B1%E6%98%AF%E9%92%A9%E5%AD%90"><span class="toc-number">4.4.3.</span> <span class="toc-text">开头：三个问题就是钩子</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%AD%E6%AE%B5%EF%BC%9A%E7%BA%BF%E6%80%A7%E5%8F%99%E4%BA%8B-%E5%A4%A7%E8%83%86%E7%A0%8D%E7%B4%A0%E6%9D%90"><span class="toc-number">4.4.4.</span> <span class="toc-text">中段：线性叙事 + 大胆砍素材</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%94%9A%E7%82%B9%EF%BC%9A%E8%A7%82%E4%BC%97%E6%83%B3%E7%9C%8B%E7%9A%84%E6%98%AF%E3%80%8C%E5%8F%98%E6%88%90%E4%BB%80%E4%B9%88%E6%A0%B7%E3%80%8D"><span class="toc-number">4.4.5.</span> <span class="toc-text">锚点：观众想看的是「变成什么样」</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%A2%E5%B3%B0%E5%88%B6%EF%BC%9A%E4%B8%8D%E8%83%BD%E4%B8%80%E7%9B%B4%E7%B4%A7%E7%BB%B7"><span class="toc-number">4.4.6.</span> <span class="toc-text">波峰制：不能一直紧绷</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%8E%E7%AB%AF%E8%A6%81%E6%9B%B4%E5%BF%AB"><span class="toc-number">4.4.7.</span> <span class="toc-text">后端要更快</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E6%AE%B5%E5%BC%8F%E5%89%AA%E8%BE%91"><span class="toc-number">4.4.8.</span> <span class="toc-text">分段式剪辑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%B6%E9%92%9F%E7%90%86%E8%AE%BA"><span class="toc-number">4.4.9.</span> <span class="toc-text">时钟理论</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%93%E8%AF%AD"><span class="toc-number">4.4.10.</span> <span class="toc-text">结语</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14-%E5%AE%9E%E6%93%8D%EF%BC%9AVlog-%E7%9A%84%E5%89%AA%E8%BE%91%E7%BB%93%E6%9E%84%E4%B8%8E%E8%89%B2%E5%BD%A9"><span class="toc-number">4.5.</span> <span class="toc-text">14 实操：Vlog 的剪辑结构与色彩</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E6%AD%A5%EF%BC%9A%E6%95%B4%E7%90%86%E7%B4%A0%E6%9D%90"><span class="toc-number">4.5.1.</span> <span class="toc-text">第一步：整理素材</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#VLOG-%E7%9A%84%E7%89%B9%E5%BE%81%E4%B8%8E%E9%9A%BE%E7%82%B9"><span class="toc-number">4.5.2.</span> <span class="toc-text">VLOG 的特征与难点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8A%80%E5%B7%A7%EF%BC%9A%E7%94%A8%E4%B8%80%E4%B8%AA%E6%98%8E%E7%A1%AE%E7%9A%84%E3%80%8C%E4%B8%BB%E7%BA%BF%E3%80%8D%E6%8A%8A%E7%B4%A0%E6%9D%90%E4%B8%B2%E8%B5%B7%E6%9D%A5"><span class="toc-number">4.5.3.</span> <span class="toc-text">技巧：用一个明确的「主线」把素材串起来</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE%E7%A4%BA%E4%BE%8B%EF%BC%88%E5%8A%A0%E5%B7%9E%E6%A0%B7%E7%89%87%E6%97%A5%E8%AE%B0%EF%BC%89"><span class="toc-number">4.5.4.</span> <span class="toc-text">思维导图示例（加州样片日记）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%85%E5%8A%A9%E5%B7%A5%E5%85%B7%EF%BC%9A%E8%AE%A9%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%B8%AE%E4%BD%A0%E5%86%99%E5%87%BA%E3%80%8C%E6%97%A5%E8%AE%B0%E3%80%8D"><span class="toc-number">4.5.5.</span> <span class="toc-text">辅助工具：让大模型帮你写出「日记」</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%B6%E9%92%9F%E7%90%86%E8%AE%BA%EF%BC%88%E5%90%8C%E6%A0%B7%E9%80%82%E7%94%A8%EF%BC%89"><span class="toc-number">4.5.6.</span> <span class="toc-text">时钟理论（同样适用）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%84%E8%A3%85%EF%BC%9A%E5%88%86%E6%AE%B5%E5%BC%8F%E5%89%AA%E8%BE%91"><span class="toc-number">4.5.7.</span> <span class="toc-text">组装：分段式剪辑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%89%87%E6%AE%B5%E4%B8%8E%E7%89%87%E6%AE%B5%E4%B9%8B%E9%97%B4%E7%9A%84%E4%B8%B2%E8%81%94%EF%BC%88%E4%B8%A4%E7%A7%8D%E8%BF%87%E6%B8%A1%EF%BC%89"><span class="toc-number">4.5.8.</span> <span class="toc-text">片段与片段之间的串联（两种过渡）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B0%83%E8%89%B2"><span class="toc-number">4.5.9.</span> <span class="toc-text">调色</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%BC%E5%87%BA%E4%B8%8E%E5%BD%92%E6%A1%A3"><span class="toc-number">4.5.10.</span> <span class="toc-text">导出与归档</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Vlog-%E7%9A%84%E6%A0%B8%E5%BF%83"><span class="toc-number">4.5.11.</span> <span class="toc-text">Vlog 的核心</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%99%84%E5%BD%95"><span class="toc-number">5.</span> <span class="toc-text">附录</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%99%84%E5%BD%95-A-%E5%8A%9F%E8%83%BD%E4%BD%8D%E7%BD%AE%E9%80%9F%E6%9F%A5"><span class="toc-number">5.1.</span> <span class="toc-text">附录 A 功能位置速查</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%99%84%E5%BD%95-B-%E5%8F%82%E6%95%B0%E4%B8%8E%E9%A2%84%E8%AE%BE%E9%80%9F%E6%9F%A5"><span class="toc-number">5.2.</span> <span class="toc-text">附录 B 参数与预设速查</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%99%84%E5%BD%95-C-%E7%B4%A0%E6%9D%90%E4%B8%8E%E8%B5%84%E6%BA%90%E6%B8%85%E5%8D%95"><span class="toc-number">5.3.</span> <span class="toc-text">附录 C 素材与资源清单</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%99%84%E5%BD%95-D-%E4%BA%A4%E4%BB%98%E5%89%8D%E6%A3%80%E6%9F%A5%E6%B8%85%E5%8D%95"><span class="toc-number">5.4.</span> <span class="toc-text">附录 D 交付前检查清单</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%99%84%E5%BD%95-E-%E7%AC%94%E8%AF%AF%E4%BF%AE%E8%AE%A2%E8%A1%A8"><span class="toc-number">5.5.</span> <span class="toc-text">附录 E 笔误修订表</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/26/%E5%89%AA%E6%98%A0%E5%BF%AB%E6%8D%B7%E9%94%AE/" title="剪映快捷键"><img src="https://t.alcy.cc/ycy" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="剪映快捷键"/></a><div class="content"><a class="title" href="/2026/11/26/%E5%89%AA%E6%98%A0%E5%BF%AB%E6%8D%B7%E9%94%AE/" title="剪映快捷键">剪映快捷键</a><time datetime="2026-11-26T15:43:59.000Z" title="发表于 2026-11-26 23:43:59">2026-11-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/22/%E5%BD%B1%E8%A7%86%E5%89%AA%E8%BE%91%E5%85%A8%E8%83%BD%E8%AF%BE/" title="影视剪辑全能课 · 整理版学习笔记"><img src="https://t.alcy.cc/ycy" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="影视剪辑全能课 · 整理版学习笔记"/></a><div class="content"><a class="title" href="/2026/11/22/%E5%BD%B1%E8%A7%86%E5%89%AA%E8%BE%91%E5%85%A8%E8%83%BD%E8%AF%BE/" title="影视剪辑全能课 · 整理版学习笔记">影视剪辑全能课 · 整理版学习笔记</a><time datetime="2026-11-22T01:38:58.000Z" title="发表于 2026-11-22 09:38:58">2026-11-22</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/02/23/%E9%94%99%E9%A2%98%E6%95%B4%E7%90%86/" title="网管错题整理">网管错题整理</a><time datetime="2025-02-23T03:20:47.235Z" title="发表于 2025-02-23 11:20:47">2025-02-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/02/23/Python50%E9%81%93%E7%BB%83%E4%B9%A0%E9%A2%98/" title="Python50道练习题"><img src="https://t.alcy.cc/fj" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Python50道练习题"/></a><div class="content"><a class="title" href="/2025/02/23/Python50%E9%81%93%E7%BB%83%E4%B9%A0%E9%A2%98/" title="Python50道练习题">Python50道练习题</a><time datetime="2025-02-23T01:38:58.000Z" title="发表于 2025-02-23 09:38:58">2025-02-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/02/23/requests%E8%AF%B7%E6%B1%82%E6%A8%A1%E5%9D%97/" title="requests请求模块"><img src="https://t.alcy.cc/xhl" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="requests请求模块"/></a><div class="content"><a class="title" href="/2025/02/23/requests%E8%AF%B7%E6%B1%82%E6%A8%A1%E5%9D%97/" title="requests请求模块">requests请求模块</a><time datetime="2025-02-23T01:38:58.000Z" title="发表于 2025-02-23 09:38:58">2025-02-23</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2026 By Taichi</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>
